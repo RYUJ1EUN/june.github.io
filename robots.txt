@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://RYUJ1EUN.github.io/sitemap.xml
+Sitemap: https://ryuj1eun.github.io/june.github.io/sitemap.xml
