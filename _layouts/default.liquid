@@ -52,5 +52,25 @@
 
     <!-- JavaScripts -->
     {% include scripts.liquid %}
+
+
+    <script type="text/javascript">
+      // 우클릭 방지
+      document.oncontextmenu = function() {
+        return false;
+      };
+
+      // 드래그 및 선택 방지
+      document.onselectstart = function() {
+        return false;
+      };
+
+      // 키보드 단축키 방지 (F12, Ctrl+Shift+I 등 개발자 도구 및 복사 방지)
+      document.onkeydown = function(e) {
+        if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 83)) {
+          return false; // Ctrl+C, Ctrl+V, Ctrl+U(소스보기), Ctrl+S 방지
+        }
+      };
+    </script>
   </body>
 </html>
