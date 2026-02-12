@@ -6,11 +6,11 @@ cv:
   image: ""
   # summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
 
-  # social_networks:
+  social_networks:
     # - network: X
     #   username: AlbertEinstein
 
-  # address:
+  address:
     # street: 2712 Broadway St
     # city: San Francisco
     # region: California
