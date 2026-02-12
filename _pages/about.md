@@ -2,7 +2,7 @@
 layout: about
 title: ABOUT
 permalink: /
-subtitle: Mathematics and Cryptography
+subtitle: PhD student
 
 profile:
   align: right
@@ -26,11 +26,44 @@ latest_posts:
 ---
 
 
+Hi, I’m Ji-eun Ryu.
+Please call me <strong style="color: #9B59B6;">June.</strong>
+I am a Ph.D. student specializing in 
+<strong style="color: #9B59B6;">Mathematics</strong> and 
+<strong style="color: #9B59B6;">Cryptography</strong>. 
+My research focus includes:
+
+* **RNG** (Random Number Generation)
+* **PQC** (Post-Quantum Cryptography)
+* **White-box Encryption**
+* Quantum Computing 
+
+I share on this site to document my work and what I’ve learned. 
+Currently, I’m delving into <strong style="color: #9B59B6;">RNG</strong> 
+and <strong style="color: #9B59B6;">White-box Encryption</strong>, 
+and I hope this site helps me stay accountable.
+
+Since my main goal is to track my learning journey, 
+you’ll find a wide range of content here— from in-depth technical documentation 
+to very basic TIL. I’m still getting used to managing this blog, 
+so the categories might seem a bit disorganized or messy at times🙈!
+
+
+<br>
+
 <center>I wish for a life full of Books, Exhibitions and Jazz.</center>
 
-Hi, I'm Jieun Ryu June (please call me June). 
+<br>
 
-If you have any questions or want to discuss my post, feel free to reach out via email at `J.ryu.jieun@gmail.com`.
+When I’m not diving into research, you can usually find me 
+<strong style="color: #9B59B6;">reading</strong> or visiting 
+<strong style="color: #9B59B6;">art exhibitions</strong>.
+I believe that everything I experience helps me grow, so I try to experience 
+as much as possible, whether directly or indirectly. I hope this corner of 
+the internet offers you new experiences and inspiration.
+
+If you have any questions or want to discuss my post, 
+feel free to reach out via email at `J.ryu.jieun@gmail.com`.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
