@@ -50,6 +50,7 @@ so the categories might seem a bit disorganized or messy at times🙈!
 
 
 <br>
+<br>
 
 <center>I wish for a life full of Books, Exhibitions and Jazz.</center>
 
@@ -62,8 +63,12 @@ I believe that everything I experience helps me grow, so I try to experience
 as much as possible, whether directly or indirectly. I hope this corner of 
 the internet offers you new experiences and inspiration.
 
+<br>
+
 If you have any questions or want to discuss my post, 
 feel free to reach out via email at `J.ryu.jieun@gmail.com`.
+
+<br>
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
