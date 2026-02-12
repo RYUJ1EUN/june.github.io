@@ -52,10 +52,7 @@ so the categories might seem a bit disorganized or messy at times🙈!
 <br>
 <br>
 
-<center>I wish for a life full of Books, Exhibitions and Jazz.</center>
-
-<br>
-
+I wish for a life full of Books, Exhibitions and Jazz.
 When I’m not diving into research, you can usually find me 
 <strong style="color: #9B59B6;">reading</strong> or visiting 
 <strong style="color: #9B59B6;">art exhibitions</strong>.
