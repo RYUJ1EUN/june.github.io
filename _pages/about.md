@@ -2,7 +2,7 @@
 layout: about
 title: ABOUT
 permalink: /
-subtitle: Ph.D. student | Mathematics and Cryptography
+subtitle: Ph.D. student | Cryptography
 
 profile:
   align: right
