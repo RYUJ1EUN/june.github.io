@@ -48,7 +48,7 @@ cv:
         start_date: 2018.03
         end_date: 2022.02
 
-    Experience:
+    # Experience:
       # - company: Institute for Advanced Study, Princeton University
       #   position: Professor of Theoretical Physics
       #   location: Princeton University, NJ
@@ -86,7 +86,7 @@ cv:
       #   start_date: 1909
       #   end_date: 1911
 
-    Volunteer:
+    # Volunteer:
       # - company: People's Climate March
       #   position: Lead Organizer
       #   location: Zurich, Switzerland
@@ -97,7 +97,7 @@ cv:
       #     - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
       #     - "Men of the year 2014 by Time magazine"
 
-    Awards:
+    # Awards:
       # - title: Nobel Prize in Physics
       #   authors:
       #     - "Royal Swedish Academy of Sciences"
@@ -138,13 +138,13 @@ cv:
       #   url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
       #   summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
 
-    Skills:
+    # Skills:
       # - name: Physics
       #   level: Master
       #   icon: fa-solid fa-hashtag
       #   keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
-    Languages:
+    # Languages:
       # - name: German
       #   summary: "Native speaker"
 
@@ -156,7 +156,7 @@ cv:
       #   icon: fa-solid fa-tag
       #   keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
-    Certificates:
+    # Certificates:
       # - name: Machine Learning
       #   date: 2018-01-01
       #   issuer: Stanford University
