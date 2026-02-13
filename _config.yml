@@ -172,7 +172,9 @@ collections:
     output: true
   teachings:
     output: true
-
+  til:
+    output: true
+    permalink: /til/:name
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------

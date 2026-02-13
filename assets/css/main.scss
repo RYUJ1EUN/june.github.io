@@ -44,3 +44,16 @@ body {
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Standard syntax */
 }
+
+/* 푸터 하단 고정 해제 및 투명화 */
+footer.fixed-bottom {
+  position: relative;             /* 화면에 고정되지 않고 페이지 끝에 위치 */
+  background-color: transparent;  /* 검은색 배경 제거 */
+  padding-top: 40px;              /* 위아래 여백 추가 */
+  padding-bottom: 40px;
+  
+  .container {
+    color: var(--global-text-color); /* 글자색을 본문 색상과 맞춤 */
+    border-top: 1px solid var(--global-divider-color); /* 상단에 얇은 구분선 추가 */
+  }
+}

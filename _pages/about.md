@@ -2,10 +2,10 @@
 layout: about
 title: ABOUT
 permalink: /
-subtitle: PhD student
+subtitle: Ph.D. student
 
 profile:
-  align: left
+  align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: #>
