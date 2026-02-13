@@ -91,7 +91,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: June's Blog # blog_name will be displayed in your blog page
-blog_description: Mathematics and Cryptography # blog_description will be displayed below the blog_name
+blog_description:  # blog_description will be displayed below the blog_name
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

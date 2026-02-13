@@ -2,7 +2,7 @@
 layout: about
 title: ABOUT
 permalink: /
-subtitle: Ph.D. student
+subtitle: Ph.D. student | Mathematics and Cryptography
 
 profile:
   align: right
@@ -28,9 +28,7 @@ latest_posts:
 
 Hi, I’m Ji-eun Ryu.
 Please call me <strong style="color: #B000B0;">June.</strong>
-I am a Ph.D. student specializing in 
-<strong style="color: #B000B0;">Mathematics</strong> and 
-<strong style="color: #B000B0;">Cryptography</strong>. 
+I am a Ph.D. student specializing in Mathematics and Cryptography. 
 My research focus includes:
 
 * **RNG** (Random Number Generation)

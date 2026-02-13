@@ -60,7 +60,7 @@ footer.fixed-bottom {
   /* 링크 글자색 설정 */
   a {
     color: var(--global-text-color) !important; /* 링크도 일반 글자색과 동일하게 */
-    text-decoration: underline; /* 링크임을 알 수 있게 밑줄 추가 (선택 사항) */
+    text-decoration: none; /* underline : 밑줄 추가 (선택 사항) */
     
     &:hover {
       color: var(--global-theme-color) !important; /* 마우스 올렸을 때만 테마 색상으로 강조 */
@@ -72,7 +72,7 @@ footer.fixed-bottom {
 
 /* BLOG 페이지(목록)의 메인 제목 크기만 줄이기 */
 .post .post-title {
-  font-size: 1.8rem !important; /* BLOG 타이틀 크기 */
+  font-size: 1.5rem !important; /* BLOG 타이틀 크기 */
   font-weight: 700;
   color: var(--global-theme-color); /* BLOG 제목만 테마 색상 강조(선택 사항) */
 }
