@@ -27,10 +27,10 @@ latest_posts:
 
 
 Hi, I’m Ji-eun Ryu.
-Please call me <strong style="color: #9B59B6;">June.</strong>
+Please call me <strong style="color: #B000B0;">June.</strong>
 I am a Ph.D. student specializing in 
-<strong style="color: #9B59B6;">Mathematics</strong> and 
-<strong style="color: #9B59B6;">Cryptography</strong>. 
+<strong style="color: #B000B0;">Mathematics</strong> and 
+<strong style="color: #B000B0;">Cryptography</strong>. 
 My research focus includes:
 
 * **RNG** (Random Number Generation)
@@ -39,8 +39,8 @@ My research focus includes:
 * Quantum Computing 
 
 I share on this site to document my work and what I’ve learned. 
-Currently, I’m delving into <strong style="color: #9B59B6;">RNG</strong> 
-and <strong style="color: #9B59B6;">White-box Encryption</strong>, 
+Currently, I’m delving into <strong style="color: #B000B0;">RNG</strong> 
+and <strong style="color: #B000B0;">White-box Encryption</strong>, 
 and I hope this site helps me stay accountable.
 
 Since my main goal is to track my learning journey, 
@@ -54,8 +54,8 @@ so the categories might seem a bit disorganized or messy at times🙈!
 
 I wish for a life full of Books, Exhibitions and Jazz.
 When I’m not diving into research, you can usually find me 
-<strong style="color: #9B59B6;">reading</strong> or visiting 
-<strong style="color: #9B59B6;">art exhibitions</strong>.
+<strong style="color: #B000B0;">reading</strong> or visiting 
+<strong style="color: #B000B0;">art exhibitions</strong>.
 I believe that everything I experience helps me grow, so I try to experience 
 as much as possible, whether directly or indirectly. I hope this corner of 
 the internet offers you new experiences and inspiration.
