@@ -51,7 +51,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/june.github.io/projects/";
               },
-            },{id: "post-ais-31-version-3-0",
+            },{id: "post-secret-sharing",
+        
+          title: "Secret Sharing",
+        
+        description: "Paper review regarding the secret sharing",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2026/ss/";
+          
+        },
+      },{id: "post-ais-31-version-3-0",
         
           title: "AIS 31 (version 3.0)",
         
