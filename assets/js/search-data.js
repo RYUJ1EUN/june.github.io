@@ -51,7 +51,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/june.github.io/projects/";
               },
-            },{id: "books-the-godfather",
+            },{id: "post-ais-31-version-3-0",
+        
+          title: "AIS 31 (version 3.0)",
+        
+        description: "Study note: AIS 31 (version 3.0)",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2026/ais31/";
+          
+        },
+      },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
