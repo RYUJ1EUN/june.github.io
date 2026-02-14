@@ -21,7 +21,7 @@ cv:
 
       - institution: Depart. of Financial Information Security, Kookmin University
         location: Seoul, South Korea
-        area: Cryptography
+        # area: Cryptography
         highlights:
           - A Study of Public-Key Cryptographic Primitive based on Combinatorics
         studyType: M.S
@@ -30,7 +30,7 @@ cv:
         
       - institution: Depart. of Information Security, Cryptography and Mathematics, Kookmin University
         location: Seoul, South Korea
-        area: Cryptography
+        # area: Cryptography
         studyType: B.S
         start_date: 2018-03
         end_date: 2022-02
