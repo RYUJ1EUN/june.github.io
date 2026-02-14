@@ -49,58 +49,7 @@ cv:
         icon: fa-solid fa-search
         keywords: "QKD post-processing, Quantum algorithms"
 
-    Publications:
-      - title: '[Paper] Entropy Harvest and Key Derivation from the Image Sensors in IP Camera'
-        authors:
-          - Jieun Ryu (First Author)
-          - Gwangjae Kim
-          - Jeongbeen Ko
-          - Dongkeun Kang
-          - Ju-Sung Kang
-          - Yongjin Yeom
-        publisher: Journal of Surveillance, Security and Safety
-        releaseDate: 2024-12-31
-        url: https://doi.org/10.1109/ACCESS.2024.3349704
-        # summary: With the widespread use of connected surveillance systems using IP cameras, the security of video data has become a critical issue. In response to the potential compromise of sensitive information via covert channels, the United States and the United Kingdom warned against the use of suspicious cameras in critical infrastructure. To mitigate the security concerns, it is indispensable to investigate every component inside IP cameras using evaluation and validation programs such as Common Criteria and Cryptographic Module Validation Program. However, such compliance tests on implementation under test cannot suffice to prevent the products from malicious attacks using a Trojan-horse in a black-box component, particularly inserted in the image-sensing module or the random number generator (RNG).In this paper, we categorize potential vulnerabilities and argue that IP cameras should disclose the components of the modules to mitigate the threats of backdoor. Based on this, we provide a way to construct backdoor-free RNG. To remove the possibility of the backdoor inside the RNG, we extract randomness from optical black pixels of the image sensor and apply two entropy accumulation methods to guarantee the min-entropy of accumulated data under weak assumptions, which means the IP camera already has a hardware entropy source in itself without additional suspicious entropy source. In the experiment using an IP camera with a Cortex-A53 processor, we can harvest entropy at the rate of 7.3kbps. The operating speed of the RNG is sufficient to provide random bits without delay when a symmetric key is updated every minute.
-      
-      - title: '[Paper] IPCC7: Post-Quantum Encryption Scheme Based on a Perfect Dominating Set in 3-Regular Graph'
-        authors:
-          - Jieun Ryu (First Author)
-          - Yongbhin Kim
-          - Seungtai Yoon
-          - Ju-Sung Kang
-          - Yongjin Yeom
-        publisher: IEEE Access
-        releaseDate: 2024-01-04
-        url: https://doi.org/10.1109/ACCESS.2024.3349704
-        # summary: Post-quantum cryptography (PQC) has been actively explored to meet the requirements arising with the rapid development of quantum computers. The National Institute of Standards and Technology (NIST) conducted a competition to establish the next-generation cryptographic standards. While previous competitions selected a single cryptographic standard, this competition aimed to standardize several algorithms based on various mathematical problems since the security of PQC has not been studied as extensively as that of legacy cryptosystems. The recent exclusion of the isogeny-based key-establishment algorithm, SIKE, from the competition emphasizes the necessity of exploring cryptographic algorithms based on various fundamental problems. In this study, we propose the Improved Perfect Code Cryptosystem 7 (IPCC7), a new post-quantum encryption scheme, as an improved version of the perfect code cryptosystem (PCC) based on combinatorics conceptualized by Koblitz. The security of our cryptosystem relies on the intractability of finding the perfect dominating set in a given graph. A PCC proposed previously by Koblitz did not receive much attention because of its low efficiency for handling higher-order polynomials. To overcome these drawbacks, we used the product of low-degree polynomials and demonstrated the feasibility of a graph-based encryption scheme. IPCC7 has some limitations for use as a general-purpose PQC. However, considering its relatively small key size (768 bytes public-key and 64 bytes secret key), fast decryption speed (2.0 Gbps), and usable encryption speed (8.6Mbps), IPCC7 is particularly suitable for environments with low-memory constraints, such as white-box encryptions.
-      
-      - title: '[Paper] End-to-End Post-Quantum Cryptography Encryption Protocol for Video Conferencing System Based on Government Public Key Infrastructure'
-        authors:
-          - Yeongjae Park
-          - Hyeondo Yoo
-          - Jieun Ryu (Co-Author)
-          - Young-Rak Choi
-          - Ju-Sung Kang
-          - Yongjin Yeom
-        publisher: Applied System Innovation
-        releaseDate: 2023-07-14
-        url: http://doi.org/10.3390/asi6040066
-        # summary: Owing to the expansion of non-face-to-face activities, security issues in video conferencing systems are becoming more critical. In this paper, we focus on the end-to-end encryption (E2EE) function among the security services of video conferencing systems. First, the E2EE-related protocols of Zoom and Secure Frame (SFrame), which are representative video conferencing systems, are thoroughly investigated, and the two systems are compared and analyzed from the overall viewpoint. Next, the E2EE protocol in a Government Public Key Infrastructure (GPKI)-based video conferencing system, in which the user authentication mechanism is fundamentally different from those used in commercial sector systems such as Zoom and SFrame, is considered. In particular, among E2EE-related protocols, we propose a detailed mechanism in which the post-quantum cryptography (PQC) key encapsulation mechanism (KEM) is applied to the user key exchange process. Since the session key is not disclosed to the central server, even in futuristic quantum computers, the proposed mechanism, which includes the PQC KEM, still satisfies the E2EE security requirements in the quantum environment. Moreover, our GPKI-based mechanism induces the effect of enhancing the security level of the next-generation video conferencing systems up to a quantum-safe level.
-      
-      - title: '[Paper] NTRU를 결합한 하이브리드 세션 보호 프로토콜을 이용한 금융 오픈 API 환경의 거래 세션 안전성 강화'
-        authors:
-          - 권수진
-          - 김덕상
-          - 박영재
-          - 류지은 (Co-Author)
-          - 강주성
-          - 염용진
-        publisher: 정보보호학회논문지
-        releaseDate: 2023-02-28
-        url: http://doi.org/10.13089/JKIISC.2023.33.1.75
-        # summary: 현재 금융거래 서비스에서 보편적으로 사용하는 RSA와 ECC 같은 공개키 암호 알고리즘은 양자 컴퓨터가 실현되면 더 이상 안전성을 보장할 수 없으므로 기존 레거시 알고리즘을 양자내성암호로 전환해야 한다. 하지만 다양한 서비스에 사용 중인 알고리즘을 교체하는 데에는 상당한 시간이 소요될 것으로 예상된다. 다가올 전환기를 대비하기 위하여 두 알고리즘을 결합하는 하이브리드 방식에 관한 연구가 필요하다. 본 논문에서는 레거시 알고리즘인 ECDH 알고리즘과 양자내성암호 알고리즘인 NTRU 알고리즘을 결합하여 세션키를 생성하는 하이브리드 세션키교환 프로토콜을 제안한다. TLS 1.3 기반 하이브리드 키 교환을 위해 IETF에서 제안한 방식들을 적용해본 결과 기존 금융거래 세션 보호 솔루션에 우리가 제안한 프로토콜을 사용하면 안전성을 강화할 수 있을 것으로 기대된다.
-        
+    Publications:        
       - title: '[Conference] 외부 가속기를 이용한 Kyber 역캡슐화에 관한 연구'
         authors:
           - 류지은 (First Author)
@@ -145,7 +94,32 @@ cv:
           - 염용진
         publisher: 2025년도 한국통신학회 동계종합학술발표대회
         releaseDate: 2025-02
-        
+
+      - title: '[Paper] Entropy Harvest and Key Derivation from the Image Sensors in IP Camera'
+        authors:
+          - Jieun Ryu (First Author)
+          - Gwangjae Kim
+          - Jeongbeen Ko
+          - Dongkeun Kang
+          - Ju-Sung Kang
+          - Yongjin Yeom
+        publisher: Journal of Surveillance, Security and Safety
+        releaseDate: 2024-12-31
+        url: https://doi.org/10.1109/ACCESS.2024.3349704
+        # summary: With the widespread use of connected surveillance systems using IP cameras, the security of video data has become a critical issue. In response to the potential compromise of sensitive information via covert channels, the United States and the United Kingdom warned against the use of suspicious cameras in critical infrastructure. To mitigate the security concerns, it is indispensable to investigate every component inside IP cameras using evaluation and validation programs such as Common Criteria and Cryptographic Module Validation Program. However, such compliance tests on implementation under test cannot suffice to prevent the products from malicious attacks using a Trojan-horse in a black-box component, particularly inserted in the image-sensing module or the random number generator (RNG).In this paper, we categorize potential vulnerabilities and argue that IP cameras should disclose the components of the modules to mitigate the threats of backdoor. Based on this, we provide a way to construct backdoor-free RNG. To remove the possibility of the backdoor inside the RNG, we extract randomness from optical black pixels of the image sensor and apply two entropy accumulation methods to guarantee the min-entropy of accumulated data under weak assumptions, which means the IP camera already has a hardware entropy source in itself without additional suspicious entropy source. In the experiment using an IP camera with a Cortex-A53 processor, we can harvest entropy at the rate of 7.3kbps. The operating speed of the RNG is sufficient to provide random bits without delay when a symmetric key is updated every minute.
+      
+      - title: '[Paper] IPCC7: Post-Quantum Encryption Scheme Based on a Perfect Dominating Set in 3-Regular Graph'
+        authors:
+          - Jieun Ryu (First Author)
+          - Yongbhin Kim
+          - Seungtai Yoon
+          - Ju-Sung Kang
+          - Yongjin Yeom
+        publisher: IEEE Access
+        releaseDate: 2024-01-04
+        url: https://doi.org/10.1109/ACCESS.2024.3349704
+        # summary: Post-quantum cryptography (PQC) has been actively explored to meet the requirements arising with the rapid development of quantum computers. The National Institute of Standards and Technology (NIST) conducted a competition to establish the next-generation cryptographic standards. While previous competitions selected a single cryptographic standard, this competition aimed to standardize several algorithms based on various mathematical problems since the security of PQC has not been studied as extensively as that of legacy cryptosystems. The recent exclusion of the isogeny-based key-establishment algorithm, SIKE, from the competition emphasizes the necessity of exploring cryptographic algorithms based on various fundamental problems. In this study, we propose the Improved Perfect Code Cryptosystem 7 (IPCC7), a new post-quantum encryption scheme, as an improved version of the perfect code cryptosystem (PCC) based on combinatorics conceptualized by Koblitz. The security of our cryptosystem relies on the intractability of finding the perfect dominating set in a given graph. A PCC proposed previously by Koblitz did not receive much attention because of its low efficiency for handling higher-order polynomials. To overcome these drawbacks, we used the product of low-degree polynomials and demonstrated the feasibility of a graph-based encryption scheme. IPCC7 has some limitations for use as a general-purpose PQC. However, considering its relatively small key size (768 bytes public-key and 64 bytes secret key), fast decryption speed (2.0 Gbps), and usable encryption speed (8.6Mbps), IPCC7 is particularly suitable for environments with low-memory constraints, such as white-box encryptions.
+      
       - title: '[Conference] 1xN 암호통신프로그램 키 설정 과정의 Kyber 적용 가능성에 관한 연구'
         authors:
           - 원희정
@@ -155,6 +129,32 @@ cv:
           - 염용진
         publisher: 2024년도 한국통신학회 하계종합학술대회
         releaseDate: 2024-06
+        
+      - title: '[Paper] End-to-End Post-Quantum Cryptography Encryption Protocol for Video Conferencing System Based on Government Public Key Infrastructure'
+        authors:
+          - Yeongjae Park
+          - Hyeondo Yoo
+          - Jieun Ryu (Co-Author)
+          - Young-Rak Choi
+          - Ju-Sung Kang
+          - Yongjin Yeom
+        publisher: Applied System Innovation
+        releaseDate: 2023-07-14
+        url: http://doi.org/10.3390/asi6040066
+        # summary: Owing to the expansion of non-face-to-face activities, security issues in video conferencing systems are becoming more critical. In this paper, we focus on the end-to-end encryption (E2EE) function among the security services of video conferencing systems. First, the E2EE-related protocols of Zoom and Secure Frame (SFrame), which are representative video conferencing systems, are thoroughly investigated, and the two systems are compared and analyzed from the overall viewpoint. Next, the E2EE protocol in a Government Public Key Infrastructure (GPKI)-based video conferencing system, in which the user authentication mechanism is fundamentally different from those used in commercial sector systems such as Zoom and SFrame, is considered. In particular, among E2EE-related protocols, we propose a detailed mechanism in which the post-quantum cryptography (PQC) key encapsulation mechanism (KEM) is applied to the user key exchange process. Since the session key is not disclosed to the central server, even in futuristic quantum computers, the proposed mechanism, which includes the PQC KEM, still satisfies the E2EE security requirements in the quantum environment. Moreover, our GPKI-based mechanism induces the effect of enhancing the security level of the next-generation video conferencing systems up to a quantum-safe level.
+      
+      - title: '[Paper] NTRU를 결합한 하이브리드 세션 보호 프로토콜을 이용한 금융 오픈 API 환경의 거래 세션 안전성 강화'
+        authors:
+          - 권수진
+          - 김덕상
+          - 박영재
+          - 류지은 (Co-Author)
+          - 강주성
+          - 염용진
+        publisher: 정보보호학회논문지
+        releaseDate: 2023-02-28
+        url: http://doi.org/10.13089/JKIISC.2023.33.1.75
+        # summary: 현재 금융거래 서비스에서 보편적으로 사용하는 RSA와 ECC 같은 공개키 암호 알고리즘은 양자 컴퓨터가 실현되면 더 이상 안전성을 보장할 수 없으므로 기존 레거시 알고리즘을 양자내성암호로 전환해야 한다. 하지만 다양한 서비스에 사용 중인 알고리즘을 교체하는 데에는 상당한 시간이 소요될 것으로 예상된다. 다가올 전환기를 대비하기 위하여 두 알고리즘을 결합하는 하이브리드 방식에 관한 연구가 필요하다. 본 논문에서는 레거시 알고리즘인 ECDH 알고리즘과 양자내성암호 알고리즘인 NTRU 알고리즘을 결합하여 세션키를 생성하는 하이브리드 세션키교환 프로토콜을 제안한다. TLS 1.3 기반 하이브리드 키 교환을 위해 IETF에서 제안한 방식들을 적용해본 결과 기존 금융거래 세션 보호 솔루션에 우리가 제안한 프로토콜을 사용하면 안전성을 강화할 수 있을 것으로 기대된다.
         
       - title: '[Conference] End-to-End PQC Encryption Protocol for GPKI-Based Video Conferencing Systems'
         authors:
@@ -212,7 +212,7 @@ cv:
           - 이성환
         publisher: 국민대학교 산학협력단
         releaseDate: 2025-11-11
-        summary: 본 발명은 양자 난수 기반 단일 채널 암호화를 이용한 스트리밍 데이터 보호 장치에 관한 것으로, 상기 장치는 양자 난수 기반의 세션 키를 생성하는 세션 키 생성부; 상기 세션 키를 기초로 프레임의 식별코드가 부여된 스트리밍 데이터를 암호화하여 암호문을 생성하는 스트리밍 데이터 암호화부; 상기 프레임의 식별코드와 사전에 상호 공유된 공유 키를 기초로 상기 세션 키를 암호화하는 세션 키 암호화부; 및 상기 암호화된 세션 키와 상기 암호문을 기초로 상기 프레임을 생성하고 상기 프레임을 단일 채널을 통해 전송하는 스트리밍 데이터 전송부를 포함한다.
+        # summary: 본 발명은 양자 난수 기반 단일 채널 암호화를 이용한 스트리밍 데이터 보호 장치에 관한 것으로, 상기 장치는 양자 난수 기반의 세션 키를 생성하는 세션 키 생성부; 상기 세션 키를 기초로 프레임의 식별코드가 부여된 스트리밍 데이터를 암호화하여 암호문을 생성하는 스트리밍 데이터 암호화부; 상기 프레임의 식별코드와 사전에 상호 공유된 공유 키를 기초로 상기 세션 키를 암호화하는 세션 키 암호화부; 및 상기 암호화된 세션 키와 상기 암호문을 기초로 상기 프레임을 생성하고 상기 프레임을 단일 채널을 통해 전송하는 스트리밍 데이터 전송부를 포함한다.
       
       - title: '[Patent] 양자 난수 기반 이중 채널 암호화를 이용한 스트리밍 데이터 보호 장치 및 방법'
         authors:
@@ -224,7 +224,7 @@ cv:
           - 이성환
         publisher: 국민대학교 산학협력단
         releaseDate: 2025-10-13
-        summary: 본 발명은 양자 난수 기반 이중 채널 암호화를 이용한 스트리밍 데이터 보호 장치에 관한 것으로, 상기 장치는 양자 난수 기반의 세션 키를 생성하는 세션 키 생성부; 상기 세션 키를 사전에 상호 공유된 마스터 키로 암호화하는 세션 키 암호화부; 상기 암호화된 세션 키를 제1 채널을 통해 전송하는 세션 키 전송부; 상기 세션 키를 입력받아 스트리밍 데이터를 암호화하는 스트리밍 데이터 암호화부; 및 상기 암호화된 스트리밍 데이터를 제2 채널을 통해 전송하는 스트리밍 데이터 전송부를 포함한다.
+        # summary: 본 발명은 양자 난수 기반 이중 채널 암호화를 이용한 스트리밍 데이터 보호 장치에 관한 것으로, 상기 장치는 양자 난수 기반의 세션 키를 생성하는 세션 키 생성부; 상기 세션 키를 사전에 상호 공유된 마스터 키로 암호화하는 세션 키 암호화부; 상기 암호화된 세션 키를 제1 채널을 통해 전송하는 세션 키 전송부; 상기 세션 키를 입력받아 스트리밍 데이터를 암호화하는 스트리밍 데이터 암호화부; 및 상기 암호화된 스트리밍 데이터를 제2 채널을 통해 전송하는 스트리밍 데이터 전송부를 포함한다.
       
       - title: '[Patent] 10-2025-0013714: 음함수를 이용한 화이트박스 블록암호 장치 및 방법'
         authors:
@@ -235,8 +235,18 @@ cv:
           - 강주성
         publisher: 국민대학교 산학협력단
         releaseDate: 2025-02-04
-        summary: 본 발명은 음함수를 이용한 화이트박스 블록암호 장치에 관한 것으로, 상기 장치는 평문을 입력받는 평문 입력부; 상기 암호문을 출력하는 암호문 출력부; 및 상기 평문을 최초의 입력 데이터로 입력하고 상기 암호문을 최종의 출력 데이터로 생성하는 음함수 기반의 라운드 구조를 포함하고, 상기 라운드 구조는 직렬로 연결된 복수의 라운드 함수들로 구성되며 각각은 암호키를 통한 화이트박스를 생성하고 상기 화이트박스를 통한 암호화를 진행함으로써 상기 최초의 입력 데이터를 상기 최종의 출력 데이터로 변환하는 화이트박스 암호화부를 포함한다.
+        # summary: 본 발명은 음함수를 이용한 화이트박스 블록암호 장치에 관한 것으로, 상기 장치는 평문을 입력받는 평문 입력부; 상기 암호문을 출력하는 암호문 출력부; 및 상기 평문을 최초의 입력 데이터로 입력하고 상기 암호문을 최종의 출력 데이터로 생성하는 음함수 기반의 라운드 구조를 포함하고, 상기 라운드 구조는 직렬로 연결된 복수의 라운드 함수들로 구성되며 각각은 암호키를 통한 화이트박스를 생성하고 상기 화이트박스를 통한 암호화를 진행함으로써 상기 최초의 입력 데이터를 상기 최종의 출력 데이터로 변환하는 화이트박스 암호화부를 포함한다.
       
+      - title: '[Patent] 10-2759297: 이미지 센서 기반 난수발생기 헬스 테스트 장치 및 방법'
+        authors:
+          - 유현도
+          - 류지은
+          - 강주성
+          - 염용진
+        publisher: 국민대학교 산학협력단
+        releaseDate: 2025-01-20
+        # summary: 본 발명은 이미지 센서 기반 난수발생기 헬스 테스트 장치 및 방법에 관한 것으로, 상기 장치는 이미지 센서로부터 수집된 픽셀별 데이터를 디지털화(digitization) 하여 난수 생성을 위한 픽셀 단위의 잡음원을 생성하는 잡음원 수집부; 상기 잡음원에 대한 헬스 테스트를 수행하여 난수 생성 과정에서의 사용 가능성을 결정하는 헬스 테스트부; 및 상기 헬스 테스트를 통과한 잡음원만을 이용한 난수 생성 과정을 통해 난수를 반복적으로 생성하는 난수 생성부;를 포함한다. 따라서, 본 발명은 이미지 센서를 잡음원으로 사용하는 난수발생기의 엔트로피 소스를 검정하여 난수발생기가 정상적으로 동작하고 있는지 확인하는 기능을 제공할 수 있다.
+        
       - title: '[Patent] 10-2023-0191332: 모바일 환경에 적합한 EC-KCDSA 전자서명의 화이트박스 암호 구현 장치 및 방법'
         authors:
           - 박영재
@@ -268,16 +278,6 @@ cv:
         publisher: 국민대학교 산학협력단
         releaseDate: 2022-01-21
         # summary: 본 발명은 암호키를 보호하고 필요한 기능만을 제공하여 안전성을 강화하기 위해 화이트박스 암호화 기술에 확률론적 일방향성을 갖는 출력 인코딩을 추가한 블록암호 운영모드에 관한 것으로, 블록 암호의 출력을 인코딩 과정에 공개키만을 사용하기 때문에 대응되는 비밀키 없이는 복호화 기능을 수행할 수 없도록 할 수 있다. 이를 통해, 호환성을 고려하여 취약한 표준 암호화이트박스 기술로 불가피하게 암호화하는 경우에도 일방향성(즉, 암호화만 가능하고 복호화는 할 수 없음)을 유지할 수 있다.
-      
-      - title: '[Patent] 10-2759297: 이미지 센서 기반 난수발생기 헬스 테스트 장치 및 방법'
-        authors:
-          - 유현도
-          - 류지은
-          - 강주성
-          - 염용진
-        publisher: 국민대학교 산학협력단
-        releaseDate: 2025-01-20
-        # summary: 본 발명은 이미지 센서 기반 난수발생기 헬스 테스트 장치 및 방법에 관한 것으로, 상기 장치는 이미지 센서로부터 수집된 픽셀별 데이터를 디지털화(digitization) 하여 난수 생성을 위한 픽셀 단위의 잡음원을 생성하는 잡음원 수집부; 상기 잡음원에 대한 헬스 테스트를 수행하여 난수 생성 과정에서의 사용 가능성을 결정하는 헬스 테스트부; 및 상기 헬스 테스트를 통과한 잡음원만을 이용한 난수 생성 과정을 통해 난수를 반복적으로 생성하는 난수 생성부;를 포함한다. 따라서, 본 발명은 이미지 센서를 잡음원으로 사용하는 난수발생기의 엔트로피 소스를 검정하여 난수발생기가 정상적으로 동작하고 있는지 확인하는 기능을 제공할 수 있다.
 
     Projects:      
       - name: 양자내성암호Kyber를 이용한 스마트카드 인증 기술개발 (`25-`26)
