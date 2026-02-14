@@ -8,10 +8,10 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign last_group = "" %}
   {% for entry in entries %}
-    {% comment %} 그룹화의 기준이 되는 name(또는 company) 추출 후 앞 3글자 슬라이스 {% endcomment %}
+    {% comment %} 그룹화의 기준을 location으로 설정 {% endcomment %}
     {% assign current_group = entry.location | default: "" %}
 
-    {% comment %} 날짜 처리는 기존 로직 유지 {% endcomment %}
+    {% comment %} 날짜 처리 로직 유지 {% endcomment %}
     {% assign s_date = entry.start_date | default: entry.startDate %}
     {% assign e_date = entry.end_date | default: entry.endDate %}
     {% assign startYear = s_date | split: '-' | first %}
@@ -31,15 +31,13 @@
                     </span>
                   </td>
                 </tr>
-                {% if entry.location %}
                 <tr>
                   <td>
                     <p class="location">
-                      <i class="fa-solid fa-location-dot iconlocation"></i> {{ entry.location }}
+                      <i class="fa-solid fa-location-dot iconlocation"></i> {{ current_group }}
                     </p>
                   </td>
                 </tr>
-                {% endif %}
               </tbody>
             </table>
             {% assign last_group = current_group %}
@@ -56,6 +54,7 @@
             <h6 class="title font-weight-bold">{{ position_title }}</h6>
           {% endif %}
 
+          {% assign company_name = entry.name | default: entry.company | default: entry.organization %}
           {% if company_name %}
             <h6 class="font-weight-bold" style="font-size: 0.95rem">{{ company_name }}</h6>
           {% endif %}
