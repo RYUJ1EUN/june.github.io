@@ -21,7 +21,8 @@ cv:
 
       - institution: Depart. of Financial Information Security, Kookmin University
         location: Seoul, South Korea
-        area: A Study of Public-Key Cryptographic Primitive based on Combinatorics
+        highlights:
+          - A Study of Public-Key Cryptographic Primitive based on Combinatorics
         studyType: M.S
         start_date: 2022-03
         end_date: 2024-02
@@ -275,16 +276,8 @@ cv:
         publisher: 국민대학교 산학협력단
         releaseDate: 2025-01-20
         summary: 본 발명은 이미지 센서 기반 난수발생기 헬스 테스트 장치 및 방법에 관한 것으로, 상기 장치는 이미지 센서로부터 수집된 픽셀별 데이터를 디지털화(digitization) 하여 난수 생성을 위한 픽셀 단위의 잡음원을 생성하는 잡음원 수집부; 상기 잡음원에 대한 헬스 테스트를 수행하여 난수 생성 과정에서의 사용 가능성을 결정하는 헬스 테스트부; 및 상기 헬스 테스트를 통과한 잡음원만을 이용한 난수 생성 과정을 통해 난수를 반복적으로 생성하는 난수 생성부;를 포함한다. 따라서, 본 발명은 이미지 센서를 잡음원으로 사용하는 난수발생기의 엔트로피 소스를 검정하여 난수발생기가 정상적으로 동작하고 있는지 확인하는 기능을 제공할 수 있다.
-      
-      - title: '[SW] C-2023-058431: 카이버(KYBER)가 적용된 모드버스(Modbus) 패킷 중계용 티엘에스(TLS)'
-        releaseDate: 2023-12-11
-      - title: '[SW] C-2023-058432: 의사난수발생기(DRBG)에 경량 블록 암호 참(CHAM)을 사용하는 카이버(KYBER)'
-        releaseDate: 2023-12-11
-      - title: '[SW] C-2022-053510: NTRU가 적용된 Modbus-TLS 통신'
-        releaseDate: 2022-12-14
 
-    Projects:
-      
+    Projects:      
       - name: 양자내성암호Kyber를 이용한 스마트카드 인증 기술개발
         summary: 저사양 단말 환경에 PQC 인증 기술을 적용 위한 외부가속기 활용 모델 개발 및 구현
         highlights:
@@ -405,6 +398,13 @@ cv:
       - name: '[Class] MS-20483: .NET Framework Programming with Visual C# .NET'
         start_date: 2023-10-16
         end_date: 2023-10-20
+        
+      - title: '[SW Registration] C-2023-058431: 카이버(KYBER)가 적용된 모드버스(Modbus) 패킷 중계용 티엘에스(TLS)'
+        releaseDate: 2023-12-11
+      - title: '[SW Registration] C-2023-058432: 의사난수발생기(DRBG)에 경량 블록 암호 참(CHAM)을 사용하는 카이버(KYBER)'
+        releaseDate: 2023-12-11
+      - title: '[SW Registration] C-2022-053510: NTRU가 적용된 Modbus-TLS 통신'
+        releaseDate: 2022-12-14
 
       - name: '[Conference] MILCOM 2025'
         start_date: 2025-10-06
