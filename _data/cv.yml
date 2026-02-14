@@ -402,12 +402,15 @@ cv:
         
       - name: '[SW Registration] C-2023-058431: 카이버(KYBER)가 적용된 모드버스(Modbus) 패킷 중계용 티엘에스(TLS)'
         start_date: 2023-12-11
+        end_date: 2023-12-11
         location: Software Registration
       - name: '[SW Registration] C-2023-058432: 의사난수발생기(DRBG)에 경량 블록 암호 참(CHAM)을 사용하는 카이버(KYBER)'
         start_date: 2023-12-11
+        end_date: 2023-12-11
         location: Software Registration
       - name: '[SW Registration] C-2022-053510: NTRU가 적용된 Modbus-TLS 통신'
         start_date: 2022-12-14
+        end_date: 2022-12-14
         location: Software Registration
 
       - name: '[Conference] MILCOM 2025'
