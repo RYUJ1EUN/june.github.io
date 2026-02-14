@@ -383,67 +383,67 @@ cv:
     Experience:
       - name: '[Certification Test] 양자기술 기반 보안문제 차단 IP 카메라 V1.0 (KTC)'
         start_date: 2025-11-07
-        location: Certification Test
+        # location: Certification Test
       - name: '[Certification Test] 이미지 센서 기반 난수발생기 건전성 평가 함수 (TTA)'
         start_date: 2023-11-15
-        location: Certification Test
+        # location: Certification Test
       - name: '[Certification Test] KMU-CHAM-DRBG 난수발생기 (TTA)'
         start_date: 2021-11-15
-        location: Certification Test
+        # location: Certification Test
 
       - name: '[Class] 2024년 국가 암호기술 전문인력 양성과정 (10기)'
         start_date: 2024-05-01
         end_date: 2024-09-30
-        location: Class
+        # location: Class
       - name: '[Class] MS-20483: .NET Framework Programming with Visual C# .NET'
         start_date: 2023-10-16
         end_date: 2023-10-20
-        location: Class
+        # location: Class
         
       - name: '[SW Registration] C-2023-058431: 카이버(KYBER)가 적용된 모드버스(Modbus) 패킷 중계용 티엘에스(TLS)'
         start_date: 2023-12-11
         end_date: 2023-12-11
-        location: Software Registration
+        # location: Software Registration
       - name: '[SW Registration] C-2023-058432: 의사난수발생기(DRBG)에 경량 블록 암호 참(CHAM)을 사용하는 카이버(KYBER)'
         start_date: 2023-12-11
         end_date: 2023-12-11
-        location: Software Registration
+        # location: Software Registration
       - name: '[SW Registration] C-2022-053510: NTRU가 적용된 Modbus-TLS 통신'
         start_date: 2022-12-14
         end_date: 2022-12-14
-        location: Software Registration
+        # location: Software Registration
 
       - name: '[Conference] MILCOM 2025'
         start_date: 2025-10-06
         end_date: 2025-10-10
-        location: Conference
+        # location: Conference
       - name: '[Conference] ICMC 2025'
         start_date: 2025-04-07
         end_date: 2025-04-10
-        location: Conference
+        # location: Conference
       - name: '[Conference] Crypto 2024'
         start_date: 2024-08-18
         end_date: 2024-08-22
-        location: Conference
+        # location: Conference
       - name: '[Conference] IEEE INFOCOM 2023'
         start_date: 2023-05-17
         end_date: 2023-05-20
-        location: Conference
+        # location: Conference
 
       - name: '[Rab] 난수성분석및안전성평가연구실'
         start_date: 2022-03
         url: https://randanalysis.kookmin.ac.kr/
         summary: "랩장(23.11-)"
-        location: Rab
+        # location: Rab
 
       - name: '[Club] 학술 동아리 RB'
         start_date: 2021-01
         end_date: 2022-02
         summary: "대표(21.06-22.02)"
-        location: Club
+        # location: Club
 
       - name: '[Club] 연합 동아리 CCC'
         start_date: 2018-03
         end_date: 2022-02
         summary: "교내 회계(19.06-20.06), 교내 대표(20.07-21.06)"
-        location: Club
+        # location: Club
