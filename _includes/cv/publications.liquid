@@ -5,33 +5,22 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign last_year = "" %}
   {% for entry in entries %}
-    {% capture pub_date %}
-      {% if entry.releaseDate %}{{ entry.releaseDate }}{% elsif entry.date %}{{ entry.date }}{% endif %}
-    {% endcapture %}
-    {% assign current_year = pub_date | split: '-' | slice: 0, 1 | join: '' %}
+    {% capture current_year %}{% if entry.releaseDate %}{{ entry.releaseDate | split: "-" | first }}{% elsif entry.date %}{{ entry.date | split: "-" | first }}{% endif %}{% endcapture %}
 
-    {% if current_year != last_year %}
-      <li class="list-group-item" style="border-top: 1px solid var(--global-divider-color); padding-top: 2rem; border-bottom: none;">
-        <div class="row">
-          <div class="col-xs-2 col-sm-2 col-md-2 text-center">
+    <li class="list-group-item" style="border: none; {% if current_year != last_year %}border-top: 1px solid var(--global-divider-color) !important; padding-top: 2rem;{% else %}padding-top: 0;{% endif %} padding-bottom: 1rem;">
+      <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2 text-center">
+          {% if current_year != last_year %}
             <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
               {{ current_year }}
             </span>
-          </div>
-          <div class="col-xs-10 col-sm-10 col-md-10">
-            {% include cv_publication_content.liquid entry=entry %}
-          </div>
+            {% assign last_year = current_year %}
+          {% endif %}
         </div>
-      </li>
-      {% assign last_year = current_year %}
-    {% else %}
-      <li class="list-group-item" style="border: none; padding-top: 0; padding-bottom: 1.5rem;">
-        <div class="row">
-          <div class="col-xs-2 col-sm-2 col-md-2"></div> <div class="col-xs-10 col-sm-10 col-md-10">
-            {% include cv_publication_content.liquid entry=entry %}
-          </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+          {% include cv_publication_content.liquid entry=entry %}
         </div>
-      </li>
-    {% endif %}
+      </div>
+    </li>
   {% endfor %}
 </ul>
