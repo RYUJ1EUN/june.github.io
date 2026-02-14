@@ -5,28 +5,20 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign last_year = "" %}
   {% for entry in entries %}
-    <li class="list-group-item">
-      <div class="row">
-        {% capture pub_date %}
-          {% if entry.releaseDate %}{{ entry.releaseDate }}{% elsif entry.date %}{{ entry.date }}{% endif %}
-        {% endcapture %}
-        
-        {% assign current_year = pub_date | split: '-' | slice: 0, 1 | join: '' %}
+    {% if entry.releaseDate %}
+      {% assign this_year = entry.releaseDate | split: '-' | first %}
+    {% else %}
+      {% assign this_year = entry.date | split: '-' | first %}
+    {% endif %}
 
+    <li class="list-group-item" style="border: none; {% if this_year != last_year %}border-top: 1px solid var(--global-divider-color) !important; padding-top: 2rem;{% else %}padding-top: 0;{% endif %}">
+      <div class="row">
         <div class="col-xs-2 col-sm-2 col-md-2 text-center">
-          {% if current_year != "" and current_year != last_year %}
-            <table class="table-cv">
-              <tbody>
-                <tr>
-                  <td>
-                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
-                      {{ current_year }}
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            {% assign last_year = current_year %}
+          {% if this_year != last_year %}
+            <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+              {{ this_year }}
+            </span>
+            {% assign last_year = this_year %}
           {% endif %}
         </div>
 
@@ -46,7 +38,7 @@
           {% endif %}
 
           {% if entry.summary %}
-            <p class="ml-1 ml-md-4">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+            <div class="ml-1 ml-md-4">{{ entry.summary | markdownify }}</div>
           {% endif %}
         </div>
       </div>
