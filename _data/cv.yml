@@ -17,21 +17,17 @@ cv:
         # end_date: ing
         # score: ""
         highlights:
-          - Professor: Yongjin Yeom
+          - 'Advisor: Prof. Yongjin Yeom'
 
       - institution: Depart. of Financial Information Security, Kookmin University
         location: Seoul, South Korea
-        url: https://randanalysis.kookmin.ac.kr/
         area: A Study of Public-Key Cryptographic Primitive based on Combinatorics
         studyType: M.S
         start_date: 2022-03
         end_date: 2024-02
-        highlights:
-          - Professor: Yongjin Yeom
         
       - institution: Depart. of Information Security, Cryptography and Mathematics, Kookmin University
         location: Seoul, South Korea
-        url: https://randanalysis.kookmin.ac.kr/
         studyType: B.S
         start_date: 2018-03
         end_date: 2022-02
