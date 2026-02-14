@@ -58,7 +58,7 @@
 
           {% assign company_name = entry.name | default: entry.company | default: entry.organization %}
           {% if company_name %}
-            <h6 style="font-size: 0.95rem">{{ company_name }}</h6>
+            <h6 class="font-weight-bold" style="font-size: 0.95rem">{{ company_name }}</h6>
           {% endif %}
 
           {% if entry.summary %}

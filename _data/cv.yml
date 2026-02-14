@@ -282,117 +282,111 @@ cv:
     Projects:      
       - name: 양자내성암호Kyber를 이용한 스마트카드 인증 기술개발 (`25-`26)
         summary: 저사양 단말 환경에 PQC 인증 기술을 적용 위한 외부가속기 활용 모델 개발 및 구현
-        highlights:
-          - PQC
+        # highlights:
+        #   - PQC
         start_date: 2025-09-01
         end_date: 2026-08-31
       
       - name: 암호기술 가이드라인 개발 체계 구성 및 방안 연구 (`25)
         summary: 암호 기술에 관한 가이드라인 개발 동향 조사 및 국내 현황을 반영한 절차, 방법론, 체계 구성 방안 연구
-        highlights:
-          - Policy
-          - Guideline
+        # highlights:
+        #   - Policy
+        #   - Guideline
         start_date: 2025-05-01
         end_date: 2025-11-30
       
       - name: 글로벌 보안시스템 관련 국제 표준 및 주요국 제도 연구 (`25)
         summary: 주요국의 보안시스템 수출입 정책 및 국제 표준 동향 조사 및 국내 현황 분석
-        highlights:
-          - Policy
-          - Cryptographic module; HW, SW, etc.
+        # highlights:
+        #   - Policy
+        #   - Cryptographic module; HW, SW, etc.
         start_date: 2025-04-01
         end_date: 2025-10-31
       
       - name: 일대다(1:N) 구조의 양자암호통신 시스템 구축 (`24-`25)
         summary: QKD 기반의 일대다(1:N) 구조의 양자암호통신 시스템 구축을 위한 후처리 기술 개발
-        highlights:
-          - QKD post-processing
+        # highlights:
+        #   - QKD post-processing
         start_date: 2024-09-01
         end_date: 2025-08-31
       
       - name: 양자내성암호 구현 기술 개발 (`24)
         summary: PQC 이론 분석 자료화 및 표준 알고리즘 3종 구현물의 기존 암호 모듈 통합 (기업 과제)
-        highlights:
-          - PQC
-          - Cryptographic module
+        # highlights:
+        #   - PQC
+        #   - Cryptographic module
         start_date: 2024-04-16
         end_date: 2024-12-15
       
       - name: 양자내성암호 전환 및 확산방안 연구 (`24)
         summary: 미국 NCCoE의 PQC 전환 프로젝트 현황 분석을 기반으로 국내 양자내성암호의 전환을 위한 절차 및 방법 연구
-        highlights:
-          - PQC
-          - Policy
+        # highlights:
+        #   - PQC
+        #   - Policy
         start_date: 2024-04-01
         end_date: 2024-10-31
       
       - name: 화이트박스 암호 설계/구현 기술 공동연구 (`24)
         summary: 음함수 기반 화이트박스 전자서명 구현 기술 개발 (기업 과제)
-        highlights:
-          - WBC
+        # highlights:
+        #   - WBC
         start_date: 2024-03-01
         end_date: 2024-12-31
       
       - name: KpqC 알고리즘 적용 및 확산 방안 연구 (`23)
         summary: NIST 및 주요국의 PQC 표준화와 전환 정책 시행 현황 분석에 기반한 국내 KpqC 알고리즘의 저변 확대 기반 조성 연구
-        highlights:
-          - PQC
-          - Policy
+        # highlights:
+        #   - PQC
+        #   - Policy
         start_date: 2023-05-01
         end_date: 2023-11-30
       
       - name: 화이트박스 암호 설계/분석 기술 공동연구 (`23-`24)
         summary: 음함수 기반 화이트박스 블록암호 구현 기술 분석 및 개발 (기업 과제)
-        highlights:
-          - WBC
+        # highlights:
+        #   - WBC
         start_date: 2023-03-01
         end_date: 2024-02-28
       
       - name: 양자기술 기반 보안문제 차단 IP카메라 개발 (`22-`26)
         summary: IP카메라 내 은닉채널 존재 가능성을 원천 차단한 이미지센서 기반 QRNG 활용 암호 체계 구축
-        highlights:
-          - RNG
+        # highlights:
+        #   - RNG
         start_date: 2022-07-01
         end_date: 2026-01-31
       
       - name: 양자내성암호 활용을 위한 전환 정책 및 절차에 관한 연구 (`22)
         summary: 암호전환정책 분석 및 하이브리드 방식 적용 방안 분석을 통한 신규 암호 알고리즘 산업계 지원 방향 연구
-        highlights:
-          - PQC
-          - Policy
+        # highlights:
+        #   - PQC
+        #   - Policy
         start_date: 2022-04-01
         end_date: 2022-10-31
       
       - name: 국가·공공 정보시스템 안전성 및 활용성 제고를 위한 차세대 암호체계 개발 (`22-`24)
         summary: 국가ㆍ공공 정보시스템 고도화를 위한 암호 알고리즘, 암호모듈 개발 및 차세대 암호 인증 기술 개발 연구
-        highlights:
-          - QKD
-          - WBC
+        # highlights:
+        #   - QKD
+        #   - WBC
         start_date: 2022-03-01
         end_date: 2024-12-31
       
       - name: 양자컴퓨팅 환경에 대비한 분산자원 플랫폼 관리용 암호 기술 연구 (`21-`24)
         summary: BEMS 등의 분산자원 플랫폼 관리를 위한 QKD-PQC 기반 보안 인프라 개발 연구
-        highlights:
-          - PQC
-          - QKD
-          - Modbus protocol
+        # highlights:
+        #   - PQC
+        #   - QKD
+        #   - Modbus protocol
         start_date: 2021-09-01
         end_date: 2024-02-23
 
     Experience:
-      - name: '[Certification Test] 양자기술 기반 보안문제 차단 IP 카메라 V1.0'
-        icon: fa-solid fa-hashtag
-        publisher: KTC
-        date: 2025-11-07
-      - name: '[Certification Test] 이미지 센서 기반 난수발생기 건전성 평가 함수'
-        icon: fa-solid fa-hashtag
-        publisher: TTA
-        date: 2023-11-15
-      - name: '[Certification Test] KMU-CHAM-DRBG 난수발생기'
-        icon: fa-solid fa-hashtag
-        publisher: TTA
-        date: 2021-11-15
+      - name: '[Certification Test] 양자기술 기반 보안문제 차단 IP 카메라 V1.0 (KTC)'
+        start_date: 2025-11-07
+      - name: '[Certification Test] 이미지 센서 기반 난수발생기 건전성 평가 함수 (TTA)'
+        start_date: 2023-11-15
+      - name: '[Certification Test] KMU-CHAM-DRBG 난수발생기 (TTA)'
+        start_date: 2021-11-15
 
       - name: '[Class] 2024년 국가 암호기술 전문인력 양성과정 (10기)'
         start_date: 2024-05-01
@@ -402,11 +396,11 @@ cv:
         end_date: 2023-10-20
         
       - name: '[SW Registration] C-2023-058431: 카이버(KYBER)가 적용된 모드버스(Modbus) 패킷 중계용 티엘에스(TLS)'
-        date: 2023-12-11
+        start_date: 2023-12-11
       - name: '[SW Registration] C-2023-058432: 의사난수발생기(DRBG)에 경량 블록 암호 참(CHAM)을 사용하는 카이버(KYBER)'
-        date: 2023-12-11
+        start_date: 2023-12-11
       - name: '[SW Registration] C-2022-053510: NTRU가 적용된 Modbus-TLS 통신'
-        date: 2022-12-14
+        start_date: 2022-12-14
 
       - name: '[Conference] MILCOM 2025'
         start_date: 2025-10-06
@@ -424,14 +418,14 @@ cv:
       - name: '[Rab] 난수성분석및안전성평가연구실'
         start_date: 2022-03
         url: https://randanalysis.kookmin.ac.kr/
-        summary: "랩장(`23.11-)"
+        summary: "랩장(23.11-)"
 
       - name: '[Club] 학술 동아리 RB'
         start_date: 2021-01
         end_date: 2022-02
-        summary: "대표(`21.06-`22.02)"
+        summary: "대표(21.06-22.02)"
 
       - name: '[Club] 연합 동아리 CCC'
         start_date: 2018-03
         end_date: 2022-02
-        summary: "교내 회계(`19.06-`20.06), 교내 대표(`20.07-`21.06)"
+        summary: "교내 회계(19.06-20.06), 교내 대표(20.07-21.06)"
