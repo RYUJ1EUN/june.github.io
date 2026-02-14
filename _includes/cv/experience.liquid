@@ -9,8 +9,7 @@
   {% assign last_group = "" %}
   {% for entry in entries %}
     {% comment %} 그룹화의 기준이 되는 name(또는 company) 추출 후 앞 3글자 슬라이스 {% endcomment %}
-    {% assign company_name = entry.name | default: entry.company | default: entry.organization %}
-    {% assign current_group = company_name | slice: 0, 3 %}
+    {% assign current_group = entry.location | default: "" %}
 
     {% comment %} 날짜 처리는 기존 로직 유지 {% endcomment %}
     {% assign s_date = entry.start_date | default: entry.startDate %}
