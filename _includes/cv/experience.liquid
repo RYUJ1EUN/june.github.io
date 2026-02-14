@@ -19,12 +19,12 @@
 
     <li class="list-group-item" style="border: none; {% if current_group != last_group and current_group != '' %}border-top: 1px solid var(--global-divider-color) !important; padding-top: 2rem;{% else %}padding-top: 0;{% endif %} padding-bottom: 1.5rem;">
       <div class="row">
-        <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
+        <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
           {% if current_group != last_group and current_group != "" %}
             <table class="table-cv">
               <tbody>
                 <tr>
-                  <td style="display: flex; justify-content: center;">
+                  <td>
                     <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
                       {{ date_range }}
                     </span>
@@ -32,7 +32,7 @@
                 </tr>
                 {% if entry.location %}
                 <tr>
-                  <td style="display: flex; justify-content: center;">
+                  <td>
                     <p class="location">
                       <i class="fa-solid fa-location-dot iconlocation"></i> {{ entry.location }}
                     </p>
