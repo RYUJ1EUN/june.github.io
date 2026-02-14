@@ -10,7 +10,6 @@ cv:
     Education:
       - institution: Depart. of Financial Information Security, Kookmin University
         location: Seoul, South Korea
-        url: https://randanalysis.kookmin.ac.kr/
         area: Cryptography
         studyType: Ph.D.
         start_date: 2024-02
@@ -423,8 +422,16 @@ cv:
         end_date: 2023-05-20
 
       - name: '[Rab] 난수성분석및안전성평가연구실'
-        keywords: "랩장(`23.11-)"
+        start_date: 2022-03
+        url: https://randanalysis.kookmin.ac.kr/
+        summary: "랩장(`23.11-)"
+
       - name: '[Club] 학술 동아리 RB'
-        keywords: "대표(`21.06-`22.02)"
+        start_date: 2021-01
+        end_date: 2022-02
+        summary: "대표(`21.06-`22.02)"
+
       - name: '[Club] 연합 동아리 CCC'
-        keywords: "교내 회계(`19.06-`20.06), 교내 대표(`20.07-`21.06)"
+        start_date: 2018-03
+        end_date: 2022-02
+        summary: "교내 회계(`19.06-`20.06), 교내 대표(`20.07-`21.06)"
