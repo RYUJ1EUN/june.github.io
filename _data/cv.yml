@@ -17,6 +17,7 @@ cv:
         # end_date: ing
         # score: ""
         highlights:
+          - 'Cryptography'
           - 'Advisor: Prof. Yongjin Yeom'
 
       - institution: Depart. of Financial Information Security, Kookmin University
@@ -34,7 +35,7 @@ cv:
         studyType: B.S
         start_date: 2018-03
         end_date: 2022-02
-
+    
     Interests:
       - name: Post-Quantum Cryptography (PQC)
         icon: fa-solid fa-tag
