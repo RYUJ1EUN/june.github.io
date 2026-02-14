@@ -5,20 +5,49 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign last_year = "" %}
   {% for entry in entries %}
-    {% capture current_year %}{% if entry.releaseDate %}{{ entry.releaseDate | split: "-" | first }}{% elsif entry.date %}{{ entry.date | split: "-" | first }}{% endif %}{% endcapture %}
-
-    <li class="list-group-item" style="border: none; {% if current_year != last_year %}border-top: 1px solid var(--global-divider-color) !important; padding-top: 2rem;{% else %}padding-top: 0;{% endif %} padding-bottom: 1rem;">
+    <li class="list-group-item">
       <div class="row">
+        {% capture pub_date %}
+          {% if entry.releaseDate %}{{ entry.releaseDate }}{% elsif entry.date %}{{ entry.date }}{% endif %}
+        {% endcapture %}
+        
+        {% assign current_year = pub_date | split: '-' | slice: 0, 1 | join: '' %}
+
         <div class="col-xs-2 col-sm-2 col-md-2 text-center">
-          {% if current_year != last_year %}
-            <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
-              {{ current_year }}
-            </span>
+          {% if current_year != "" and current_year != last_year %}
+            <table class="table-cv">
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+                      {{ current_year }}
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
             {% assign last_year = current_year %}
           {% endif %}
         </div>
+
         <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
-          {% include cv_publication_content.liquid entry=entry %}
+          {% if entry.url %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">
+              <a href="{{ entry.url }}">{{ entry.title | default: entry.name }}</a>
+            </h6>
+          {% elsif entry.title %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
+          {% endif %}
+
+          {% if entry.publisher %}
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+              <em>{{ entry.publisher }}</em>
+            </h6>
+          {% endif %}
+
+          {% if entry.summary %}
+            <p class="ml-1 ml-md-4">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+          {% endif %}
         </div>
       </div>
     </li>
