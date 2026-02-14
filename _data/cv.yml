@@ -383,12 +383,15 @@ cv:
     Experience:
       - name: '[Certification Test] 양자기술 기반 보안문제 차단 IP 카메라 V1.0 (KTC)'
         start_date: 2025-11-07
+        end_date: 2025-11-07
         # location: Certification Test
       - name: '[Certification Test] 이미지 센서 기반 난수발생기 건전성 평가 함수 (TTA)'
         start_date: 2023-11-15
+        end_date: 2023-11-15
         # location: Certification Test
       - name: '[Certification Test] KMU-CHAM-DRBG 난수발생기 (TTA)'
         start_date: 2021-11-15
+        end_date: 2021-11-15
         # location: Certification Test
 
       - name: '[Class] 2024년 국가 암호기술 전문인력 양성과정 (10기)'
