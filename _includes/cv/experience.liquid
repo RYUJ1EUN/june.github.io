@@ -8,18 +8,16 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign last_group = "" %}
   {% for entry in entries %}
-    {% comment %} 그룹화의 기준이 되는 name(또는 company) 추출 후 앞 3글자 슬라이스 {% endcomment %}
     {% assign company_name = entry.name | default: entry.company | default: entry.organization %}
     {% assign current_group = company_name | slice: 0, 3 %}
 
-    {% comment %} 날짜 처리는 기존 로직 유지 {% endcomment %}
     {% assign s_date = entry.start_date | default: entry.startDate %}
     {% assign e_date = entry.end_date | default: entry.endDate %}
     {% assign startYear = s_date | split: '-' | first %}
     {% assign endYear = e_date | split: '-' | first | default: 'Present' %}
-    {% assign full_date_range = startYear | append: ' - ' | append: endYear %}
+    {% assign date_range = startYear | append: ' - ' | append: endYear %}
 
-    <li class="list-group-item" style="border: none; {% if current_group != last_group and current_group != "" %}border-top: 1px solid var(--global-divider-color) !important; padding-top: 2rem;{% else %}padding-top: 0;{% endif %} padding-bottom: 1.5rem;">
+    <li class="list-group-item" style="border: none; {% if current_group != last_group and current_group != '' %}border-top: 1px solid var(--global-divider-color) !important; padding-top: 2rem;{% else %}padding-top: 0;{% endif %} padding-bottom: 1.5rem;">
       <div class="row">
         <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
           {% if current_group != last_group and current_group != "" %}
@@ -28,7 +26,7 @@
                 <tr>
                   <td>
                     <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
-                      {{ full_date_range }}
+                      {{ date_range }}
                     </span>
                   </td>
                 </tr>
@@ -48,13 +46,11 @@
         </div>
 
         <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
-          {% assign position_title = entry.position %}
+          {% assign pos = entry.position %}
           {% if entry.url %}
-            <h6 class="title font-weight-bold">
-              <a href="{{ entry.url }}">{{ position_title }}</a>
-            </h6>
-          {% elsif position_title %}
-            <h6 class="title font-weight-bold">{{ position_title }}</h6>
+            <h6 class="title font-weight-bold"><a href="{{ entry.url }}">{{ pos }}</a></h6>
+          {% elsif pos %}
+            <h6 class="title font-weight-bold">{{ pos }}</h6>
           {% endif %}
 
           {% if company_name %}
@@ -70,9 +66,7 @@
           {% if entry.highlights %}
             <ul class="items">
               {% for item in entry.highlights %}
-                <li>
-                  <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
-                </li>
+                <li><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
               {% endfor %}
             </ul>
           {% endif %}
