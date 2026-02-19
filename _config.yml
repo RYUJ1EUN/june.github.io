@@ -83,7 +83,8 @@ pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: n8dLJYW35x7DJL8Qm6jd505pT0eW3ucsWsW4_GaH3MA # <meta name="google-site-verification" content="n8dLJYW35x7DJL8Qm6jd505pT0eW3ucsWsW4_GaH3MA" /> your google-site-verification ID (Google Search Console)
+enable_google_verification: true # add
+google_site_verification: "n8dLJYW35x7DJL8Qm6jd505pT0eW3ucsWsW4_GaH3MA" # <meta name="google-site-verification" content="n8dLJYW35x7DJL8Qm6jd505pT0eW3ucsWsW4_GaH3MA" /> your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
