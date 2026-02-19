@@ -26,8 +26,7 @@ latest_posts:
 ---
 
 
-Hi, I’m Ji-eun Ryu.
-Please call me <strong style="color: #B000B0;">June.</strong>
+Hi, I’m Jieun Ryu. Please call me June.
 I am a Ph.D. student specializing in Mathematics and Cryptography. 
 My research focus includes:
 
