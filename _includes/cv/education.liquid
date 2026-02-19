@@ -77,7 +77,7 @@
               {% endfor %}
               {% for item in entry.highlights %}
                 <li>
-                  <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+                  <span class="item">{% capture m_item %}{{ item }}{% endcapture %}{{ m_item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
                 </li>
               {% endfor %}
             </ul>
