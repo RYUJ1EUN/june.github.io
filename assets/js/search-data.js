@@ -51,7 +51,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/june.github.io/projects/";
               },
-            },{id: "post-secret-sharing",
+            },{id: "post-kpqc-특강-정리",
+        
+          title: "KpqC 특강 정리",
+        
+        description: "&#39;2025년도 상반기 정보보호 전문가를 위한 암호교육&#39; 특강 내용 정리",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2026/pqc/";
+          
+        },
+      },{id: "post-secret-sharing",
         
           title: "Secret Sharing",
         
@@ -71,6 +82,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/june.github.io/blog/2026/ais31/";
+          
+        },
+      },{id: "post-pqc-동향-39-24-10",
+        
+          title: "PQC 동향 (~ &#39;24.10)",
+        
+        description: "Study note: AIS 31 (version 3.0)",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2025/pqc-updates/";
           
         },
       },{id: "books-the-godfather",
