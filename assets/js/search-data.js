@@ -99,11 +99,16 @@ ninja.data = [{
           description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
           section: "Teachings",handler: () => {
               window.location.href = "/june.github.io/teachings/introduction-to-machine-learning/";
-            },},{id: "til-test",
-          title: 'TEST',
+            },},{id: "til-devops-기초-1",
+          title: 'DevOps 기초 - 1',
           description: "",
           section: "Til",handler: () => {
-              window.location.href = "/june.github.io/til/2026-02-13-first-note";
+              window.location.href = "/june.github.io/til/2026-02-19-1";
+            },},{id: "til-javacard-함수-시간-속도-측정",
+          title: 'JavaCard 함수 시간 속도 측정',
+          description: "",
+          section: "Til",handler: () => {
+              window.location.href = "/june.github.io/til/2026-02-19-2";
             },},{
         id: 'social-cv',
         title: 'CV',
