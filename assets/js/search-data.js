@@ -106,11 +106,11 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2024/information-theory/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
+      },{id: "books-빛의-제국-your-republic-is-calling-you",
+          title: '빛의 제국 (Your Republic is Calling You)',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/june.github.io/books/the_godfather/";
+              window.location.href = "/june.github.io/books/the_empire_of_light/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
