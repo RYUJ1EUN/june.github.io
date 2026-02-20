@@ -11,7 +11,7 @@ categories: [Study]
 📖 Cover, Thomas M. *Elements of information theory*. John Wiley & Sons, 1999.
 
 
-![일반적인 통신 시스템의 도식]('/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_153653.png'){: width="90%" }
+![일반적인 통신 시스템의 도식]({{'/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_153653.png' | relative_url }}){: width="90%" }
 
 이상적인 channel은 transmitter로부터 receiver까지 오류 없이 정보가 전달되는 channel이지만, 일반적인 channel은 noise channel임
 
@@ -65,7 +65,7 @@ Y는 R.V.이고, 조건부의 x는 value
 X=2인 행에 대한 확률은
 X=2일 때의 Y에 대한 조건부 분포를 나타냄
 
-![marginal dist. and joint dist.]('/assets/img/post_information_theory/Untitled.png')
+![marginal dist. and joint dist.]({{'/assets/img/post_information_theory/Untitled.png' | relative_url }})
 
 - ex
     
@@ -119,7 +119,7 @@ X=2일 때의 Y에 대한 조건부 분포를 나타냄
             
     4. The information measure $I(p)$ is continuous
     
-    ![log_a function]('/assets/img/post_information_theory/PZLMYNWXnYn2pWQVXLCAm7rDpopTP36K_477OXTN8SD2LDdPCXXy-K3JFuJlMHfQRXRSGf7cP9WIUFRtU1-FcMDwuJdBazKIHPQ8psEu_w0CKdiMDVe82MpHK_qxUIluLzc-X_Zfm_S-NWXNkA9GVA.webp')
+    ![log_a function]({{'/assets/img/post_information_theory/PZLMYNWXnYn2pWQVXLCAm7rDpopTP36K_477OXTN8SD2LDdPCXXy-K3JFuJlMHfQRXRSGf7cP9WIUFRtU1-FcMDwuJdBazKIHPQ8psEu_w0CKdiMDVe82MpHK_qxUIluLzc-X_Zfm_S-NWXNkA9GVA.webp' | relative_url }})
     
     log의 밑을 2로 사용하면 정보량의 비트 수를 표현할 수 있음
     
@@ -149,7 +149,7 @@ X=2일 때의 Y에 대한 조건부 분포를 나타냄
     
     *(case 2)의 그림*
     
-    ![(case 2)의 그림]('/assets/img/post_information_theory/Untitled%201.png')
+    ![(case 2)의 그림]({{'/assets/img/post_information_theory/Untitled%201.png' | relative_url }})
     
 - $I(X;Y)$ : mutual information (average of mutual information $X=x_i, Y=y_j$) — for R.V.s
     
@@ -220,9 +220,9 @@ X=2일 때의 Y에 대한 조건부 분포를 나타냄
     | --- | --- | --- |
     | P(Y) | 1/2 | 1/2 |
     
-    ![스크린샷 2023-09-21 183918.png]('/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_183918.png')
+    ![스크린샷 2023-09-21 183918.png]({{'/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_183918.png' | relative_url }})
     
-    ![스크린샷 2023-09-21 184010.png]('/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_184010.png')
+    ![스크린샷 2023-09-21 184010.png]({{'/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_184010.png' | relative_url }})
     
     $P(Y=0)=P(Y=0|X=0)P(X=0)+P(Y=0|X=1)P(X=1)\\ \qquad\qquad\ \ =(1-p)(1/2)+p(1/2)=1/2$
     
@@ -261,7 +261,7 @@ $H(X):=-\sum_x p(x)\log p(x)$        ; $\log\frac{1}{p(x)}$의 기대값(평균)
     - 데이터를 최대로 압축 때의 크기 (바른 복원을 보장할 수 있어야 함)
 - Example 1.1.2 (*x의 확률이 uniform하지 않은 경우 code word의 길이가 줄어드는 상황* )
     
-    ![example]('/assets/img/post_information_theory/Untitled%202.png')
+    ![example]({{'/assets/img/post_information_theory/Untitled%202.png' | relative_url }})
     
     | $x_i$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -279,7 +279,7 @@ $H(X):=-\sum_x p(x)\log p(x)$        ; $\log\frac{1}{p(x)}$의 기대값(평균)
     
     $H(X)=H(p)$
     
-    ![1-bit Shannon entropy]('/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_184032.png')
+    ![1-bit Shannon entropy]({{'/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_184032.png' | relative_url }})
     
 
 #### Joint entropy
@@ -318,7 +318,7 @@ joint dist (X,Y)의 불확실성
     $H(X,Y) \\ =-\sum_{x,y}\log p(x,y) \\ = -\sum_{x,y} p(x,y)\log p(x)p(y|x) \\ = -\sum_{x,y} p(x,y)\log p(x) - \sum_{x,y} p(x,y)\log p(y|x) \\ = -\sum_x p(x)\log p(x) - \sum_{x,y} p(x,y)\log p(y|x) \\ = H(X)+H(Y|X)$
     
 
-![conditional entropy]('/assets/img/post_information_theory/Untitled%203.png')
+![conditional entropy]({{'/assets/img/post_information_theory/Untitled%203.png' | relative_url }})
 
 - **Corollary (Diagram about Entropy & M.I.)**
     
@@ -331,7 +331,7 @@ joint dist (X,Y)의 불확실성
     
     $I(X;X)=H(X)$
     
-    ![entropy diagram]('/assets/img/post_information_theory/Untitled%204.png')
+    ![entropy diagram]({{'/assets/img/post_information_theory/Untitled%204.png' | relative_url }})
     
 
 **Chain rule for entropy**
@@ -385,7 +385,7 @@ $H(X_1, \ldots, X_n)=\sum_{i=1}^n H(X_i|X{i-1},\ldots, X_1)$
     
     $p(x_i):=P({X}=x_i)$
     
-    ![prob dist.]('/assets/img/post_information_theory/Untitled%205.png')
+    ![prob dist.]({{'/assets/img/post_information_theory/Untitled%205.png' | relative_url }})
     
 - $\sum p(x)\log\frac{1}{p(x)} + \sum p(x)\log\frac{p(x)}{q(x)}=\sum p(x)\log\frac{1}{q(x)}$
     
@@ -502,11 +502,11 @@ $f(\lambda x_1+(1-\lambda)x_2)\le \lambda f(x_1)+(1-\lambda)f(x_2)$ where $0\le 
 
 $f:(a,b)\rightarrow\mathbb{R}$ is concave if $-f$ is convex
 
-![convex]('/assets/img/post_information_theory/Untitled%206.png')
+![convex]({{'/assets/img/post_information_theory/Untitled%206.png' | relative_url }})
 
 convex
 
-![concave]('/assets/img/post_information_theory/Untitled%207.png')
+![concave]({{'/assets/img/post_information_theory/Untitled%207.png' | relative_url }})
 
 concave
 
@@ -526,7 +526,7 @@ $f\in C^2$ ($f',f''$ exist and are continuous) and $f''(x)\ge0$ on $(a,b)$, then
     
     ($x_1^*$ lines between $x_0, x_1$)
     
-    ![Jenson]('/assets/img/post_information_theory/Untitled%208.png')
+    ![Jenson]({{'/assets/img/post_information_theory/Untitled%208.png' | relative_url }})
     
     $f(x_2)=f(x_0)+f'(x_0)(x_2-x_0)+(f''(x_2^*)/2)(x_2-x_0)^2$
     
@@ -700,7 +700,7 @@ $\sum_{i=1}^n a_i\left(\log\frac{a_i}{b_i}\right) \ge \left(\sum_{i=1}n a_i\righ
     
     $\therefore\ f''(t)>0 \;\Rightarrow \;f$ is convex
     
-    ![Graph shape]('/assets/img/post_information_theory/Untitled%209.png')
+    ![Graph shape]({{'/assets/img/post_information_theory/Untitled%209.png' | relative_url }})
     
     By Jensen’s inequality $\mathbb{E}[f(X)] \ge f(\mathbb{E}[X])$ for convex $f$,
     
@@ -827,7 +827,7 @@ output이 확률적으로 input에 의존하는 시스템
     
     noisy n-symbol channel
     
-    ![n-symbol channel]('/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_183927.png')
+    ![n-symbol channel]({{'/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_183927.png' | relative_url }})
     
     Y를 받으면 X를 결정할 수 있음
     
@@ -858,7 +858,7 @@ output이 확률적으로 input에 의존하는 시스템
 
 #### Data flow
 
-![noisy channel]('/assets/img/post_information_theory/Untitled%2010.png')
+![noisy channel]({{'/assets/img/post_information_theory/Untitled%2010.png' | relative_url }})
 
 - **Def: Markov Chain**
 $X, Y, Z$ : R.V.s 
@@ -1183,7 +1183,7 @@ $I(X;Y\ |Z)>I(X;Y)$ but $I(X;Y\ |Z)\neq I(X;Y)$ is possible
     
     $X\sim f_{\theta}(x)$ : $X$ is a R.V. from a distribution in this family $\{f_{\theta}(x)\}$
     
-    ![coin tossing]('/assets/img/post_information_theory/Untitled%2011.png')
+    ![coin tossing]({{'/assets/img/post_information_theory/Untitled%2011.png' | relative_url }})
     
     coin마다 $\theta$가 정해져 있음
     
