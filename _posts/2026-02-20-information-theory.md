@@ -11,7 +11,7 @@ categories: [Study]
 📖 Cover, Thomas M. *Elements of information theory*. John Wiley & Sons, 1999.
 
 
-![일반적인 통신 시스템의 도식]({{'/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_153653.png' | relative_url }}){: width="90%" }
+<img src="{{ '/assets/img/post_information_theory/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2023-09-21_153653.png' | relative_url }}" width="90%" alt="일반적인 통신 시스템의 도식">
 
 이상적인 channel은 transmitter로부터 receiver까지 오류 없이 정보가 전달되는 channel이지만, 일반적인 channel은 noise channel임
 
