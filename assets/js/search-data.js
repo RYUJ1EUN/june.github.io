@@ -95,6 +95,17 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2025/pqc-updates/";
           
         },
+      },{id: "post-information-theory",
+        
+          title: "Information Theory",
+        
+        description: "Information theory: Probability and Entropy",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2024/information-theory/";
+          
+        },
       },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
