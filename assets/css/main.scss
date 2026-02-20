@@ -78,14 +78,8 @@ footer.fixed-bottom {
 }
 
 
-/* --- 줄 간격은 넓게, 문단 사이 여백은 좁게 설정 --- */
-p {
+/* --- 줄 간격, 문단 사이 여백 설정 --- */
+body, p, li{
   line-height: 2 !important;   /* 줄 간격 (위아래 줄 사이), 보통 기본은 1.5 */
-  margin-bottom: 1.5em !important; /* 문단 간격 (문단과 문단 사이 여백, 기본은 보통 1.5rem 이상) */
-}
-
-/* 리스트 항목 간의 간격도 조절하고 싶다면 추가하세요 */
-li {
-  line-height: 1 !important;
-  // margin-bottom: 0.4rem !important;
+  margin-bottom: 1.2em !important; /* 문단 간격 (문단과 문단 사이 여백, 기본은 보통 1.5rem 이상) */
 }
