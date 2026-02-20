@@ -84,6 +84,28 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2026/ais31/";
           
         },
+      },{id: "post-ntt-ml-kem",
+        
+          title: "NTT ML-KEM",
+        
+        description: "NTT(Number Theoretic Transform) for ML-KEM, ML-DSA",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2025/ntt-ml-kem/";
+          
+        },
+      },{id: "post-ntt",
+        
+          title: "NTT",
+        
+        description: "NTT(Number Theoretic Transform) for ML-KEM, ML-DSA",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2025/ntt/";
+          
+        },
       },{id: "post-pqc-동향-39-24-10",
         
           title: "PQC 동향 (~ &#39;24.10)",
