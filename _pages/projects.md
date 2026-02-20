@@ -2,7 +2,7 @@
 layout: page
 title: EXHIBITIONS
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Exhibitions I Want to Remember.
 nav: false
 # nav_order: 3
 display_categories: [work, fun]
