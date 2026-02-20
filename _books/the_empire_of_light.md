@@ -13,7 +13,7 @@ started: 2026-02-02
 finished: 2026-02-13
 released: 2006
 stars: 3
-goodreads_review: 3.59
+goodreads_review: 8131789-your-republic-is-calling-you
 status: Finished
 ---
 

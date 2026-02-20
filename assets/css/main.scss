@@ -80,6 +80,6 @@ footer.fixed-bottom {
 
 /* --- 줄 간격, 문단 사이 여백 설정 --- */
 body, p, li{
-  line-height: 2 !important;   /* 줄 간격 (위아래 줄 사이), 보통 기본은 1.5 */
+  line-height: 1.8 !important;   /* 줄 간격 (위아래 줄 사이), 보통 기본은 1.5 */
   margin-bottom: 1.2em !important; /* 문단 간격 (문단과 문단 사이 여백, 기본은 보통 1.5rem 이상) */
 }
