@@ -76,3 +76,9 @@ footer.fixed-bottom {
   font-weight: 700;
   color: var(--global-theme-color); /* BLOG 제목만 테마 색상 강조(선택 사항) */
 }
+
+
+/* --- 커스텀 줄 간격 설정 --- */
+body, p, li {
+  line-height: 1.8 !important; /* 기본값은 보통 1.5입니다. 원하는 만큼 숫자를 조절하세요 */
+}
