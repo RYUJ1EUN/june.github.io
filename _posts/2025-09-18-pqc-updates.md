@@ -32,7 +32,7 @@ categories: [Study]
 
 #### 공식 타임라인
 
-![timeline]({{ '/assets/img/post_pqc_updates/250311_nistir_8545.png' | relative_url }})
+![timeline]({{ '/assets/img/post/pqc_updates/250311_nistir_8545.png' | relative_url }})
 <!-- ![timeline](../assets/img/post_pqc_updates/250311_nistir_8545.png) -->
 
 #### HQC 선정
