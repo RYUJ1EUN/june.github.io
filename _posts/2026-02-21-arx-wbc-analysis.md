@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ARX-WBC"
+title: "ARX-WBC Cryptanalysis"
 date: 2025-04-02
 last_modified_at: 2025-12-09 04:30:00
 description: "Biryukov arx-based white-box 분석 논문 리뷰"
