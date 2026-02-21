@@ -128,6 +128,28 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2024/information-theory/";
           
         },
+      },{id: "post-windows-vs-code-latex",
+        
+          title: "(Windows) VS code LaTeX",
+        
+        description: "Windows에서 VS code로 오프라인 latex 문서 작업을 위한 환경 구축하기",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2023/windows-vs-code-latex/";
+          
+        },
+      },{id: "post-windows-vs-code",
+        
+          title: "(Windows) VS code",
+        
+        description: "Windows에서 VS code 컴파일 환경 구축",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2023/windows-vs-code/";
+          
+        },
       },{id: "books-빛의-제국-your-republic-is-calling-you",
           title: '빛의 제국 (Your Republic is Calling You)',
           description: "",
