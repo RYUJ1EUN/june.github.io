@@ -150,6 +150,17 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2023/windows-openssl/";
           
         },
+      },{id: "post-git-기초",
+        
+          title: "Git 기초",
+        
+        description: "Git 기초 실습 과정 정리",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2023/basic-git/";
+          
+        },
       },{id: "post-windows-vs-code-latex",
         
           title: "(Windows) VS code LaTeX",
