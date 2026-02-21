@@ -84,17 +84,6 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2026/ais31/";
           
         },
-      },{id: "post-ntt-ml-kem",
-        
-          title: "NTT ML-KEM",
-        
-        description: "NTT(Number Theoretic Transform) for ML-KEM, ML-DSA",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/june.github.io/blog/2025/ntt-ml-kem/";
-          
-        },
       },{id: "post-ntt",
         
           title: "NTT",
@@ -117,15 +106,37 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2025/pqc-updates/";
           
         },
-      },{id: "post-arx-wbc",
+      },{id: "post-arx-wbc-cryptanalysis",
         
-          title: "ARX-WBC",
+          title: "ARX-WBC Cryptanalysis",
         
         description: "Biryukov arx-based white-box 분석 논문 리뷰",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/june.github.io/blog/2025/arx-wbc/";
+            window.location.href = "/june.github.io/blog/2025/arx-wbc-analysis/";
+          
+        },
+      },{id: "post-wbc-hw-binding",
+        
+          title: "WBC HW binding",
+        
+        description: "WBC HW binding 안전성 분석 모델 연구",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2025/wbc_hw_binding/";
+          
+        },
+      },{id: "post-arx-wbc",
+        
+          title: "ARX-WBC",
+        
+        description: "Ranea ARX-WBC 구현 논문 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2024/arx-wbc/";
           
         },
       },{id: "post-information-theory",
@@ -137,6 +148,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/june.github.io/blog/2024/information-theory/";
+          
+        },
+      },{id: "post-ntt-ml-kem",
+        
+          title: "NTT ML-KEM",
+        
+        description: "NTT(Number Theoretic Transform) for ML-KEM, ML-DSA",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2023/ntt-ml-kem/";
           
         },
       },{id: "post-windows-openssl",
