@@ -161,6 +161,17 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2023/windows-vs-code/";
           
         },
+      },{id: "post-windows-vs-code",
+        
+          title: "(Windows) VS code",
+        
+        description: "Windows에서 VS code 컴파일 환경 구축",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2023/windows-vs-code-copy/";
+          
+        },
       },{id: "books-빛의-제국-your-republic-is-calling-you",
           title: '빛의 제국 (Your Republic is Calling You)',
           description: "",
