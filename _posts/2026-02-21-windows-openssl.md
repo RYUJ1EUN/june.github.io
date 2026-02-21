@@ -87,14 +87,14 @@ clean:
 
 
 
-<img src="{{ '/assets/img/post/windows_vs_code/image.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/windows_openssl/image.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
 <!-- ![image.png](image.png) -->
 
 최신 버전으로 다운로드하여 압축 풀고 C드라이브로 이동
 
 #### 2. Visual studio prompt 관리자 권한으로 실행
 
-<img src="{{ '/assets/img/post/windows_vs_code/Untitled.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/windows_openssl/Untitled.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
 <!-- ![Untitled](Untitled.png) -->
 
 #### 3. perl로 openssl build *(C:\openssl-3.1.1)*
@@ -125,22 +125,22 @@ nmake install
 
 ‘고급 시스템 설정 보기’ 검색
 
-<img src="{{ '/assets/img/post/windows_vs_code/Untitled_1.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/windows_openssl/Untitled_1.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
 <!-- ![Untitled](Untitled%201.png) -->
 
 (2) 고급 → 환경변수
 
-<img src="{{ '/assets/img/post/windows_vs_code/Untitled_2.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/windows_openssl/Untitled_2.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
 <!-- ![Untitled](Untitled%202.png) -->
 
 (3) 사용자 변수 → Path → 편집
 
-<img src="{{ '/assets/img/post/windows_vs_code/Untitled_3.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/windows_openssl/Untitled_3.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
 <!-- ![Untitled](Untitled%203.png) -->
 
 (4) 새로 만들기 → OpenSSL\bin 위치 추가
 
-<img src="{{ '/assets/img/post/windows_vs_code/Untitled_4.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/windows_openssl/Untitled_4.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
 <!-- ![Untitled](Untitled%204.png) -->
 
 ```
@@ -149,12 +149,12 @@ C:\Program Files\OpenSSL\bin
 
 (5) 시스템 변수 → Path → 편집
 
-<img src="{{ '/assets/img/post/windows_vs_code/Untitled_5.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/windows_openssl/Untitled_5.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
 <!-- ![Untitled](Untitled%205.png) -->
 
 (6) 새로 만들기 → bin, include, lib 위치 추가
 
-<img src="{{ '/assets/img/post/windows_vs_code/Untitled_6.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/windows_openssl/Untitled_6.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
 <!-- ![Untitled](Untitled%206.png) -->
 
 ```
