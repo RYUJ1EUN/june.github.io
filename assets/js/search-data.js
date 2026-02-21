@@ -128,6 +128,17 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2024/information-theory/";
           
         },
+      },{id: "post-windows-openssl",
+        
+          title: "(Windows) OpenSSL",
+        
+        description: "Windows에서 OpenSSL 환경 구축",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2023/windows-openssl/";
+          
+        },
       },{id: "post-windows-vs-code-latex",
         
           title: "(Windows) VS code LaTeX",
