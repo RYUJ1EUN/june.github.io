@@ -117,6 +117,17 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2025/pqc-updates/";
           
         },
+      },{id: "post-arx-wbc",
+        
+          title: "ARX-WBC",
+        
+        description: "Biryukov arx-based white-box 분석 논문 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2025/arx-wbc/";
+          
+        },
       },{id: "post-information-theory",
         
           title: "Information Theory",
@@ -159,17 +170,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/june.github.io/blog/2023/windows-vs-code/";
-          
-        },
-      },{id: "post-windows-vs-code",
-        
-          title: "(Windows) VS code",
-        
-        description: "Windows에서 VS code 컴파일 환경 구축",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/june.github.io/blog/2023/windows-vs-code-copy/";
           
         },
       },{id: "books-빛의-제국-your-republic-is-calling-you",
