@@ -58,8 +58,8 @@ LaTeX 작업 흐름 동기화 (Perl script) 프로그램 latexmk의 윈도우 �
 1. Updates - Update now
 2. Packages - latexmk 검색 - 결과 선택 후 + 버튼을 눌러 install
 
-<aside>
-<img src="https://www.notion.so/icons/attachment_gray.svg" alt="https://www.notion.so/icons/attachment_gray.svg" width="40px" /> 'MiKTeX Console is already running'이라는 오류 메시지만 뜨고 프로그램 실행이 안 될 수 있다. 내 경우 이때 프로그램 설치 경로로 들어가다 보면 찾을 수 있는 lock 파일을 삭제하니 열렸다.
+
+<img src="https://www.notion.so/icons/attachment_gray.svg" alt="https://www.notion.so/icons/attachment_gray.svg" width="20px" /> 'MiKTeX Console is already running'이라는 오류 메시지만 뜨고 프로그램 실행이 안 될 수 있다. 내 경우 이때 프로그램 설치 경로로 들어가다 보면 찾을 수 있는 lock 파일을 삭제하니 열렸다.
 
 프로그램 설치 경로는 C:\Users\user\AppData\Local 인데, lock 파일은 C:\Users\user 에 있었다.
 
@@ -67,10 +67,10 @@ LaTeX 작업 흐름 동기화 (Perl script) 프로그램 latexmk의 윈도우 �
 
 옆 사진처럼 작업표시줄의 활성화 프로그램 목록에 MiKTeX이 있으면 더블클릭해서 열 수 있다. 
 
-<img src="{{ '/assets/img/post/windows_vs_code_latex/Untitled_1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/windows_vs_code_latex/Untitled.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
 <!-- ![Untitled](Untitled.png) -->
 
-</aside>
+
 
 latexmk 설치가 완료되면 윈도우 검색 기능에 고급 시스템 속성을 검색하여 시스템 속성 창을 열어 다음을 진행한다.
 
