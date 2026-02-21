@@ -89,8 +89,8 @@ body, p, li{
 blockquote {
   font-size: 0.92rem !important; /* 기본보다 약간 작게 설정 (취향에 따라 0.9 ~ 1.0 사이 추천) */
   // color: #555 !important;        /* 글씨 색상을 살짝 연하게 하여 일반 본문과 차이를 둡니다 */
-  margin: 1.5rem 10px !important; /* 위아래 여백 조절 */
-  padding: 0.5rem 15px !important; /* 선과 글자 사이의 간격 */
+  margin: 1rem 10px !important; /* 위아래 여백 조절 */
+  // padding: 0.5rem 15px !important; /* 선과 글자 사이의 간격 */
 }
 
 /* 인용구 조정 */
