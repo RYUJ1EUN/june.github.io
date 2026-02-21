@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h4 id="1-github-actions와-devops">1. GitHub Actions와 DevOps</h4> <p>GitHub Actions: 코드 저장소 기능 + 소프트웨어 빌드/테스트/배포 자동화 ⇒ DevOps 핵심 도구</p> <ul> <li>CI: 코드 변경 시 자동으로 빌드 및 테스트 수행</li> <li>CD: 검증된 코드를 서버나 클라우드에 자동으로 반영</li> </ul> <h4 id="2-devops-툴체인-내-위치">2. DevOps 툴체인 내 위치</h4> <table> <thead> <tr> <th>분류</th> <th>주요 도구</th> <th>GitHub Actions의 역할</th> </tr> </thead> <tbody> <tr> <td>CI/CD</td> <td> <strong>GitHub Actions</strong>, Jenkins, GitLab CI</td> <td>자동화 워크플로우 실행 엔진</td> </tr> <tr> <td>인프라 관리</td> <td>Terraform, Ansible</td> <td>배포 스크립트 실행 및 인프라 변경 적용</td> </tr> <tr> <td>협업/운영</td> <td>Slack, Jira, Prometheus</td> <td>작업 완료 알림 및 상태 모니터링 연동</td> </tr> </tbody> </table> <h4 id="3-github-actions의-기본-작동-모델">3. GitHub Actions의 기본 작동 모델</h4> <p>이벤트 발생(Trigger) → 실행 환경 설정(Runner) → 단계별 작업(Steps) 수행</p> <h5 id="간단한-워크플로우-예시">간단한 워크플로우 예시</h5> <p><code class="language-plaintext highlighter-rouge">.github/workflows/main.yml</code>가 존재하는 상황<br> <em>(YAML: JSON의 상위 집합 Markup 언어의 일종)</em></p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Hello DevOps Robot</span>
+
+<span class="c1"># 1. Trigger: 언제 실행할 것인가?</span>
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="s2">"</span><span class="s">main"</span> <span class="pi">]</span>
+
+<span class="c1"># 2-3. Jobs: 어떤 환경에서 무엇을 할 것인가?</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span> <span class="c1"># Runner: 가상 우분투 환경</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout code</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span> <span class="c1"># 작업: 소스 코드 로드</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run Greeting</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">echo "Hello, DevOps World!"</span> <span class="c1"># 작업: 명령어 실행</span>
+
+</code></pre></div></div> <h5 id="자동화-프로세스-흐름">자동화 프로세스 흐름</h5> <ol> <li>코드 푸시: 개발자가 <code class="language-plaintext highlighter-rouge">main</code> 브랜치에 코드를 올림</li> <li>이벤트 감지: GitHub이 푸시를 감지하고 워크플로우 가동</li> <li>러너 할당: GitHub이 가상 머신을 배정</li> <li>단계별 실행: YAML에 정의된 순서대로 테스트, 빌드 등 수행</li> <li>결과 보고: 성공/실패 여부를 GitHub Actions 탭에 표시</li> </ol> </body></html>

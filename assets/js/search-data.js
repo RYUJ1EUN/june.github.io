@@ -241,6 +241,11 @@ ninja.data = [{
           description: "",
           section: "Til",handler: () => {
               window.location.href = "/june.github.io/til/2026-02-19-2";
+            },},{id: "til-devops-기초-2",
+          title: 'DevOps 기초 - 2',
+          description: "",
+          section: "Til",handler: () => {
+              window.location.href = "/june.github.io/til/2026-02-21";
             },},{
         id: 'social-cv',
         title: 'CV',
