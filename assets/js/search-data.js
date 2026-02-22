@@ -51,9 +51,9 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/june.github.io/projects/";
               },
-            },{id: "post-kpqc-특강-정리",
+            },{id: "post-kpqc-특강-워크숍-정리",
         
-          title: "KpqC 특강 정리",
+          title: "KpqC 특강, 워크숍 정리",
         
         description: "&#39;2025년도 상반기 정보보호 전문가를 위한 암호교육&#39; 특강 내용 정리",
         section: "Posts",
