@@ -51,7 +51,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/june.github.io/projects/";
               },
-            },{id: "post-kpqc-특강-워크숍-정리",
+            },{id: "post-nist-ir8446",
+        
+          title: "NIST IR8446",
+        
+        description: "NIST IR8446: Bridging the Gap Between Standards on Random Number Generation",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2026/nist-ir8446/";
+          
+        },
+      },{id: "post-kpqc-특강-워크숍-정리",
         
           title: "KpqC 특강, 워크숍 정리",
         
@@ -104,6 +115,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/june.github.io/blog/2025/pqc-updates/";
+          
+        },
+      },{id: "post-nist-sp-800-90c",
+        
+          title: "NIST SP 800-90C",
+        
+        description: "NIST SP 800-90C: Recommendation for Random Bit Generator (RBG) Constructions",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2025/nist-90c/";
           
         },
       },{id: "post-arx-wbc-cryptanalysis",
