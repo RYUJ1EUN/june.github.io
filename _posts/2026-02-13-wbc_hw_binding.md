@@ -19,7 +19,9 @@ categories: [Study]
 
 
 
-<iframe src="{{ '/assets/pdf/wbc_hw_binding.pdf' | relative_url }}" width="100%" height="800px" style="border: none;">
+<!-- <iframe src="{{ '/assets/pdf/wbc_hw_binding.pdf' | relative_url }}" width="100%" height="800px" style="border: none;">
     PDF 미리보기를 불러올 수 없습니다.
     <a href="{{ '/assets/pdf/wbc_hw_binding.pdf' | relative_url }}">여기</a>를 클릭해 다운로드하세요.
-</iframe>
+</iframe> -->
+
+<iframe src="https://docs.google.com/viewer?url={{ '/assets/pdf/wbc_hw_binding.pdf' | absolute_url }}&embedded=true" style="width:100%; height:1000px;" frameborder="0"></iframe>
