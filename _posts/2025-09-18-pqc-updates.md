@@ -2,11 +2,68 @@
 layout: post
 title: "PQC 동향 (~ '24.10)"
 date: 2025-09-18
+last_modified_at: 2026-02-23
 description: "Study note: AIS 31 (version 3.0)"
 tags: [Cryptography, PQC]
 categories: [Study]
 ---
 
+### 26.01.27 [BSI TR-02102 Cryptographic Mechanisms](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr02102/tr02102_node.html)
+
+양자내성을 고려한 키 관리 문서 개정
+
+- [BSI TR-02102-1: Cryptographic Mechanisms: Recommendations and Key Lengths](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile&v=13)
+- [BSI TR-02102-2: Use of Transport Layer Security (TLS)](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-2.pdf?__blob=publicationFile&v=10)
+- [BSI TR-02102-3: Use of Internet Protocol Security (IPsec) and Internet Key Exchange (IKEv2)](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-3.pdf?__blob=publicationFile&v=9)
+- [BSI TR-02102-4: Use of Secure Shell (SSH)](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-4.pdf?__blob=publicationFile&v=10)
+
+
+<br>
+<br>
+---
+
+### 26.01.23 [Product Categories for Technologies That Use Post-Quantum Cryptography Standards](https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards)
+
+CISA’s response to [Executive Order (EO) 14306](https://www.congress.gov/crs_external_products/IN/HTML/IN12570.html)
+
+- [Post-Quantum Cryptography Initiative](https://www.cisa.gov/topics/risk-management/quantum)
+
+<br>
+<br>
+---
+
+### 26.01.06 [NIST to Update Special Publication 800-56A and Revise 800-56C](https://csrc.nist.gov/News/2026/nist-to-revise-key-establishment-recommendations)
+
+PQC 표준화에 따른 키 설립 표준 개정
+
+- [NIST SP 800-56A Rev. 3: Recommendation for Pair-Wise Key-Establishment Schemes Using Discrete Logarithm Cryptography](https://csrc.nist.gov/pubs/sp/800/56/a/r3/final)
+- [NIST SP 800-56C Rev. 2: Recommendation for Key-Derivation Methods in Key-Establishment Schemes](https://csrc.nist.gov/pubs/sp/800/56/c/r2/final)
+
+
+<br>
+<br>
+---
+
+### 25.12.19 [NIST CSWP 39: Considerations for Achieving Cryptographic Agility: Strategies and Practices](https://csrc.nist.gov/pubs/cswp/39/considerations-for-achieving-cryptographic-agility/final)
+
+암호화 민첩성 Cybersecurity White Papers 발행
+
+[NIST Publishes CSWP 39: Considerations for Achieving Crypto Agility](https://csrc.nist.gov/News/2025/considerations-for-achieving-crypto-agility)
+
+
+<br>
+<br>
+---
+
+### 25.12.05 [NIST SP 800-57 Rev. 6 (Initial Public Draft): Recommendation for Key Management: Part 1 – General](https://csrc.nist.gov/pubs/sp/800/57/pt1/r6/ipd)
+
+PQC 표준화에 따른 키 관리 문서 개정
+
+[Comment on Recommendation for Key Management: Part 1 – General | Initial Public Draft of SP 800-57 Part 1 Revision 6](https://csrc.nist.gov/News/2025/comment-on-sp-800-57pt1r6-initial-public-draft)
+
+<br>
+<br>
+---
 
 ### 25.09.24-26 [6th PQC Standardization Conference](https://csrc.nist.gov/events/2025/6th-pqc-standardization-conference)
 
@@ -14,9 +71,15 @@ categories: [Study]
 
 #### [SP 800-227: Recommendations for Key-Encapsulation Mechanisms](https://csrc.nist.gov/Presentations/2025/sp-800-227-recommendations-for-key-encapsulation-m) Gorjan Alagic (September 25, 2025)
 
+
+
+<br>
+<br>
+---
+
 ### 25.09.18. [NIST Publishes SP 800-227](https://csrc.nist.gov/News/2025/nist-publishes-sp-800-227)
 
-“Recommendations for Key-Encapsulation Mechanisms”
+- [NIST SP 800-227: Recommendations for Key-Encapsulation Mechanisms](https://csrc.nist.gov/pubs/sp/800/227/final)
 
 #### 25.07.29 PQC Hybrid 검증 안내 [발표](https://www.ncsc.go.kr/main/cop/bbs/selectBoardArticle.do?bbsId=CryptoNotice_main&nttId=213309&pageIndex=1&searchCnd2=)
 
@@ -26,7 +89,22 @@ categories: [Study]
 
 - [ETSI TR 103 966 v1.1.1.](https://www.etsi.org/deliver/etsi_tr/103900_103999/103966/01.01.01_60/tr_103966v010101p.pdf) 부록 A.3 교차 확인
 
+<br>
+<br>
+---
+
+### 25.07.29. [(수정) 양자내성암호 활용을 위한 하이브리드 검증 방식 안내](https://www.ncsc.go.kr/main/cop/bbs/selectBoardArticle.do?bbsId=CryptoNotice_main&nttId=213309&pageIndex=1&searchCnd2=)
+
+[「암호모듈 구현안내서(GVI Part 1)」 개정 공지(2025.12.10부)](https://www.ncsc.go.kr/main/cop/bbs/selectBoardArticle.do?bbsId=CryptoNotice_main&nttId=221869&pageIndex=1&searchCnd2=)
+
+
+<br>
+<br>
+---
+
 ### 25.03.11. [NISTIR 8545](https://csrc.nist.gov/pubs/ir/8545/final)
+
+- [NEWS: NIST Selects HQC as Fifth Algorithm for Post-Quantum Encryption](https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption)
 
 “Status Report on the Fourth Round of the NIST Post-Quantum Cryptography Standardization Process”
 
@@ -50,9 +128,13 @@ categories: [Study]
 - BIKE 역시 비슷한 성질을 고려하여 표준화 후보로 선정되었으나, HQC와 유사한 기반 문제를 다루면서도 안전성은 더 낮다고 판단되어 표준으로 함께 선정하지 않음
 - HQC의 표준화는 약 2년정도 소요될 것으로 예상함
 
-### 24.11.12. [NISTIR 8547](https://csrc.nist.gov/pubs/ir/8547/ipd)
 
-“Transition to Post-Quantum Cryptography Standards”
+<br>
+<br>
+---
+
+### 24.11.12. [NISTIR 8547(Initial Public Draft): Transition to Post-Quantum Cryptography Standards](https://csrc.nist.gov/pubs/ir/8547/ipd)
+
 
 #### 4.1. NIST Cryptographic Algorithm Standards and Guidelines
 
@@ -138,6 +220,10 @@ Table 7: Hash functions and XOFs
 |  | SHA3-384 | 192 bits | 4 | 384 bits | 5 |
 |  | SHA3-512 | 256 bits | 5 | 512 bits | 5 |
 |  | SHAKE256 | 256 bits | 5 | 512 bits | 5 |
+
+<br>
+<br>
+---
 
 ### 24.10.24. [NISTIR 8528](https://csrc.nist.gov/pubs/ir/8528/final)
 
@@ -237,3 +323,29 @@ EUF-CMA 안전성, 보안 강도 1,2와 가능한 3 충족 및 4,5 중 하나 �
 | SNOVA | UOV에 비해 훨씬 작은 공개 키(MAYO와 비슷하거나 약간 작음), 제출 알고리즘 중 암호 분석에 대해 가장 작은 공개 키임. 상대적으로 빠른 성능 유지. MAYO보다 약간 느리지만 비슷한 범위의 속도. 안전성은 약간 의문 |
 | FAEST | 유사한 MPCitH 방식에 비해 서명 크기가 상당히 작음. 이론적 안전성은 대칭 키 가정에만 기반하고 있지만, 해당 속성을 가진 대부분의 다른 방식, 특히 SLH-DSA보다 성능이 훨씬 뛰어남. 단, 성능은 ML-DSA와 FN-DSA 같은 격자 기반 방식과는 경쟁력이 없음 |
 | SQIsign | 알려진 공격들에 저항성을 가짐. 1차 라운드 후보들 및 ML-DSA와 Falcon을 포함한 모든 방식 중에서 가장 작은 공개 키와 서명 크기. 서명 및 검증의 계산 효율성 측면에서, 매우 느리지만, 검증은 서명보다 훨씬 빠름 |
+
+<br>
+<br>
+---
+
+### 24.10.21. [NIST SP 800-131A Rev. 3 (Initial Public Draft): Transitioning the Use of Cryptographic Algorithms and Key Lengths](https://csrc.nist.gov/pubs/sp/800/131/a/r3/ipd)
+
+PQC 표준 및 해시함수 표준 반영을 위한 개정
+
+<br>
+<br>
+---
+
+### 24.08.13. [Announcing Approval of Three Federal Information Processing Standards (FIPS) for Post-Quantum Cryptography](https://csrc.nist.gov/News/2024/postquantum-cryptography-fips-approved)
+
+- [FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard](https://csrc.nist.gov/pubs/fips/203/final)
+- [FIPS 204, Module-Lattice-Based Digital Signature Standard](https://csrc.nist.gov/pubs/fips/204/final)
+- [FIPS 205, Stateless Hash-Based Digital Signature Standard](https://csrc.nist.gov/pubs/fips/205/final)
+
+<br>
+<br>
+---
+
+### 22.07.05. [PQC Standardization Process: Announcing Four Candidates to be Standardized, Plus Fourth Round Candidates](https://csrc.nist.gov/News/2022/pqc-candidates-to-be-standardized-and-round-4)
+
+PQC 표준화 공모전 표준 알고리즘 당선 공지
