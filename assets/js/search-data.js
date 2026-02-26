@@ -242,9 +242,9 @@ ninja.data = [{
           description: "260108 @국립중앙박물관 특별전시실 &quot;인상주의에서 초기 모더니즘까지, 빛을 수집한 사람들 - 메트로폴리탄박물관 소장 로버트 리먼 컬렉션&quot;",
           section: "Projects",handler: () => {
               window.location.href = "/june.github.io/exhibitions/260108";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-알폰스-무하-빛과-꿈",
+          title: '알폰스 무하: 빛과 꿈',
+          description: "260208 @더현대 서울 ALT.1 &quot;알폰스 무하&#39;:&#39; 빛과 꿈&quot;",
           section: "Projects",handler: () => {
               window.location.href = "/june.github.io/exhibitions/260208";
             },},{id: "til-devops-기초-1",
