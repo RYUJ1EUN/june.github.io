@@ -8,22 +8,18 @@ nav: false
 # display_categories: [work, fun]
 horizontal: false
 ---
-<div class="projects">
-{% assign sorted_exhibitions = site.exhibitions | sort: "importance" %}
 
-{% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_exhibitions %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-{% else %}
+
+
+<div class="projects">
+{% if site.exhibitions %}
+  {% assign sorted_exhibitions = site.exhibitions | sort: "importance" %}
   <div class="row row-cols-1 row-cols-md-3">
     {% for project in sorted_exhibitions %}
       {% include projects.liquid %}
     {% endfor %}
   </div>
+{% else %}
+  <p>아직 등록된 전시회가 없습니다. _exhibitions 폴더에 파일을 추가해 주세요!</p>
 {% endif %}
 </div>
