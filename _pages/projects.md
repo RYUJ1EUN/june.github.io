@@ -3,7 +3,7 @@ layout: page
 title: EXHIBITIONS
 permalink: /exhibitions/
 description: Exhibitions I Want to Remember.
-nav: true
+nav: false
 # nav_order: 3
 # display_categories: [work, fun]
 horizontal: false
