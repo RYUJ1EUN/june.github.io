@@ -167,16 +167,14 @@ collections:
     defaults:
       layout: post
     output: true
-  # projects:
-  #   output: true
+  projects:
+    output: true
+    permalink: /exhibitions/:name
   # teachings:
   #   output: true
   til:
     output: true
     permalink: /til/:name
-  exhibitions:
-    output: true
-    permalink: /exhibitions/:name
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
