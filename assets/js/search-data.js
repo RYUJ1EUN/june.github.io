@@ -237,11 +237,11 @@ ninja.data = [{
           description: "",
           section: "Interest",handler: () => {
               window.location.href = "/june.github.io/interest/2026-02-26";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+            },},{id: "projects-인상주의에서-초기-모더니즘까지-빛을-수집한-사람들-메트로폴리탄박물관-소장-로버트-리먼-컬렉션",
+          title: '인상주의에서 초기 모더니즘까지, 빛을 수집한 사람들 - 메트로폴리탄박물관 소장 로버트 리먼 컬렉션',
+          description: "260108 @국립중앙박물관 특별전시실",
           section: "Projects",handler: () => {
-              window.location.href = "/june.github.io/exhibitions/1-project";
+              window.location.href = "/june.github.io/exhibitions/260108";
             },},{id: "til-devops-기초-1",
           title: 'DevOps 기초 - 1',
           description: "",
