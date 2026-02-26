@@ -1,7 +1,7 @@
 ---
 layout: page
 title: EXHIBITIONS
-permalink: /projects/
+permalink: /exhibitions/
 description: Exhibitions I Want to Remember.
 nav: false
 # nav_order: 3
