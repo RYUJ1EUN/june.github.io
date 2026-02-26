@@ -237,6 +237,11 @@ ninja.data = [{
           description: "",
           section: "Interest",handler: () => {
               window.location.href = "/june.github.io/interest/2026-02-26";
+            },},{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/june.github.io/exhibitions/1-project";
             },},{id: "til-devops-기초-1",
           title: 'DevOps 기초 - 1',
           description: "",
