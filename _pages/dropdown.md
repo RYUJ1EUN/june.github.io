@@ -11,6 +11,6 @@ children:
   - title: Exhibitions
     permalink: /exhibitions/
   - title: divider
-  - title: etc.
-    permalink: /etc/
+  - title: Interest
+    permalink: /interest/
 ---

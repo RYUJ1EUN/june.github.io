@@ -163,10 +163,10 @@ newsletter:
 collections:
   books:
     output: true
-  news:
-    defaults:
-      layout: post
-    output: true
+  # news:
+  #   defaults:
+  #     layout: post
+  #   output: true
   projects:
     output: true
     permalink: /exhibitions/:name
@@ -175,9 +175,9 @@ collections:
   til:
     output: true
     permalink: /til/:name
-  etc:
+  interest:
     output: true
-    permalink: /etc/:name
+    permalink: /interest/:name
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
