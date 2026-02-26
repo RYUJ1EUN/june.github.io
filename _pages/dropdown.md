@@ -9,5 +9,5 @@ children:
     permalink: /books/
   - title: divider
   - title: Exhibitions
-    permalink: /projects/
+    permalink: /exhibitions/
 ---
