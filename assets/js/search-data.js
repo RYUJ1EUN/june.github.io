@@ -44,12 +44,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/june.github.io/exhibitions/";
               },
-            },{id: "dropdown-etc",
-              title: "etc.",
+            },{id: "dropdown-interest",
+              title: "Interest",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/june.github.io/etc/";
+                window.location.href = "/june.github.io/interest/";
               },
             },{id: "post-nist-ir8446",
         
@@ -232,11 +232,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/june.github.io/books/the_empire_of_light/";
-            },},{id: "etc-test",
+            },},{id: "interest-test",
           title: 'TEST',
           description: "",
-          section: "Etc",handler: () => {
-              window.location.href = "/june.github.io/etc/2026-02-26";
+          section: "Interest",handler: () => {
+              window.location.href = "/june.github.io/interest/2026-02-26";
             },},{id: "til-devops-기초-1",
           title: 'DevOps 기초 - 1',
           description: "",
