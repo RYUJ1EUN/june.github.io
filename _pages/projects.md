@@ -5,7 +5,7 @@ permalink: /exhibitions/
 description: Exhibitions I Want to Remember.
 nav: false
 # nav_order: 3
-# display_categories: [work, fun]
+display_categories: [2026]
 horizontal: false
 ---
 
