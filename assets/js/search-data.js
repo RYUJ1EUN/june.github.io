@@ -232,11 +232,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/june.github.io/books/the_empire_of_light/";
-            },},{id: "interest-test",
-          title: 'TEST',
+            },},{id: "interest-고래",
+          title: '고래',
           description: "",
           section: "Interest",handler: () => {
-              window.location.href = "/june.github.io/interest/2026-02-26";
+              window.location.href = "/june.github.io/interest/2025-01-01";
             },},{id: "projects-인상주의에서-초기-모더니즘까지",
           title: '인상주의에서 초기 모더니즘까지',
           description: "260108 @국립중앙박물관 특별전시실 &quot;인상주의에서 초기 모더니즘까지, 빛을 수집한 사람들 - 메트로폴리탄박물관 소장 로버트 리먼 컬렉션&quot;",
