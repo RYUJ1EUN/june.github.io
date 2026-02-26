@@ -175,6 +175,9 @@ collections:
   til:
     output: true
     permalink: /til/:name
+  etc:
+    output: true
+    permalink: /etc/:name
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------

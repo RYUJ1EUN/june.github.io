@@ -10,4 +10,7 @@ children:
   - title: divider
   - title: Exhibitions
     permalink: /exhibitions/
+  - title: divider
+  - title: etc.
+    permalink: /etc/
 ---
