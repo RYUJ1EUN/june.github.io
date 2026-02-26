@@ -44,6 +44,13 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/june.github.io/exhibitions/";
               },
+            },{id: "dropdown-etc",
+              title: "etc.",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/june.github.io/etc/";
+              },
             },{id: "post-nist-ir8446",
         
           title: "NIST IR8446",
@@ -225,6 +232,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/june.github.io/books/the_empire_of_light/";
+            },},{id: "etc-test",
+          title: 'TEST',
+          description: "",
+          section: "Etc",handler: () => {
+              window.location.href = "/june.github.io/etc/2026-02-26";
             },},{id: "til-devops-기초-1",
           title: 'DevOps 기초 - 1',
           description: "",
