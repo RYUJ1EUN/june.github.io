@@ -30,9 +30,9 @@ Hi, I’m Jieun Ryu. Please call me June.
 I am a Ph.D. student specializing in Mathematics and Cryptography. 
 My research focus includes:
 
-* **RNG** (Random Number Generation)
-* **PQC** (Post-Quantum Cryptography)
-* **White-box Encryption**
+* RNG (Random Number Generation)
+* PQC (Post-Quantum Cryptography)
+* White-box Encryption
 * Quantum Computing 
 
 I share on this site to document my work and what I’ve learned. 
@@ -42,8 +42,7 @@ and I hope this site helps me stay accountable.
 
 Since my main goal is to track my learning journey, 
 you’ll find a wide range of content here— from in-depth technical documentation 
-to very basic TIL. I’m still getting used to managing this blog, 
-so the categories might seem a bit disorganized or messy at times🙈!
+to very basic TIL 🙈
 
 
 <br>
