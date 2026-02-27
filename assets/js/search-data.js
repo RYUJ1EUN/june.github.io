@@ -232,6 +232,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/june.github.io/books/the_empire_of_light/";
+            },},{id: "books-싯다르타-siddhartha",
+          title: '싯다르타 (Siddhartha)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/june.github.io/books/the_empire_of_light%20copy/";
             },},{id: "interest-whale",
           title: 'Whale',
           description: "",
