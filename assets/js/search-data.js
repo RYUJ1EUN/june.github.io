@@ -62,6 +62,17 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2026/nist-ir8446/";
           
         },
+      },{id: "post-review-paper-on-graph-based-pk-cryptosystem",
+        
+          title: "Review: Paper on Graph-Based PK Cryptosystem",
+        
+        description: "A Graph-Based Public-Key Cryptosystem Using the NP-Complete Problem of Partitioning Into Perfect Matchings",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2026/graph_paper_review/";
+          
+        },
       },{id: "post-kpqc-특강-워크숍-정리",
         
           title: "KpqC 특강, 워크숍 정리",
