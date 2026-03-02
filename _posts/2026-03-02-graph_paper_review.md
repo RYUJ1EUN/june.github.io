@@ -20,8 +20,12 @@ categories: [Study]
 각 분할 집합(partite set)이 유도하는 부분 그래프를 완전 매칭(perfect matching)시킬 수 있는가에 대한 4-정규 그래프(regular graph) 분할 문제
 
 > The central problem relevant to our scheme is ‘partitioning into perfect matching’ [15], defined as follows.  
-Given a graph $G$ and a positive integer $Q \le \|V \|$, the objective is to partition the vertex set $V$ into $q \le Q$ disjoint subsets $P\_1, P\_2, ... , P\_q$, such that each induced subgraph $G[P_i]$ is a perfect matching, that is each $G[P_i]$ is a finite union of $K_2$ (each vertex incident to exactly one edge). This problem is known to be NP-complete, even under strong constraints, such as when $Q = 2$ or when the graph is planar cubic.  
-We refer to any graph that admits such a partitioning, that is whose vertex set can be partitioned into disjoint subsets inducing perfect matching, as a graph that satisfies Partitioning into Perfect Matching (PPM).
+그래프 $G$와 양의 정수 $Q \le \|V \|$가 주어졌을 때, 정점 집합 $V$를 $q \le Q$개의 서로소인 부분 집합 $P\_1, P\_2, ... , P\_q$로 분할하는 문제. 이때 각 유도된 부분 그래프 $G[P_i]$가 완전 매칭이 되어야 함. 즉, $G[P_i]$가 $K\_2$의 유한합(finite union)이 되어야 함(각 정점이 정확히 하나의 간선에 연결)  
+
+이 문제는 $Q = 2$이거나 그래프가 평면 3차(planar cubic) 그래프인 경우와 같이 강한 제약 조건 하에서도 NP-complete로 알려짐  
+
+- Partitioning into Perfect Matching (PPM): 정점 집합이 완전 매칭을 유도하는 서로소인 부분 집합으로 분할 될 수 있는 그래프
+
 
 ##### 키 쌍
 - 공개키: $n$개의 정점을 가지는 4-정규 그래프
