@@ -19,12 +19,12 @@ categories: [Study]
 ##### 기반 문제 (NP-complete)
 각 분할 집합(partite set)이 유도하는 부분 그래프를 완전 매칭(perfect matching)시킬 수 있는가에 대한 4-정규 그래프(regular graph) 분할 문제
 
-> The central problem relevant to our scheme is ‘partitioning into perfect matching’ [15], defined as follows.  
-그래프 $G$와 양의 정수 $Q \le \|V \|$가 주어졌을 때, 정점 집합 $V$를 $q \le Q$개의 서로소인 부분 집합 $P\_1, P\_2, ... , P\_q$로 분할하는 문제. 이때 각 유도된 부분 그래프 $G[P_i]$가 완전 매칭이 되어야 함. 즉, $G[P_i]$가 $K\_2$의 유한합(finite union)이 되어야 함(각 정점이 정확히 하나의 간선에 연결)  
+_The central problem relevant to our scheme is ‘partitioning into perfect matching’ [15], defined as follows.  
+그래프 $G$와 양의 정수 $Q \le \|V \|$가 주어졌을 때, 정점 집합 $V$를 $q \le Q$개의 서로소인 부분 집합 $P\_1, P\_2, ... , P\_q$로 분할하는 문제. 이때 각 유도된 부분 그래프 $G[P_i]$가 완전 매칭이 되어야 함. 즉, $G[P_i]$가 $K\_2$의 유한합(finite union)이 되어야 함(각 정점이 정확히 하나의 간선에 연결)_  
 
 이 문제는 $Q = 2$이거나 그래프가 평면 3차(planar cubic) 그래프인 경우와 같이 강한 제약 조건 하에서도 NP-complete로 알려짐  
 
-- Partitioning into Perfect Matching (PPM): 정점 집합이 완전 매칭을 유도하는 서로소인 부분 집합으로 분할 될 수 있는 그래프
+**Partitioning into Perfect Matching (PPM)**: 정점 집합이 완전 매칭을 유도하는 서로소인 부분 집합으로 분할 될 수 있는 그래프
 
 
 ##### 키 쌍
@@ -38,7 +38,8 @@ categories: [Study]
 - $\mathcal{G}$의 각 정점은 자신의 분할 집합 내 정확히 한 정점과 인접하며, 다른 세 분할 집합의 정점 중 정확히 하나씩과 인접함
 - 각 분할 집합은 $\mathcal{G}$에서 전체 지배 집합(total dominating set)을 형성함
 
-간선 변수에 값을 대응시키는 함수는 다음과 같음
+간선 변수에 값을 대응시키는 함수는 다음과 같음  
+
 $$
 F(v_i, v_j) = \begin{cases} -1, & \text{if } (v_i, v_j) \in M \\ 0, & \text{if } (v_i, v_j) \text{ is an edge between } P_1 \text{ to } P_2 \\ & \text{or } P_3 \text{ to } P_4 \\ 1, & \text{otherwise.} \end{cases}
 $$
@@ -56,9 +57,11 @@ IPCC7는 정점 집합을 네 개의 비밀 부분 집합 $P\_1, P\_2, P\_3, P\_
 
 ##### 제안 암호 기법
 원칙적으로, 이와 유사한 선형 대수적 접근 방식이 위 연구의 체계에 대해서도 시도될 수 있으며, 다음과 같은 선형 시스템을 도출함
+
 $$
 \mathcal{I}_{n \times 2n}X_{2n \times 1} = J_{n \times 1}
-$$
+$$  
+
 여기서 $\mathcal{I}$는 공개 그래프의 정점-간선 근접 행렬을 나타내고, $X$는 간선 변수의 열 벡터이며, $J$는 모든 요소가 1인 열 벡터임
 
 공격자는 각 방정식에서 정확히 하나의 변수는 $-1$의 값을, 정확히 하나는 0의 값을, 그리고 정확히 두 개는 1의 값을 가진다는 점을 앎
