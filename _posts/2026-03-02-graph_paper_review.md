@@ -2,6 +2,7 @@
 layout: post
 title: "Review: Paper on Graph-Based PK Cryptosystem"
 date: 2026-03-02
+last_modified_at: 2026-03-03
 description: "A Graph-Based Public-Key Cryptosystem Using the NP-Complete Problem of Partitioning Into Perfect Matchings"
 tags: [PQC]
 categories: [Study]
@@ -74,10 +75,10 @@ $$
 
 ### Lange 등의 공격 기법 분석
 
-이 공격은 IPCC7이 정점 변수를 사용하고 특정한 닫힌 이웃(Closed neighborhood) 구조를 갖는다는 취약점을 이용하여 다항 시간 내에 비밀 키(파티션)를 복구함
+이 공격은 IPCC7이 정점 변수를 사용하고 특정한 닫힌 이웃(Closed neighborhood) 구조를 갖는다는 취약점을 이용하여 다항 시간 내에 비밀 키(부분 집합)를 복구함
 
 1. 닫힌 이웃 행렬(Closed Neighborhood Matrix) 구성  
-IPCC7의 구조적 특성상, 임의의 정점 $v_i$와 그 이웃 $N(v_i)$에 속한 정점들 중 정확히 하나만 비밀 파티션 $A$에 속함
+IPCC7의 구조적 특성상, 임의의 정점 $v_i$와 그 이웃 $N(v_i)$에 속한 정점들 중 정확히 하나만 비밀 부분 집합 $A$에 속함
 $$
 \mathcal{X}_{v_i} + \sum_{u \in N(v_i)} \mathcal{X}_u = 1
 $$
@@ -94,7 +95,7 @@ $v$의 위치와 그 이웃 $w$들의 위치에 1을 채워 넣음으로써, $25
 4. 자유 변수 기저(Basis)로의 투영 및 동치류 분류  
 공격의 핵심 단계로 모든 정점에 대해 표준 기저 벡터 $c = e_v$(자신의 위치만 1이고 나머지는 0)를 생성함. 그리고 todo에 저장된 선형 관계식을 이용해 역대입(Back-substitution)을 수행함(c[i] -= cj*ri)  
 IPCC7는 같은 부분 집합에 속한 정점들이 전체 그래프 내에서 동일한 지배(Domination) 특성을 띄기 때문에, 해당 단계를 거치면 같은 부분 집합에 속한 정점들이 동일한 벡터 값을 갖게 됨
-5. 비밀 파티션(Secret Key) 복구  
+5. 비밀 부분 집합(Secret Key) 복구  
 4단계에서 각 정점마다 도출된 벡터 c를 기준으로 정점들을 그룹화함.
 이로써 동일한 선형 종속성을 띄는 정점 집합이 형성됨. 
 결과적으로 이 집합들이 4개의 비밀 부분 집합과 정확히 일치하게 됨
