@@ -51,7 +51,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/june.github.io/interest/";
               },
-            },{id: "post-review-paper-on-graph-based-pk-cryptosystem",
+            },{id: "post-nist-ir8446",
+        
+          title: "NIST IR8446",
+        
+        description: "NIST IR8446: Bridging the Gap Between Standards on Random Number Generation",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2026/nist-ir8446/";
+          
+        },
+      },{id: "post-review-paper-on-graph-based-pk-cryptosystem",
         
           title: "Review: Paper on Graph-Based PK Cryptosystem",
         
