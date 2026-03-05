@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Quantum Parallelism"
-date: 2026-03-02
-last_modified_at: 2026-03-03
-description: "A Graph-Based Public-Key Cryptosystem Using the NP-Complete Problem of Partitioning Into Perfect Matchings"
+date: 2026-03-05
+# description: ""
 tags: [QUANTUM]
 categories: [Study, Class]
 ---
@@ -41,12 +40,12 @@ categories: [Study, Class]
 3. 작용-반작용의 법칙 (Law of Action-Reaction)
     <div class="row align-items-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/post/quantum_parallelism/0305_1.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="0306-1"> 
+        <img src="{{ '/assets/img/post/quantum_parallelism/0305_1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
         - $N$: 수직항력, 책이 책싱을 미는 힘
     </div>
     
     <div class="col-sm-2 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/post/quantum_parallelism/0305_2.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="0306-2">
+        <img src="{{ '/assets/img/post/quantum_parallelism/0305_2.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
     </div>
 </div>
 
@@ -62,10 +61,11 @@ categories: [Study, Class]
 - $-$ 부호는 '돌아가려는 힘'을 의미
 
 뉴턴의 법칙에 의해 $ma = -kx$  
-이때 $a = \frac{d^2x}{dt^2} = \ddot{x}$이므로 $\ddot{x} + \frac{k}{m}x = 0$  
-    $\dot{x} := \frac{dx}{dt} = v, \ddot{x} := \dot{v} = \frac{dv}{dt} = a$  
-    즉, dot은 '시간'에 대한 미분을 의미  
+이때 $a = \frac{d^2x}{dt^2} = \ddot{x}$이므로 $\ddot{x} + \frac{k}{m}x = 0$
+($\dot{x} := \frac{dx}{dt} = v, \ddot{x} := \dot{v} = \frac{dv}{dt} = a$, 
+dot은 '시간'에 대한 미분을 의미)  
 ${\omega\_0} = \sqrt{\frac{k}{m}}$라고 하면 $\ddot{x} + {\omega\_0}^2x = 0$ (미분방정식의 해 $x(t)$를 구하는 문제가 됨)  
+
 $$
 \begin{aligned}
 x(t) & = c_1 \cos \omega_0 t + c_2 \sin \omega_0 t \\
@@ -74,10 +74,13 @@ x(t) & = c_1 \cos \omega_0 t + c_2 \sin \omega_0 t \\
 & = A \cos (\omega_0 t +\delta)
 \end{aligned}
 $$
+
 for 
+
 $$
 \cos \delta = \frac{c_1}{\sqrt{c_1^2 + c_2^2}}, \sin \delta = \frac{c_2}{\sqrt{c_1^2 + c_2^2}}, A = \sqrt{c_1^2 + c_2^2}
-$$  
+$$
+
 마지막 줄의 cos 덧셈 법칙은 $x(t)$의 $\cos \omega\_0 t, \sin \omega\_0 t$의 주기가 같기 때문에 적용 가능
 
 #### Damped Harmonic Motion
