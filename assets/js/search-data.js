@@ -51,7 +51,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/june.github.io/interest/";
               },
-            },{id: "post-nist-ir8446",
+            },{id: "post-quantum-parallelism",
+        
+          title: "Quantum Parallelism",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2026/quantum_parallelism/";
+          
+        },
+      },{id: "post-nist-ir8446",
         
           title: "NIST IR8446",
         
@@ -60,17 +71,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/june.github.io/blog/2026/nist-ir8446/";
-          
-        },
-      },{id: "post-quantum-parallelism",
-        
-          title: "Quantum Parallelism",
-        
-        description: "A Graph-Based Public-Key Cryptosystem Using the NP-Complete Problem of Partitioning Into Perfect Matchings",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/june.github.io/blog/2026/quantum_parallelism/";
           
         },
       },{id: "post-review-paper-on-graph-based-pk-cryptosystem",
