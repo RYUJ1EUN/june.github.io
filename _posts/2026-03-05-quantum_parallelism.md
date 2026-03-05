@@ -76,7 +76,7 @@ x(t) & = c_1 \cos \omega_0 t + c_2 \sin \omega_0 t \\
 $$
 for 
 $$
-\cos \delta = \frac{c\_1}{\sqrt{{c_1}^2 + {c_2}^2}}, \sin \delta = \frac{c_2}{\sqrt{{c_1}^2 + {c_2}^2}}, A = \sqrt{{c_1}^2 + {c_2}^2}
+\cos \delta = \frac{c_1}{\sqrt{{c_1}^2 + {c_2}^2}}, \sin \delta = \frac{c_2}{\sqrt{{c_1}^2 + {c_2}^2}}, A = \sqrt{{c_1}^2 + {c_2}^2}
 $$  
 마지막 줄의 cos 덧셈 법칙은 $x(t)$의 $\cos \omega\_0 t, \sin \omega\_0 t$의 주기가 같기 때문에 적용 가능
 
