@@ -45,9 +45,9 @@ categories: [Study, Class]
     </div>
     
     <div class="col-sm-2 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/post/quantum_parallelism/0305_2.png' | relative_url }}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" alt="image">
+        <img src="{{ '/assets/img/post/quantum_parallelism/0305_2.png' | relative_url }}" style="max-width: 90%; height: auto; display: block; margin: 0 auto;" alt="image">
     </div>
-</div>
+    </div>
 
 
 #### Harmonic Oscillation: Hooke's Law
