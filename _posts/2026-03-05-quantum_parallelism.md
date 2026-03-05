@@ -40,12 +40,12 @@ categories: [Study, Class]
 3. 작용-반작용의 법칙 (Law of Action-Reaction)
     <div class="row align-items-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/post/quantum_parallelism/0305_1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+        <img src="{{ '/assets/img/post/quantum_parallelism/0305_1.png' | relative_url }}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" alt="image">
         - $N$: 수직항력, 책이 책싱을 미는 힘
     </div>
     
     <div class="col-sm-2 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/post/quantum_parallelism/0305_2.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+        <img src="{{ '/assets/img/post/quantum_parallelism/0305_2.png' | relative_url }}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" alt="image">
     </div>
 </div>
 
