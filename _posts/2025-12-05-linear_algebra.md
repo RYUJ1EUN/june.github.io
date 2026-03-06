@@ -12,7 +12,6 @@ categories: [Study, Class]
 📚 [SUB] Strang, Gilbert. *Linear algebra and its applications*. 2012.
 
 
-##### 
 
 
 ### Preliminary
@@ -161,7 +160,7 @@ $$
 $$
 \begin{aligned}
 &\left[\begin{array}{ccccc|c}  1 & -2 & 1 & -1 & 1 & 0 \\  0 & 0 & 1 & -1 & 3 & -2 \\  0 & 0 & 0 & 1 & -2 & 1 \\  0 & 0 & 0 & 0 & 0 & 0\end{array}\right]\\& \qquad\qquad\qquad\qquad\qquad P_1 \qquad\;\; P_2\quad P_3 \qquad\;   \qquad\qquad \leftarrow \text{Pivot Columns}
-\and{aligned}
+\end{aligned}
 $$
 
 $$
@@ -203,14 +202,14 @@ C_2 = 3C_1, \quad C_5 = 3C_1 + 9C_3 - 4C_4
 $$
 
 $$
-\begin{aligned} & \text{(i)} C_2 = 3C_1
+\begin{aligned} & \text{(i) } C_2 = 3C_1
 \\ &\quad
 \begin{pmatrix} C_1 & C_2 & \dots & C_5 \end{pmatrix}\begin{pmatrix} 3 \\ -1 \\ 0 \\ 0 \\ 0 \end{pmatrix}= 3C_1 - C_2 = \vec{0}& \implies
 \lambda_1 \begin{pmatrix} 3 \\ -1 \\ 0 \\ 0 \\ 0 \end{pmatrix}
 \\ \
 \\ &
 
-\text{(ii)} C_5 = 3C_1 + 9C_3 - 4C_4 \; (3C_1 + 9C_3 - 4C_4 - C_5 = 0)
+\text{(ii) } C_5 = 3C_1 + 9C_3 - 4C_4 \; (3C_1 + 9C_3 - 4C_4 - C_5 = 0)
 
 \\ &\quad
 
@@ -252,7 +251,9 @@ $$
 
 $$
 AX = [A] \begin{bmatrix} | & | & & | \\ \vec{x}_1 & \vec{x}_2 & \cdots & \vec{x}_n \\ | & | & & | \end{bmatrix} = \begin{bmatrix} | & | & & | \\ A\vec{x}_1 & A\vec{x}_2 & \cdots & A\vec{x}_n \\ | & | & & | \end{bmatrix}= \begin{bmatrix} 1 & & 0 \\ & \ddots & \\ 0 & & 1 \end{bmatrix}
-\\
+$$
+
+$$
 \iff A\vec{x}_1 = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}, \quad \dots, \quad A\vec{x}_n = \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \end{bmatrix}
 $$
 
@@ -284,7 +285,7 @@ $$
 $$
 \begin{align*}
 \therefore\ [A|\vec{e}_1 \cdots \vec{e}_n]=[A|I_n] \implies & [R|\vec{b}_1\cdots \vec{b}_n] 
-\\ & = [I_n|A^{-1}]\qquad \text{if }\exist A^{-1}
+\\ & = [I_n|A^{-1}]\qquad \text{if }\exists A^{-1}
 \end{align*}
 $$
 
@@ -422,7 +423,7 @@ $$
 \vec{x} \in U \implies A(\lambda \vec{x}) = \lambda (A\vec{x}) = \lambda \vec{0} = \vec{0}
 $$
 
-$U=\{\vec{x}\in\mathbb{R}^n\ \mid \ A\vec{x}=\vec{0}$, for some $A\in\mathbb{R}^{n\times n}\}$: null-space
+$U=\{\vec{x}\in\mathbb{R}^n\ \mid \ A\vec{x}=\vec{0}, \text{ for some } A\in\mathbb{R}^{n\times n}\}$: null-space
 
 ⇒ 즉, $\lambda\vec{x}\in U$
 
@@ -435,8 +436,8 @@ $$
 ##### Definition
 
 $$
-x_1, x_2, \dots, x_k \in V, \quad \lambda_1, \dots, \lambda_k \in \mathbb{R} \\\implies \vec{v} = \lambda_1 \vec{x}_1 + \dots + \lambda_k \vec{x}_k \;\text{ is called a linear combination of }\; \vec{x}_1, \dots, \vec{x}_k.
-$$
+x_1, x_2, \dots, x_k \in V, \quad \lambda_1, \dots, \lambda_k \in \mathbb{R} \implies \vec{v} = \lambda_1 \vec{x}_1 + \dots + \lambda_k \vec{x}_k$$
+is called a linear combination of $\vec{x}\_1, \dots, \vec{x}\_k.$
 
 ##### Definition
 
@@ -805,7 +806,7 @@ $$
 &= \sum_{l=1}^m \left( \sum_{k=1}^m t_{lk} \tilde{a}_{kj} \right) c_l &(c_l\text{: basis of }\Phi(*))\\
 &= \sum_{l=1}^m T\tilde{A}_\Phi c_l &(T\tilde{A}_\Phi\text{ w.r.t. }C\tilde{B})\\
 T\tilde{A}_\Phi 
-&={A_\Phi}_{[C\tilde{B}]}&(\text{transf.\; w.r.t. }C \& \tilde{B})
+&={A_\Phi}_{[C\tilde{B}]}&(\text{transf. w.r.t. }C \& \tilde{B})
 \end{aligned}
 $$
 
@@ -889,15 +890,13 @@ $$
 $$
 \begin{aligned}
 V_{[B]} &\;\;\;\xrightarrow{\Phi_{[CB]}}_A & W_{[C]}\qquad\\
-\psi_{[B\tilde B]}\uparrow\;& &\uparrow \Theta_{[C\tilde C]}
-$$
-
-$$
+\psi_{[B\tilde B]}\uparrow\;& &\uparrow \Theta_{[C\tilde C]}\\
 |_S\! &  &|_T \qquad\,\\
 V_{[\tilde B]} & \;\;\;\,\xrightarrow{\Phi_{[\tilde C\tilde B]}}_{\tilde A} &W_{[\tilde C]}\qquad\!
 \end{aligned}
-\\[1em]
+$$
 
+$$
 \quad\tilde A=\Phi_{[\tilde C\tilde B]}=(\Theta_{[C\tilde C]})^{-1}\circ\Phi_{[CB]}\circ\psi_{[B\tilde B]}=T^{-1}\circ A\circ S
 $$
 
@@ -922,12 +921,12 @@ $$
 
 Linear Map $\Phi : V \to W$
 
-##### **Definitions**
+##### Definitions
 
 - Kernel:  $\ker(\Phi) := \Phi^{-1}(0_W) = \{ v \in V \mid \Phi(v) = 0_W \}$
 - Image :  $\text{Im}(\Phi) := \Phi(V) = \{ w \in W \mid \exists v \in V \text{ s.t. } \Phi(v) = w \}$
 
-##### **Remark**
+##### Remark
 
 1. $\ker(\Phi)$ is not empty $\quad (\because \Phi(0_V) = 0_W, \text{ i.e. } 0_V \in \ker(\Phi))$
 2. $\text{Im}(\Phi)$ is a subspace of $W$
@@ -941,7 +940,7 @@ Linear Map $\Phi : V \to W$
     $$
     
 
-#### **Column Space**
+#### Column Space
 
 $$
 A = \begin{bmatrix} a_1 & a_2 & \dots & a_n \end{bmatrix} \in \mathbb{R}^{m \times n}
@@ -951,12 +950,12 @@ $$
 \begin{aligned} \text{Im}(\Phi) &= \{ Ax \mid x \in \mathbb{R}^n \} \\ &= \{ x_1 \vec{a}_1 + \dots + x_n \vec{a}_n \mid x_i \in \mathbb{R} \} \\ &= \text{span} \langle \vec{a}_1, \dots, \vec{a}_n \rangle \subseteq \mathbb{R}^m \end{aligned}
 $$
 
-##### **Remark**
+##### Remark
 
 1. $\text{rank}(A) = \dim(\text{Im}(\Phi))$
-2. $\text{null-space} : \ker(\Phi) = \{ x \mid Ax = 0 \}$
+2. $\text{null-space} : \ker(\Phi) = \\{ x \mid Ax = 0 \\}$
 
-##### **example**
+##### example
 
 $$
 \Phi : \mathbb{R}^4 \to \mathbb{R}^2
@@ -986,7 +985,10 @@ $$
 $$
 
 $$
-(0,-1/2.-1.0)^T, (1,-1/2,0,-1)^T\in\ker(\Phi)\\[.5em]
+(0,-1/2.-1.0)^T, (1,-1/2,0,-1)^T\in\ker(\Phi)
+$$
+
+$$
 \text{i.e., } \ker(\Phi)=\text{span}\left< (0,-1/2.-1.0)^T, (1,-1/2,0,-1)^T \right>
 $$
 
@@ -1007,7 +1009,7 @@ $$
 - $\dim(\text{Im}(\Phi)) = \text{rank}$
 - $\dim(\ker(\Phi)) = \text{nullity}$
 
-##### **Remark (Consequences of Rank-Nullity)**
+##### Remark (Consequences of Rank-Nullity)
 
 1. $\dim(\text{Im}(\Phi)) \le \dim(V)$
 2. $\dim(\text{Im}(\Phi)) < \dim(V)$
@@ -1044,7 +1046,7 @@ $L$ is called affine subspace (linear manifold) of $V$.
 
 $U$: direction (direction space)
 
-##### **Remark**
+##### Remark
 
 1. Let $L = x_0 + U$ and $\tilde{L} = \tilde{x}_0 + \tilde{U}$ be affine subspaces.
     
@@ -1061,11 +1063,11 @@ $U$: direction (direction space)
     $$
     
 
-##### **Inhomogeneous System and Affine Subspace**
+##### Inhomogeneous System and Affine Subspace
 
 $$
 \begin{aligned}
-Ax=b &\iff \begin{bmatrix} a_1 & \cdots & a_n \end{bmatrix} \begin{bmatrix} x_1 \\ \vdots \\ x_n \end{bmatrix} = \vec{b}\\[2em]
+Ax=b &\iff \begin{bmatrix} a_1 & \cdots & a_n \end{bmatrix} \begin{bmatrix} x_1 \\ \vdots \\ x_n \end{bmatrix} = \vec{b}\\[1em]
 &\iff x_1 \vec{a}_1 + \cdots + x_n \vec{a}_n = \vec{b}
 \end{aligned}
 $$
@@ -1075,7 +1077,7 @@ The solution of $Ax=b$ is
 - either empty $(\text{if } \vec{b} \notin \text{span}\langle a_1, \dots, a_n \rangle)$
 - or an affine subspace of $\dim(\ker(Ax=0))$.
 
-##### **Affine Mapping**
+##### Affine Mapping
 
 $$
 \phi : V \to W ;\ x \longmapsto a + \Phi(x)
@@ -1525,7 +1527,7 @@ $$
 
 $U\cap U^\perp = \{0\}$
 
-##### **Unique Decomposition & Basis**
+##### Unique Decomposition & Basis
 
 For any vector $\vec{x} \in V$, $\vec{x}$ can be uniquely decomposed into
 
@@ -1574,7 +1576,7 @@ $$
 
 ### Projection
 
-#### **Projection**
+#### Projection
 
 - $V$: vector space
 - $U$: subspace of $V$
@@ -1588,7 +1590,7 @@ $$
     (Projection matrix $P_\pi \implies P_\pi^2 = P_\pi$)
     
 
-##### **Projection onto 1-Dim subspace (line)**
+##### Projection onto 1-Dim subspace (line)
 
 - $\pi_u$: projection onto $U$
 - $U := \text{span} \langle \vec{b} \rangle$ ($\vec{b}$ is a basis)
@@ -1599,6 +1601,7 @@ The error vector $(\vec{x} - \pi_u(\vec{x}))$ must be orthogonal to the basis $\
 $$
 \langle \vec{x} - \pi_u(\vec{x}), \vec{b} \rangle = 0
 $$
+
 $$
 \implies \langle \vec{x} - \lambda \vec{b}, \vec{b} \rangle = \langle \vec{x}, \vec{b} \rangle - \lambda \|\vec{b}\|^2 = 0
 $$
@@ -1613,7 +1616,7 @@ $$
 
 $$
 \begin{aligned}
-\pi_u(\vec{x}) &= \lambda \vec{b} = \frac{\langle \vec{x}, \vec{b} \rangle}{\|\vec{b}\|^2} \vec{b} \\[5em]
+\pi_u(\vec{x}) &= \lambda \vec{b} = \frac{\langle \vec{x}, \vec{b} \rangle}{\|\vec{b}\|^2} \vec{b} \\
 &= \frac{\langle \vec{b}, \vec{x} \rangle}{\|\vec{b}\|^2} \vec{b} 
 = \underbrace{\frac{\vec{b}^T\, \vec{x}}{\|\vec{b}\|^2}}_{\in\mathbb{R}}\; \vec{b} 
 |= \underbrace{\frac{\vec{b}\, \vec{b}^T}{\|\vec{b}\|^2}}_{\in\mathbb{R}^{n\times n}}\; \vec{x}
@@ -1621,7 +1624,7 @@ $$
 $$
 
 $$
-\pi_u(\vec{x}) = P_\pi (\vec{x})\
+\pi_u(\vec{x}) = P_\pi (\vec{x})
 $$
 
 $$
@@ -1637,7 +1640,11 @@ V = \mathbb{R}^3, \quad U = \text{span}\langle \vec{b} \rangle = \langle (1, 2, 
 $$
 
 $$
-P_\pi = \frac{b b^T}{\|\vec{b}\|^2} \\[1em] \|\vec{b}\|^2 = 1^2 + 2^2 + 2^2 = 1 + 4 + 4 = 9
+P_\pi = \frac{b b^T}{\|\vec{b}\|^2}
+$$
+
+$$
+\|\vec{b}\|^2 = 1^2 + 2^2 + 2^2 = 1 + 4 + 4 = 9
 $$
 
 $$
@@ -1659,12 +1666,15 @@ Projection matrix는 rank가 full rank가 될 수 없음
 $$
 V := \mathbb{R}^n
 $$
+
 $$
 U = \text{span} \langle \vec{b}_1, \dots, \vec{b}_m \rangle, \quad \dim U = m
 $$
+
 $$
 B := \begin{pmatrix} \vec{b}_1 & \cdots & \vec{b}_m \end{pmatrix}_{n\times m}, \quad \vec{\lambda} = \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_m \end{pmatrix}
 $$
+
 $$
 \text{rank}(B)=m
 $$
@@ -1755,15 +1765,17 @@ $$
 
 ##### Remark
 
-<img src="{{ '/assets/img/post/linear_algebra/image3.png' | relative_url }}" style="max-width: 85%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/linear_algebra/image3.png' | relative_url }}" style="max-width: 70%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 
 $$
 A = \begin{pmatrix} \vec{A}_1 & \vec{A}_2 & \cdots & \vec{A}_k \end{pmatrix}
 $$
+
 $$
 Ax = \begin{pmatrix} \vec{A}_1 & \cdots & \vec{A}_k \end{pmatrix} \begin{pmatrix} x_1 \\ \vdots \\ x_k \end{pmatrix} = x_1 \vec{A}_1 + x_2 \vec{A}_2 + \cdots + x_k \vec{A}_k
 $$
+
 $$
 U := \text{span} \langle \vec{A}_1, \dots, \vec{A}_k \rangle \subseteq \mathbb{R}^n
 $$
@@ -1775,6 +1787,7 @@ $$
 $$
 U = \text{span} \langle \vec{A}_1, \dots, \vec{A}_k \rangle
 $$
+
 $$
 \dim U \le k < n
 $$
@@ -1784,9 +1797,11 @@ $$
 $$
 (\vec{b}_1, \dots, \vec{b}_n) : \text{any basis of } n\text{-dimensional vector space } V
 $$
+
 $$
 \downarrow \text{ Gram-Schmidt method}
 $$
+
 $$
 (\vec{u}_1, \dots, \vec{u}_n) : \text{orthogonal basis (orthonormal basis)}
 $$
@@ -1826,6 +1841,7 @@ Matrix $A$ → Spectral Decomposition (Eigen Decomp) → SVD (Singular Value Dec
 $$
 \det : \mathbb{R}^{n \times n} \longrightarrow \mathbb{R} 
 $$
+
 $$A \longmapsto \det(A) = |A|
 $$
 
@@ -1899,7 +1915,7 @@ $$
 \det(A) \neq 0 \quad \iff \quad \text{rank}(A) = n \quad (\text{full-rank})
 $$
 
-##### **Definition: Trace**
+##### Definition: Trace
 
 The trace of a matrix $A$ is the sum of its diagonal entries:
 
@@ -1938,6 +1954,7 @@ For  $A \in \mathbb{R}^{n \times n}$,  $\lambda \in \mathbb{R}$  is an  eigenval
 $$
 A\vec{x} = \lambda\vec{x} \quad (\text{eigenvalue equation})
 $$
+
 $$
 \text{i.e., }
 (A - \lambda I)\vec{x} = 0 \quad (\vec{x} \neq 0)
@@ -2044,6 +2061,7 @@ The set of all eigenvalues of $A$ is called the eigenspectrum of $A$.
     $$
     \vec{v}^T A \vec{v} = v^T (\lambda \vec{v}) = \lambda v^T v = \lambda \|\vec{v}\|^2 > 0 \quad (\because \vec{v} \neq 0)
     $$
+    
     $$
     \lambda \|\vec{v}\|^2 > 0 \implies \lambda > 0
     $$
@@ -2180,12 +2198,15 @@ pf) For $n=2$
 $$
 c_1 \vec{v}_1 + c_2 \vec{v}_2 = \vec{0} \quad \cdots \text{①}
 $$
+
 $$
 A(c_1 \vec{v}_1 + c_2 \vec{v}_2) = c_1 \lambda_1 \vec{v}_1 + c_2 \lambda_2 \vec{v}_2 = 0 \quad \cdots \text{②}
 $$
+
 $$
 \text{Subtract ①} \times \lambda_1: c_2 (\lambda_2 - \lambda_1) \vec{v}_2 = 0
 $$
+
 $$
 \text{Since } \lambda_1 \neq 0, \lambda_1 \neq \lambda_2 \text{ and } \vec{v}_2 \neq 0 \implies c_2 = 0
 $$
@@ -2193,9 +2214,11 @@ $$
 $$
 \text{Substitute } c_2=0 \text{ into ①:} 
 $$
+
 $$
 c_1 \vec{v}_1 = 0 \implies c_1 = 0
 $$
+
 $$
 \therefore c_1 = c_2 = 0 \quad (\text{Linearly Independent})
 $$
@@ -2242,6 +2265,7 @@ $\hat{c_j}$ means except $c_j$
 $$
 c_j v_j = 0 \implies c_j = 0
 $$
+
 $$
 \therefore c_1 = \cdots = c_n = 0
 $$
@@ -2269,13 +2293,15 @@ $A \in \mathbb{R}^{n \times n}$ is called defective, if it has fewer than $n$ li
     $$
     
     $$
-    \dim C(\lambda_1) = k_1, \quad \dim C(\lambda_2) = k_2, \quad \dots, \quad \dim C(\lambda_m) = k_m\\
+    \dim C(\lambda_1) = k_1, \quad \dim C(\lambda_2) = k_2, \quad \dots, \quad \dim C(\lambda_m) = k_m
+    $$
+
+    $$
     k_1 + k_2 + \cdots + k_m \le n
     $$
     
     $$
     \text{If defective, }k_1 + \cdots + k_m < n
-    
     $$
     
     → Defective면 diagonal matrix를 만들 수 없음
@@ -2294,6 +2320,7 @@ pf)
 $$
 S^T = (A^T A)^T = A^T (A^T)^T = A^T A = S \quad (\text{symmetric})
 $$
+
 $$
 \begin{aligned}
 x^T S x &= x^T (A^T A) x = (x^T A^T)(Ax) = (Ax)^T (Ax) \\
@@ -2321,12 +2348,13 @@ $A$ is a symmetric, positive definite ⇒ $A=LL^T$
     &= \lambda^2 - \lambda - 2 = (\lambda + 1)(\lambda - 2) = 0
     \end{aligned}
     $$
+    
     $$
     \implies \lambda_1 = -1, \quad \lambda_2 = 2
     $$
-    $$
-    \begin{pmatrix} 5 & -5 \\ 2 & -2 \end{pmatrix} v_1 = 0 \implies v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
     
+    $$
+    \begin{pmatrix} 5 & -5 \\ 2 & -2 \end{pmatrix} v_1 = 0 \implies v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix},    
     v_2 = \begin{pmatrix} 5 \\ 2 \end{pmatrix}
     $$
     
@@ -2427,7 +2455,7 @@ $$
 w_j = x_j + i y_j \quad (x_j, y_j \in \mathbb{R})
 $$
 
-norm : $\|\vec{w}\|^2 = |w\_1|^2 + \cdots + |w\_n|^2$
+norm : $\|\vec{w}\|^2 = \|w\_1\|^2 + \cdots + \|w\_n\|^2$
 
 $$
 |w_j|^2 = w_j \overline{w}_j = x_j^2 + y_j^2
@@ -2501,6 +2529,7 @@ $$
 &= y
 \end{aligned}
 $$
+
 $$
 \bar{y} = y \quad \therefore \;y \in \mathbb{R} \quad \square
 $$
@@ -2534,6 +2563,7 @@ and $\vec v\_1,\vec v\_2$ be eigenvectors s.t.
 $$
 A\vec{v}_1 = \lambda_1 \vec{v}_1, \quad A\vec{v}_2 = \lambda_2 \vec{v}_2
 $$
+
 $$
 v_1^H A^H v_2 = (A v_1)^H v_2 = (\lambda_1 v_1)^H v_2 = \bar{\lambda}_1 v_1^H v_2 
 =v_1^H (A v_2) = v_1^H (\lambda_2 v_2) = \lambda_2 v_1^H v_2
@@ -2554,6 +2584,7 @@ Since  $\lambda\_1 \neq \lambda\_2$,
 $$
 v_1^H v_2 = \langle v_1, v_2 \rangle = 0
 $$
+
 $$
 \therefore v_1, v_2 \text{ are orthogonal.}
 $$
@@ -2575,51 +2606,51 @@ $A\in\mathbb{R}^{n\times n}$: real symmetric transformation matrix of $\Phi_A :V
 
 pf)  2. is proved above thm.
 
- 1.   (case 1)
+1. (case 1)
 
-    all eigenvalues are distinct.
+all eigenvalues are distinct.
 
-    $$
-    \underset{\text{eigenvalues}}{(\lambda_1, \dots, \lambda_n)} \longleftrightarrow \underset{\text{eigenvectors}}{(\vec{v}_1, \dots, \vec{v}_n)}
-    $$
+$$
+\underset{\text{eigenvalues}}{(\lambda_1, \dots, \lambda_n)} \longleftrightarrow \underset{\text{eigenvectors}}{(\vec{v}_1, \dots, \vec{v}_n)}
+$$
 
-    By Theorem. 
+By Theorem. 
 
-    $$
-    v_i \perp v_j \quad \text{if } \quad i \neq j
-    $$
+$$
+v_i \perp v_j \quad \text{if } \quad i \neq j
+$$
 
-    $(\vec{v}_1, \dots, \vec{v}_n)$ : linearly independent $n$  vectors in  $V$
+$(\vec{v}_1, \dots, \vec{v}_n)$ : linearly independent $n$  vectors in  $V$
 
-    $(\vec{v}_1, \dots, \vec{v}_n)$ forms an orthogonal basis of  $V$.
+$(\vec{v}_1, \dots, \vec{v}_n)$ forms an orthogonal basis of  $V$.
 
-    (case 2)
+(case 2)
 
-    $\lambda_1, \dots, \lambda_k$  : distinct eigenvalues  $(k < n)$
+$\lambda_1, \dots, \lambda_k$  : distinct eigenvalues  $(k < n)$
 
-    $C(\lambda_1), \dots, C(\lambda_k)$ :  eigenspaces  $\dim C(\lambda_i) = n_i$
+$C(\lambda_1), \dots, C(\lambda_k)$ :  eigenspaces  $\dim C(\lambda_i) = n_i$
 
-    $$
-    C(\lambda_i) = \text{span} \langle \underbrace{v_{i,1}, \dots, v_{i,n_i}}_{(n_i)} \rangle
-    $$
+$$
+C(\lambda_i) = \text{span} \langle \underbrace{v_{i,1}, \dots, v_{i,n_i}}_{(n_i)} \rangle
+$$
 
-    By Schur’s lemma, $\dim \underbrace{C(\lambda_1)}_{n_1} + \cdots + \dim \underbrace{C(\lambda_k)}_{n_k} = n$
+By Schur’s lemma, $\dim \underbrace{C(\lambda_1)}_{n_1} + \cdots + \dim \underbrace{C(\lambda_k)}_{n_k} = n$
 
-    $$
-    \begin{aligned}
-    C(\lambda_i) &= \text{span} \langle v_{i,1}, \dots, v_{i,n_i} \rangle \quad (n_i \text{ dim'l space}) \\ \;
-    \\
-    &\downarrow\text{Gram-Schmidt process} \\ \;
-    \\
-    &= \langle \underbrace{w_{i,1}, \dots, w_{i,n_i}}_{\text{orthogonal}} \rangle
-    \end{aligned}
-    $$
+$$
+\begin{aligned}
+C(\lambda_i) &= \text{span} \langle v_{i,1}, \dots, v_{i,n_i} \rangle \quad (n_i \text{ dim'l space}) \\ \;
+\\
+&\downarrow\text{Gram-Schmidt process} \\ \;
+\\
+&= \langle \underbrace{w_{i,1}, \dots, w_{i,n_i}}_{\text{orthogonal}} \rangle
+\end{aligned}
+$$
 
-    $$
-    ( \underbrace{w_{1,1}, \dots, w_{1,n_1}}_{C(\lambda_1)}, \ \dots, \ \underbrace{w_{k,1}, \dots, w_{k,n_k}}_{C(\lambda_k)} )  \text{ forms an orthogonal basis of } V.
-    $$
+$$
+( \underbrace{w_{1,1}, \dots, w_{1,n_1}}_{C(\lambda_1)}, \ \dots, \ \underbrace{w_{k,1}, \dots, w_{k,n_k}}_{C(\lambda_k)} )  \text{ forms an orthogonal basis of } V.
+$$
 
-    $\implies w_{i_l}\perp w_{j_{l'}}\quad(i\neq j\text{ or }$ 
+$\implies w_{i_l}\perp w_{j_{l'}}\quad(i\neq j\text{ or }$ 
 
 즉, real symmetric $A$가 존재하면 eigenvector들로 만들어진 orthogonal basis를 만들 수 있다.
 
@@ -2785,7 +2816,7 @@ $A$ : Hermitian matrix but $\lambda_i\neq \lambda_j \implies v_i\perp v_j$
 
 $A\in\mathbb{R}^{n\times n}$ : real symmetrix → Hermitian matrix
 
-⇒ $\exists$ orthogonal basis $[B]$ of $mathbb{R}^n$ s.t. 
+⇒ $\exists$ orthogonal basis $[B]$ of $\mathbb{R}^n$ s.t. 
 
 $$P=\begin{bmatrix}
 \\
@@ -2864,6 +2895,7 @@ $$
     $$
     A \vec{v}_i = \lambda_i \vec{v}_i \quad 
     $$
+    
     $$
     \implies v_i^T (A v_i) = v_i^T (\lambda_i v_i) = \lambda_i \|v_i\|^2 > 0\quad
     \therefore \ \lambda_i > 0
@@ -2945,9 +2977,11 @@ $$
 D = P^{-1} A P,\qquad
 D = \begin{pmatrix} \lambda_1 & & 0 \\ & \ddots & \\ 0 & & \lambda_n \end{pmatrix}
 $$
+
 $$
 Dx = D \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} = \lambda_1 \;\,\underbrace{\!\!\!\begin{pmatrix} x_1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}\!\!\!}_{x_1 v_1} + \dots + \lambda_n \;\,\underbrace{\!\!\!\begin{pmatrix} 0 \\ \vdots \\ 0 \\ x_n \end{pmatrix}\!\!\!}_{x_n v_n}
 $$
+
 $$
 \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} = x_1 \vec{v}_1 + \dots + x_n \vec{v}_n
 $$
@@ -3083,6 +3117,7 @@ $$
     [\Sigma]_{m \times n}
     [V^T]_{n \times n}
     $$
+    
     $$
     \text{where } \Sigma=\left[\begin{array}{ccc}
     \sigma_1 & & 0 \\
@@ -3100,6 +3135,7 @@ $$
     [\Sigma]_{m \times n}
     [V^T]_{n \times n}
     $$
+    
     $$
     \text{where } \Sigma=\left[\begin{array}{ccc|ccc}
     \sigma_1 & & 0 &&&\\
@@ -3133,6 +3169,7 @@ $$
     $$
     \mathbb{R}^n \xrightarrow[\text{(rotation)}]{V^T} \mathbb{R}^n \xrightarrow[\text{stretching}]{\Sigma} \mathbb{R}^m \xrightarrow[\text{(rotation)}]{U} \mathbb{R}^m
     $$
+    
     $$
     \xrightarrow[\qquad\qquad\text{linear transformation}\qquad\qquad]{A}
     $$
@@ -3140,7 +3177,7 @@ $$
     
     <div style="text-align: center;">
         <img src="{{ '/assets/img/post/linear_algebra/image5.png' | relative_url }}" style="width: 25%; display: inline-block; margin: 0 5px;" alt="no_in_encoding_attack_structure_3">
-        <img src="{{ '/assets/img/post/linear_algebra/image6.png' | relative_url }}" style="width: 65%; display: inline-block; margin: 0 5px;" alt="no_in_encoding_attack_structure_5">
+        <img src="{{ '/assets/img/post/linear_algebra/image6.png' | relative_url }}" style="width: 55%; display: inline-block; margin: 0 5px;" alt="no_in_encoding_attack_structure_5">
     </div>
 
     
@@ -3154,9 +3191,11 @@ $A^T_{n \times m} A_{m \times n} \in \mathbb{R}^{n \times n}$ :  Symmetric, Posi
 $$
 A^T A = PDP^T
 $$
+
 $$
 P = (v_1 \dots v_n) : \text{orthogonal matrix } (PP^T = I)
 $$
+
 $$
 D = \begin{pmatrix} \lambda_1 & & 0 \\ & \ddots & \\ 0 & & \lambda_n \end{pmatrix}_{n \times n}\qquad (\lambda_i\ge 0)
 $$
@@ -3192,6 +3231,7 @@ A^TA=PDP^{-1}&=P\begin{bmatrix}
 \end{bmatrix}V^T=V\Sigma^T\Sigma V^T
 \end{aligned}
 $$
+
 $$
 \therefore\;
 V^T=P^T,\; \sigma_i^2=\lambda_i
@@ -3264,6 +3304,7 @@ $$
 $$
 \| A v_i \| = \sqrt{\lambda_i} = \sigma_i
 $$
+
 $$
 u_i = \dfrac{A v_i}{\| A v_i \|} = \dfrac{A v_i}{\sigma_i}
 $$
@@ -3292,9 +3333,7 @@ $$
 
 $$
 \begin{aligned}
-A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} &= U(\theta_2) \cdot \Sigma(\sigma_1, \sigma_2) \cdot V^T(\theta_1)
-$$
-$$
+A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} &= U(\theta_2) \cdot \Sigma(\sigma_1, \sigma_2) \cdot V^T(\theta_1)\\
 (a, b, c, d) &\longleftrightarrow (\theta_1, \theta_2, \sigma_1, \sigma_2)
 \end{aligned}
 $$
@@ -3317,9 +3356,11 @@ $$
 $$
 \lambda_1 = 3, \quad \lambda_2 = 1, \quad \lambda_3 = 0
 $$
+
 $$
 \sigma_1 = \sqrt{3},\; \sigma_2 = \sqrt{1} = 1, \; \sigma_3 = \sqrt{0} 
 $$
+
 $$
 \Sigma_{2\times 3}=\begin{bmatrix}
 \sqrt{3} & 0 & 0\\
