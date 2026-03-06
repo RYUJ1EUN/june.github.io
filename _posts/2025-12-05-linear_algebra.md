@@ -1037,7 +1037,7 @@ L &= x_0 + U := \{ x_0 + u \mid u \in U \} \quad (\text{hyperplane})\\
 \end{aligned}
 $$
 
-<img src="{{ '/assets/img/post/linear_algebra/image1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/linear_algebra/image1.png' | relative_url }}" style="max-width: 20%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 
 $x_0$: support vector
@@ -1765,7 +1765,7 @@ $$
 
 ##### Remark
 
-<img src="{{ '/assets/img/post/linear_algebra/image3.png' | relative_url }}" style="max-width: 70%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/linear_algebra/image3.png' | relative_url }}" style="max-width: 60%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 
 $$
@@ -3177,7 +3177,7 @@ $$
     
     <div style="text-align: center;">
         <img src="{{ '/assets/img/post/linear_algebra/image5.png' | relative_url }}" style="width: 25%; display: inline-block; margin: 0 5px;" alt="no_in_encoding_attack_structure_3">
-        <img src="{{ '/assets/img/post/linear_algebra/image6.png' | relative_url }}" style="width: 55%; display: inline-block; margin: 0 5px;" alt="no_in_encoding_attack_structure_5">
+        <img src="{{ '/assets/img/post/linear_algebra/image6.png' | relative_url }}" style="width: 45%; display: inline-block; margin: 0 5px;" alt="no_in_encoding_attack_structure_5">
     </div>
 
     
