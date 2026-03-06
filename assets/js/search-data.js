@@ -249,6 +249,17 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2023/windows-vs-code/";
           
         },
+      },{id: "post-linear-algebra",
+        
+          title: "Linear Algebra",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2020/linear_algebra/";
+          
+        },
       },{id: "books-빛의-제국-your-republic-is-calling-you",
           title: '빛의 제국 (Your Republic is Calling You)',
           description: "",
