@@ -244,3 +244,268 @@ $D/4 = \beta^2 - \omega_0^2$
     $$
     
     $\beta > \omega\_2$이므로 $t$가 커지면 $e^{-\beta t}$에 의해 $0$으로 감소함 (진동 X)
+
+
+### Snell's law
+
+_빛도 매질에 따라 속도가 다름 (파동의 성질)_
+
+Snell의 법칙: 입사각 = 반사각
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0312_1.png' | relative_url }}" style="max-width: 25%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+$$\frac{\sin\theta_1}{\sin\theta_2} = \frac{v_1}{v_2}$$
+
+- 최소시간의 원리 (Fermat); 빛 = 파동. 가장 빨리 갈 수 있는 길을 거쳐 감.
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0312_2.png' | relative_url }}" style="max-width: 35%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+
+$$A \xrightarrow{t_{AP}} P \xrightarrow{t_{PB}} B$$
+
+$$t_{AB} = t_{AP} + t_{PB}$$
+
+$$
+\begin{aligned}
+\overline{AP} & = \sqrt{x^2+a^2} = v_1 t_{AP}\\
+\overline{PB} &= \sqrt{(d-x)^2+b^2} = v_2 t_{PB}\\
+t_{AB} &= \frac{\sqrt{x^2+a^2}}{v_1} + \frac{\sqrt{(d-x)^2+b^2}}{v_2}
+\end{aligned}
+$$
+
+$t\_{AB}$가 최소인 $x$의 선택: 
+$$\frac{dt_{AB}}{dx} = 0$$
+
+$$
+\begin{aligned}
+\frac{dt_{AB}}{dx} = \frac{x}{v_1 \sqrt{x^2+a^2}} &+ \frac{-(d-x)}{v_2 \sqrt{(d-x)^2+b^2}} = 0\\
+\frac{x}{v_1 \sqrt{x^2+a^2}} &= \frac{d-x}{v_2 \sqrt{(d-x)^2+b^2}}\\
+\Rightarrow \frac{\sin\theta_1}{v_1} &= \frac{\sin\theta_2}{v_2}
+\qquad \text{(Snell's rule)}
+\end{aligned}
+$$
+
+$\rightarrow$ 이를 만족하는 $x$를 택함.
+
+
+
+### 에너지 (Energy)
+
+##### 포텐셜 에너지 (potential energy)
+
+- (위치 에너지) $V(x)$ ; 위치 $x$ 외 시간 같은 다른 요인이 작용하지 않음
+
+- (힘) $F(x) = -\frac{dV}{dx}$ (1-Dim)  
+    $\qquad = -\nabla V$ (3-dim, gradient) 
+
+- $$V(x) = -\int_{p_1}^{p_2} F(x) dx = -\int_{p_1}^{p_2} \frac{dV}{dx} dx = -V(p_2) + V(p_1)$$
+
+##### 보존장 (conservative vector field)
+
+$$\vec{F} : \mathbb{R}^3 \rightarrow \mathbb{R}^3$$
+
+$$(x,y,z) \mapsto \vec{F}(x,y,z)$$
+
+$\Rightarrow$ 각 점마다 벡터와 대응되고, 1 또는 2 성립 (1과 2 동치)
+
+1. 경로와 무관한 적분 결과  
+    $$\int_{C_1} \vec{F} \cdot d\vec{r} = \int_{C_2} \vec{F} \cdot d\vec{r}$$
+
+2. potential func의 존재  
+    $\exists f : \mathbb{R}^3 \rightarrow \mathbb{R}$  
+    s.t. $\vec{F} = \nabla f$ (적분의 기본 정리: 부정적분 = 정적분)
+
+$$\int_C \vec{F} \cdot d\vec{r} = \int_C \nabla f \cdot d\vec{r} = f(Q) - f(P)$$
+
+에너지를 다룰 것인가 
+$$\frac{1}{2}mv^2 = \frac{1}{2}m\dot{x}^2$$
+? 힘을 다룰 것인가
+$$F = ma = m\ddot{x}$$
+?
+$\Rightarrow$ 에너지를 다룸 ($v$가 $a$보다 미분 1회 덜함)
+
+_(시간에 대한 미분은 일반적으로 편미분을 잘 고려하지 않고, 시간을 파라미터로 갖는 map들을 독립변수로 바라봄)_
+
+- 운동에너지 (Kinetic Energy) : $T = \frac{1}{2}mv^2$
+- 총 에너지 (닫힌 계) $E = T + V$
+
+##### 에너지 보존 법칙
+
+$\dot{E} = 0$ ; 시간의 흐름에 따른 에너지 변화량이 없음
+
+$$
+\begin{aligned}
+\frac{dT}{dt} &= \dot{T} = \frac{1}{2}m 2v \dot{v} = mv\dot{v} = mva\\
+\frac{dV}{dt} &= \dot{V} = \frac{dV}{dx} \dot{x} = \frac{dV}{dx} v (\because V=V(x))
+\end{aligned}
+$$  
+_($t$는 식에 나타나지 않음)_
+
+$$\therefore \dot{E} = \dot{T} + \dot{V} = mva + \frac{dV}{dx} v = (ma + \frac{dV}{dx}) v = (ma - F) v = 0$$
+
+$\Rightarrow ma = F$ 일 때 보존력
+
+
+##### 운동량 (momentum) $p := mv$
+
+- 속도보다 근본적인 물리량에 가까움
+
+- 계의 모든 힘을 더하면 0인 고립계에서 보존되는 성질이 있음
+
+    $$
+    \begin{aligned}
+    F &= \sum_{i,j} F\_{ij} = 0\\
+    &= \sum_j F_j \qquad (F_j = \sum_i F_{ij}: j\text{가 받는 알짜힘})
+    \end{aligned}
+    $$
+
+    $$
+    F_j = m_j a_j = \frac{d}{dt}(m_j v_j) = \frac{d}{dt} p_j = \dot{p}_j
+    $$
+
+    i.e. $F_j$는 운동량의 미분
+
+    $$\therefore F = \sum_j F_j = \sum_j \dot{p}_j = \frac{d}{dt} \sum_j p_j = 0$$
+
+    $$\Rightarrow \sum_j p_j$$
+    는 시간에 대한 상수
+
+    $$\Rightarrow$$ 
+    운동량 보존 법칙 (고립계에서 운동량 총합은 바뀌지 않음)
+
+- 질량의 합이나 속도의 합은 보존되지 않음
+
+**Example**
+
+작용-반작용의 법칙 
+$$F_{12} = -F_{21}$$
+
+탄성충돌 
+
+그림: $m(v_1) \rightarrow M(v_2=0) \Rightarrow m(\tilde{v}_1) \rightarrow M(\tilde{v}_2)$)
+
+$$
+\begin{cases}
+E = \frac{1}{2}mv_1^2\\
+p = mv_1
+\end{cases}
+$$
+
+$$
+\begin{cases}
+\tilde{E} = \frac{1}{2}m\tilde{v}_1^2 + \frac{1}{2}m\tilde{v}_2^2\\
+\tilde{p} = m\tilde{v}_1 + m\tilde{v}_2
+\end{cases}
+$$
+
+$$\Rightarrow E = \tilde{E} \ \& \ p = \tilde{p}$$
+
+$$
+\begin{cases}
+v_1^2 = \tilde{v}_1^2 + \tilde{v}_2^2\\
+v_1 = \tilde{v}_1 + \tilde{v}_2
+\end{cases}
+$$
+
+$$\Rightarrow v_1^2 + 2\tilde{v}_1\tilde{v}_2 + \tilde{v}_2^2 = \tilde{v}_1^2 + \tilde{v}_2^2$$
+
+$$\therefore 2\tilde{v}_1\tilde{v}_2 = 0 \Rightarrow \tilde{v}_1= 0, \tilde{v}_2=v_1$$
+
+$B$가 $A$의 앞에 있으므로 둘이 부딪힌 후 $\tilde{v}\_1>0$이면서 $\tilde{v}\_2 = 0$인 상황은 불가능함
+
+
+**역학 발전 과정**
+
+Newtonian $\rightarrow$ Lagrangian
+$\rightarrow$ Hamiltonian
+$\rightarrow$ Schrödinger
+$\rightarrow$ Quantum computer
+
+
+##### Lagrangian Dynamics
+
+- Principle of Least Action: "입자의 경로는 작용 (action) 이 정상값 (최솟값) 이 되는 경로이다."
+
+- Minimum Principles
+    - Fermat's principle (1657): least time
+    - Hamilton's principle (1834): "Of all the possible paths along which a dynamical system may move from one point to another within a specified time interval, the actual path followed is that which minimizes the time integral of the difference between the kinetic and potential energies."
+        
+        $$\Rightarrow \delta \left( \int_{t_1}^{t_2} (T - V) dt \right) = 0$$
+
+        $\delta$ : 기호적 함수 (변분)
+
+
+### Calculus of variation
+
+Action 
+
+$$S := \int_{t_1}^{t_2} L(x, \dot{x} ; t) dt$$ 
+
+($x, \dot{x}$는 독립변수(편미분 할 때 독립적인 변수로 봄), $t$는 파라미터)
+
+Let $x(t\_1) = x\_1$, $x(t\_2) = x\_2$
+
+$S$를 최소화하는 함수 $x_0(t)$는 
+
+$$\frac{d}{dt}(\frac{\partial L}{\partial \dot{x}_0}) = \frac{\partial L}{\partial x_0}$$
+
+를 만족한다. 
+($x\_a(t)$는 임의의 경로 함수)
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0312_3.png' | relative_url }}" style="max-width: 25%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+$x\_0(t)$가 $S$의 정상값을 준다고 할 때, 임의의 다른 경로는 
+
+$$x_\alpha(t) := x_0(t) + \alpha \beta(t) \qquad \alpha \in \mathbb{R}, \beta(t_1) = \beta(t_2) = 0$$
+
+$$\Rightarrow S[x_0] \le S[x_\alpha]\qquad \forall \alpha, \beta$$
+
+pf) $x\_0(t)$가 $S$의 정상값을 준다고 하자.
+    임의의 
+    $$x_\alpha(t) := x_0(t) + \alpha \beta(t), \beta(t_1) = \beta(t_2) = 0, \alpha \in \mathbb{R}$$
+    에 대하여 작용 
+    $$S[x_\alpha(t)]$$
+    를 생각하면,
+    $\alpha = 0$에서 
+    $$\frac{\partial}{\partial \alpha} S[x_\alpha(t)] = 0$$
+    을 만족할 것이다. ($\alpha=0$일 때 정상값이므로)  
+    $$
+    \begin{aligned}
+    \frac{\partial}{\partial \alpha} S[x_\alpha(t)] 
+    &= \frac{\partial}{\partial \alpha} \int_{t_1}^{t_2} L dt \\
+    &= \int_{t_1}^{t_2} \frac{\partial L}{\partial \alpha} dt\\
+    &= \int_{t_1}^{t_2} \frac{\partial L}{\partial x_\alpha} \frac{\partial x_\alpha}{\partial \alpha} + \frac{\partial L}{\partial \dot{x}_\alpha} \frac{\partial \dot{x}_\alpha}{\partial \alpha} dt (\because L = L(x_\alpha, \dot{x}_\alpha ; t))
+    &= \int_{t_1}^{t_2} \frac{\partial L}{\partial x_\alpha} \beta + \frac{\partial L}{\partial \dot{x}_\alpha} \dot{\beta} dt (\because x_\alpha(t) = x_0(t) + \alpha \beta(t))\\
+    &= \int_{t_1}^{t_2} \frac{\partial L}{\partial x_\alpha} \beta dt + \left[ \frac{\partial L}{\partial \dot{x}_\alpha} \beta \right]_{t_1}^{t_2} - \int_{t_1}^{t_2} \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}_\alpha} \right) \beta dt\\
+    &= \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial x_\alpha} - \frac{d}{dt} \frac{\partial L}{\partial \dot{x}_\alpha} \right) \beta dt
+    \qquad(\because \left[ \frac{\partial L}{\partial \dot{x}_\alpha} \beta \right]_{t_1}^{t_2} = 0)
+    \end{aligned}
+    $$
+
+
+
+We want to check
+
+$$\frac{\partial}{\partial \alpha} S[x_\alpha(t)] = \int_{t_1}^{t_2} \left[ \frac{\partial L}{\partial x_\alpha} - \frac{d}{dt} \frac{\partial L}{\partial \dot{x}_\alpha} \right] \beta dt = 0$$
+
+for all $\beta(t)$, $\alpha=0$.
+
+$$\therefore \frac{\partial L}{\partial x_0} = \frac{d}{dt} \frac{\partial L}{\partial \dot{x}_0}$$ 
+
+for $\alpha=0$ (Euler-Lagrangian Eq)
+
+**Example of Lagrangian $L := T - V$**
+
+탄성력에 대하여,
+
+$$T = \frac{1}{2}m\dot{x}^2,\; V = \frac{1}{2}kx^2.$$
+
+$$L(x, \dot{x} ; t) = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}kx^2$$
+
+$$\frac{d}{dt} \frac{\partial L}{\partial \dot{x}} = \frac{\partial L}{\partial x}$$ 
+가 되는 $x$는
+
+$$\frac{\partial L}{\partial \dot{x}} = m\dot{x} \ , \ \frac{\partial L}{\partial x} = -kx$$
+
+$$\therefore m\ddot{x} = -kx$$ 
+를 만족하는 $x$이다.
