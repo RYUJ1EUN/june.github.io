@@ -16,13 +16,14 @@ categories: [Study]
 
 ### 선형대수학
 
+<img src="{{ '/assets/img/post/algebra/260313_1.jpg' | relative_url }}" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+_~이해하고 활용할 수 있는 연산은 선형 연산 뿐이다~_
+
 #### 행렬과 Gauss 소거법
 
 ##### Matrix
 
-<img src="{{ '/assets/img/post/algebra/260313_1.jpg' | relative_url }}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" alt="image">
-
-_~이해하고 활용할 수 있는 연산은 선형 연산 뿐이다~_
 
 - $A$의 대각성분의 합 trace 
 $$\text{tr}(A) = \sum_{i=1}^n a_{ii}$$
@@ -76,7 +77,7 @@ $$\text{tr}(A) = \sum_{i=1}^n a_{ii}$$
     
     * $AX=0$이 trivial solution만 가질 때 $A$가 가역임을 추후 또 다른 방식으로 증명
 
-<img src="{{ '/assets/img/post/algebra/260313_1.jpg' | relative_url }}" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/algebra/260313_1.jpg' | relative_url }}" style="max-width: 70%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 _찜찜함을 느끼셨으면 다 써주시지,,, 제가 순수하지 못해서 이유가 와 닿지 않아요_ 🤣
 
