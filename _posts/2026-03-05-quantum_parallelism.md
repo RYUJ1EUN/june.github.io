@@ -278,7 +278,7 @@ $$\frac{dt_{AB}}{dx} = 0$$
 
 $$
 \begin{aligned}
-\frac{dt_{AB}}{dx} = \frac{x}{v_1 \sqrt{x^2+a^2}} + \frac{-(d-x)}{v_2 \sqrt{(d-x)^2+b^2}} &= 0\\
+\frac{dt_{AB}}{dx} = \frac{x}{v_1 \sqrt{x^2+a^2}} &+ \frac{-(d-x)}{v_2 \sqrt{(d-x)^2+b^2}} = 0\\
 \frac{x}{v_1 \sqrt{x^2+a^2}} &= \frac{d-x}{v_2 \sqrt{(d-x)^2+b^2}}\\
 \Rightarrow \frac{\sin\theta_1}{v_1} &= \frac{\sin\theta_2}{v_2}
 \qquad \text{(Snell's rule)}
@@ -309,8 +309,7 @@ $$(x,y,z) \mapsto \vec{F}(x,y,z)$$
 $\Rightarrow$ 각 점마다 벡터와 대응되고, 1 또는 2 성립 (1과 2 동치)
 
 1. 경로와 무관한 적분 결과  
-    $\int_{C_1} \vec{F} \cdot d\vec{r} = \int_{C_2} \vec{F} \cdot d\vec{r}$ 
-    (적분 정리)부정 적분 = 정적분인 $\leftarrow$ 
+    $$\int_{C_1} \vec{F} \cdot d\vec{r} = \int_{C_2} \vec{F} \cdot d\vec{r}$$
 
 2. potential func의 존재  
     $\exists f : \mathbb{R}^3 \rightarrow \mathbb{R}$  
@@ -453,11 +452,11 @@ $$\frac{d}{dt}(\frac{\partial L}{\partial \dot{x}_0}) = \frac{\partial L}{\parti
 를 만족한다. 
 ($x\_a(t)$는 임의의 경로 함수)
 
+<img src="{{ '/assets/img/post/quantum_parallelism/0312_3.png' | relative_url }}" style="max-width: 25%; height: auto; display: block; margin: 0 auto;" alt="image">
+
 $x\_0(t)$가 $S$의 정상값을 준다고 할 때, 임의의 다른 경로는 
 
-$$x_\alpha(t) := x_0(t) + \alpha \beta(t) \qquad \alpha \in \mathbb{R}$, $\beta(t_1) = \beta(t_2) = 0$$
-
-<img src="{{ '/assets/img/post/quantum_parallelism/0312_3.png' | relative_url }}" style="max-width: 25%; height: auto; display: block; margin: 0 auto;" alt="image">
+$$x_\alpha(t) := x_0(t) + \alpha \beta(t) \qquad \alpha \in \mathbb{R}, \beta(t_1) = \beta(t_2) = 0$$
 
 $$\Rightarrow S[x_0] \le S[x_\alpha]\qquad \forall \alpha, \beta$$
 
@@ -469,8 +468,7 @@ pf) $x\_0(t)$가 $S$의 정상값을 준다고 하자.
     를 생각하면,
     $\alpha = 0$에서 
     $$\frac{\partial}{\partial \alpha} S[x_\alpha(t)] = 0$$
-    을 만족할 것이다. ($\alpha=0$일 때 정상값이므로)
-    
+    을 만족할 것이다. ($\alpha=0$일 때 정상값이므로)  
     $$
     \begin{aligned}
     \frac{\partial}{\partial \alpha} S[x_\alpha(t)] 
