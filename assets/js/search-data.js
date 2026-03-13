@@ -183,6 +183,28 @@ ninja.data = [{
             window.location.href = "/june.github.io/blog/2024/arx-wbc/";
           
         },
+      },{id: "post-lprng",
+        
+          title: "LPRNG",
+        
+        description: "LPRNG 구조 변화 분석 세미나",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2024/LPRNG/";
+          
+        },
+      },{id: "post-양자정보기초",
+        
+          title: "양자정보기초",
+        
+        description: "한국통신학회 양자통신및양자컴퓨터 기초 단기강좌: 고려대 허준 교수님 양자정보기초 1, 2",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/june.github.io/blog/2024/quantum/";
+          
+        },
       },{id: "post-information-theory",
         
           title: "Information Theory",
