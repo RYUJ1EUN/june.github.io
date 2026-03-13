@@ -102,8 +102,8 @@ jobs:
           npm install -g purgecss
           purgecss -c purgecss.config.js
           
-      # [수정 핵심 1] 과거 gh-pages 브랜치 배포 코드(JamesIves) 삭제 
-      # [수정 핵심 2] 빌드된 결과물을 Actions 배포용으로 묶어주는 단계 추가
+      # [수정 1] 과거 gh-pages 브랜치 배포 코드(JamesIves) 삭제 
+      # [수정 2] 빌드된 결과물을 Actions 배포용으로 묶어주는 단계 추가
       - name: Upload artifact 📤
         uses: actions/upload-pages-artifact@v3
         with:
@@ -115,7 +115,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    # [수정 핵심 3] PR(Pull Request) 테스트 시에는 실제 배포가 되지 않도록 안전장치 추가
+    # [수정 3] PR(Pull Request) 테스트 시에는 실제 배포가 되지 않도록 안전장치 추가
     if: github.event_name != 'pull_request'
     steps:
       - name: Deploy to GitHub Pages 🚀
