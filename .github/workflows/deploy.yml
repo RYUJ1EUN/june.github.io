@@ -63,6 +63,8 @@ on:
 
 permissions:
   contents: write
+  pages: write      # GitHub Pages 직접 배포를 위한 핵심 권한
+  id-token: write
 
 jobs:
   deploy:
@@ -103,3 +105,13 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4
