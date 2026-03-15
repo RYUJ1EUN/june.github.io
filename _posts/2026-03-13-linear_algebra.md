@@ -81,3 +81,23 @@ $$\text{tr}(A) = \sum_{i=1}^n a_{ii}$$
 
 _찜찜함을 느끼셨으면 다 써주시지,,, 제가 순수하지 못해서 이유가 와 닿지 않아요_ 🤣
 
+##### Equivalence Class와 Partition
+
+- Class $\mathcal{X}$에 대하여 $\mathcal{X}\times \mathcal{X}$의
+subset $R$이 $\mathcal{X}$ 위의 equivalence relation이고,
+$x\in\mathcal{X}$일 때,
+$$[x]=\{ y\in \mathcal{X} : x\sim y \}$$
+이면 $[x]$를 $x$의 equivalence class라고 함
+    - Class
+    - Set
+    - Family
+    - Collection
+- $\mathcal{X}$의 subset $\mathcal{C}$이 complete set of representative이면,
+즉, $z\in\mathcal{X}$이면 유일한 $x\in\mathcal{C}$에 대해 $z\sim x$이면,
+equivalence class decomposition
+$$\mathcal{X} = \dot{\bigcup_{x\in\mathcal{C}}} [x]$$
+가능함
+
+* Class $\mathcal{X}$에 equivalence relation이 주어짐
+$\iff$
+equivalence class들로 이뤄진 partition이 주어짐
