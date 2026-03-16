@@ -88,10 +88,9 @@ subset $R$이 $\mathcal{X}$ 위의 equivalence relation이고,
 $x\in\mathcal{X}$일 때,
 $$[x]=\{ y\in \mathcal{X} : x\sim y \}$$
 이면 $[x]$를 $x$의 equivalence class라고 함
-    - Class
-    - Set
-    - Family
-    - Collection
+    - Set: collections of elements satisfying boundedness
+    - Class: collections that are too large to be strictly defined as sets
+    - Family: indexed collection (sets of sets)
 - $\mathcal{X}$의 subset $\mathcal{C}$이 complete set of representative이면,
 즉, $z\in\mathcal{X}$이면 유일한 $x\in\mathcal{C}$에 대해 $z\sim x$이면,
 equivalence class decomposition
@@ -101,3 +100,24 @@ $$\mathcal{X} = \dot{\bigcup_{x\in\mathcal{C}}} [x]$$
 * Class $\mathcal{X}$에 equivalence relation이 주어짐
 $\iff$
 equivalence class들로 이뤄진 partition이 주어짐
+
+
+#### 벡터 공간
+
+##### Vector Space
+
+- 고정된 집합 $F$가 주어지고, 집합 $V$에 덧셈과 상수곱 연산이 주어졌을 때,
+    - $V$에 대한 덧셈의 결합법칙, 교환법칙 성립
+    - $V$에 대한 덧셈 항등원, 곱셈 항등원 존재
+    - $V$에 대한 덧셈 역원 존재
+    - $F, V$에 대한 곱셈의 분배법칙, 결합법칙 성립
+    을 만족하면, $V$를 $F$-위의 벡터공간이라고 함    
+- 이때 $V$의 원소는 vector, $F$의 원소는 scalar
+
+- $F$-vector space인 $V$의 subset $W$가 상속받은(inherited) 
+연산에 대해 닫혀있으면, $W$는 $V$의 subspace가 됨
+    $$W\leq V$$
+
+
+- Homogeneous equation $AX=0$의 solution space는 $F^n$의 $F$-subspace임
+    - $F^n$의 모든 subspace는 어떤 $A$에 대한 $AX=0$의 solution space임
