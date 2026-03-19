@@ -474,7 +474,7 @@ pf) $x\_0(t)$가 $S$의 정상값을 준다고 하자.
     \frac{\partial}{\partial \alpha} S[x_\alpha(t)] 
     &= \frac{\partial}{\partial \alpha} \int_{t_1}^{t_2} L dt \\
     &= \int_{t_1}^{t_2} \frac{\partial L}{\partial \alpha} dt\\
-    &= \int_{t_1}^{t_2} \frac{\partial L}{\partial x_\alpha} \frac{\partial x_\alpha}{\partial \alpha} + \frac{\partial L}{\partial \dot{x}_\alpha} \frac{\partial \dot{x}_\alpha}{\partial \alpha} dt (\because L = L(x_\alpha, \dot{x}_\alpha ; t))
+    &= \int_{t_1}^{t_2} \frac{\partial L}{\partial x_\alpha} \frac{\partial x_\alpha}{\partial \alpha} + \frac{\partial L}{\partial \dot{x}_\alpha} \frac{\partial \dot{x}_\alpha}{\partial \alpha} dt (\because L = L(x_\alpha, \dot{x}_\alpha ; t))\\
     &= \int_{t_1}^{t_2} \frac{\partial L}{\partial x_\alpha} \beta + \frac{\partial L}{\partial \dot{x}_\alpha} \dot{\beta} dt (\because x_\alpha(t) = x_0(t) + \alpha \beta(t))\\
     &= \int_{t_1}^{t_2} \frac{\partial L}{\partial x_\alpha} \beta dt + \left[ \frac{\partial L}{\partial \dot{x}_\alpha} \beta \right]_{t_1}^{t_2} - \int_{t_1}^{t_2} \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}_\alpha} \right) \beta dt\\
     &= \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial x_\alpha} - \frac{d}{dt} \frac{\partial L}{\partial \dot{x}_\alpha} \right) \beta dt
