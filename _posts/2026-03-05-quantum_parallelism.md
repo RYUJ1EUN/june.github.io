@@ -509,3 +509,48 @@ $$\frac{\partial L}{\partial \dot{x}} = m\dot{x} \ , \ \frac{\partial L}{\partia
 
 $$\therefore m\ddot{x} = -kx$$ 
 를 만족하는 $x$이다.
+
+
+<br>
+$D_1, D_2$: 첫 번째, 두 번째 component로 미분한다는 표현.
+
+$$\frac{\partial L}{\partial x} = D_1 L$$  
+$$\frac{\partial L}{\partial \dot{x}} = D_2 L$$
+
+$t \mapsto (x\_1(t), x\_2(t))$ : Curve
+
+$$f(x, y) = x^2 y^2 \quad f: \mathbb{R}^2 \to \mathbb{R}$$  
+$$f(x_1(t), x_2(t))$$  
+$$\frac{\partial f}{\partial x_1} = D_1 f(x_1, x_2)$$
+
+$$y = f(x)$$  
+$$w = g(y) = g(f(x))$$  
+$$\frac{dw}{dx} = g'(f(x)) f'(x)$$  
+$$\frac{dw}{dx} = \frac{dw}{dy} \frac{dy}{dx} = \frac{dw}{df} \frac{df}{dx}$$
+
+#### Lagrangian Eq. 
+
+$$L := T - V = L(x, \dot{x}, t)$$
+(여기서 $T$는 운동 에너지, $V$는 위치 에너지)
+
+오일러-라그랑주 방정식
+$$\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) = \frac{\partial L}{\partial x}$$  
+왜? $\longrightarrow$ Hamilton의 원리
+
+1. 뉴턴 역학의 외력($F$)을 고려하지 않고,
+2. 에너지의 특징으로부터 물체의 운동을 기술할 수 있다.
+
+$\Rightarrow$ 1.과 2.는 동치: 1.로 알고 있었지만 2.로 접근해야 함  
+1.은 벡터(Vector) 2.는 스칼라(Scalar): 2.가 계산이 훨씬 쉬움
+
+##### Generalized Coordinates
+
+Any set of quantities that completely specifies the state of a system.
+
+$$\begin{cases} 
+x = x(q_1, \dots, q_n, t) \\
+\dot{x} = \dot{x}(\dot{q}_1, \dots, \dot{q}_n, t) 
+\end{cases}
+\longrightarrow \text{Action } S = \int_{t_1}^{t_2} L \, dt$$
+
+$\Rightarrow$ $x$를 찾는 문제가 $(q\_1, \dots, q\_n)$을 찾는 문제가 됨
