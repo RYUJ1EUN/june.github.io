@@ -554,3 +554,88 @@ x = x(q_1, \dots, q_n, t) \\
 \longrightarrow \text{Action } S = \int_{t_1}^{t_2} L \, dt$$
 
 $\Rightarrow$ $x$를 찾는 문제가 $(q\_1, \dots, q\_n)$을 찾는 문제가 됨
+
+
+**Example: Pendulum**
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0316_1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+
+$$l^2 = x^2 + y^2$$
+
+$$x = l \sin\theta, y = -l \cos\theta$$
+
+$$\dot{x} = l \cos\theta \cdot \dot{\theta}, \dot{y} = l \sin\theta \cdot \dot{\theta}$$
+
+$$
+T = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2), V = mgy
+$$
+
+$$
+\begin{aligned}
+L = T - V &= \frac{1}{2}m\dot{x}^2 + \frac{1}{2}m\dot{y}^2 - mgy\\
+L(\theta, \dot{\theta}, t) &= \frac{1}{2}m(l^2 \cos^2\theta \cdot \dot{\theta}^2 + l^2 \sin^2\theta \cdot \dot{\theta}^2) + mgl \cos\theta\\
+&= \frac{1}{2}ml^2\dot{\theta}^2 + mgl \cos\theta
+\end{aligned}$$
+
+
+$$\frac{\partial L}{\partial \theta} = -mgl \sin\theta, \frac{\partial L}{\partial \dot{\theta}} = ml^2\dot{\theta}$$
+
+(EL-Eq) 
+$$
+\begin{aligned}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) &= \frac{\partial L}{\partial \theta}\\
+\frac{d}{dt}(ml^2\dot{\theta}) &= -mgl \sin\theta\\
+&= ml^2\ddot{\theta}
+\end{aligned}$$
+
+
+$$\ddot{\theta} + \frac{g}{l} \sin\theta = 0$$
+Equation of motion: If $\theta$ is small, $\sin\theta \approx \theta$.
+Then: $\ddot{\theta} + \frac{g}{l}\theta = 0$
+
+
+
+|Newtonian|Lagrangian |
+|-|-|
+|Outside force acting on a body |(energy) quantity associated with body|
+|Force: vector|Lagrangian fn: scalar(invariant to coordinate transformation)|
+|Cause (force) $\Rightarrow$ effect (motion)|Purpose (minimization) $\Rightarrow$ motion|
+
+_패러다임의 변화_
+
+
+**Example**
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0316_2.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+$q\_1(t), q\_2(t)$ : generalized coordinates
+
+- 초기 조건
+    $q_1(0) = l$, $\dot{q}_1(0) = 0$  
+    $q_2(0) = 0$, $\dot{q}_2(0) = 0$
+
+- 시간이 지난 후
+    $$\tan \alpha = \frac{h - y_m}{x_m - q_1}$$
+
+$x_m = q_1 + q_2 \cos \alpha$
+$y_m = (h - q_2) \sin \alpha$
+$\dot{x}_m = \dot{q}_1 + \dot{q}_2 \cos \alpha$
+$\dot{y}_m = -\dot{q}_2 \sin \alpha$
+
+속도의 제곱 ($v_m^2$):$v_m^2 = \dot{x}_m^2 + \dot{y}_m^2$$v_m^2 = (\dot{q}_1 + \dot{q}_2 \cos \alpha)^2 + (-\dot{q}_2 \sin \alpha)^2$$v_m^2 = \dot{q}_1^2 + 2\dot{q}_1\dot{q}_2 \cos \alpha + \dot{q}_2^2 \cos^2 \alpha + \dot{q}_2^2 \sin^2 \alpha$$v_m^2 = \dot{q}_1^2 + 2\dot{q}_1\dot{q}_2 \cos \alpha + \dot{q}_2^2$2. 에너지 정의 (Energy)운동 에너지 ($T$):
+
+$$
+\begin{aligned}
+T &= \frac{1}{2} m (\dot{x}_m^2 + \dot{y}_m^2) + \frac{1}{2} M \dot{q}_1^2\\ 
+&= \frac{1}{2} m (\dot{q}_1^2 + \dot{q}_2^2 + 2\dot{q}_1 \dot{q}_2 \cos \alpha) + \frac{1}{2} M \dot{q}_1^2
+\end{aligned}$$
+
+$$V = mgy_m = mg(h - q_2) \sin \alpha$$
+
+$$L = T - V$$
+
+$$\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_1} \right) - \frac{\partial L}{\partial q_1} = 0$$
+
+
+$$\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_2} - \frac{\partial L}{\partial q_2} =0$$
