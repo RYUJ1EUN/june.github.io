@@ -558,7 +558,7 @@ $\Rightarrow$ $x$를 찾는 문제가 $(q\_1, \dots, q\_n)$을 찾는 문제가 
 
 **Example: Pendulum**
 
-<img src="{{ '/assets/img/post/quantum_parallelism/0316_1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/quantum_parallelism/0316_1.png' | relative_url }}" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 
 $$l^2 = x^2 + y^2$$
@@ -607,7 +607,7 @@ _패러다임의 변화_
 
 **Example**
 
-<img src="{{ '/assets/img/post/quantum_parallelism/0316_2.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/quantum_parallelism/0316_2.png' | relative_url }}" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 $q\_1(t), q\_2(t)$ : generalized coordinates
 
@@ -623,7 +623,6 @@ $y_m = (h - q_2) \sin \alpha$
 $\dot{x}_m = \dot{q}_1 + \dot{q}_2 \cos \alpha$
 $\dot{y}_m = -\dot{q}_2 \sin \alpha$
 
-속도의 제곱 ($v_m^2$):$v_m^2 = \dot{x}_m^2 + \dot{y}_m^2$$v_m^2 = (\dot{q}_1 + \dot{q}_2 \cos \alpha)^2 + (-\dot{q}_2 \sin \alpha)^2$$v_m^2 = \dot{q}_1^2 + 2\dot{q}_1\dot{q}_2 \cos \alpha + \dot{q}_2^2 \cos^2 \alpha + \dot{q}_2^2 \sin^2 \alpha$$v_m^2 = \dot{q}_1^2 + 2\dot{q}_1\dot{q}_2 \cos \alpha + \dot{q}_2^2$2. 에너지 정의 (Energy)운동 에너지 ($T$):
 
 $$
 \begin{aligned}
@@ -753,7 +752,9 @@ $$dH = \frac{\partial H}{\partial q} dq + \frac{\partial H}{\partial p} dp + \fr
 Since,
 $H = p\dot{q} - L,$
 
-$\begin{aligned} dH &= \dot{q} dp + p d\dot{q} - \frac{\partial L}{\partial q} dq - \frac{\partial L}{\partial \dot{q}} d\dot{q} - \frac{\partial L}{\partial t} dt \\ &= \dot{q} dp + p d\dot{q} - \dot{p} dq - p d\dot{q} - \frac{\partial L}{\partial t} dt \quad \text{by (1), (2)} \\ &= \dot{q} dp - \dot{p} dq - \frac{\partial L}{\partial t} dt \cdots \text{(b)} \end{aligned}$
+$$\begin{aligned} dH &= \dot{q} dp + p d\dot{q} - \frac{\partial L}{\partial q} dq - \frac{\partial L}{\partial \dot{q}} d\dot{q} - \frac{\partial L}{\partial t} dt \\ 
+&= \dot{q} dp + p d\dot{q} - \dot{p} dq - p d\dot{q} - \frac{\partial L}{\partial t} dt \quad \text{by (1), (2)} \\ 
+&= \dot{q} dp - \dot{p} dq - \frac{\partial L}{\partial t} dt \cdots \text{(b)} \end{aligned}$$
 
 $\text{(a) = (b)}$ 여야 하므로,
 
