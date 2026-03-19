@@ -639,3 +639,137 @@ $$\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_1} \right) - \frac{\par
 
 
 $$\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_2} - \frac{\partial L}{\partial q_2} =0$$
+
+
+<br>
+
+
+$$T = \frac{1}{2}m(\dot{q}_1^2 + \dot{q}_2^2 + 2\dot{q}_1\dot{q}_2 \cos \alpha) + \frac{1}{2}M\dot{q}_1^2$$ 
+(generalized coordinate의 2차 동차식)
+
+$$L = T - mg(h - q_2 \sin \alpha)$$ 
+($V$는 위치에만 관련됨)
+
+$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_1}\right) = \frac{\partial L}{\partial q_1} \Rightarrow \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_1}\right) = m\ddot{q}_1 + m\ddot{q}_2 \cos \alpha + M\ddot{q}_1 = 0 = \frac{\partial L}{\partial q_1}$$
+
+$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_2}\right) = \frac{\partial L}{\partial q_2} \Rightarrow \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_2}\right) = m\ddot{q}_2 + m\ddot{q}_1 \cos \alpha = mg \sin \alpha = \frac{\partial L}{\partial q_2}$$
+
+$$(M+m)\ddot{q}_1 = -m \cos \alpha \ddot{q}_2 \Rightarrow \ddot{q}_1 = -\frac{m \cos \alpha}{M+m}\ddot{q}_2$$
+
+$$m\ddot{q}_2 - \frac{(m \cos \alpha)^2}{M+m}\ddot{q}_2 = mg \sin \alpha$$
+
+$$\left(1 - \frac{m \cos^2 \alpha}{M+m}\right)\ddot{q}_2 = g \sin \alpha$$
+
+$$\therefore\; \ddot{q}_2 = \frac{g \sin \alpha}{1 - \frac{m \cos^2 \alpha}{M+m}}$$ 
+
+($\ddot{q}_2$가 constant $\rightarrow$ 등가속도 운동)
+
+
+
+### Hamiltonian
+
+Newtonian $\rightarrow$ Lagrangian $\rightarrow$ Hamiltonian
+
+
+$L = L(q, \dot{q}, t)$  
+($x$$와 $\dot{x}$가 들어감 -> 둘 사이의 dependency는?)
+
+$H = H(q, p, t)$  
+($p = m\dot{x}$ 보존량을 사용함)
+
+<br>
+
+$\frac{\partial L}{\partial t} = 0$ (고립계, closed system; 시간이 명시적으로 수식에 나타나지 않음)
+
+Total derivative of $L$ wrt $t$ ($F=T+V$ 보존, $L=T-V$ 비보존)
+
+$$\frac{dL}{dt} = \frac{\partial L}{\partial q}\dot{q} + \frac{\partial L}{\partial \dot{q}}\ddot{q} = \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right)\dot{q} + \frac{\partial L}{\partial \dot{q}}\ddot{q}$$ 
+(By Lagrange Eq)
+
+$$\frac{dL}{dt} = \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}}\dot{q}\right] \Rightarrow \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}}\dot{q} - L\right] = 0$$
+
+_이때 $[*]$ 안의 값은 시간 변화에 대한 불변량(constant)임_
+
+해밀토니안 정의: 
+
+$$H := \dot{q}\frac{\partial L}{\partial \dot{q}} - L$$
+
+<br>
+
+Potential energy $V = V(q)$ i.e. $\frac{\partial V}{\partial \dot{q}} = 0$
+
+$$\frac{\partial L}{\partial \dot{q}} = \frac{\partial(T - V)}{\partial \dot{q}} = \frac{\partial T}{\partial \dot{q}}$$
+
+$$\Rightarrow \frac{d}{dt} \left[ \dot{q} \left( \frac{\partial T}{\partial \dot{q}} \right) - (T - V) \right] = 0$$
+
+$$T = \frac{1}{2} m \dot{x}^2 \longrightarrow T(\dot{q}) = a \dot{q}^2$$
+
+즉, 
+
+$$T(\dot{q}_1, \dot{q}_2) = a \dot{q}_1^2 + b \dot{q}_2^2 + c \dot{q}_1 \dot{q}_2$$ 
+= homogeneous quadratic func of $(\dot{q}_1, \dot{q}_2)$
+
+$$\dot{q} \left( \frac{\partial T}{\partial \dot{q}} \right) = 2 a \dot{q}^2 = 2 T$$
+
+$$\Rightarrow \frac{d}{dt} [2T - T + V]= \frac{d}{dt} (T + V) = \frac{dE}{dt} = 0$ $
+
+많은 경우에 Hamiltonian = energy ($H$ : 보존됨)
+1. $T$ : homogeneous quadratic func of $\dot{q}$
+2. $V$ : $\frac{\partial V}{\partial \dot{q}} = 0$
+
+
+#### Hamiltonian Dynamics
+
+
+EL-Eq $L = T - V$
+
+$$\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) = \frac{\partial L}{\partial x} \quad \quad \text{momentum 운동량 } p = m\dot{x} \text{ (보존량)}$$
+
+$$T = \frac{1}{2} m\dot{x}^2 \Rightarrow \frac{\partial T}{\partial \dot{x}} = m\dot{x} = p$$
+
+$$\frac{\partial L}{\partial \dot{x}} = \frac{\partial T}{\partial \dot{x}} = p \Rightarrow \text{Define generalized momentum} p := \frac{\partial L}{\partial \dot{q}} \cdots \text{(1)}$$
+
+$$\frac{\partial L}{\partial q} = \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) = \dot{p} \quad \Rightarrow \quad \dot{p} = \frac{\partial L}{\partial q} \cdots \text{(2)}$$
+
+
+Hamiltonian 
+$$H = \dot{q} \frac{\partial L}{\partial \dot{q}} - L = p\dot{q} - L \quad \text{by (1)}$$
+
+Let
+$$\dot{q} = \dot{q}(q, p, t)$$ 
+then 
+$$(q, \dot{q}, t) \longrightarrow (q, p, t)$$
+즉,
+$$L(q, \dot{q}, t) \longrightarrow H(q, p, t)$$  
+_위치와 운동량을 정확히 측정할 수 있다 — 불확정성의 원리_
+
+$$\left( \frac{1}{2} m\dot{q}^2 = \frac{p^2}{2m} \right)$$
+
+
+Total differential of $H(q, p, t)$
+
+$$dH = \frac{\partial H}{\partial q} dq + \frac{\partial H}{\partial p} dp + \frac{\partial H}{\partial t} dt \cdots \text{(a)}$$
+
+Since,
+$H = p\dot{q} - L,$
+
+$\begin{aligned} dH &= \dot{q} dp + p d\dot{q} - \frac{\partial L}{\partial q} dq - \frac{\partial L}{\partial \dot{q}} d\dot{q} - \frac{\partial L}{\partial t} dt \\ &= \dot{q} dp + p d\dot{q} - \dot{p} dq - p d\dot{q} - \frac{\partial L}{\partial t} dt \quad \text{by (1), (2)} \\ &= \dot{q} dp - \dot{p} dq - \frac{\partial L}{\partial t} dt \cdots \text{(b)} \end{aligned}$
+
+$\text{(a) = (b)}$ 여야 하므로,
+
+$$\frac{\partial H}{\partial q} = -\dot{p} \quad , \quad \frac{\partial H}{\partial p} = \dot{q} \quad \text{; Hamilton's eqs of motion (canonical eqs of motion)}$$
+
+
+
+
+$$\left[ \frac{\partial H}{\partial t} = -\frac{\partial L}{\partial t} \right] \quad$$ 
+
+_증명 생략_
+
+(입자) $H \quad \rightarrow$ wave $\rightarrow$
+Schrödinger Eq : $H\psi = E\psi$
+
+- $E$: eigenvalue of $\psi$
+- $\psi$: 파동함수
+
+이때, $H$는 $L$을 더 엄밀하게(새로운 식이 아닌 변형) 표현하지만, action $S$를 구할 때는 $L$을 사용함
