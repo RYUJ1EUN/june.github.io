@@ -776,22 +776,20 @@ Schrödinger Eq : $H\psi = E\psi$
 이때, $H$는 $L$을 더 엄밀하게(새로운 식이 아닌 변형) 표현하지만, action $S$를 구할 때는 $L$을 사용함
 
 
-
-<img src="{{ '/assets/img/post/quantum_parallelism/0323_1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
-
-
 ### Black body radiation
 
 - 흑체 : 모든 전자기파를 흡수 ($a=1$)
     - 복사 (방출) = 흡수 인 상태 : 흑체 복사
     - 흑체 복사에서 복사 에너지의 세기는 온도와 파장의 관계됨
 
+    <img src="{{ '/assets/img/post/quantum_parallelism/0323_1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+* 온도: 열에너지 = 분자의 움직임
 
 <img src="{{ '/assets/img/post/quantum_parallelism/0323_0.png' | relative_url }}" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 _[그림 출처](https://ko.wikipedia.org/wiki/%ED%9D%91%EC%B2%B4#/media/%ED%8C%8C%EC%9D%BC:Black_body.svg)_
 
-* 온도: 열에너지 = 분자의 움직임
 
 ##### Wien의 공식
 
@@ -812,9 +810,9 @@ for small $\nu$
 
 <img src="{{ '/assets/img/post/quantum_parallelism/0323_2.png' | relative_url }}" style="max-width: 60%; height: auto; display: block; margin: 0 auto;" alt="image">
 
-<img src="{{ '/assets/img/post/quantum_parallelism/0323_3.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/quantum_parallelism/0323_3.png' | relative_url }}" style="max-width: 35%; height: auto; display: block; margin: 0 auto;" alt="image">
 
-<img src="{{ '/assets/img/post/quantum_parallelism/0323_4.png' | relative_url }}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/quantum_parallelism/0323_4.png' | relative_url }}" style="max-width: 95%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 $$
 \begin{cases}
@@ -851,7 +849,7 @@ $$
 - $N(\nu)$: 진동수가 $\nu$보다 작은 정상파의 개수
     $$N(\nu) \approx |\{(n_x, n_y, n_z) : n_x^2 + n_y^2 + n_z^2 \leq (\frac{2a\nu}{c})^2, n_x, n_y, n_z\ge 0\}|$$
 
-    <img src="{{ '/assets/img/post/quantum_parallelism/0323_5.png' | relative_url }}" style="max-width: 3%; height: auto; display: block; margin: 0 auto;" alt="image">
+    <img src="{{ '/assets/img/post/quantum_parallelism/0323_5.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
 
     - 구의 $\frac{1}{8}$ 부피: 
         $$\frac{1}{8} \cdot \frac{4\pi}{3} \cdot (\frac{2a\nu}{c})^3$$
