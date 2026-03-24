@@ -2,7 +2,7 @@
 layout: post
 title: "Quantum Parallelism"
 date: 2026-03-05
-last_modified_at: 2026-03-12
+last_modified_at: 2026-03-23
 # description: ""
 tags: [QUANTUM]
 categories: [Study, Class]
@@ -774,3 +774,122 @@ Schrödinger Eq : $H\psi = E\psi$
 - $\psi$: 파동함수
 
 이때, $H$는 $L$을 더 엄밀하게(새로운 식이 아닌 변형) 표현하지만, action $S$를 구할 때는 $L$을 사용함
+
+
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0323_1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+
+### Black body radiation
+
+- 흑체 : 모든 전자기파를 흡수 ($a=1$)
+    - 복사 (방출) = 흡수 인 상태 : 흑체 복사
+    - 흑체 복사에서 복사 에너지의 세기는 온도와 파장의 관계됨
+
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0323_0.png' | relative_url }}" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+_[그림 출처](https://ko.wikipedia.org/wiki/%ED%9D%91%EC%B2%B4#/media/%ED%8C%8C%EC%9D%BC:Black_body.svg)_
+
+* 온도: 열에너지 = 분자의 움직임
+
+##### Wien의 공식
+
+$$u_{\nu}(T) = C_1 e^{-C_2 \frac{\nu}{T}}$$ 
+for large $\nu$
+
+##### Rayleigh-Jeans 공식
+
+$$u_{\nu}(T) = \frac{8\pi \nu^2}{c^3} kT$$ 
+for small $\nu$
+
+**Rayleigh-Jeans 유도**
+
+정상파의 파장 $\lambda = \frac{2a}{n}$ ($n=1, 2, 3 \dots$)
+
+
+3차원 공간(x, y, z)에서의 입방체와 벡터 $\vec{k}$ 기하학적 분석
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0323_2.png' | relative_url }}" style="max-width: 60%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0323_3.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0323_4.png' | relative_url }}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+$$
+\begin{cases}
+\lambda_x \cos\alpha = \lambda\\
+\lambda_y \cos\beta = \lambda\\
+\lambda_z \cos\gamma = \lambda
+\end{cases}
+\implies
+\begin{cases}
+\lambda_x = \frac{\lambda}{\cos\alpha} = \frac{2a}{\cos\alpha}\\
+\lambda_y = \frac{\lambda}{\cos\beta} = \frac{2a}{\cos\beta}\\
+\lambda_z = \frac{\lambda}{\cos\gamma} = \frac{2a}{\cos\gamma}
+\end{cases}
+\quad
+(\text{for } n=1, 2, 3 \dots)
+$$
+
+* 벡터 $\vec{\lambda}$가 $x, y, z$축과 이루는 각이
+$\alpha, \beta, \gamma$이면, 
+$\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1$
+
+$$
+\begin{aligned}
+\cos^2\alpha + \cos^2\beta + \cos^2\gamma 
+& = (\frac{\lambda}{2a} n_x)^2 + (\frac{\lambda}{2a} n_y)^2 + (\frac{\lambda}{2a} n_z)^2 = 1\\
+\implies
+n_x^2 + n_y^2 + n_z^2 
+& = (\frac{2a}{\lambda})^2
+& = (\frac{2a}{c}\nu)^2
+\qquad (\because \lambda\nu = c)
+\end{aligned}
+$$
+
+- $N(\nu)$: 진동수가 $\nu$보다 작은 정상파의 개수
+    $$N(\nu) \approx |\{(n_x, n_y, n_z) : n_x^2 + n_y^2 + n_z^2 \leq (\frac{2a\nu}{c})^2, n_x, n_y, n_z\ge 0\}|$$
+
+    <img src="{{ '/assets/img/post/quantum_parallelism/0323_5.png' | relative_url }}" style="max-width: 3%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+    - 구의 $\frac{1}{8}$ 부피: 
+        $$\frac{1}{8} \cdot \frac{4\pi}{3} \cdot (\frac{2a\nu}{c})^3$$
+    
+    - $n\_x, n\_y, n\_z\ge 0$인 양자 상태 개수: 
+    $$N(\nu) = 2 \cdot \frac{1}{8} \cdot \frac{4\pi}{3} (\frac{2a\nu}{c})^3 = \frac{8\pi L^3}{3c^3}\nu^3$$
+    
+    - 부피 $V = a^3$
+    - 진동수 $\nu$와 $\nu + \Delta\nu$ 사이의 정상파 개수:
+        $$\Delta N(\nu) = \frac{N(\nu+\Delta\nu) - N(\nu)}{\Delta\nu} \Delta\nu \approx (\frac{dN}{d\nu})\Delta\nu \qquad(\nu\to\infty)$$ 
+        
+        - 이때, $\frac{dN}{d\nu}$는 밀도
+    
+    - 단위 부피당 에너지 밀도는 다음의 정상파 밀도에 비례함
+        $$
+        n(\nu) = \frac{1}{V}\cdot \frac{dN(\nu)}{d\nu} = \frac{1}{a^3}\cdot \frac{8\pi a^3}{c^3} \nu^2 = \frac{8\pi}{c^3}\nu^2
+        $$
+    
+    - **Boltzmann factor**: $e^{-E/kT}$ 
+        - $E$: 에너지 (실수; 연속)
+        - $k$: 상수
+        - $T$: 온도
+
+        - 온도 $T$에서 에너지 $E$인 상태에 있을 확률 밀도 $\propto e^{-E/kT}$
+        - 평균 에너지 = $\langle E \rangle$ = 에너지의 합 / 확률 합 = 
+        $$\int_0^{\infty} E e^{-E/kT} dE / \int_0^{\infty} e^{-E/kT} dE = kT$$
+            * $\langle \,\cdot\, \rangle$: 물리에서 평균을 의미
+
+    - $\nu$와 $\nu + \Delta\nu$ 사이의 에너지 밀도
+        $$u(\nu) = n(\nu) \cdot \langle E \rangle = \frac{8\pi \nu^2}{c^3} kT$$
+
+        $$\Rightarrow u_{\nu}(T) = \frac{8\pi \nu^2 kT}{c^3}\qquad\text{(Rayleigh-Jeans)}$$ 
+        
+    
+- Planck의 양자론 "에너지가 불연속적인 값을 가진다."
+    $$E_n = nh\nu \quad(n=0, 1, 2, \dots)$$
+
+|Boltzmann 분포| $\rightarrow$ |이산 확률 분포|
+|$P(E) = e^{-E/kT}$ | | $P(E=E\_n) = \frac{e^{-nh\nu/kT}}{\sum\_{n=0}^{\infty} e^{-nh\nu/kT}}$ |
+|($E \in [0, \infty)$)| |($E_n = 0, h\nu, 2h\nu, \dots$) |
+|확률 밀도 함수 | | |
