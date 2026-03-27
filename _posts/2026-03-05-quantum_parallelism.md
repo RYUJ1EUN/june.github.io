@@ -2,7 +2,7 @@
 layout: post
 title: "Quantum Parallelism"
 date: 2026-03-05
-last_modified_at: 2026-03-23
+last_modified_at: 2026-03-27
 # description: ""
 tags: [QUANTUM]
 categories: [Study, Class]
@@ -891,3 +891,136 @@ $$
 |$P(E) = e^{-E/kT}$ | | $P(E=E\_n) = \frac{e^{-nh\nu/kT}}{\sum\_{n=0}^{\infty} e^{-nh\nu/kT}}$ |
 |($E \in [0, \infty)$)| |($E_n = 0, h\nu, 2h\nu, \dots$) |
 |확률 밀도 함수 | | |
+
+
+
+
+### Planck의 양자설
+
+$$P(E = E_n) = \frac{e^{-nh\nu/kT}}{\sum_{n=0}^{\infty} e^{-nh\nu/kT}}$$ 
+확률 질량 함수 (연속 X)
+
+$$\langle E \rangle = \sum_{n=0}^{\infty} E_n P(E = E_n) = \frac{\sum_{n=0}^{\infty} nh\nu \cdot e^{-nh\nu/kT}}{\sum_{n=0}^{\infty} e^{-nh\nu/kT}}$$
+
+Let 
+$$\beta = \frac{1}{kT},$$ 
+then 
+$$\begin{aligned}
+\langle E \rangle 
+& = \frac{\sum_{n=0}^{\infty} nh\nu \cdot e^{-nh\nu\beta}}{\sum_{n=0}^{\infty} e^{-nh\nu\beta}}\\
+& = \frac{-\sum_{n=0}^{\infty} \frac{d}{d\beta} (e^{-nh\nu\beta})}{\sum_{n=0}^{\infty} e^{-nh\nu\beta}}\\
+& = -\frac{d}{d\beta} [\ln(\sum_{n=0}^{\infty} e^{-nh\nu\beta})]\\
+& = -\frac{d}{d\beta} \ln \frac{1}{1-e^{-h\nu\beta}} \qquad(\because \text{등비급수})\\
+& = \frac{d}{d\beta} \ln(1-e^{-h\nu\beta})\\
+& = \frac{h\nu e^{-h\nu\beta}}{1-e^{-h\nu\beta}}
+\end{aligned}$$
+
+Planck에 의해 에너지 평균 계산이 연속에서 불연속에 대한 값으로 변화
+
+$$\langle E \rangle = \begin{cases} kT & \text{, if 연속} \\ \frac{h\nu e^{-h\nu/kT}}{1 - e^{-h\nu/kT}} & \text{, if 불연속} \end{cases}$$
+
+$\Rightarrow$ Rayleigh-Jeans 공식에서 $kT$ 대신 불연속 $\langle E \rangle$ 대입하면, 
+
+$$\begin{aligned}
+\qquad\qquad u_{\nu}(T) 
+& = \frac{8\pi\nu^2}{c^3}\cdot \frac{h\nu}{e^{h\nu/kT} - 1}\\
+& = \frac{8\pi h\nu^3}{c^3} \cdot \frac{1}{e^{h\nu/kT} - 1}\\
+& \approx \frac{8\pi h\nu^3}{c^3} \cdot \frac{1}{1 + \frac{h\nu}{kT} - 1} \qquad (\because e^{h\nu/kT} \approx 1 + \frac{h\nu}{kT}\;\text{ for small }\nu)\\
+& = \frac{8\pi\nu^2}{c^3} kT
+\end{aligned}$$ 
+
+* Planck 공식을 사용할 때, 여전히 small $\nu$에서 Rayleigh-Jeans 공식이 잘 맞는 것을 확인할 수 있음
+
+#### Wien의 공식
+
+$$e^{\frac{h\nu}{kT}} - 1 \approx e^{h\nu/kT}\qquad\text{for large }\nu$$
+
+$$u_{\nu}(T) = \frac{8\pi h\nu^3}{c^3} \cdot e^{-h\nu/kT} \propto e^{-h\nu/kT}$$
+
+|Rayleigh-Jeans | | Planck | | Wien|
+|$\frac{kT}{h\nu}$ | $\xleftarrow{\text{small } \nu}$ | 
+$\frac{1}{e^{h\nu/kT}-1}$ | $\xrightarrow{\text{large } \nu}$ | $e^{-\frac{h\nu}{kT}}$|
+
+
+### 파동의 이해
+
+$$\begin{aligned}
+\Psi(x, 0) &= \Psi_0 \sin(kx + \phi)\\
+\Psi(x, t) &= A \cos k(x - vt) \quad\cdots (*)
+\end{aligned}$$
+
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0326_1.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+- 물질은 움직이지 않고 에너지만 이동함
+    - 입자 : $x(t)$에 관심
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0326_2.png' | relative_url }}" style="max-width: 35%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+$$\Psi(x, t) = A \cos k(x - vt)$$
+
+- $x - vt = 0$  또는 constant라면 특정 점을 표시할 수 있음
+
+$$x - vt = 0 \Rightarrow v = \frac{x}{t}$$
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0326_3.png' | relative_url }}" style="max-width: 70%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+주기
+1. 시간 주기 $T$: 
+$$\Psi(x, t+T) = \Psi(x, t)$$
+2. 위치 주기 (파장) $\lambda$: 
+$$\Psi(x+\lambda, t) = \Psi(x, t)$$
+
+* 파동이 $\cos / \sin$ 함수로 표현될 때가 많음이 알려짐  
+$\Rightarrow$ 이를 통해 고전적인 파동방정식의 구성을 보임. (
+$$\frac{\partial^2 u}{\partial t^2} - \Delta u = 0$$ 
+type의 미분방정식 풀이)
+
+#### $T$와 $\lambda$의 관계 $\lambda = vT$
+
+1. $$A \cos k(x - v(t+T)) = A \cos k(x - vt)$$
+    $kvT = 2\pi$ (smallest $k$)  
+    $\therefore T = \frac{2\pi}{kv}$
+2. $$A \cos k((x+\lambda) - vt) = A \cos k(x - vt)$$
+    $k\lambda = 2\pi$ (smallest $k$)  
+    $\therefore \lambda = \frac{2\pi}{k}$    
+by 1., 2., 
+$$T = \lambda/v$$
+
+- 진동수 $\nu := \frac{1}{T}$
+- 각진동수 $\omega := \frac{2\pi}{T} = 2\pi\nu$
+
+$$\Psi(x, t) = A \cos k(x - vt) = A \cos(kx - kvt)$$
+
+By 1., $$kv = \frac{2\pi}{T} = \omega$$
+
+$$\begin{aligned}
+\therefore \Psi(x, t) 
+&= A \cos(kx - \omega t) \quad\cdots (**)\\
+&= Ae^{i(kx - \omega t)}
+\end{aligned}$$
+
+$$\begin{aligned}
+\frac{\partial \Psi}{\partial x} & = -kA \sin(kx - \omega t) &
+\frac{\partial \Psi}{\partial t} &= \omega A \sin(kx - \omega t)\\
+\frac{\partial^2 \Psi}{\partial x^2} &= -k^2 A \cos(kx - \omega t) &
+\frac{\partial^2 \Psi}{\partial t^2} &= -\omega^2 A \cos(kx - \omega t)
+\end{algined}$$
+
+$$\Rightarrow \frac{\partial^2 \Psi}{\partial x^2} = (-k^2) \frac{1}{\omega^2} \frac{\partial^2 \Psi}{\partial t^2} = (\frac{k}{\omega})^2 \frac{\partial^2 \Psi}{\partial t^2}$$
+
+Since, $k = \frac{2\pi}{\lambda}, \omega = \frac{2\pi}{T}$ and $(\frac{k}{\omega} =) \frac{T}{\lambda} = \frac{1}{v}$,
+
+$$\qquad\frac{\partial^2 \Psi}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 \Psi}{\partial t^2} \quad\cdots\text{ wave equation}$$
+
+* 3차원 : 
+$$\frac{\partial^2 \Psi}{\partial x^2} + \frac{\partial^2 \Psi}{\partial y^2} + \frac{\partial^2 \Psi}{\partial z^2} = \Delta \Psi = \nabla \cdot (\nabla \Psi)$$
+    ($\Delta \Psi$ : Laplacian, $\nabla \cdot$ : div, $\nabla \Psi$ : grad)
+    
+#### Schrödinger Equation
+
+$$i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + V\Psi\qquad(\hbar = \frac{h}{2\pi})$$
+
+(Potential energy $V$와 풀고자 하는 함수 $\Psi$를 제외한 변수는 상수)
+
+_2차 미분방정식 풀이 문제_
