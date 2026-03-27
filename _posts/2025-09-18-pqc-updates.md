@@ -2,10 +2,10 @@
 layout: post
 title: "PQC 동향 (~ '24.10)"
 date: 2025-09-18
-last_modified_at: 2026-02-23
+last_modified_at: 2026-03-27
 description: "Study note: AIS 31 (version 3.0)"
 tags: [Cryptography, PQC]
-categories: [Study]
+categories: [Research]
 ---
 
 ### 26.01.27 [BSI TR-02102 Cryptographic Mechanisms](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr02102/tr02102_node.html)
@@ -341,6 +341,17 @@ PQC 표준 및 해시함수 표준 반영을 위한 개정
 - [FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard](https://csrc.nist.gov/pubs/fips/203/final)
 - [FIPS 204, Module-Lattice-Based Digital Signature Standard](https://csrc.nist.gov/pubs/fips/204/final)
 - [FIPS 205, Stateless Hash-Based Digital Signature Standard](https://csrc.nist.gov/pubs/fips/205/final)
+
+<br>
+<br>
+---
+
+### 23.02.07. [NIST Selects ‘Lightweight Cryptography’ Algorithms to Protect Small Devices](https://www.nist.gov/news-events/news/2023/02/nist-selects-lightweight-cryptography-algorithms-protect-small-devices)
+
+- 양자 컴퓨팅 시대에 IoT 환경에서 보다 높은 안전성을 제공하기 위한 경량암호 [공모전](https://csrc.nist.gov/projects/lightweight-cryptography) 진행 ('18.08~'23.02)
+- Ascon 선정: AEAD, hashing 제공
+    - 저자들은 양자 키 암호 저항성을 주장했으나, 평가 결과 이는 달성하지 못한 것으로 밝혀짐
+- 2025.08.13. 표준문서 [NIST SP 800-232, Ascon-Based Lightweight Cryptography Standards for Constrained Devices: Authenticated Encryption, Hash, and Extendable Output Functions](https://csrc.nist.gov/pubs/sp/800/232/final) 발행
 
 <br>
 <br>
