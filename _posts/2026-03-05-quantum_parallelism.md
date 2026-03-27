@@ -905,6 +905,7 @@ $$\langle E \rangle = \sum_{n=0}^{\infty} E_n P(E = E_n) = \frac{\sum_{n=0}^{\in
 Let 
 $$\beta = \frac{1}{kT},$$ 
 then 
+
 $$\begin{aligned}
 \langle E \rangle 
 & = \frac{\sum_{n=0}^{\infty} nh\nu \cdot e^{-nh\nu\beta}}{\sum_{n=0}^{\infty} e^{-nh\nu\beta}}\\
@@ -938,8 +939,7 @@ $$e^{\frac{h\nu}{kT}} - 1 \approx e^{h\nu/kT}\qquad\text{for large }\nu$$
 $$u_{\nu}(T) = \frac{8\pi h\nu^3}{c^3} \cdot e^{-h\nu/kT} \propto e^{-h\nu/kT}$$
 
 |Rayleigh-Jeans | | Planck | | Wien|
-|$\frac{kT}{h\nu}$ | $\xleftarrow{\text{small } \nu}$ | 
-$\frac{1}{e^{h\nu/kT}-1}$ | $\xrightarrow{\text{large } \nu}$ | $e^{-\frac{h\nu}{kT}}$|
+|$\frac{kT}{h\nu}$ | $\xleftarrow{\text{small } \nu}$ | $\frac{1}{e^{h\nu/kT}-1}$ | $\xrightarrow{\text{large } \nu}$ | $e^{-\frac{h\nu}{kT}}$|
 
 
 ### 파동의 이해
@@ -1005,7 +1005,7 @@ $$\begin{aligned}
 \frac{\partial \Psi}{\partial t} &= \omega A \sin(kx - \omega t)\\
 \frac{\partial^2 \Psi}{\partial x^2} &= -k^2 A \cos(kx - \omega t) &
 \frac{\partial^2 \Psi}{\partial t^2} &= -\omega^2 A \cos(kx - \omega t)
-\end{algined}$$
+\end{aligned}$$
 
 $$\Rightarrow \frac{\partial^2 \Psi}{\partial x^2} = (-k^2) \frac{1}{\omega^2} \frac{\partial^2 \Psi}{\partial t^2} = (\frac{k}{\omega})^2 \frac{\partial^2 \Psi}{\partial t^2}$$
 
