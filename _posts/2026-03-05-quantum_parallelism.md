@@ -1026,6 +1026,9 @@ $$i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2
 _2차 미분방정식 풀이 문제_
 
 
+<img src="{{ '/assets/img/post/quantum_parallelism/0330_1.png' | relative_url }}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+
 $$\Psi(x, t) = A \cos(kx - \omega t),$$
 파장(공간) $\lambda = vT$ 속도 $\cdot$ 주기(시간)
 
