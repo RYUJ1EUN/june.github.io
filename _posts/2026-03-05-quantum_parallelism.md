@@ -1024,3 +1024,59 @@ $$i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2
 (Potential energy $V$와 풀고자 하는 함수 $\Psi$를 제외한 변수는 상수)
 
 _2차 미분방정식 풀이 문제_
+
+
+$$\Psi(x, t) = A \cos(kx - \omega t),$$
+파장(공간) $\lambda = vT$ 속도 $\cdot$ 주기(시간)
+
+de Broglie 물질파  
+("입자도 파동으로 해석할 수 있다")
+
+에너지 (Einstein-Planck)
+
+$E = nh\nu$ ($n=0, 1, 2, \dots$)  
+$\quad = nhf$ ($\nu=f$, $\nu$: 진동수)
+
+Maxwell 전자기파의 운동량
+
+$p = \frac{E}{c}$ ($\because p = mv$ for 입자, $E = mc^2$)
+
+$n=1$ 일 때,
+
+$$\begin{aligned}
+p = \frac{E}{c} = \frac{hf}{c} = \frac{\frac{1}{2\pi} h 2\pi f}{c} 
+& = \frac{\hbar 2\pi f}{c} (\omega\text{: 각진동수, }\omega = 2\pi f)\\
+& = \frac{\hbar 2\pi}{c} \cdot \frac{c}{\lambda} (\because f = \frac{1}{T} = \frac{c}{\lambda})\\
+& = \hbar k (\because \lambda = \frac{2\pi}{k})$$
+
+에너지 $E = KE + PE$
+
+$$KE = \frac{1}{2} mv^2 \overset{p=mv}{=} \frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m} \quad(\because p = \hbar k)$$
+
+$$PE = V$$
+
+$$\begin{cases} E = \frac{\hbar^2 k^2}{2m} + V \\ E = \hbar \omega \quad(\text{or } hf) \end{cases}\dots \text{(1)}$$
+
+$$\Psi(x, t) = A \cos(kx - \omega t) = Ae^{i(kx - \omega t)}$$ 
+속도: $$kx - \omega t = 0 \rightarrow \frac{x}{t} = \frac{\omega}{k} = v$$
+
+$$\frac{\partial \Psi}{\partial t} = -i \omega \Psi,\quad  \frac{\partial \Psi}{\partial x} = ik \Psi,\quad \frac{\partial^2 \Psi}{\partial x^2} = -k^2 \Psi$$
+
+$$\omega = \frac{i}{\Psi} \frac{\partial \Psi}{\partial t},\quad k^2 = -\frac{1}{\Psi} \frac{\partial^2 \Psi}{\partial x^2}\dots \text{(2)}$$
+
+By (1), (2), 
+
+$$E = \hbar \omega = \frac{i \hbar}{\Psi} \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{1}{\Psi} \frac{\partial^2 \Psi}{\partial x^2} + V$$
+
+$$i \hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + V \Psi$$ (Schrödinger Equation) 
+
+- $E \Psi = i \hbar \frac{\partial \Psi}{\partial t}$
+- $-\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} = KE \Psi$
+
+
+$KE = \frac{p^2}{2m}$ 관계로부터:
+
+$$p^2 = -\hbar^2 \frac{\partial^2}{\partial x^2}$$
+$$p = i \hbar \frac{\partial}{\partial x}$$
+
+운동량 $p = mv$ (입자) $\rightarrow p = \frac{E}{c}$ (전자기파) $\rightarrow p = i \hbar \frac{\partial}{\partial x}$ (미분연산자)
