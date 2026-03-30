@@ -1050,7 +1050,8 @@ $$\begin{aligned}
 p = \frac{E}{c} = \frac{hf}{c} = \frac{\frac{1}{2\pi} h 2\pi f}{c} 
 & = \frac{\hbar 2\pi f}{c} (\omega\text{: 각진동수, }\omega = 2\pi f)\\
 & = \frac{\hbar 2\pi}{c} \cdot \frac{c}{\lambda} (\because f = \frac{1}{T} = \frac{c}{\lambda})\\
-& = \hbar k (\because \lambda = \frac{2\pi}{k})$$
+& = \hbar k (\because \lambda = \frac{2\pi}{k})
+\end{aligned}$$
 
 에너지 $E = KE + PE$
 
