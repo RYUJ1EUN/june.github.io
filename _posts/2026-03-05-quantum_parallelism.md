@@ -1176,9 +1176,9 @@ $$\begin{aligned}
 & = \int_{-\infty}^{\infty} -\frac{i\hbar}{2m} \frac{\partial^2 \Psi^*}{\partial x^2} \Psi + \frac{i\hbar}{2m} \frac{\partial^2 \Psi}{\partial x^2} \Psi^* dx\\
 & = \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \frac{\partial}{\partial x} \left( -\Psi \frac{\partial \Psi^*}{\partial x} + \Psi^* \frac{\partial \Psi}{\partial x} \right) dx\\
 & = \frac{i\hbar}{2m} \left[ \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right]_{-\infty}^{\infty}\\
-& = \frac{i\hbar}{2m} (0 - 0) = 0 \qquad \because \Psi, \Psi^* \rightarrow 0 \text{ as } x \rightarrow \pm\infty
-\end{aligned}\\
-\therefore \frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 0$$
+& = \frac{i\hbar}{2m} (0 - 0) = 0 \qquad \because \Psi, \Psi^* \rightarrow 0 \text{ as } x \rightarrow \pm\infty\\
+\therefore \frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 0
+\end{aligned}$$
 
 ##### 위치 $x$와 운동량 $p$
 
@@ -1195,9 +1195,9 @@ $$\begin{aligned}
 & = \frac{i\hbar}{2m} \underbrace{\left[ x \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) \right]_{-\infty}^{\infty}}_{0} - \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} dx\\
 & = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} dx\\
 & = -\frac{i\hbar}{2m} \underbrace{[\Psi^* \Psi]_{-\infty}^{\infty}}_{0} - \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx\\
-& = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx
-\end{aligned}\\
-\therefore \frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx $$
+& = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx\\
+\therefore \frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx 
+\end{aligned}$$
 
 $$\langle v \rangle \overset{?}{=} \frac{d\langle x \rangle}{dt}$$ 
 성립?
