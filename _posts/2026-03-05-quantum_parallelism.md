@@ -2,7 +2,7 @@
 layout: post
 title: "Quantum Parallelism"
 date: 2026-03-05
-last_modified_at: 2026-03-27
+last_modified_at: 2026-04-02
 # description: ""
 tags: [QUANTUM]
 categories: [Study, Class]
@@ -1104,9 +1104,10 @@ $$i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2
 $$\int_{a}^{b} |\Psi(x, t)|^2 dx =$$ 
 시각 $t$에서 입자가 $a$와 $b$ 사이에 관측될 확률
 
-* 복소함수 $$|f|^2 = f \cdot \bar{f}$$
+* 복소함수 
+$$|f|^2 = f \cdot \bar{f}$$
 
-<img src="{{ '/assets/img/post/quantum_parallelism/0402_1.png' | relative_url }}" style="max-width: 90%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/quantum_parallelism/0402_1.png' | relative_url }}" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 
 $$\begin{cases} x \text{의 평균 } \langle x \rangle := \int_{-\infty}^{\infty} x \cdot \rho(x) dx, & \rho(x) : \text{ 확률밀도함수, } \rho(x) = |\Psi(x, t)|^2 \\ \text{표준편차 } \sigma = \sqrt{\langle x^2 \rangle - \langle x \rangle^2} & \text{(표준 편차가 크다는 것을 오차가 크다고 볼 수 있음)} \end{cases}$$
@@ -1118,23 +1119,23 @@ $$\Delta x \Delta p = \sigma \cdot \Delta p \ge \hbar / 2 \Rightarrow$$
 
 예제.
 
-<img src="{{ '/assets/img/post/quantum_parallelism/0402_2.png' | relative_url }}" style="max-width: 60%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/quantum_parallelism/0402_2.png' | relative_url }}" style="max-width: 70%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 $$x(t) = \frac{1}{2}gt^2$$  
 $$\frac{1}{2}gT^2 = h \Rightarrow T = \sqrt{\frac{2h}{g}}$$
 
 $[0, T]$ 중 임의의 시간을 선택 $\Rightarrow x$를 측정  
 $\langle x \rangle$의 기댓값은? 
+($\langle x \rangle = \frac{h}{3}$)
 
 $$\langle x \rangle = \int_{0}^{h} x [x\text{에 대한 확률밀도함수}] dx$$
 
-($\langle x \rangle = \frac{h}{3}$)
 
 
 #### Wave func $\Psi(x, t)$ 규격화 (normalization)
 
-$$\int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 1$$ 
-($$\because |\Psi(x, t)|^2;$$ 
+$$\int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 1\quad$$ 
+( $$\because |\Psi(x, t)|^2;$$ 
 확률밀도함수)
 
 ##### 규격화의 필요성
@@ -1152,19 +1153,17 @@ $$i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2
 
 Q: $t=0$에서 
 $$\int_{-\infty}^{\infty} |\Psi(x, 0)|^2 dx = 1$$ 
-이면,  
+이면,
 (초기조건이 주어지면 $\longrightarrow \Psi(x, t)$가 유일하게 결정됨)  
 임의의 $t$에 대해 
 $$\int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 1$$ 
-일까? 
+일까? ($t$에 영향을 받지 X)
 
 $$\iff \frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 0$$ 
 
-($t$에 영향을 받지 X)
-
 $$\begin{aligned}
 \frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx \overset{\text{가능}}{=} \int_{-\infty}^{\infty} \frac{\partial}{\partial t} |\Psi(x, t)|^2 dx
-& = \int_{-\infty}^{\infty} \frac{\partial}{\partial t} \Psi^*(x, t) \Psi(x, t) dx\text{ (Complex conjugate)} \\
+& = \int_{-\infty}^{\infty} \frac{\partial}{\partial t} \Psi^*(x, t) \Psi(x, t) dx \\
 & = \int_{-\infty}^{\infty} \frac{\partial \Psi^*}{\partial t} \Psi(x, t) + \Psi^*(x, t) \frac{\partial \Psi}{\partial t} dx
 \end{aligned}$$
 
@@ -1178,13 +1177,13 @@ $$\begin{aligned}
 & = \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \frac{\partial}{\partial x} \left( -\Psi \frac{\partial \Psi^*}{\partial x} + \Psi^* \frac{\partial \Psi}{\partial x} \right) dx\\
 & = \frac{i\hbar}{2m} \left[ \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right]_{-\infty}^{\infty}\\
 & = \frac{i\hbar}{2m} (0 - 0) = 0 \qquad \because \Psi, \Psi^* \rightarrow 0 \text{ as } x \rightarrow \pm\infty
-\end{aligned}$$
-
-$$\therefore \frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 0$$
+\end{aligned}\\
+\therefore \frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 0$$
 
 ##### 위치 $x$와 운동량 $p$
 
 $$\langle x \rangle = \int_{-\infty}^{\infty} x |\Psi(x, t)|^2 dx$$ 
+
 (측정하면 붕괴되는데 평균을 어떻게 구함? 똑같은 파동함수 $\Psi(x, t)$를 가지는 입자가 여러 개 있다고 하고 각각을 측정)
 
 ##### 평균 속도 
@@ -1197,11 +1196,11 @@ $$\begin{aligned}
 & = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} dx\\
 & = -\frac{i\hbar}{2m} \underbrace{[\Psi^* \Psi]_{-\infty}^{\infty}}_{0} - \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx\\
 & = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx
-\end{aligned}$$
+\end{aligned}\\
+\therefore \frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx $$
 
-$$\therefore \frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx \quad \langle v \rangle \overset{?}{=} \frac{d\langle x \rangle}{dt}$$
-
-
+$$\langle v \rangle \overset{?}{=} \frac{d\langle x \rangle}{dt}$$ 
+성립?
 
 ##### 평균 운동량 
 
@@ -1229,6 +1228,6 @@ $T = \frac{p^2}{2m}$
 $$\langle T \rangle = \frac{1}{2m} \langle p^2 \rangle = \int_{-\infty}^{\infty} \Psi^* \frac{1}{2m} \left( -\hbar^2 \frac{\partial^2}{\partial x^2} \right) \Psi dx$$
 
 
-
+<br>
 Sch. Eq.를 푸는 방법 
 $$\begin{cases} \text{(1) 변수 분리법} \\ \text{(2) 연산자 방법} \end{cases}$$
