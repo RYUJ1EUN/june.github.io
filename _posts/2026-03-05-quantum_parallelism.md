@@ -1081,6 +1081,154 @@ $$i \hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^
 $KE = \frac{p^2}{2m}$ 관계로부터:
 
 $$p^2 = -\hbar^2 \frac{\partial^2}{\partial x^2}$$
-$$p = i \hbar \frac{\partial}{\partial x}$$
+$$p = -i \hbar \frac{\partial}{\partial x}$$
 
-운동량 $p = mv$ (입자) $\rightarrow p = \frac{E}{c}$ (전자기파) $\rightarrow p = i \hbar \frac{\partial}{\partial x}$ (미분연산자)
+운동량 $p = mv$ (입자) $\rightarrow p = \frac{E}{c}$ (전자기파) $\rightarrow p = -i \hbar \frac{\partial}{\partial x}$ (미분연산자)
+
+
+
+#### 파동함수의 규격화
+
+Schrodinger Equation $\longleftrightarrow$ wave $\Psi(x, t) = Ae^{i(kx - \omega t)}$
+
+$$i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + V\Psi$$ 
+편미분 방정식
+
+- $\Psi(x, 0)$ : 초기 조건
+
+[초기 조건] + [Sch. Eq] $\Rightarrow$ 파동함수 $\Psi(x, t)$ 확률 분포 결정
+
+- 파동이 움직인다고 보지 않고, 파동 함수 해석에만 초점을 맞춤
+
+해석 : 
+$$\int_{a}^{b} |\Psi(x, t)|^2 dx =$$ 
+시각 $t$에서 입자가 $a$와 $b$ 사이에 관측될 확률
+
+* 복소함수 $$|f|^2 = f \cdot \bar{f}$$
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0402_1.png' | relative_url }}" style="max-width: 90%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+
+$$\begin{cases} x \text{의 평균 } \langle x \rangle := \int_{-\infty}^{\infty} x \cdot \rho(x) dx, & \rho(x) : \text{ 확률밀도함수, } \rho(x) = |\Psi(x, t)|^2 \\ \text{표준편차 } \sigma = \sqrt{\langle x^2 \rangle - \langle x \rangle^2} & \text{(표준 편차가 크다는 것을 오차가 크다고 볼 수 있음)} \end{cases}$$
+
+$$\Delta x \Delta p = \sigma \cdot \Delta p \ge \hbar / 2 \Rightarrow$$ 
+오차를 0으로 만들 수 없음
+
+
+
+예제.
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0402_2.png' | relative_url }}" style="max-width: 60%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+$$x(t) = \frac{1}{2}gt^2$$  
+$$\frac{1}{2}gT^2 = h \Rightarrow T = \sqrt{\frac{2h}{g}}$$
+
+$[0, T]$ 중 임의의 시간을 선택 $\Rightarrow x$를 측정  
+$\langle x \rangle$의 기댓값은? 
+
+$$\langle x \rangle = \int_{0}^{h} x [x\text{에 대한 확률밀도함수}] dx$$
+
+($\langle x \rangle = \frac{h}{3}$)
+
+
+#### Wave func $\Psi(x, t)$ 규격화 (normalization)
+
+$$\int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 1$$ 
+($$\because |\Psi(x, t)|^2;$$ 
+확률밀도함수)
+
+##### 규격화의 필요성
+
+$$\begin{matrix} y'' - 2y' + y = 0 & \text{homogenous eq. (해를 구하면 상수배로 함)} \\ y'' - 2y' + y = e^x & \text{non-homo. eq. (구한 해의 상수배는 해가 아닐 수 있음)} \end{matrix}$$
+
+$$i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + V\Psi$$
+
+- $\Psi$가 Sch. Eq의 해이면, $a\Psi$도 해가 됨
+- 규격화 조건을 추가하면 $a$가 유일하게 결정됨 $\Rightarrow$ 유일해를 구하는 문제로 바뀜
+
+
+
+##### $t$에 대한 종속성
+
+Q: $t=0$에서 
+$$\int_{-\infty}^{\infty} |\Psi(x, 0)|^2 dx = 1$$ 
+이면,  
+(초기조건이 주어지면 $\longrightarrow \Psi(x, t)$가 유일하게 결정됨)  
+임의의 $t$에 대해 
+$$\int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 1$$ 
+일까? 
+
+$$\iff \frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 0$$ 
+
+($t$에 영향을 받지 X)
+
+$$\begin{aligned}
+\frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx \overset{\text{가능}}{=} \int_{-\infty}^{\infty} \frac{\partial}{\partial t} |\Psi(x, t)|^2 dx
+& = \int_{-\infty}^{\infty} \frac{\partial}{\partial t} \Psi^*(x, t) \Psi(x, t) dx\text{ (Complex conjugate)} \\
+& = \int_{-\infty}^{\infty} \frac{\partial \Psi^*}{\partial t} \Psi(x, t) + \Psi^*(x, t) \frac{\partial \Psi}{\partial t} dx
+\end{aligned}$$
+
+Since 
+$$\frac{\partial \Psi}{\partial t} = \frac{i\hbar}{2m} \frac{\partial^2 \Psi}{\partial x^2} - \frac{i}{\hbar} V\Psi,\qquad \frac{\partial \Psi^*}{\partial t} = -\frac{i\hbar}{2m} \frac{\partial^2 \Psi^*}{\partial x^2} + \frac{i}{\hbar} V\Psi^*,$$ 
+
+$$\begin{aligned}
+\int_{-\infty}^{\infty} \frac{\partial \Psi^*}{\partial t} \Psi(x, t) + \Psi^*(x, t) \frac{\partial \Psi}{\partial t} dx 
+& = \int_{-\infty}^{\infty} \left( -\frac{i\hbar}{2m} \frac{\partial^2 \Psi^*}{\partial x^2} + \cancel{\frac{i}{\hbar} V\Psi^*} \right) \Psi(x, t) + \Psi^*(x, t) \left( \frac{i\hbar}{2m} \frac{\partial^2 \Psi}{\partial x^2} - \cancel{\frac{i}{\hbar} V\Psi} \right) dx\\
+& = \int_{-\infty}^{\infty} -\frac{i\hbar}{2m} \frac{\partial^2 \Psi^*}{\partial x^2} \Psi + \frac{i\hbar}{2m} \frac{\partial^2 \Psi}{\partial x^2} \Psi^* dx\\
+& = \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \frac{\partial}{\partial x} \left( -\Psi \frac{\partial \Psi^*}{\partial x} + \Psi^* \frac{\partial \Psi}{\partial x} \right) dx\\
+& = \frac{i\hbar}{2m} \left[ \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right]_{-\infty}^{\infty}\\
+& = \frac{i\hbar}{2m} (0 - 0) = 0 \qquad \because \Psi, \Psi^* \rightarrow 0 \text{ as } x \rightarrow \pm\infty
+\end{aligned}$$
+
+$$\therefore \frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = 0$$
+
+##### 위치 $x$와 운동량 $p$
+
+$$\langle x \rangle = \int_{-\infty}^{\infty} x |\Psi(x, t)|^2 dx$$ 
+(측정하면 붕괴되는데 평균을 어떻게 구함? 똑같은 파동함수 $\Psi(x, t)$를 가지는 입자가 여러 개 있다고 하고 각각을 측정)
+
+##### 평균 속도 
+
+$$\begin{aligned}
+\frac{d\langle x \rangle}{dt} = \int_{-\infty}^{\infty} x \frac{\partial}{\partial t} |\Psi|^2 dx
+& = \int_{-\infty}^{\infty} x \cdot \frac{\partial}{\partial x} \cdot \frac{i\hbar}{2m} \left( -\Psi \frac{\partial \Psi^*}{\partial x} + \Psi^* \frac{\partial \Psi}{\partial x} \right) dx\\
+& = \frac{i\hbar}{2m} \int_{-\infty}^{\infty} x \frac{\partial}{\partial x} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) dx\\
+& = \frac{i\hbar}{2m} \underbrace{\left[ x \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) \right]_{-\infty}^{\infty}}_{0} - \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} dx\\
+& = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} dx\\
+& = -\frac{i\hbar}{2m} \underbrace{[\Psi^* \Psi]_{-\infty}^{\infty}}_{0} - \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx\\
+& = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx
+\end{aligned}$$
+
+$$\therefore \frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx \quad \langle v \rangle \overset{?}{=} \frac{d\langle x \rangle}{dt}$$
+
+
+
+##### 평균 운동량 
+
+$p = mv$에서 
+$$\langle p \rangle = m \langle v \rangle = m \frac{d\langle x \rangle}{dt} \quad (p = -i\hbar \frac{\partial}{\partial x})$$
+
+$$\langle x \rangle = \int_{-\infty}^{\infty} x |\Psi(x, t)|^2 dx= \int_{-\infty}^{\infty} \Psi^* x \Psi dx$$
+
+어떤 물리량 $Q$에 대해 
+
+$$\langle Q \rangle := \int_{-\infty}^{\infty} \Psi^*(x, t) Q \Psi(x, t) dx$$ 
+
+라고 하면,
+
+$$\frac{d\langle x \rangle}{dt} = \int_{-\infty}^{\infty} \Psi^* \cdot \underbrace{\left( -\frac{i\hbar}{m} \frac{\partial}{\partial x} \right)}_{?} \Psi dx$$
+
+$$m \frac{d\langle x \rangle}{dt} = \int_{-\infty}^{\infty} \Psi^* \underbrace{(-i\hbar \frac{\partial}{\partial x})}_{\text{운동량 연산자}} \Psi dx = \langle p \rangle$$ 
+
+라고 하자.
+
+##### 평균 운동에너지 
+
+$T = \frac{p^2}{2m}$
+
+$$\langle T \rangle = \frac{1}{2m} \langle p^2 \rangle = \int_{-\infty}^{\infty} \Psi^* \frac{1}{2m} \left( -\hbar^2 \frac{\partial^2}{\partial x^2} \right) \Psi dx$$
+
+
+
+Sch. Eq.를 푸는 방법 
+$$\begin{cases} \text{(1) 변수 분리법} \\ \text{(2) 연산자 방법} \end{cases}$$
