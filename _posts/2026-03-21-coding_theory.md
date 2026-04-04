@@ -160,15 +160,19 @@ Hamming code $H$: 1-bit 오류를 탐지할 수 있음
 1. Find error with Syndrome $H(c+e)$
 2. Remove error
 
-| $m$ | $\longrightarrow \boxed{\text{Enc}} \longrightarrow$ | Codeword |
+| $m$ | $\longrightarrow \boxed{\qquad\text{Enc}\qquad} \longrightarrow$ | Codeword |
 | | | $\downarrow$ |
 | | | $\oplus \longleftarrow$ error |
 | | | $\downarrow$
-| $m$ | $\longleftarrow \boxed{\begin{matrix} \text{Codeword} \\ \text{Dec} \end{matrix}} \longleftarrow$ | vector |
+| $m$ | $\longleftarrow \boxed{\text{Dec(Codeword)}} \longleftarrow$ | vector |
 
 - $H$는 vector에서 codeword를 만드는 데 사용됨
 
-$$G: \mathcal{M} \longrightarrow \mathcal{C} = \mathbb{F}_2^k \longrightarrow \mathbb{F}_2^n; (\alpha, \beta, \gamma) \mapsto (\alpha u_1 + \beta u_2 + \gamma u_3)$$
+$$\begin{aligned}
+G: \mathcal{M} & \longrightarrow \mathcal{C}\\
+\mathbb{F}_2^k & \longrightarrow \mathbb{F}_2^n\\
+(\alpha, \beta, \gamma) & \mapsto (\alpha u_1 + \beta u_2 + \gamma u_3)
+\end{aligned}$$
 
 Generator matrix (생성행렬) 
 
@@ -178,9 +182,9 @@ i.e.,
 
 $$H G^T \begin{pmatrix} \alpha \\ \beta \\ \gamma \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \Rightarrow H G^T = 0$$
 
-#### Special case
+##### Special case
 
-$$H = [M \mid I_{n-k}]_{n \times n-k} \Rightarrow G^T = \begin{bmatrix} I_k \\ -M \end{bmatrix}, G = [I_k \mid -M^T]$$
+$$H = [M \mid I_{n-k}]_{n \times n-k} \Rightarrow G^T = \begin{bmatrix} I_k \\ -M \end{bmatrix},\; G = [I_k \mid -M^T]$$
 
 - $G$의 $I_k$는 $m$을 그대로 유지함
   - Vector로부터 codeword를 찾으면 뒤의 $n-k$개 원소만 날리면 디코딩 완료
@@ -207,7 +211,7 @@ $$w_H(u_1) = |\text{supp}(u_1)| = |\text{supp}(f_1(\alpha^0), \dots, f_1(\alpha^
 
 $$\begin{aligned}
 \# \text{ non-zero} &= (q-1) - \underbrace{\# \text{ zeros of } f}_{\downarrow \# \text{해} \le k-1}\quad(\because \deg f \le k-1)\\
-& \ge (q-1) - (k-1)
+& \ge (q-1) - (k-1)\\
 & = q - k
 \end{aligned}$$
 
