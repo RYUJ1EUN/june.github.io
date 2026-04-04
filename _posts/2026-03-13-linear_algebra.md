@@ -121,3 +121,24 @@ equivalence class들로 이뤄진 partition이 주어짐
 
 - Homogeneous equation $AX=0$의 solution space는 $F^n$의 $F$-subspace임
     - $F^n$의 모든 subspace는 어떤 $A$에 대한 $AX=0$의 solution space임
+
+##### Vector Space의 해석 (Isomorphism)
+
+- $\text{Mat}\_{2\times 2}(F)\cong F^4$ (사실상 같은 벡터 공간, isomorphic)
+    - Isomorphism $\phi$: $\exist$ bijection $\phi:V\to U$ s.t. $\phi(v,u) = \phi(v) + \phi(u)$ and $\phi(av) = a\phi(v)$
+    - $\text{Mat}\_{2\times 2}(F)$가 vector space라면 우선 행렬 곱셈 연산은 고려하지 않음
+    * 두 isomophism $\pi: U\to V, \phi:V\to W$의 composition $\phi\circ \pi: U\to W$도 isomorphism
+
+- 벡터 공간의 product는 벡터 공간이 됨
+
+#### 기저와 차원
+
+##### linear combination
+
+- $S\subseteq V$, then $\langle S \rangle = \bigcap_{S\subseteq W leq V} W$
+    - $\langle S \rangle$는 $S$를 포함하는 $V$의 subspace 중 (집합의 포함관계에 관하여) 가장 작은 것
+    - 이로부터 $\langle S \rangle$는 존재성과 유일성이 보장됨
+- $S\subseteq V$, then $\langle S \rangle$ equals a set of the all linear combinations of elements in $S$
+    - $\langle S \rangle$가 $S$의 linear combination 전체 집합 $U$에 대하여 $U\subseteq \langle S \rangle$여야 하는데, $U$는 $S$를 포함하는 subspace이므로 $\langle S \rangle$의 정의에 의해 $\langle S \rangle\subseteq U$이고, 결과적으로 $\langle S \rangle = U$가 됨
+* $\langle S \rangle$는 $V$의 subspace
+* $S,T\subseteq V$, then $\langle S +T\rangle = \langle S \rangle+\langle T \rangle$
