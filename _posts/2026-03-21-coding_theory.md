@@ -2,7 +2,7 @@
 layout: post
 title: "Coding Theory"
 date: 2026-03-20
-last_modified_at: 2026-03-27
+last_modified_at: 2026-04-03
 description: "with the Code-based cryptography"
 tags: [Cryptography]
 categories: [Study]
@@ -138,3 +138,77 @@ $H = (h\_1, h\_2, \dots, h\_n) = (1^T, 2^T, \dots, n^T)$ 이라고 하면
     $$(h_1, h_2, \dots, h_n) \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix}= x_1 h_1 + x_2 h_2 + \dots + x_n h_n$$
     
     - $x\_i \in \{0, 1\}$ 이므로 오류 발생 시 $h\_i$ 만큼 신드롬이 나타남 ($Hx + h\_i = h\_i$)
+
+
+### 0403
+
+- Subspace
+  - 연립 선형 방정식의 해들의 집합
+  - $\text{span}(\cdot)$
+    
+$$C = \{ v \in \mathbb{F}_2^n \mid Hv = 0^k \}$$
+    
+- $H$: parity-check matrix.
+- 이때, $$v_1, v_2 \in C \Rightarrow v_1 + v_2 \in C$$
+
+Hamming code $H$: 1-bit 오류를 탐지할 수 있음
+
+| Alice |  | $e$ |  | Bob |
+| | | $\downarrow$ | | |
+| $c$ | ———— | $\oplus$ | ————> | $c+e$ |
+
+1. Find error with Syndrome $H(c+e)$
+2. Remove error
+
+| $m$ | $\longrightarrow \boxed{\text{Enc}} \longrightarrow$ | Codeword |
+| | | $\downarrow$ |
+| | | $\oplus \longleftarrow$ error |
+| | | $\downarrow$
+| $m$ | $\longleftarrow \boxed{\begin{matrix} \text{Codeword} \\ \text{Dec} \end{matrix}} \longleftarrow$ | vector |
+
+- $H$는 vector에서 codeword를 만드는 데 사용됨
+
+$$G: \mathcal{M} \longrightarrow \mathcal{C} = \mathbb{F}_2^k \longrightarrow \mathbb{F}_2^n; (\alpha, \beta, \gamma) \mapsto (\alpha u_1 + \beta u_2 + \gamma u_3)$$
+
+Generator matrix (생성행렬) 
+
+$$G^T = \begin{pmatrix} \mid & \mid & \mid \\ u_1 & u_2 & u_3 \\ \mid & \mid & \mid \end{pmatrix}$$ 
+
+i.e., 
+
+$$H G^T \begin{pmatrix} \alpha \\ \beta \\ \gamma \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \Rightarrow H G^T = 0$$
+
+#### Special case
+
+$$H = [M \mid I_{n-k}]_{n \times n-k} \Rightarrow G^T = \begin{bmatrix} I_k \\ -M \end{bmatrix}, G = [I_k \mid -M^T]$$
+
+- $G$의 $I_k$는 $m$을 그대로 유지함
+  - Vector로부터 codeword를 찾으면 뒤의 $n-k$개 원소만 날리면 디코딩 완료
+
+- Hamming code $\rightarrow$ cyclic code $\rightarrow$ polynomial로 연산할 수 있음
+  - cyclic code는 행렬을 통으로 저장하지 않고 순환하는 행만 저장하면 됨
+
+* $\mathbb{F}_q$에서 Hamming code $[\frac{q^r-1}{q-1}, \frac{q^r-1}{q-1} - r, 3]$
+  - $d=3$이므로 1개의 오류가 존재할 때만 오류 정정 가능
+  - 실제 환경에서는 오류가 몰려서 발생하므로 $q$를 키워서 한 블록을 잡아내는 것이 유리함
+  * 암호에서는 오류를 uniform하게 뿌리기 때문에 이를 고려하지 않아도 됨
+
+$d \le n - k + 1$ 이고 $d = n - k + 1$ 이면 MDS 부호라고 함 (AES MixCol)
+
+$\mathbb{F}_q^* = \langle \alpha \rangle = \{ \alpha^0, \alpha^1, \dots, \alpha^{q-2} \}$
+
+$$A = \{ (f(\alpha^0), f(\alpha^1), \dots, f(\alpha^{q-2})) : f(x) \in \mathbb{F}_q[x] \text{ and } \deg(f) < k \} \subseteq \mathbb{F}_q^{q-1}$$
+
+- $u_1 = (f_1(\alpha^0), f_1(\alpha^1), \dots, f_1(\alpha^{q-2})) \in A$
+- $u_2 = (f_2(\alpha^0), f_2(\alpha^1), \dots, f_2(\alpha^{q-2})) \in A$ 
+→ $u_1 + u_2 \in A$ $\because f_1(x) + f_2(x) \in \mathbb{F}_q(x)$
+
+$$w_H(u_1) = |\text{supp}(u_1)| = |\text{supp}(f_1(\alpha^0), \dots, f_1(\alpha^{q-2}))|$$
+
+$$\begin{aligned}
+\# \text{ non-zero} &= (q-1) - \underbrace{\# \text{ zeros of } f}_{\downarrow \# \text{해} \le k-1}\quad(\because \deg f \le k-1)\\
+& \ge (q-1) - (k-1)
+& = q - k
+\end{aligned}$$
+
+For $n = q-1$, $d \le n - k + 1$ ($d \overset{?}{=} w_H$)
