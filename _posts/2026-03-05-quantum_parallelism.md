@@ -2,16 +2,16 @@
 layout: post
 title: "Quantum Parallelism"
 date: 2026-03-05
-last_modified_at: 2026-04-02
+last_modified_at: 2026-04-06
 # description: ""
 tags: [QUANTUM]
 categories: [Study, Class]
 ---
 
 
-📚 [MAIN] 배준호. (2023). 양자 컴퓨팅과 양자 알고리즘 개론.
+📚 [MAIN] Griffiths, D. J., & Schroeter, D. F. (2018). Introduction to quantum mechanics. Cambridge university press. 
+📚 [SUB] 배준호. (2023). 양자 컴퓨팅과 양자 알고리즘 개론.
 📚 [SUB] Marion, J. B. (2013). Classical dynamics of particles and systems. Academic Press.
-📚 [SUB] Griffiths, D. J., & Schroeter, D. F. (2018). Introduction to quantum mechanics. Cambridge university press.
 📚 [SUB] Nielsen, M. A., & Chuang, I. L. (2010). Quantum computation and quantum information. Cambridge university press.
 
 
@@ -671,7 +671,7 @@ Newtonian $\rightarrow$ Lagrangian $\rightarrow$ Hamiltonian
 
 
 $L = L(q, \dot{q}, t)$  
-($x$$와 $\dot{x}$가 들어감 -> 둘 사이의 dependency는?)
+($x$와 $\dot{x}$가 들어감 -> 둘 사이의 dependency는?)
 
 $H = H(q, p, t)$  
 ($p = m\dot{x}$ 보존량을 사용함)
@@ -710,7 +710,7 @@ $$T(\dot{q}_1, \dot{q}_2) = a \dot{q}_1^2 + b \dot{q}_2^2 + c \dot{q}_1 \dot{q}_
 
 $$\dot{q} \left( \frac{\partial T}{\partial \dot{q}} \right) = 2 a \dot{q}^2 = 2 T$$
 
-$$\Rightarrow \frac{d}{dt} [2T - T + V]= \frac{d}{dt} (T + V) = \frac{dE}{dt} = 0$ $
+$$\Rightarrow \frac{d}{dt} [2T - T + V]= \frac{d}{dt} (T + V) = \frac{dE}{dt} = 0$$
 
 많은 경우에 Hamiltonian = energy ($H$ : 보존됨)
 1. $T$ : homogeneous quadratic func of $\dot{q}$
@@ -1231,3 +1231,99 @@ $$\langle T \rangle = \frac{1}{2m} \langle p^2 \rangle = \int_{-\infty}^{\infty}
 <br>
 Sch. Eq.를 푸는 방법 
 $$\begin{cases} \text{(1) 변수 분리법} \\ \text{(2) 연산자 방법} \end{cases}$$
+
+
+$$i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + V\Psi$$
+
+연산자
+
+$$\left.
+\begin{array}{ll}
+x \longrightarrow x \\
+p \longrightarrow -i\hbar \frac{\partial}{\partial x}
+\end{array}
+\right\}
+\Rightarrow Q(x,p) = Q\left(x, -i\hbar \frac{\partial}{\partial x}\right)$$
+
+$$\langle Q(x,p) \rangle = \int_{-\infty}^{\infty} \Psi^*(x,t) Q(x,p) \Psi(x,t) dx$$
+
+$V = V(x) \cdots$ 시간에 무관한 potential
+
+변수분리법: $\Psi(x,t) = \psi(x) \cdot \varphi(t)$ 인 해를 찾아보자
+
+$$\frac{\partial}{\partial t}\Psi = \psi(x) \frac{d\varphi(t)}{dt} , \quad \frac{\partial^2}{\partial x^2}\Psi = \frac{d^2\psi}{dx^2} \varphi(t)$$
+
+$$i\hbar \psi \frac{d\varphi}{dt} = -\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} \varphi + V(x)\psi\varphi$$
+
+$$\underbrace{i\hbar \frac{1}{\varphi} \frac{d\varphi}{dt} = }_{\text{(DE 1)}}\underbrace{E}_{\text{constant(에너지)}}\underbrace{ = -\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} \frac{1}{\psi} + V(x)}_{\text{(DE 2)}}$$
+
+$$i\hbar \frac{d\varphi}{dt} = E\varphi , \quad \frac{d\varphi}{dt} = \underbrace{-i\frac{E}{\hbar}}_{\text{상수}}\varphi \Rightarrow \varphi = e^{-iEt/\hbar}$$
+
+(계수 $A$ 생략: $\psi$ 에 곱해진다고 봄)
+
+$$\Psi(x,t) = \psi(x) \cdot e^{-\frac{iE}{\hbar}t}$$
+
+
+- (DE 2)에는 $i$가 없어서 $\psi(x)$는 실수함수 임
+    $$|\Psi(x,t)|^2 = \Psi^* \Psi = \psi(x)e^{\frac{iE}{\hbar}t} \cdot \psi(x)e^{-\frac{iE}{\hbar}t} = |\psi(x)|^2$$
+    
+    $\Rightarrow |\psi(x)|^2$에 대해서 규격화를 하면 $|\Psi|^2$ 도 규격화됨
+- $\Psi\_1(x,t)$ 와 $\Psi\_2(x,t)$가 Sch. Eq의 해이면(상수항이 없기 때문에 가능)
+    $$\Psi(x,t) = a_1\Psi_1(x,t) + a_2\Psi_2(x,t)$$ 
+    
+    도 해가 됨
+    - 이 해는 변수분리해가 아닐 가능성이 매우 높음
+    - 변수분리해가 일반해를 구하는 데 도움이 됨을 알 수 있음 (모든 해를 표현할 수 있는 것은 아님)
+- 분리 상수 $E = {E\_n} = {E\_1, E\_2, \dots }$일 때,
+    해가 ${\Psi\_n} = {\Psi\_1, \Psi\_2, \dots }$이면  
+    $\Psi\_n(x,t) = \psi\_n(x)\varphi\_n(t) = \psi\_n(x) \cdot e^{-\frac{iE_n}{\hbar}t}$ 의 선형 결합도 해가 됨
+    
+    즉, 
+    
+    $$\Psi(x,t) = \sum_{n=1}^{\infty} c_n \psi_n(x) e^{-\frac{iE_n}{\hbar}t} \cdots \text{(일반해)}$$
+    
+    - 초기 조건이 결정되면 $c\_n$이 결정됨
+
+    - 일차결합으로 표현할 수 없는 해는?
+        - Hilbert 공간 가정 : 공간 내에 일반해로 수렴하는 해가 존재
+- 초기조건에서 $\Psi(x,0) = f(x)$ 에서 $c\_n$을 결정하면 $\Psi(x,t)$가 구해짐
+
+[요약]
+시간에 무관한 potential $V(x)$에 대한 Schrödinger Eq.의 초기값 문제
+
+$$\begin{cases}
+i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + V(x) \Psi & \cdots \text{ (PDE)} \\
+\Psi(x,0) = \psi(x) & \cdots \text{ (IC).}
+\end{cases}$$
+
+1. 변수 분리 : $\Psi(x,t) = \psi(x) \cdot \varphi(t)$
+    $$\Rightarrow \begin{cases} i\hbar \frac{1}{\varphi} \frac{d\varphi}{dt} = E & \cdots \text{ (DE 1)} \\
+    \underbrace{-\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} + V(x)\psi}_{\hat{H}\psi \ (\hat{H} = \frac{\hat{p}^2}{2m} + V)} = E\psi & \cdots \text{ (DE 2)}
+    \end{cases}$$
+    
+    - $\hat{H}$: eigenfunction
+    - $E$: eigenvalue
+2. 분리 상수 $E = \{E\_1, E\_2, \dots \}$ 으로 가정하고
+    $$\begin{cases}
+    (\text{DE 1}) \Rightarrow \varphi_n(t) = e^{-\frac{iE_n}{\hbar}t}\\
+    (\text{DE 2}) \Rightarrow \psi_n(x)
+    \end{cases}$$
+    
+    - (DE 1), (DE 2)는 $E_n$ 으로부터 나옴
+    - $\psi\_n(x)$를 풀려면 $V(x)$ 가 주어져야 함
+3. 편미분방정식(PDE)의 해는
+    $$\Psi_1(x,t) = \psi_1(x)\varphi_1(t) , \quad \Psi_2(x,t) = \psi_2(x)\varphi_2(t)$$
+    
+    의 선형결합으로 쓸 수 있음  
+    즉,
+    
+    $$\Psi(x,t) = \sum_{n=1}^{\infty} c_n \psi_n(x) \varphi_n(t)$$
+4. 초기 조건에서
+    $$\psi(x) = \Psi(x,0) = \sum_{n=1}^{\infty} c_n \psi_n(x)$$
+
+    인 
+    $$\{c_n\}$$
+    을 구함
+    
+    $$\Rightarrow \Psi(x,t) = \sum_{n=1}^{\infty} c_n \psi_n(x) e^{-\frac{iE_n}{\hbar}t}$$
+$\therefore$ (DE 2)를 풀면 $\Psi(x,t)$를 구할 수 있음
