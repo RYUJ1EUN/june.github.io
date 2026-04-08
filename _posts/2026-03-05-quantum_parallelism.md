@@ -1194,13 +1194,14 @@ $$\begin{aligned}
 & = \frac{i\hbar}{2m} \int_{-\infty}^{\infty} x \frac{\partial}{\partial x} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) dx\\
 & = \frac{i\hbar}{2m} \underbrace{\left[ x \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) \right]_{-\infty}^{\infty}}_{0} - \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} dx\\
 & = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} dx\\
-& = -\frac{i\hbar}{2m} \underbrace{[\Psi^* \Psi]_{-\infty}^{\infty}}_{0} - \frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx\\
-& = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx\\
+& = -\frac{i\hbar}{2m} \underbrace{[\Psi^* \Psi]_{-\infty}^{\infty}}_{0} - \frac{i\hbar}{m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx \qquad(- \Psi \frac{\partial \Psi^*}{\partial x} \text{에 대한 부분 적분을 수행하면})\\
+& = -\frac{i\hbar}{m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx\\
 \therefore \frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{2m} \int_{-\infty}^{\infty} \Psi^* \frac{\partial \Psi}{\partial x} dx 
 \end{aligned}$$
 
-$$\langle v \rangle \overset{?}{=} \frac{d\langle x \rangle}{dt}$$ 
-성립?
+이제, (아직 맞는지 확인은 하지 않았지만)
+$$\langle v \rangle = \frac{d\langle x \rangle}{dt}$$ 
+라고 둠
 
 ##### 평균 운동량 
 
@@ -1209,17 +1210,18 @@ $$\langle p \rangle = m \langle v \rangle = m \frac{d\langle x \rangle}{dt} \qua
 
 $$\langle x \rangle = \int_{-\infty}^{\infty} x |\Psi(x, t)|^2 dx= \int_{-\infty}^{\infty} \Psi^* x \Psi dx$$
 
-어떤 물리량 $Q$에 대해 
+비슷하게, 
+$$|\Psi|^2$$
+을 확률밀도함수로 갖는 어떤 물리량 $Q(x,p)$에 대해 
 
 $$\langle Q \rangle := \int_{-\infty}^{\infty} \Psi^*(x, t) Q \Psi(x, t) dx$$ 
 
 라고 하면,
 
-$$\frac{d\langle x \rangle}{dt} = \int_{-\infty}^{\infty} \Psi^* \cdot \underbrace{\left( -\frac{i\hbar}{m} \frac{\partial}{\partial x} \right)}_{?} \Psi dx$$
+$$\frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{m} \frac{\partial}{\partial x} \int_{-\infty}^{\infty} \Psi^* \cdot \Psi dx = \int_{-\infty}^{\infty} \Psi^* \left(-\frac{i\hbar}{m} \frac{\partial}{\partial x} \right) \Psi dx$$
 
-$$m \frac{d\langle x \rangle}{dt} = \int_{-\infty}^{\infty} \Psi^* \underbrace{(-i\hbar \frac{\partial}{\partial x})}_{\text{운동량 연산자}} \Psi dx = \langle p \rangle$$ 
+$$m \frac{d\langle x \rangle}{dt} = \int_{-\infty}^{\infty} \Psi^* \underbrace{(-i\hbar \frac{\partial}{\partial x})}_{\text{운동량 연산자 }\langle p\rangle} \Psi dx = \langle p \rangle$$ 
 
-라고 하자.
 
 ##### 평균 운동에너지 
 
