@@ -1372,7 +1372,8 @@ $$\begin{aligned}
 \psi(a) &= A \sin ka &= 0\\
 & ka &= n\pi, \quad n=1, 2, \dots\\
 & k &= \frac{n\pi}{a}\\
-& k_n &= \sqrt{\frac{2mE_n}{\hbar^2}}$$
+& k_n &= \sqrt{\frac{2mE_n}{\hbar^2}}
+\end{aligned}$$
 
 $$\Rightarrow E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{\hbar^2}{2m} \left(\frac{n\pi}{a}\right)^2 \quad (\rightarrow \text{discrete})$$
 
@@ -1413,11 +1414,11 @@ L[y] = 0 \dots \text{DE}, \quad L &= D^2 + D - 6 \dots \text{미분 연산자}\\
 \end{aligned}$$
 
 $$begin{aligned}
-L[\psi] = 0 \Longleftrightarrow& (D-2)(D+3)\psi = 0 \\
-\Longleftrightarrow& (D-2)\psi_1 = 0 \quad(\text{i.e., }D\psi_1 = 2\psi_1) \quad \text{or}\\
-&(D+3)\psi_2 = 0 \quad(\text{i.e., } D\psi_2 = -3\psi_2) \quad (\becuase \text{ D.O의 순서를 바꿔도 되기 때문})\\
-\therefore&\psi_1 = e^{2x}, \quad \psi_2 = e^{-3x}\\
-\Longleftrightarrow& \text{general sol.} \quad \psi = c_1 e^{2x} + c_2 e^{-3x}
+L[\psi] = 0 \Longleftrightarrow & (D-2)(D+3)\psi = 0 \\
+\Longleftrightarrow & (D-2)\psi_1 = 0 \quad(\text{i.e., }D\psi_1 = 2\psi_1) \quad \text{or}\\
+& (D+3)\psi_2 = 0 \quad(\text{i.e., } D\psi_2 = -3\psi_2) \quad (\becuase \text{ D.O의 순서를 바꿔도 되기 때문})\\
+\therefore &\psi_1 = e^{2x}, \quad \psi_2 = e^{-3x}\\
+\Longleftrightarrow & \text{general sol.} \quad \psi = c_1 e^{2x} + c_2 e^{-3x}
 \end{aligned}$$
 
 $$L_1 := D-2, \quad L_2 := D+3 \Rightarrow L = L_1 L_2 = L_2 L_1$$
@@ -1434,8 +1435,8 @@ $$L_{12} := L_1 L_2, \quad L_{21} := L_2 L_1$$
 이 경우,
 
 $$begin{aligned}
-L_{12}[\psi] &= \frac{d}{dx}(x\psi) = \psi + x\frac{d\psi}{dx} = \left(1 + x\frac{d}{dx}\right)\psi\\
-L_{21}[\psi] &= x\left(\frac{d}{dx}\psi\right) = x\frac{d\psi}{dx} = \left(x\frac{d}{dx}\right)\psi
+L_{12}[\psi] & = \frac{d}{dx}(x\psi) = \psi + x\frac{d\psi}{dx} = \left(1 + x\frac{d}{dx}\right)\psi\\
+L_{21}[\psi] & = x\left(\frac{d}{dx}\psi\right) = x\frac{d\psi}{dx} = \left(x\frac{d}{dx}\right)\psi
 \end{aligned}$$
 
 $$L_{12} = 1 + x\frac{d}{dx} \ne x\frac{d}{dx} = L_{21}$$
@@ -1489,7 +1490,7 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
     \frac{\hat{p}^2}{2m}\psi + \frac{1}{2}m\omega^2x^2\psi &= E\psi \quad \left(\because \hat{p} = -i\hbar\frac{\partial}{\partial x}\right)
     \end{aligned}$$
     
-    $$\underset{\underbrace{\frac{1}{2m} \left[ \hat{p}^2 + (m\omega x)^2 \right]}}{\text{Hamiltonian operator, Differential operator}} \psi = E\psi$$
+    $$\underset{\text{Hamiltonian operator, Differential operator}}{\underbrace{\frac{1}{2m} \left[ \hat{p}^2 + (m\omega x)^2 \right]}} \psi = E\psi$$
 
     - 이를 풀 때 다음과 같이 하면 안 됨
         $$\frac{1}{2m} \underline{(i\hat{p} + m\omega x)(-i\hat{p} + m\omega x)} \psi = E\psi$$
