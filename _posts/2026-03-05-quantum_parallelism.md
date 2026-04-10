@@ -1495,7 +1495,7 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
     - 이를 풀 때 다음과 같이 하면 안 됨
         $$\frac{1}{2m} \underline{(i\hat{p} + m\omega x)(-i\hat{p} + m\omega x)} \psi = E\psi$$
     - 다음과 같이 변형된 operator 사용
-        Operator $\quad \hat{a}_+, \quad \hat{a}_-$
+        Operator $\quad \hat{a}\_+, \quad \hat{a}\_-$
         
         $$\begin{aligned}
         \hat{a}_+ &:= \frac{1}{\sqrt{2\hbar m\omega}} (-i\hat{p} + m\omega x)\\       
