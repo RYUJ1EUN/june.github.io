@@ -1369,10 +1369,10 @@ $$\begin{aligned}
 $$\begin{aligned}
 \therefore \psi(x) &= A \sin kx + B \cos kx\\
 \psi(0) &= B = 0\\
-\psi(a) &= A \sin ka &= 0\\
-& ka &= n\pi, \quad n=1, 2, \dots\\
-& k &= \frac{n\pi}{a}\\
-& k_n &= \sqrt{\frac{2mE_n}{\hbar^2}}
+\psi(a) &= A \sin ka = 0\\
+ka &= n\pi, \quad n=1, 2, \dots\\
+k &= \frac{n\pi}{a}\\
+k_n &= \sqrt{\frac{2mE_n}{\hbar^2}}
 \end{aligned}$$
 
 $$\Rightarrow E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{\hbar^2}{2m} \left(\frac{n\pi}{a}\right)^2 \quad (\rightarrow \text{discrete})$$
@@ -1390,7 +1390,7 @@ $$\int \psi_m^* \psi_n = \delta_{mn} = \begin{cases} 1, & m=n \\ 0, & m \ne n \e
 Because,
 
 $$\begin{aligned}
-A = A^T &\Rightarrow A v_1 = \lambda_1 v_1, A v_2 = \lambda_2 v_2,\\
+A = A^T &\Rightarrow A v_1 = \begin{cases}\lambda_1 v_1\\ A v_2 = \lambda_2 v_2\end{cases},\\
 \lambda_1 \ne \lambda_2 &\Rightarrow v_1 \perp v_2,\\ 
 E_n \ne E_m &\Rightarrow \psi_n \perp \psi_m
 \end{aligned}$$
@@ -1416,7 +1416,7 @@ L[y] = 0 \dots \text{DE}, \quad L &= D^2 + D - 6 \dots \text{미분 연산자}\\
 $$begin{aligned}
 L[\psi] = 0 \Longleftrightarrow & (D-2)(D+3)\psi = 0 \\
 \Longleftrightarrow & (D-2)\psi_1 = 0 \quad(\text{i.e., }D\psi_1 = 2\psi_1) \quad \text{or}\\
-& (D+3)\psi_2 = 0 \quad(\text{i.e., } D\psi_2 = -3\psi_2) \quad (\becuase \text{ D.O의 순서를 바꿔도 되기 때문})\\
+\; & (D+3)\psi_2 = 0 \quad(\text{i.e., } D\psi_2 = -3\psi_2) \quad (\becuase \text{ D.O의 순서를 바꿔도 되기 때문})\\
 \therefore &\psi_1 = e^{2x}, \quad \psi_2 = e^{-3x}\\
 \Longleftrightarrow & \text{general sol.} \quad \psi = c_1 e^{2x} + c_2 e^{-3x}
 \end{aligned}$$
