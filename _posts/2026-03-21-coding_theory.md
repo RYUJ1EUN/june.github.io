@@ -216,3 +216,119 @@ $$\begin{aligned}
 \end{aligned}$$
 
 For $n = q-1$, $d \le n - k + 1$ ($d \overset{?}{=} w_H$)
+
+### 0410
+
+Hamming Code $\left[ \overset{n}{7}, \overset{k}{4}, \overset{d}{3} \right]_2$
+
+* Encoding
+  생성행렬 
+  $$G \quad \text{s.t.} \quad HG^T = \mathbb{O},$$
+  
+  이때 
+  $$H = [M | I_{n-k}]$$ 
+  형태이면 
+  $$G = [I_k | -M^T],$$ 
+    $G$: systematic encoding
+    
+    - Hamming code 
+    $$H = \left[ \begin{smallmatrix} 0 & 0 & 0 & \dots \\ 1 & 0 & 1 & \dots \end{smallmatrix} \middle| I \right]$$
+    에 대해
+    - Equivalent code 
+    $$H' = \left[ M \middle| \begin{smallmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{smallmatrix} \right]$$
+    이 되도록 행렬을 변환 (행 변환을 해도 벡터 공간이 같고 d가 변하지 않음)
+* Decoding
+  - parity-check matrix 
+  $$H \in \mathbb{F}_2^{3 \times 7}, \quad H = [h_0\ h_1\ \dots\ h_6]$$
+  - $r$: received vector
+  1. $s \leftarrow Hr \in \mathbb{F}\_2^3$ : 오류 비트를 찾기 위해 신드롬을 구함
+  2. If $s = h\_j$, : 코드 워드에서 오류 비트를 정정함
+    $$c \leftarrow r \oplus e_j \quad \text{where} \quad e_j = (0\ 0\ \dots\ \overset{\uparrow \text{ j-th element}}{0\ 1\ 0}\ \dots\ 0)^T$$
+  3. $m \leftarrow c_{[0:4]}$
+
+##### cyclic code
+1. Hamming code
+2. BCH
+3. RS $\leftarrow$ HQC에서 사용
+
+Non-trivial perfect code
+1. Hamming code ($\mathbb{F}\_2$)
+2. Golay code ($\mathbb{F}\_2, \mathbb{F}\_3$)
+
+
+Hamming code : perfect code, cyclic code
+
+- perfect code: sphere가 겹치지 않고 전체 공간을 이루도록 $d$를 키울 수 있음
+- cyclic code: 
+$$\Leftrightarrow \left( \begin{aligned} \forall c = (c_0, c_1, \dots, c_{n-1}) &\in C \\ \Rightarrow c^{\ggg 1} = (c_{n-1}, c_0, c_1, \dots, c_{n-2}) &\in C \end{aligned} \right.$$
+  - 행렬연산 $\Rightarrow$ 다항식 연산 : 메모리 효율적 연산 가능
+  - $$\forall c = (c_0, c_1, \dots, c_n) \in C \Rightarrow c^{\ggg 2} = (c_6, c_n, c_0, c_1 \dots c_4, c_5) \in C$$
+    $$c^{\ggg l}:$$ 
+    quasi-cyclic (HQC의 Q) $\Rightarrow$ submodule이 cyclic code를 이룸
+
+
+- 순환 행렬 circulant matrix 
+  $$\begin{pmatrix} a_2 & a_0 & a_1 \\ a_1 & a_2 & a_0 \\ a_0 & a_1 & a_2 \end{pmatrix}$$
+
+Ring 
+$$\mathbb{F}_q[x] / \langle x^n - 1 \rangle$$
+  $$a(x) + b(x) := a(x) + b(x) \pmod{x^n - 1}$$
+  
+  $$a(x) \times b(x) := a(x) \times b(x) \pmod{x^n - 1}$$
+  over $\mathbb{F}\_q[x]$
+  
+$\rightarrow$ Ideal 
+$$I \subseteq \mathbb{F}_q[x] / \langle x^n - 1 \rangle$$
+  $$\forall r \in R, \quad rI \subseteq I, \quad Ir \subseteq I$$
+  
+  Suppose $a(x) \in I, \quad x \in R \implies x\ a(x) \in I$
+  
+  for 
+
+  $$\begin{aligned}
+  a(x) &= \sum_{j=0}^{n-1} a_j x^j \quad \text{where} \quad a_j \in \mathbb{F}_q\\
+  a(x) \cdot x &= \sum_{j=0}^{n-1} a_j x^{j+1} \pmod{x^n - 1}\\
+  &= (a_{n-1}, a_0, \dots, a_{n-2}) \quad \because x^n = 1
+  \end{aligned}$$
+  
+  Let 
+  $$a = (a_0, a_1, \dots, a_{n-1}) \in \mathbb{F}_q^n$$
+  and
+  $$a \cdot x = (a_{n-1}, a_0, \dots, a_{n-2}) \in \mathbb{F}_q^n$$
+  
+  $a(x) \in I$ 이면 $a(x) \cdot x \in I$ 이고 $a$는 cyclic code의 generator임
+  
+  cyclic code = 
+  $$R = \mathbb{F}_q[x] / \langle x^n - 1 \rangle$$
+  의 ideal $I$
+  
+  - Principal Ideal Ring: 모든 원소를 하나의 polynomial $g(x)$로 표현할 수 있음
+    = $\langle g(x) \rangle$ : generator polynomial
+    
+    - message $$m(x) \longrightarrow c(x) = m(x) \cdot g(x)$$
+      $$g(x) \in C, \quad g(x) \cdot x \in C, \quad g(x) \cdot x^j \in C \quad \text{for } j=0, 1, \dots, k-1$$
+
+      $$\begin{cases} (g_0, g_1, \dots, g_l, 0, 0, \dots, 0) \\ (0, g_0, g_1, \dots, g_l, 0, \dots, 0) \\ \dots \\ (0, 0, \dots, 0, g_0, \dots, g_{l-1}, g_l) \end{cases} \Rightarrow \text{1차 독립}$$
+    
+    * $g(x)$가 작아야 $m$을 크게 사용할 수 있기 때문에 가능한 $g$ 중 가장 작은 $g$를 선택함 
+      - $R\_{q,n}$ 의 주이데알 $C$에 대하여, $C$에 속하는 최소 차수 monic 다항식 $g(x)$에 대해
+        $$\forall c \in C, \exists q(x), r(x) \in R_{q,n} \text{ s.t. } \begin{cases} c(x) = q(x)g(x) + r(x) \\ 0 \le \deg r(x) \le \deg g(x) \end{cases}$$
+        
+      이때 $c \in C, \quad g \in C, \quad q \cdot g \in C$ 이므로 $c - q \cdot g = r \in C$ 인데, $r \ne 0$ 이면 $g(x)$가 $C$에 속하는 최소 다항식이라는 것에 모순이므로 $c(x) = q(x) \cdot g(x)$
+
+    * $g(x)$는 어떻게 찾지?
+      $g(x) \mid (x^n - 1)$ 이므로 $(x^n - 1)$을 인수분해하여 $g(x)$를 구함
+      
+      $$\Rightarrow \exists h(x) \quad \text{s.t.} \quad g(x) \cdot h(x) = x^n - 1$$
+
+      $$m(x) \xRightarrow{\text{encoding}} m(x)g(x) = c(x)$$
+      
+      $$c(x)h(x) = m(x)g(x)h(x) = 0 \pmod{x^n - 1}$$
+      
+      $\therefore c(x)h(x) \ne 0$ 이면 오류가 발생했다고 판단함
+      
+    * systematic encoding 
+      $$m(X) = \sum_{j=0}^{k-1} m_j X^j$$ 
+      에 대하여
+      
+      $$c(X) := -(m(X)X^{n-k} \bmod g(X)) + m(X)X^{n-k} \in C$$
