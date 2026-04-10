@@ -1416,7 +1416,7 @@ L[y] = 0 \dots \text{DE}, \quad L &= D^2 + D - 6 \dots \text{미분 연산자}\\
 $$\begin{aligned}
 L[\psi] = 0 \Longleftrightarrow & (D-2)(D+3)\psi = 0 \\
 \Longleftrightarrow & \begin{cases}(D-2)\psi_1 = 0 \quad(\text{i.e., }D\psi_1 = 2\psi_1) \quad \text{or}\\
-(D+3)\psi_2 = 0 \quad(\text{i.e., } D\psi_2 = -3\psi_2) \quad (\becuase \text{ D.O의 순서를 바꿔도 되기 때문})\end{cases}\\
+(D+3)\psi_2 = 0 \quad(\text{i.e., } D\psi_2 = -3\psi_2) \quad (\because \text{ D.O의 순서를 바꿔도 되기 때문})\end{cases}\\
 \therefore & \psi_1 = e^{2x}, \quad \psi_2 = e^{-3x}\\
 \Longleftrightarrow & \text{general sol.} \quad \psi = c_1 e^{2x} + c_2 e^{-3x}
 \end{aligned}$$
@@ -1465,7 +1465,7 @@ $$\begin{cases} \hat{x} = x \\ \hat{p} = -i\hbar\frac{d}{dx} \end{cases}\qquad
 
 ##### [2] 조화진동자
 
-<img src="{{ '/assets/img/post/quantum_parallelism/0305_3.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/quantum_parallelism/0305_3.png' | relative_url }}" style="max-width: 25%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 $F = -\frac{dV}{dx} \quad \left( V = \frac{1}{2}kx^2 \right)$
 
