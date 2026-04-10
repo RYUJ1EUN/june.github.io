@@ -1390,14 +1390,14 @@ $$\int \psi_m^* \psi_n = \delta_{mn} = \begin{cases} 1, & m=n \\ 0, & m \ne n \e
 Because,
 
 $$\begin{aligned}
-A = A^T &\Rightarrow A v_1 = \begin{cases}\lambda_1 v_1\\ A v_2 = \lambda_2 v_2\end{cases},\\
+A = A^T &\Rightarrow \begin{cases}A v_1 = \lambda_1 v_1\\ A v_2 = \lambda_2 v_2\end{cases},\\
 \lambda_1 \ne \lambda_2 &\Rightarrow v_1 \perp v_2,\\ 
 E_n \ne E_m &\Rightarrow \psi_n \perp \psi_m
 \end{aligned}$$
 
 $$\begin{aligned}
 \int \psi_m^* \psi_n \, dx &= \int_0^a \sqrt{\frac{2}{a}} \sin\left(\frac{m}{a}\pi\right) \sqrt{\frac{2}{a}} \sin\frac{n}{a}\pi\\
-$\downarrow$ & (\because \sin \alpha \cdot \sin \beta = -\frac{1}{2} [\cos(\alpha+\beta) - \cos(\alpha-\beta)])\\
+\downarrow & (\because \sin \alpha \cdot \sin \beta = -\frac{1}{2} [\cos(\alpha+\beta) - \cos(\alpha-\beta)])\\
 &= \dots = \delta_{mn}
 \end{aligned}$$
 
@@ -1413,11 +1413,11 @@ L[y] = 0 \dots \text{DE}, \quad L &= D^2 + D - 6 \dots \text{미분 연산자}\\
 &= (D-2)(D+3)
 \end{aligned}$$
 
-$$begin{aligned}
+$$\begin{aligned}
 L[\psi] = 0 \Longleftrightarrow & (D-2)(D+3)\psi = 0 \\
-\Longleftrightarrow & (D-2)\psi_1 = 0 \quad(\text{i.e., }D\psi_1 = 2\psi_1) \quad \text{or}\\
-\; & (D+3)\psi_2 = 0 \quad(\text{i.e., } D\psi_2 = -3\psi_2) \quad (\becuase \text{ D.O의 순서를 바꿔도 되기 때문})\\
-\therefore &\psi_1 = e^{2x}, \quad \psi_2 = e^{-3x}\\
+\Longleftrightarrow & \begin{cases}(D-2)\psi_1 = 0 \quad(\text{i.e., }D\psi_1 = 2\psi_1) \quad \text{or}\\
+(D+3)\psi_2 = 0 \quad(\text{i.e., } D\psi_2 = -3\psi_2) \quad (\becuase \text{ D.O의 순서를 바꿔도 되기 때문})\end{cases}\\
+\therefore & \psi_1 = e^{2x}, \quad \psi_2 = e^{-3x}\\
 \Longleftrightarrow & \text{general sol.} \quad \psi = c_1 e^{2x} + c_2 e^{-3x}
 \end{aligned}$$
 
@@ -1434,7 +1434,7 @@ $$L_{12} := L_1 L_2, \quad L_{21} := L_2 L_1$$
 
 이 경우,
 
-$$begin{aligned}
+$$\begin{aligned}
 L_{12}[\psi] & = \frac{d}{dx}(x\psi) = \psi + x\frac{d\psi}{dx} = \left(1 + x\frac{d}{dx}\right)\psi\\
 L_{21}[\psi] & = x\left(\frac{d}{dx}\psi\right) = x\frac{d\psi}{dx} = \left(x\frac{d}{dx}\right)\psi
 \end{aligned}$$
