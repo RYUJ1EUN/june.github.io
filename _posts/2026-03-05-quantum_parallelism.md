@@ -1329,3 +1329,180 @@ i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \
     
     $$\Rightarrow \Psi(x,t) = \sum_{n=1}^{\infty} c_n \psi_n(x) e^{-\frac{iE_n}{\hbar}t}$$
 $\therefore$ (DE 2)를 풀면 $\Psi(x,t)$를 구할 수 있음
+
+
+
+#### Schrodinger Eq.의 해
+
+##### [1] 무한한 사각형 우물
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0409_1.png' | relative_url }}" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+$$V(x) = \begin{cases} 0, & 0 \le x \le a \\ \infty, & \text{otherwise} \end{cases}$$
+
+- 입자는 $0 \le x \le a$ 에서만 발견됨: $\psi(x) \ge 0$
+- $0 < x < a$ 에서는 자유 입자임 ($V=0$, 끌어당기는 힘이 작용하지 않음)
+- $x < 0$, $x > 0$ 에서 $\psi(x) = 0$ (즉, 발견될 확률 
+$$\int_{\alpha}^{\beta} |\psi(x)|^2 dx = 0$$
+)
+
+$$-\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + V(x)\psi = E\psi$$
+
+$0 \le x \le a$ 에서 $V(x) \equiv 0$ 이므로,
+
+$$\begin{aligned}
+-\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} &= E\psi\\
+\frac{d^2\psi}{dx^2} &= -\frac{2mE}{\hbar^2}\psi
+\end{aligned}$$
+
+$k = \sqrt{\frac{2mE}{\hbar^2}}$ 이라고 하면, (상수, 에너지, 질량이라 음수가 아님)
+
+$$\begin{aligned}
+\frac{d^2\psi}{dx^2} &= -k^2\psi\\
+\frac{d^2\psi}{dx^2} + k^2\psi &= 0 \quad (\text{스프링})
+\end{aligned}$$
+
+(초기 조건) 그리고 이때 $\quad \psi(0) = \psi(a) = 0$ 이므로
+
+(Boundary Condition 구하기)
+
+$$\begin{aligned}
+\therefore \psi(x) &= A \sin kx + B \cos kx\\
+\psi(0) &= B = 0\\
+\psi(a) &= A \sin ka &= 0\\
+& ka &= n\pi, \quad n=1, 2, \dots\\
+& k &= \frac{n\pi}{a}\\
+& k_n &= \sqrt{\frac{2mE_n}{\hbar^2}}$$
+
+$$\Rightarrow E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{\hbar^2}{2m} \left(\frac{n\pi}{a}\right)^2 \quad (\rightarrow \text{discrete})$$
+
+미분방정식은 continuous한데 Energy는 discrete함 $\Rightarrow$ 경계조건에 의함
+
+
+
+$$\int_0^a |\psi|^2 dx = 1 \Rightarrow \int_0^a |A|^2 \sin^2 kx \, dx = |A|^2 \frac{a}{2} = 1 \Rightarrow A = \sqrt{\frac{2}{a}}$$
+
+$$\psi_n(x) = \sqrt{\frac{2}{a}} \sin \left(\frac{n\pi}{a}x\right)\qquad \begin{pmatrix} \Psi_n(x,t) = \psi_n(x) \varphi_n(t) \\ \Psi(x,t) = \sum_n c_n \Psi_n(x,t) \end{pmatrix}$$
+
+$$\int \psi_m^* \psi_n = \delta_{mn} = \begin{cases} 1, & m=n \\ 0, & m \ne n \end{cases} \dots\text{ 직교성}$$
+
+Because,
+
+$$\begin{aligned}
+A = A^T &\Rightarrow A v_1 = \lambda_1 v_1, A v_2 = \lambda_2 v_2,\\
+\lambda_1 \ne \lambda_2 &\Rightarrow v_1 \perp v_2,\\ 
+E_n \ne E_m &\Rightarrow \psi_n \perp \psi_m
+\end{aligned}$$
+
+$$\begin{aligned}
+\int \psi_m^* \psi_n \, dx &= \int_0^a \sqrt{\frac{2}{a}} \sin\left(\frac{m}{a}\pi\right) \sqrt{\frac{2}{a}} \sin\frac{n}{a}\pi\\
+$\downarrow$ & (\because \sin \alpha \cdot \sin \beta = -\frac{1}{2} [\cos(\alpha+\beta) - \cos(\alpha-\beta)])\\
+&= \dots = \delta_{mn}
+\end{aligned}$$
+
+
+
+
+##### Differential Operator $\quad D = \frac{d}{dx}$
+
+[ex 1] $y'' + y' - 6y = 0$
+
+$$\begin{aligned}
+L[y] = 0 \dots \text{DE}, \quad L &= D^2 + D - 6 \dots \text{미분 연산자}\\ 
+&= (D-2)(D+3)
+\end{aligned}$$
+
+$$begin{aligned}
+L[\psi] = 0 \Longleftrightarrow& (D-2)(D+3)\psi = 0 \\
+\Longleftrightarrow& (D-2)\psi_1 = 0 \quad(\text{i.e., }D\psi_1 = 2\psi_1) \quad \text{or}\\
+&(D+3)\psi_2 = 0 \quad(\text{i.e., } D\psi_2 = -3\psi_2) \quad (\becuase \text{ D.O의 순서를 바꿔도 되기 때문})\\
+\therefore&\psi_1 = e^{2x}, \quad \psi_2 = e^{-3x}\\
+\Longleftrightarrow& \text{general sol.} \quad \psi = c_1 e^{2x} + c_2 e^{-3x}
+\end{aligned}$$
+
+$$L_1 := D-2, \quad L_2 := D+3 \Rightarrow L = L_1 L_2 = L_2 L_1$$
+
+[ex 2] Non-Commutative "operator"
+
+$$L_1 = \frac{d}{dx} \quad L_2 = x$$
+일 때,
+
+Let 
+
+$$L_{12} := L_1 L_2, \quad L_{21} := L_2 L_1$$
+
+이 경우,
+
+$$begin{aligned}
+L_{12}[\psi] &= \frac{d}{dx}(x\psi) = \psi + x\frac{d\psi}{dx} = \left(1 + x\frac{d}{dx}\right)\psi\\
+L_{21}[\psi] &= x\left(\frac{d}{dx}\psi\right) = x\frac{d\psi}{dx} = \left(x\frac{d}{dx}\right)\psi
+\end{aligned}$$
+
+$$L_{12} = 1 + x\frac{d}{dx} \ne x\frac{d}{dx} = L_{21}$$
+
+* 상수배, 미분 연산자만 있을 때, 교환법칙이 성립함
+
+- Commutator (교환자) 
+$$[A,B] := AB - BA$$
+    [ex 2]에서 
+    $$\quad [L_1, L_2] = \left[\frac{d}{dx}, x\right] = \left(1 + x\frac{d}{dx}\right) - \left(x\frac{d}{dx}\right) = 1 \ne 0$$
+
+- Linear Differential Operator $L$
+    $$L = \underline{a_n(x)}D^n + \underline{a_{n-1}(x)}D^{n-1} + \dots + \underline{a_1(x)}D^1 + \underline{a_0(x)}$$
+    
+    $$L[y] = 0 \quad \underline{y^{(n)}, y^{(n-1)}, \dots, y', y \text{ 의 1차식}}$$
+
+
+[ex 3] $\quad [\hat{x}, \hat{p}] = i\hbar$ cannonical commutation relation
+
+$$\begin{cases} \hat{x} = x \\ \hat{p} = -i\hbar\frac{d}{dx} \end{cases}\qquad 
+\begin{aligned}
+[\hat{x}, \hat{p}]\psi &= (\hat{x}\hat{p} - \hat{p}\hat{x})\psi\\
+&= -x i\hbar \frac{d\psi}{dx} - \left( -i\hbar \frac{dx}{dx}\psi - i\hbar x \frac{d\psi}{dx} \right)\\
+&= i\hbar\psi
+\end{aligned}$$
+
+##### [2] 조화진동자
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0305_3.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+$F = -\frac{dV}{dx} \quad \left( V = \frac{1}{2}kx^2 \right)$
+
+$m\frac{d^2x}{dt^2} = -kx \longrightarrow \ddot{x} + \omega^2 x = 0ㅇ\qquad(\omega := \sqrt{\frac{k}{m}})$
+
+$$x(t) = A\cos\omega t + B\sin\omega t$$
+
+이를 Schrödinger Eq.에 대입하면
+
+$$i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + \underbrace{\frac{1}{2}kx^2}_{V(x)} \Psi$$
+
+또한, $\Psi(x,t) = \psi(x)\varphi(t)$ 에 대하여
+
+$$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + \frac{1}{2}kx^2 \psi = E\psi \quad (x^2\text{: 상수 계수가 아님}) \end{cases}$$
+
+[푸는 방법]
+
+1. power series method
+2. Ladder Operator
+    $$\begin{aligned}
+    -\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + \frac{1}{2}m\omega^2x^2 \psi &= E\psi\\
+    \frac{\hat{p}^2}{2m}\psi + \frac{1}{2}m\omega^2x^2\psi &= E\psi \quad \left(\because \hat{p} = -i\hbar\frac{\partial}{\partial x}\right)
+    \end{aligned}$$
+    
+    $$\underset{\underbrace{\frac{1}{2m} \left[ \hat{p}^2 + (m\omega x)^2 \right]}}{\text{Hamiltonian operator, Differential operator}} \psi = E\psi$$
+
+    - 이를 풀 때 다음과 같이 하면 안 됨
+        $$\frac{1}{2m} \underline{(i\hat{p} + m\omega x)(-i\hat{p} + m\omega x)} \psi = E\psi$$
+    - 다음과 같이 변형된 operator 사용
+        Operator $\quad \hat{a}_+, \quad \hat{a}_-$
+        
+        $$\begin{aligned}
+        \hat{a}_+ &:= \frac{1}{\sqrt{2\hbar m\omega}} (-i\hat{p} + m\omega x)\\       
+        \hat{a}_- &:= \frac{1}{\sqrt{2\hbar m\omega}} (i\hat{p} + m\omega x)
+        \end{aligned}$$
+        
+        $$\Longrightarrow \hat{H} = \hbar\omega \left( \hat{a}_- \hat{a}_+ - \frac{1}{2} \right) = \hbar\omega \left( \hat{a}_+ \hat{a}_- + \frac{1}{2} \right)$$
+
+        이때, $\hbar\omega, \pm\frac{1}{2}$ 는 $\hat{a}\_- \hat{a}\_+$ 와 $\hat{a}\_+ \hat{a}\_-$ 의 차이를 보정하기 위함
+
+ 
