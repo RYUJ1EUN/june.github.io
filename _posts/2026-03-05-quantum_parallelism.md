@@ -1527,10 +1527,8 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
         $$\frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi$$
         - 공간에 대한 방정식 (DE2): 
         $$-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} + \frac{1}{2}m\omega^2x^2\psi = E\psi$$
-    
-    **교환자(commutator)**
 
-    2. 연산자 $A$, $B$의 교환자 $[A, B]$를 다음과 같이 정의함
+    2. **교환자(commutator)** 연산자 $A$, $B$의 교환자 $[A, B]$를 다음과 같이 정의함
         $$[A, B] = AB - BA$$
 
         - 연산자가 교환가능하면, $[A, B] = 0$ 이 됨 
@@ -1539,11 +1537,13 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
         연산자는 교환 불가능함
     
     3. $[x, \hat{p}]$를 계산하기 위해 임의의 함수 $\psi$에 대하여 다음을 계산하면,
+        
         $$[x, \hat{p}]\psi = x \left(-i\hbar\frac{d\psi}{dx}\right) - \left(-i\hbar\frac{d}{dx}\right)(x\psi) = i\hbar \psi$$
 
         이므로 $[x, \hat{p}] = i\hbar$ 이며, 이 식을 정준교환관계(canonical commutation relation)라 부름
     
     4. 퍼텐셜이 $V(x) = \frac{1}{2}m\omega^2x^2$인 경우, 시간에 무관한 Schrödinger 방정식 (DE2)는 다음과 같음
+
         $$\hat{H}\psi = \frac{1}{2m}[\hat{p}^2 + (m\omega x)^2]\psi = E\psi.$$
         
         $u^2 + v^2 = (iu + v)(-iu + v)$와 같이 $\hat{H}$를 연산자 분해하기 위해 $\hat{a}\_+$, $\hat{a}\_-$를 다음과 같이 정의함
@@ -1560,11 +1560,16 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
         \end{aligned}$$
 
         * 미분연산자처럼 
-            $$(D-2)(D-3)y = 0 \iff y'' - 5 y' + 6y = 0 \iff (D-3)(D-2)y = - \iff (D-3)y=0 \text{ or } (D-2)y=0$$
+            
+            $$\begin{aligned}
+            (D-2)(D-3)y = 0 & \iff y'' - 5 y' + 6y = 0 \iff (D-3)(D-2)y = 0\\
+            & \iff (D-3)y=0 \text{ or } (D-2)y=0
+            \end{aligned}$$
 
             을 만족하면 좋지만, 이러한 교환 법칙은 연산자에 대하여 일반적으로 성립하지 않는다는 문제가 있음
         
     5. 이 결과로부터 교환자(commutator) $[\hat{a}\_-, \hat{a}\_+]$를 쉽게 계산할 수 있음 
+        
         $$[\hat{a}_-, \hat{a}_+] = \hat{a}_-\hat{a}_+ - \hat{a}_+\hat{a}_- = \left(\frac{1}{\hbar\omega}\hat{H} + \frac{1}{2}\right) - \left(\frac{1}{\hbar\omega}\hat{H} - \frac{1}{2}\right) = 1$$
 
         비슷하게,
@@ -1572,9 +1577,11 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
         $$[\hat{a}_+, \hat{a}_-] = -1$$
         
     6. 역으로 Hamiltonian $\hat{H}$를 $\hat{a}\_+$와 $\hat{a}\_-$로 표현하면,
+        
         $$\hat{H} = \hbar\omega \left(\hat{a}_+\hat{a}_- + \frac{1}{2}\right) \quad \text{또는} \quad \hat{H} = \hbar\omega \left(\hat{a}_+\hat{a}_- - \frac{1}{2}\right)$$
         
     7. $\psi$가 에너지 $E$의 Schrödinger 방정식을 만족하면, $\hat{a}\_+\psi$는 에너지가 $E+\hbar\omega$ 인 Schrödinger 방정식을 만족함
+        
         식으로 쓰면,
         
         $$\hat{H}\psi = E\psi \quad \Rightarrow \quad \hat{H}(\hat{a}_+\psi) = (E+\hbar\omega)(\hat{a}_+\psi)$$
@@ -1582,6 +1589,7 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
         같은 방법으로 $\hat{a}\_-\psi$는 에너지가 $E-\hbar\omega$ 인 Schrödinger 방정식을 만족함
     
     8. 이 결과는 다음과 같이 확인 가능함
+        
         $$\begin{aligned}
         \hat{H}(\hat{a}_+\psi) &= \hbar\omega\left(\hat{a}_+\hat{a}_- + \frac{1}{2}\right)(\hat{a}_+\psi) \\
         &= \hbar\omega\left(\hat{a}_+\hat{a}_-\hat{a}_+ + \frac{1}{2}\hat{a}_+\right)\psi\\
@@ -1592,6 +1600,7 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
         \end{aligned}$$
 
     9. 조화진동자의 파동함수 $\psi$에 올림연산자 $\hat{a}\_+$와 내림연산자 $\hat{a}\_-$를 반복하여 적용해도 Schrödinger 방정식의 해가 되므로
+        
         $$\hat{a}_+\psi, \quad \hat{a}_+^2\psi, \quad \hat{a}_+^3\psi, \dots, \quad \hat{a}_-\psi, \quad \hat{a}_-^2\psi, \quad \hat{a}_-^3\psi, \dots$$
         
         모두 해가 되며 대응되는 에너지는 연산자를 적용할 때마다 $\pm\hbar\omega$ 만큼 증감함
@@ -1602,12 +1611,14 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
     10. 조화진동자의 파동함수 $\psi$에 $\hat{a}\_-$ 연산자를 계속 적용하면 대응되는 에너지도 계속 작아짐
         - 에너지는 0보다 크거나 같아야 하므로 가장 낮은 바닥상태 $\psi\_0$는 $\hat{a}\_- \psi\_0 = 0$을 만족함
         
-        미분방정식으로 쓰면,
-        
-        $$\frac{d\psi_0}{dx} = - \frac{m\omega x}{\hbar} \psi_0$$
+        - 미분방정식으로 쓰면,
+
+            $$\frac{d\psi_0}{dx} = - \frac{m\omega x}{\hbar} \psi_0$$
     
     11. 이 미분방정식을 풀면,
+
         $$\psi_0(x) = A \exp\left( - \frac{m\omega}{2\hbar} x^2 \right).$$
         
     12. 규격화를 적용하여 상수 $A$를 결정하면, 
+        
         $$A = \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}$$
