@@ -1701,7 +1701,8 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
         
 $H$ : Hilbert Space 
 $$\overset{\text{def}}{=}$$ 
-complete `Every Cauchy seq. converges in $H$` inner product space : norm, dist 등을 정의할 수 있음
+complete inner product space : norm, dist 등을 정의할 수 있음
+    complete: Every Cauchy seq. converges in $H$
 
 - e.g. 
     - $L^2(\mathbb{R})$
@@ -1713,7 +1714,7 @@ complete `Every Cauchy seq. converges in $H$` inner product space : norm, dist �
     For 
     $$A \in M_{n \times n}(\mathbb{C}), \quad \langle \vec{u}, \vec{v} \rangle := u^H v, \quad u, v \in \mathbb{C}^n \quad (u^H := \bar{u}^T)$$
     
-    $$A^H \overset{\text{def}}{=} \overline{A^T}$$ 
+    $$A^H \overset{\text{def}}{=} \bar{A}^T$$ 
     is called Hermitian of $A$.
     
     If 
@@ -1760,7 +1761,7 @@ complete `Every Cauchy seq. converges in $H$` inner product space : norm, dist �
     
     $$\hat{Q}^\dagger := \hat{Q}^*$$
 
-##### Determined State $\cdots$ 항상 같은 결과를 주는 상태 (붕괴)
+##### Determined State: 항상 같은 결과를 주는 상태 (붕괴)
 
 $$\text{Observable } Q \xrightarrow{\text{measurement}} \text{result } q \in \mathbb{R}$$
 
@@ -1779,7 +1780,7 @@ $$\begin{aligned}
 
 $$\begin{aligned}
 \therefore (Q - q)\psi &= 0 \qquad \because \langle f, f \rangle = 0 \implies f = 0\\
-\implies \underset{\text{관측량}}{Q}\psi &= \underset{실수 상수}{q}\underset{\text{파동함수}}{\psi}
+\implies \underset{\text{관측량}}{Q}\underset{\text{파동함수}}{\psi} &= \underset{\text{실수 상수 }}{q}\psi
 \end{aligned}$$
 
 
@@ -1787,7 +1788,7 @@ $$\begin{aligned}
 
 즉, 
 
-$$\underset{\text{observable\\ (eigenvector)}}{\hat{Q}}\underset{\text{wave func\\ (eigenfunc)}}{|\psi\rangle} = \underset{\text{measure result\\ (eigenvalue)}}{q}|\psi\rangle$$
+$$\underset{\matrix{\text{observable}\\ \text{(eigenvector)}}}{\hat{Q}}\underset{\matrix{\text{wave func}\\ \text{(eigenfunc)}}}{|\psi\rangle} = \underset{\matrix{\text{measure result}\\ \text{(eigenvalue)}}}{q}|\psi\rangle$$
 
 "The eigenfuncs of an observable operator are complete."
 
