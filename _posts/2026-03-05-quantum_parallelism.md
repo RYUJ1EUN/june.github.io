@@ -1622,3 +1622,178 @@ $$\begin{cases} \frac{d\varphi}{dt} = -\frac{iE}{\hbar}\varphi \\ -\frac{\hbar^2
     12. 규격화를 적용하여 상수 $A$를 결정하면, 
         
         $$A = \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}$$
+
+
+
+### Mach-Zehnder Interferomenter
+
+<img src="{{ '/assets/img/post/quantum_parallelism/0423_1.png' | relative_url }}" style="max-width: 35%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+
+- 입자 하나만 던질 때
+    - 관측하지 않으면 파동처럼 행동해서 어느 경로로 이동했는지 알 수 없음
+    - 관측하면 delay가 있어도 50% 씩 나뉘고, 관측 안하면 파동처럼 간섭이 발생해서 비율이 바뀜
+
+
+
+#### Formalism
+
+- State (계의 상태) $\Psi$ ... represented by its wave func
+- Observable (관측량) $\hat{Q}$ ... represented by an operator
+
+|QM| | LA|
+|wave func | $\longleftrightarrow$ | vector|
+| operater | $\longleftrightarrow$ |linear transformation|
+
+1. Finite dimensional vector space
+    1. vector 
+    $$\vec{x} = |\vec{x}\rangle = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}$$
+        ( 
+        $$|\vec{x}\rangle$$: Dirac notation )
+    2. Inner product of 
+    $$|\alpha\rangle, |\beta\rangle$$
+        
+        $$\langle \alpha, \beta \rangle = \langle \alpha \mid \beta \rangle = \sum_i \alpha_i^* \beta_i$$
+    3. Linear transf. $T$
+
+        $$|\alpha\rangle \xrightarrow{T} |\beta\rangle$$
+        
+        $$\vec{\beta} = T\vec{\alpha} \iff |\beta\rangle = \hat{T}|\alpha\rangle$$
+
+2. $\infty$-dimensional vector space
+
+    규격화 
+    $$\int |\psi|^2 = 1$$ 
+    필요
+    
+    1. Inner product of $f, g$
+
+        For 
+        $$f, g \in L^2(\mathbb{R}) = \left\{ f : \int |f|^2 < \infty \right\},$$         
+        
+        $$\langle f | g \rangle := \int f^* g$$
+    2. 규격화
+        
+        $$\langle f | f \rangle = 1 \quad (\text{normalized})$$
+    3. 직교 규격화 (orthonormal)
+        
+        $$\{f_n\} : \text{orthonormal if } \langle f_n | f_m \rangle = \delta_{mn}$$
+    4. 완비성 (completeness) (
+    $$f_n \in \mathbb{R}$$
+    의 limit가 
+    $$\mathbb{R}$$
+    에 속하는가)
+        
+        $$\{f_n\}$$ 
+        is complete, if any $f$ can be expressed as
+        
+        $$f(x) = \sum_n c_n f_n(x)$$
+        
+        In addition, if 
+        $$\{f_n\}$$ 
+        is orthonormal,
+        
+        $$c_n = \langle f_n | f \rangle$$
+        
+        (
+        $$f = c_1f_1 + c_1f_1 + \dots + c_nf_n + \dots \leftarrow$$ 
+        완비성에 의해 가능)
+        
+$H$ : Hilbert Space 
+$$\overset{\text{def}}{=}$$ 
+complete `Every Cauchy seq. converges in $H$` inner product space : norm, dist 등을 정의할 수 있음
+
+- e.g. 
+    - $L^2(\mathbb{R})$
+    - 파동함수 $\Psi$는 Hilbert Space에 존재
+
+#### Hermitian
+
+1. Linear Algebra
+    For 
+    $$A \in M_{n \times n}(\mathbb{C}), \quad \langle \vec{u}, \vec{v} \rangle := u^H v, \quad u, v \in \mathbb{C}^n \quad (u^H := \bar{u}^T)$$
+    
+    $$A^H \overset{\text{def}}{=} \overline{A^T}$$ 
+    is called Hermitian of $A$.
+    
+    If 
+    $$A^H = A$$
+    , $A$ is called a Hermitian matrix.
+    
+    **Thm (Hermitian matrix)**
+    
+    If 
+    $$A^H = A$$
+    , then
+    1. Every eigenvalue is real $\mathbb{R}$ (관측 결과가 real인게 자연스러움)
+    2. Eigenspaces are orthogonal
+    $$(\lambda_i \neq \lambda_j \implies v_i \perp v_j)$$
+    3. $\exists$ orthogonal basis consists of eigenvectors
+
+2. Hermitian Operator
+    1. 관측량 (observable) $Q \cdots$ Hermitian operator $\hat{Q}$
+    2. 내적 (inner product) 
+    $$\langle f \mid g \rangle := \int f^* \cdot g$$
+    3. 기댓값 (expectation) 
+    $$\langle Q \rangle := \int \psi^* \hat{Q} \psi = \langle \psi | \hat{Q} \psi \rangle$$ 
+    (※ 기댓값: 앙상블, $\hat{Q}$: 실수)
+    
+    **Def.** $Q$ : Hermitian operator if 
+    $$\langle f \mid \hat{Q}g \rangle = \langle \hat{Q}f \mid g \rangle, \quad \forall f, g.$$
+    
+    즉, 
+    $$\int f^* (\hat{Q}g) = \int (\hat{Q}f)^* g$$
+    
+    e.g. 
+    $$\hat{p} = -i\hbar \frac{d}{dx}$$
+        $$\begin{aligned}
+        \langle f \mid \hat{p}g \rangle 
+        &= \int_{-\infty}^{\infty} f^*(x) \left(-i\hbar \frac{d}{dx}\right) g(x) dx\\
+        &= \left[ f^*(x) (-i\hbar) g(x) \right]_{-\infty}^{\infty} - \int_{-\infty}^{\infty} \left(-i\hbar \frac{d}{dx}\right) f^*(x) \cdot g(x) dx \quad (\text{부분적분})\\
+        &= 0 + \int_{-\infty}^{\infty} \left(i\hbar \frac{d}{dx}\right) f^*(x) \cdot g(x) dx\\
+        &= \int_{-\infty}^{\infty} \left[ \left(-i\hbar \frac{d}{dx}\right) f(x) \right]^* \cdot g(x) dx\\
+        &= \langle \hat{p}f \mid g \rangle
+        \end{aligned}$$
+        
+    $$\hat{Q}^\dagger$$ 
+    (Hermitian Conjugate of $\hat{Q}$)
+    
+    $$\hat{Q}^\dagger := \hat{Q}^*$$
+
+##### Determined State $\cdots$ 항상 같은 결과를 주는 상태 (붕괴)
+
+$$\text{Observable } Q \xrightarrow{\text{measurement}} \text{result } q \in \mathbb{R}$$
+
+Determined state이면 항상 같은 결과 $q$를 얻음 (분산이 0)  
+$$(\sigma^2 = E(X^2) - (E(X))^2 = E(X-E(X))^2)$$
+
+분산 
+
+$$\begin{aligned}
+\sigma^2 = \langle (Q - \langle Q \rangle)^2 \rangle 
+&= \langle \psi | (Q - \langle Q \rangle)^2 \psi \rangle\\
+&= \langle (Q - \langle Q \rangle)\psi | (Q - \langle Q \rangle)\psi \rangle \quad (\because Q^H = Q, \langle Q \rangle \in \mathbb{R})\\
+&= \langle (Q - q)\psi | (Q - q)\psi \rangle \quad (\because \langle Q \rangle = q)\\
+&= 0 \quad (\text{이 되어야 함})
+\end{aligned}$$
+
+$$\begin{aligned}
+\therefore (Q - q)\psi &= 0 \qquad \because \langle f, f \rangle = 0 \implies f = 0\\
+\implies \underset{\text{관측량}}{Q}\psi &= \underset{실수 상수}{q}\underset{\text{파동함수}}{\psi}
+\end{aligned}$$
+
+
+(관측량 $Q =$ Hermitian op. $\hat{Q}$) 
+
+즉, 
+
+$$\underset{\text{observable\\ (eigenvector)}}{\hat{Q}}\underset{\text{wave func\\ (eigenfunc)}}{|\psi\rangle} = \underset{\text{measure result\\ (eigenvalue)}}{q}|\psi\rangle$$
+
+"The eigenfuncs of an observable operator are complete."
+
+Any func (in Hilbert space) can be expressed as a linear combination of the eigenfuncs.
+
+$$\Psi = \sum_n c_n \psi_n\quad \rightarrow$$
+관측을 하면 특정 
+$$\psi_n$$
+으로 붕괴함
