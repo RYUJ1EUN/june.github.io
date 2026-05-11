@@ -1885,7 +1885,8 @@ $$\begin{aligned}
 &= \langle \Psi | AB | \Psi \rangle - \langle A \rangle \langle \Psi | B | \Psi \rangle - \langle B \rangle \langle \Psi | A | \Psi \rangle + \langle A \rangle \langle B \rangle \langle \Psi | \Psi \rangle\\
 &= \langle AB \rangle - \langle A \rangle \langle B \rangle - \langle B \rangle \langle A \rangle + \langle A \rangle \langle B \rangle
 &= \langle AB \rangle - \langle A \rangle \langle B \rangle\\
-\langle g | f \rangle &= \langle BA \rangle - \langle A \rangle \langle B \rangle
+\langle g | f \rangle \\
+&= \langle BA \rangle - \langle A \rangle \langle B \rangle
 \end{aligned}$$
 
 Therefore,
