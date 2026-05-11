@@ -1883,8 +1883,8 @@ $$\begin{aligned}
 &= \langle \Psi | (A - \langle A \rangle) (B - \langle B \rangle) \Psi \rangle\quad (\because A - \langle A \rangle\text{: Hermitian operator})\\
 &= \langle \Psi | (AB - \langle A \rangle B - A \langle B \rangle + \langle A \rangle \langle B \rangle) | \Psi \rangle\\
 &= \langle \Psi | AB | \Psi \rangle - \langle A \rangle \langle \Psi | B | \Psi \rangle - \langle B \rangle \langle \Psi | A | \Psi \rangle + \langle A \rangle \langle B \rangle \langle \Psi | \Psi \rangle\\
-&= \langle AB \rangle - \langle A \rangle \langle B \rangle - \langle B \rangle \langle A \rangle + \langle A \rangle \langle B \rangle
-&= \langle AB \rangle - \langle A \rangle \langle B \rangle\\
+&= \langle AB \rangle - \langle A \rangle \langle B \rangle - \langle B \rangle \langle A \rangle + \langle A \rangle \langle B \rangle\\
+&= \langle AB \rangle - \langle A \rangle \langle B \rangle
 \langle g | f \rangle \\
 &= \langle BA \rangle - \langle A \rangle \langle B \rangle
 \end{aligned}$$
