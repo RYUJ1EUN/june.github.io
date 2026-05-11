@@ -1861,11 +1861,14 @@ $$\begin{aligned}
 \end{aligned}$$
 
 또한, 다음 사실
+
 $$\begin{aligned}
 z \in \mathbb{C} , |z|^2 &= [Re(z)]^2 + [Im(z)]^2\\
 &\ge [Im(z)]^2 = [\frac{1}{2i}(z - \bar{z})]^2
 \end{aligned}$$
+
 에 의해
+
 $z = \langle f \mid g \rangle$ 라고 하면, 
 
 $$\langle f \mid f \rangle \langle g \mid g \rangle \ge \langle f | g \rangle =|z|^2 \ge [\frac{1}{2i}(z - \bar{z})]^2$$
@@ -1887,7 +1890,7 @@ $$\begin{aligned}
 
 Therefore,
 
-$$\begin{aligend}
+$$\begin{aligned}
 \langle f | f \rangle \langle g | g \rangle = \sigma_A^2 \sigma_B^2 \ge |\langle f | g \rangle|^2 &\ge [\frac{1}{2i}(\langle f | g \rangle - \langle g | f \rangle)]^2\\
 &= [\frac{1}{2i} (\langle AB \rangle - \langle A \rangle \langle B \rangle - \langle BA \rangle + \langle A \rangle \langle B \rangle)]^2\\
 &= [\frac{1}{2i} \langle AB - BA \rangle]^2\\
@@ -1905,8 +1908,8 @@ $$\sigma_x^2 \sigma_p^2 \ge \{ \frac{1}{2i} \langle [x, p] \rangle \}^2 = \{ \fr
 
 ### Qubit
 
-- $|0\rangle$ 바닥 상태
-- $|1\rangle$ 들뜬 상태
+- 바닥 상태: $|0\rangle$ 
+- 들뜬 상태: $|1\rangle$
 
 (general) Qubit
 - 양자 상태 (중첩) 
@@ -1945,11 +1948,11 @@ $\alpha = 0$ 이면 $\beta = 0$, $\alpha = 1$ 이면 $\beta = 1$
 #### Dirac Notation
 
 - $\langle \text{ } \rangle$ ... bracket
-- $|\beta\rangle$ ... ket vector
-    * $|f\rangle = f(x)$ 함수
-- $\langle \alpha |$ ... bra vector
-    - $\rightarrow$ functional(벡터를 내적값($\mathbb{C}$)으로 보냄) $\Rightarrow \langle f | g \rangle = \int f^* g$
-    * $\langle f | = \int f^* \square$ : linear functional
+- $\mid \beta\rangle$ ... ket vector
+    * $\mid f\rangle = f(x)$ 함수
+- $\langle \alpha \mid $ ... bra vector
+    - $\rightarrow$ functional(벡터를 내적값($\mathbb{C}$)으로 보냄) $\Rightarrow \langle f \mid  g \rangle = \int f^* g$
+    * $\langle f \mid  = \int f^* \square$ : linear functional
         함수 $\rightarrow$ 실수(복소수) : $g \mapsto \int f^* g$
 
 ##### Dual space (space of bra vectors) : linear functional
@@ -1974,7 +1977,7 @@ $$||\alpha\rangle|| = 1$$
 
 $$\Rightarrow \hat{P}|\beta\rangle = (|\alpha\rangle\langle\alpha|)|\beta\rangle = |\alpha\rangle\langle\alpha|\beta\rangle = \langle\alpha|\beta\rangle |\alpha\rangle$$
 
-$\{|e\_n\rangle\} :$ 정규직교 기저 (O-N basis) $\rightarrow \sum\_n |e_n\rangle\langle e\_n| = 1$ (operator)
+$\{\mid e\_n\rangle\} :$ 정규직교 기저 (O-N basis) $\rightarrow \sum\_n \mid e\_n\rangle\langle e\_n\mid  = 1$ (operator)
 
 $\because$ 임의의 
 $$|\alpha\rangle = \sum \alpha_n |e_n\rangle$$
@@ -2010,8 +2013,9 @@ $$\hat{Q} \Rightarrow \hat{Q} = \sum_n q_n |e_n\rangle\langle e_n|$$
 proof) 임의의 
 $$|\alpha\rangle = \sum \alpha_n |e_n\rangle$$ 
 에 대해
-1. $$\hat{Q}|\alpha\rangle = \hat{Q}(\sum \alpha_n |e_n\rangle) = \sum \alpha_n \hat{Q}|e_n\rangle = \sum \alpha_n q_n |e_n\rangle$$
-2. $$(\sum_n q_n |e_n\rangle\langle e_n|)|\alpha\rangle = \sum_n q_n |e_n\rangle\langle e_n|\alpha\rangle = \sum_n \alpha_n q_n |e_n\rangle$$
+1. $$\hat{Q}|\alpha\rangle = \hat{Q}(\sum \alpha_n |e_n\rangle) = \sum \alpha_n \hat{Q}|e_n\rangle = \sum \alpha_n q_n |e_n\rangle$$ ,
+2. $$(\sum_n q_n |e_n\rangle\langle e_n|)|\alpha\rangle = \sum_n q_n |e_n\rangle\langle e_n|\alpha\rangle = \sum_n \alpha_n q_n |e_n\rangle$$ .
+
 $\therefore$ 1. = 2.
 
 
