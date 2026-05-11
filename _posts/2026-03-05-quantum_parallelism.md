@@ -2,7 +2,7 @@
 layout: post
 title: "Quantum Parallelism"
 date: 2026-03-05
-last_modified_at: 2026-04-13
+last_modified_at: 2026-05-11
 # description: ""
 tags: [QUANTUM]
 categories: [Study, Class]
@@ -1798,3 +1798,269 @@ $$\Psi = \sum_n c_n \psi_n\quad \rightarrow$$
 관측을 하면 특정 
 $$\psi_n$$
 으로 붕괴함
+
+
+
+- operator : system을 벗어나지 않음
+- transform : system을 벗어날 수 있음. (linear transf. : 잘 정의하면 system을 벗어나지 않음)
+
+$$Q\Psi \approx \hat{Q} |\Psi\rangle$$
+
+- $\hat{Q}$ : Hermitian operator
+- Determined state : 파동이 중첩되지 않고 하나인 상태 $\rightarrow$ 측정 시 매번 같은 결과가 나옴
+    
+    $$\Psi = \sum c_n \psi_n$$
+
+통계적 해석 (확률적 해석); 가정 (공리) 앙상블
+- $\Phi(x, t)$ 상태의 입자에 대하여, 관측량 $Q$로 측정하면, Hermitian 연산자 $Q$의 고윳값을 얻는다.
+- $\Psi = \sum c\_n f\_n, f\_n : Q$의 고유함수, $q\_n : Q$의 고윳값 ; 
+$$\hat{Q}f_n = q_n f_n \quad(A\vec{v_i} = \lambda_i \vec{v_i})$$
+    $Q$가 hermitian 일 때 항상 real
+- $$c_n = \langle f_n | \Psi \rangle$$
+- $\therefore \Psi$의 규격화 
+$$\iff \sum |c_n|^2 = 1$$
+
+$Q$ (operator), $q\_n$ (eigenvalue), $f\_n$ (eigenfunc)
+
+$$\Psi = \sum_n c_n f_n$$ 
+($n$: countable) 이면, 관측 ($Q$) $\rightarrow$ 결과 ($q\_n$)가 확률 $|c\_n|^2$으로 얻어짐
+
+규격화 : 
+$$\langle \Psi | \Psi \rangle = 1 = \langle \sum_n c_n f_n | \sum_m c_m f_m \rangle = \sum_n \sum_m c_n^* c_m \langle f_n | f_m \rangle = \sum_n c_n^* c_n = \sum_n |c_n|^2$$
+
+$Q$의 기댓값 
+$$E(Q) = \sum_n q_n \cdot P(Q=q_n) = \sum_n q_n |c_n|^2$$
+
+한편, 
+
+$$\begin{aligned}
+\langle Q \rangle := \langle \Psi | \hat{Q} \Psi \rangle 
+& = \langle \sum_n c_n f_n | \hat{Q} \sum_m c_m f_m \rangle\\
+& = \sum_n \sum_m c_n^* \langle f_n | \sum_m q_m c_m f_m \rangle\\
+& = \sum_n \sum_m c_n^* c_m q_m \langle f_n | f_m \rangle\\
+& = \sum_n c_n^* c_n q_n = \sum_n q_n |c_n|^2
+\end{aligned}$$
+
+### Uncertainty Principle (불확정성의 원리)
+
+$$\sigma_A^2 \sigma_B^2 \ge \{ \frac{1}{2i} \langle [A, B] \rangle \}^2\quad (= \{ \frac{1}{2i} \langle AB - BA \rangle \}^2)$$
+
+pf) 먼저 Cauchy-Schwarz 부등식
+
+$$(\int f^* g)^2 \le (\int |f|^2)(\int |g|^2)\iff \langle f|g \rangle^2 \le \langle f|f \rangle \langle g|g \rangle$$
+
+임을 상기한다.
+분산 $\sigma\_A^2,\sigma\_B^2$은
+
+$$\begin{aligned}
+\sigma_A^2 &= \langle (A - \langle A \rangle)^2 \rangle\quad (= E[(A - \langle A \rangle)^2])\\
+&= \langle \Psi | (A - \langle A \rangle)^2 \Psi \rangle\\
+&= \langle (A - \langle A \rangle) \Psi | (A - \langle A \rangle) \Psi \rangle\quad (\because A\text{: hermitian operator})\\
+&:= \langle f | f \rangle\quad\text{ for }\quad f := (A - \langle A \rangle) \Psi\\
+\sigma_B^2 &= \langle g | g \rangle$ for $g := (B - \langle B \rangle) \Psi
+\end{aligned}$$
+
+또한, 다음 사실
+$$\begin{aligned}
+z \in \mathbb{C} , |z|^2 &= [Re(z)]^2 + [Im(z)]^2\\
+&\ge [Im(z)]^2 = [\frac{1}{2i}(z - \bar{z})]^2
+\end{aligned}$$
+에 의해
+$z = \langle f \mid g \rangle$ 라고 하면, 
+
+$$\langle f \mid f \rangle \langle g \mid g \rangle \ge \langle f | g \rangle =|z|^2 \ge [\frac{1}{2i}(z - \bar{z})]^2$$
+
+따라서,
+
+$f = (A - \langle A \rangle) \Psi, g = (B - \langle B \rangle) \Psi$
+
+$$\begin{aligned}
+\langle f | g \rangle &= \langle (A - \langle A \rangle) \Psi | (B - \langle B \rangle) \Psi \rangle\\
+&= \langle \Psi | (A - \langle A \rangle)^{\dagger} (B - \langle B \rangle) \Psi \rangle\\
+&= \langle \Psi | (A - \langle A \rangle) (B - \langle B \rangle) \Psi \rangle\quad (\because A - \langle A \rangle\text{: Hermitian operator})\\
+&= \langle \Psi | (AB - \langle A \rangle B - A \langle B \rangle + \langle A \rangle \langle B \rangle) | \Psi \rangle\\
+&= \langle \Psi | AB | \Psi \rangle - \langle A \rangle \langle \Psi | B | \Psi \rangle - \langle B \rangle \langle \Psi | A | \Psi \rangle + \langle A \rangle \langle B \rangle \langle \Psi | \Psi \rangle\\
+&= \langle AB \rangle - \langle A \rangle \langle B \rangle - \langle B \rangle \langle A \rangle + \langle A \rangle \langle B \rangle
+&= \langle AB \rangle - \langle A \rangle \langle B \rangle\\
+\langle g | f \rangle &= \langle BA \rangle - \langle A \rangle \langle B \rangle
+\end{aligned}$$
+
+Therefore,
+
+$$\begin{aligend}
+\langle f | f \rangle \langle g | g \rangle = \sigma_A^2 \sigma_B^2 \ge |\langle f | g \rangle|^2 &\ge [\frac{1}{2i}(\langle f | g \rangle - \langle g | f \rangle)]^2\\
+&= [\frac{1}{2i} (\langle AB \rangle - \langle A \rangle \langle B \rangle - \langle BA \rangle + \langle A \rangle \langle B \rangle)]^2\\
+&= [\frac{1}{2i} \langle AB - BA \rangle]^2\\
+&= [\frac{1}{2i} \langle [A, B] \rangle]^2
+\end{aligned}$$
+
+$\therefore [x, p] = i\hbar$ 에 대하여
+
+$$\sigma_x^2 \sigma_p^2 \ge \{ \frac{1}{2i} \langle [x, p] \rangle \}^2 = \{ \frac{1}{2i} i\hbar \}^2 = (\frac{\hbar}{2})^2 \Rightarrow \sigma_x \sigma_p \ge \frac{\hbar}{2}$$
+
+- If $A, B$ : Commute $\Rightarrow AB = BA$ i.e. $[A, B] = 0$ ($x, p$는 commute 하지 않음)
+- In matrix theory, $AB = BA$ (& some condition) $\Rightarrow \exists$ Common eigenvectors
+    i.e. 
+    $$\exists |\Psi\rangle$ s.t. $A|\Psi\rangle = \lambda_A |\Psi\rangle \Rightarrow B|\Psi\rangle = \lambda_B |\Psi\rangle$$
+
+### Qubit
+
+- $|0\rangle$ 바닥 상태
+- $|1\rangle$ 들뜬 상태
+
+(general) Qubit
+- 양자 상태 (중첩) 
+$$|\Psi\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle$$ 
+(다른 상태가 중첩되지 않도록 control)
+- 측정 가설 (붕괴) 
+$$|\Psi\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle
+\begin{matrix}\xrightarrow{\text{확률 } |\alpha_0|^2} |0\rangle\\
+\xrightarrow{\text{확률 } |\alpha_1|^2} |1\rangle
+\end{matrix}\text{ for }|\alpha_0|^2 + |\alpha_1|^2 = 1$$
+    (Collapse $\Rightarrow$ "$|\Psi\rangle$에 어떤 연산자를 걸지." $\rightarrow$ 물리량의 eigenvalue 중 하나로 결정됨)
+
+#### 중첩과 얽힘 (Superposition & Entanglement)
+
+##### 중첩 2-qubit system
+
+$$|\Psi_A\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle, |\Psi_B\rangle = \beta_0 |0\rangle + \beta_1 |1\rangle$$
+
+$$|\Psi_{AB}\rangle = C_0 |0\rangle|0\rangle + C_1 |0\rangle|1\rangle + C_2 |1\rangle|0\rangle + C_3 |1\rangle|1\rangle$$
+
+##### $n$-qubit system
+
+$$|\Psi\rangle = C_0 |0\dots0\rangle + \dots + C_{2^n-1} |1\dots1\rangle$$ 
+($2^n$개 상태가 중첩)
+
+##### 얽힘
+
+$$|\Psi_A\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle, |\Psi_B\rangle = \beta_0 |0\rangle + \beta_1 |1\rangle$$
+
+(흔들기? $C\_1, C\_2 = 0$으로 만듦 $\rightarrow$ 하나를 측정할 때 다른 하나의 상태가 고정되도록 조정)
+
+$$|\Psi_{AB}\rangle = C_0 |0\rangle|0\rangle + C_3 |1\rangle|1\rangle$$
+
+$\alpha = 0$ 이면 $\beta = 0$, $\alpha = 1$ 이면 $\beta = 1$
+
+#### Dirac Notation
+
+- $\langle \text{ } \rangle$ ... bracket
+- $|\beta\rangle$ ... ket vector
+    * $|f\rangle = f(x)$ 함수
+- $\langle \alpha |$ ... bra vector
+    - $\rightarrow$ functional(벡터를 내적값($\mathbb{C}$)으로 보냄) $\Rightarrow \langle f | g \rangle = \int f^* g$
+    * $\langle f | = \int f^* \square$ : linear functional
+        함수 $\rightarrow$ 실수(복소수) : $g \mapsto \int f^* g$
+
+##### Dual space (space of bra vectors) : linear functional
+
+$$\Phi : \text{vector, func} \rightarrow \mathbb{R}, \mathbb{C}; |f\rangle \xmapsto{\quad} \langle \Phi | f \rangle = \int \Phi^* f$$
+
+##### Projection
+
+$$\begin{aligned}
+l &= |\vec{\beta}| \cos\theta = |\vec{\beta}| \frac{\vec{\alpha} \cdot \vec{\beta}}{|\vec{\alpha}| |\vec{\beta}|} = \frac{\vec{\alpha} \cdot \vec{\beta}}{|\vec{\alpha}|}\\
+\pi_\alpha(\vec{\beta}) &= l \frac{\vec{\alpha}}{|\vec{\alpha}|} = \frac{\vec{\alpha} \cdot \vec{\beta}}{|\vec{\alpha}|^2} \vec{\alpha}
+\end{aligned}$$
+
+$|\vec{\alpha}| = 1$ 이면, 
+$$\pi_\alpha(\vec{\beta}) = (\vec{\alpha} \cdot \vec{\beta}) \vec{\alpha}$$
+
+$$|\beta\rangle \xrightarrow{\hat{P}} C_{\beta} |\alpha\rangle : \hat{P}:$$ 
+operator ; 
+$$\hat{P} = |\alpha\rangle\langle\alpha|$$ 
+if 
+$$||\alpha\rangle|| = 1$$
+
+$$\Rightarrow \hat{P}|\beta\rangle = (|\alpha\rangle\langle\alpha|)|\beta\rangle = |\alpha\rangle\langle\alpha|\beta\rangle = \langle\alpha|\beta\rangle |\alpha\rangle$$
+
+$\{|e\_n\rangle\} :$ 정규직교 기저 (O-N basis) $\rightarrow \sum\_n |e_n\rangle\langle e\_n| = 1$ (operator)
+
+$\because$ 임의의 
+$$|\alpha\rangle = \sum \alpha_n |e_n\rangle$$
+
+$$\begin{aligned}
+(\sum_n |e_n\rangle\langle e_n|)|\alpha\rangle &= |e_1\rangle\langle e_1|\alpha\rangle + \dots + |e_n\rangle\langle e_n|\alpha\rangle + \dots\\
+&= |e_1\rangle \alpha_1 + \dots + |e_n\rangle \alpha_n + \dots = \sum_n \alpha_n |e_n\rangle = |\alpha\rangle
+\end{aligned}$$
+
+##### Spectral Decomposition
+
+e.g.) 
+
+$$A = \begin{pmatrix} 10 & 6 \\ 6 & 1 \end{pmatrix} \quad \begin{cases} \lambda_1 = 13 \dots v_1 = \frac{1}{\sqrt{5}} \begin{pmatrix} 2 \\ 1 \end{pmatrix} \\ \lambda_2 = -2 \dots v_2 = \frac{1}{\sqrt{5}} \begin{pmatrix} 1 \\ -2 \end{pmatrix} \end{cases} \{v_1, v_2\} : \text{O.N. basis}$$
+
+$$A = VDV^T \quad V = [v_1 \text{ } v_2], V^T = \begin{bmatrix} v_1^T \\ v_2^T \end{bmatrix} = V^{-1}, D = \begin{bmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{bmatrix}$$
+
+$$\begin{aligned}
+A &= [v_1 \text{ } v_2] \begin{bmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{bmatrix} \begin{bmatrix} v_1^T \\ v_2^T \end{bmatrix} = [v_1 \text{ } v_2] \begin{bmatrix} \lambda_1 v_1^T \\ \lambda_2 v_2^T \end{bmatrix}\\
+&= v_1 (\lambda_1 v_1^T) + v_2 (\lambda_2 v_2^T)\\
+&= \lambda_1 (v_1 v_1^T) + \lambda_2 (v_2 v_2^T)
+\end{aligned}$$
+
+$$\{|e_1\rangle, \dots, |e_n\rangle, \dots\} :$$ 
+Eigenvectors of $\hat{Q}$ (O.N. basis, Hermitian operator)
+
+$$\hat{Q}|e_n\rangle = q_n |e_n\rangle$$ 
+(eigenvalue)
+
+S.D. of 
+$$\hat{Q} \Rightarrow \hat{Q} = \sum_n q_n |e_n\rangle\langle e_n|$$
+
+proof) 임의의 
+$$|\alpha\rangle = \sum \alpha_n |e_n\rangle$$ 
+에 대해
+1. $$\hat{Q}|\alpha\rangle = \hat{Q}(\sum \alpha_n |e_n\rangle) = \sum \alpha_n \hat{Q}|e_n\rangle = \sum \alpha_n q_n |e_n\rangle$$
+2. $$(\sum_n q_n |e_n\rangle\langle e_n|)|\alpha\rangle = \sum_n q_n |e_n\rangle\langle e_n|\alpha\rangle = \sum_n \alpha_n q_n |e_n\rangle$$
+$\therefore$ 1. = 2.
+
+
+
+
+### Qubit
+
+$$|\Psi\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle \quad (|\alpha_0|^2 + |\alpha_1|^2 = 1)$$
+
+Di Vincenzo의 조건 (Q.C.를 구현하기 위한 7가지 조건)
+- 양자 계산 (ALU)
+1. Qubit (Hamiltonian이 잘 정의된) 구현 (Hamiltonian: 에너지를 나타냄)
+2. 원하는 상태로 qubit을 초기화 $\rightarrow \alpha\_0, \alpha\_1$ 값
+3. 충분히 긴(유효한 양자 계산 시간) 결맞음 (coherent) 상태 ($\longleftrightarrow$ decoherent)
+4. 양자 게이트 (universal gate : 원하는 연산이 가능한 gates)
+5. 측정 능력 (특정 qubit을 선택적으로 측정하는 능력)
+- 양자 통신
+6. 정적 상태 $\longleftrightarrow$ 동적 상태 전환
+7. 동적 상태 qubit을 전송하는 능력
+
+양자 컴퓨터(HW) = Qubit + Quantum Gates
+
+**공준 (postulate)**
+
+물리계 (physical system) — 
+$$\begin{cases} \text{상태함수 (state func)} \\ \text{상태벡터 (state vector)} \end{cases}$$
+
+$|\Psi\rangle$에 모든 정보가 담겨 있다.
+
+$$\begin{cases} \Psi \in H \text{ (Hilbert space) } \dots \text{함수 · 벡터} \\ \uparrow \\ \Psi^\dagger \in H^* \text{ (Dual space, 쌍대공간) } \dots \text{(linear) functional} \end{cases}$$
+
+**Bracket notation**
+
+$$\begin{cases} |\Psi\rangle & \text{ket vector } \in H \\ \langle\Psi| & \text{bra vector } \in H^* \end{cases} \quad \langle\Psi|\Psi\rangle = 1$$
+
+**기저 (변환)** 
+$|p\rangle \longleftrightarrow |x\rangle$
+
+변환 
+$$\begin{cases} |\Psi\rangle = a_1|\alpha_1\rangle + \dots + a_n|\alpha_n\rangle & \{|\alpha_1\rangle, \dots, |\alpha_n\rangle\} \\ |\Psi\rangle = b_1|\beta_1\rangle + \dots + b_n|\beta_n\rangle & \{|\beta_1\rangle, \dots, |\beta_n\rangle\} \end{cases}$$
+
+**내적** 
+
+$$|\alpha\rangle \cdot \langle\beta| = \langle\alpha|\beta\rangle \in \mathbb{C} \quad (\text{내적도 } \in H^*)$$
+
+**직교** 
+
+$$|\alpha\rangle \perp |\beta\rangle \iff \langle\alpha|\beta\rangle = 0$$
+
+**크기** 
+
+$$\| |\alpha\rangle \| = \sqrt{\langle\alpha|\alpha\rangle}$$
