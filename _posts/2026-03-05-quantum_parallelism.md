@@ -2069,3 +2069,198 @@ $$|\alpha\rangle \perp |\beta\rangle \iff \langle\alpha|\beta\rangle = 0$$
 **크기** 
 
 $$\| |\alpha\rangle \| = \sqrt{\langle\alpha|\alpha\rangle}$$
+
+
+
+Bloch Sphere : (Qubit) 
+$$|\Psi\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle, \quad \alpha_0, \alpha_1 \in \mathbb{C}\quad(|\alpha_0|^2 + |\alpha_1|^2 = 1)$$
+
+* 4 차원
+
+    $$\begin{cases} \alpha_0 = x_0 + y_0 i \in \mathbb{C} \\ \alpha_1 = x_1 + y_1 i \in \mathbb{C}, \quad x_0, x_1, y_0, y_1 \in \mathbb{R} \end{cases}$$
+
+    - $|\Psi\rangle$를 표현하려면 4개의 차원 필요
+    - $|\alpha\_0|^2 + |\alpha\_1|^2 = 1$ 조건이 있으므로 3차원으로 표현 가능
+
+* 3 차원 (변수 3개로 표현 가능)
+    
+    $$|\Psi\rangle = e^{i\phi} [c_0 |0\rangle + c_1 |1\rangle],$$ 
+    
+    - $|c\_0|^2, |c\_1|^2$의 확률로 $|0\rangle$ 또는 $|1\rangle$이 됨
+    - $e^{i\phi}$: global phase $\rightarrow$ 크기가 1이고 확률에 기여 X $\rightarrow$ 2 차원
+
+#### Qubit 
+$$|\Psi\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle, \quad |\alpha_0|^2 + |\alpha_1|^2 = 1$$
+
+- $n$개 qubit에 대하여 임의의 $i$ 번째 qubit 상태가
+$$|\Psi_n\rangle = \alpha_{n0}|0_n\rangle + \alpha_{n1}|1_n\rangle$$
+라고 하면, $N = 2^n$에 대하여
+$$\begin{aligned}
+|\Psi\rangle = &|\Psi_1\rangle \dots |\Psi_n\rangle\\
+= &(\alpha_{10} \dots \alpha_{n0}) |0_1\rangle|0_2\rangle \dots |0_n\rangle + (\alpha_{11} \alpha_{20} \dots \alpha_{n0}) |1_1\rangle|0_2\rangle \dots |0_n\rangle \\
+&+ \dots + (\alpha_{11} \dots \alpha_{(n-1)1} \alpha_{n0}) |1_1\rangle \dots |1_{n-1}\rangle|0_n\rangle + (\alpha_{11} \alpha_{21} \dots \alpha_{n1}) |1_1\rangle|1_2\rangle \dots |1_n\rangle
+\end{aligned}$$
+
+
+
+2-qubit system 기저 $|0\rangle|0\rangle, |0\rangle|1\rangle, |1\rangle|0\rangle, |1\rangle|1\rangle$
+
+$$|\Psi_1\rangle = a_0|0\rangle + a_1|1\rangle, \quad |\Psi_2\rangle = b_0|0\rangle + b_1|1\rangle$$
+
+$$\begin{aligned}
+|\Psi\rangle = |\Psi_1\rangle |\Psi_2\rangle 
+&= (a_0|0\rangle + a_1|1\rangle) \otimes (b_0|0\rangle + b_1|1\rangle)\\
+&= a_0b_0|0\rangle \otimes |0\rangle + a_0b_1|0\rangle \otimes |1\rangle + a_1b_0|1\rangle \otimes |0\rangle + a_1b_1|1\rangle \otimes |1\rangle
+\end{aligned}$$
+
+- 텐서곱 $\otimes$ : 기저의 차원을 늘리는 방법
+
+$$\{0, 1, 2, 3\} = \{|00\rangle, |01\rangle, |10\rangle, |11\rangle\} = \{|0\rangle \otimes |0\rangle, |0\rangle \otimes |1\rangle, |1\rangle \otimes |0\rangle, |1\rangle \otimes |1\rangle\}$$
+
+$$|0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix},\quad |1\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix},\quad |0\rangle \otimes |1\rangle = \begin{pmatrix} 1 \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\ 0 \begin{pmatrix} 0 \\ 1 \end{pmatrix} \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix}$$
+
+※ 주의 
+$$V_1 = \mathbb{R}^2 (\text{basis } \{v_{11}, v_{12}\}), V_2 = \mathbb{R}^2 (\text{basis } \{v_{21}, v_{22}\})$$
+    $$\Rightarrow V = V_1 \times V_2 = \mathbb{R}^2 \times \mathbb{R}^2 = \mathbb{R}^4 (\text{basis } \{v_{11}, v_{12}, v_{21}, v_{22}\}) : 2+2$$
+    개 기저  
+    한편 
+    $$V_1 \otimes V_2 = \mathbb{R}^2 \otimes \mathbb{R}^2 \approx \mathbb{R}^4(\text{basis } \{v_{11} \otimes v_{21}, v_{11} \otimes v_{22}, v_{12} \otimes v_{21}, v_{12} \otimes v_{22}\}) : 2 \times 2$$
+    개 기저  
+    그러나 $V\_1 = \mathbb{R}^3$ 이면 두 곱이 다르게 작용함
+
+
+##### 연산자 = 양자 게이트
+
+$$\begin{pmatrix} X: \text{연산자} \\ |\alpha\rangle: \text{양자 상태} \end{pmatrix} \xrightarrow{Q \text{ 연산}} X|\alpha\rangle = |\beta\rangle : \text{새로운 양자 상태}$$
+
+※ 연산자 = 선형함수 (유니타리 변환)
+
+1. $2$-qubit system
+    $$|\alpha\rangle = a_0|0\rangle + a_1|1\rangle = a_0 \begin{pmatrix} 1 \\ 0 \end{pmatrix} + a_1 \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} a_0 \\ a_1 \end{pmatrix}$$
+
+    $$X = \begin{pmatrix} x_{00} & x_{01} \\ x_{10} & x_{11} \end{pmatrix}$$
+    
+    $$|\beta\rangle = X|\alpha\rangle = (x_{00}a_0 + x_{01}a_1)|0\rangle + (x_{10}a_0 + x_{11}a_1)|1\rangle$$
+
+2. $n$-qubit system
+$|\alpha\rangle = \begin{pmatrix} a_0 \\ \vdots \\ a_{2^n-1} \end{pmatrix}$
+$|\beta\rangle = [ \quad ]_{2^n \times 2^n} \begin{pmatrix} a_0 \\ \vdots \\ a_{2^n-1} \end{pmatrix} = X|\alpha\rangle$
+
+**Dual conjugate $X^\dagger$**
+
+$$|\beta\rangle = X|\alpha\rangle \longleftrightarrow \langle\beta| = \langle X\alpha| = \langle\alpha|X^\dagger$$
+
+$$\langle\alpha|\beta\rangle := a_1^*\beta_1 + \dots + a_n^*\beta_n \Rightarrow \langle\alpha|\alpha\rangle = |a|^2$$
+
+$$\Rightarrow \langle\alpha|\beta\rangle = \langle\beta|\alpha\rangle^*$$
+
+$$\begin{aligned}
+\langle r | (X|\alpha\rangle) &= r_1^* (X|\alpha\rangle)_1 + \dots + r_n^* (X|\alpha\rangle)_n\\
+&= (X^\dagger r_1)^* |\alpha\rangle_1 + \dots + (X^\dagger r_n)^* |\alpha\rangle_n\\
+&= (\langle r|X^\dagger) |\alpha\rangle
+\end{aligned}$$
+
+$\Rightarrow \mathbb{R}$에서 
+$$\langle\beta|X\alpha\rangle := \beta^T X \alpha = (X^T \beta)^T \alpha = \langle X^T\beta|\alpha\rangle$$
+
+$\mathbb{C}$에서 
+$$\langle\beta|X\alpha\rangle = (\beta^*)^T X \alpha = (X^* \beta)^* \alpha = \langle X^* \beta|\alpha\rangle = \langle X^H \beta|\alpha\rangle = \langle\beta|X^H|\alpha\rangle$$
+
+
+### Bloch Sphere
+
+1. $$(r_\alpha, \phi_\alpha, r_\beta, \phi_\beta) \approx (x_\alpha, y_\alpha, x_\beta, y_\beta):$$
+4차원
+    극좌표로 ($x+iy = re^{i\theta}$ 이므로)
+    $$\alpha = r_\alpha e^{i\phi_\alpha}, \quad \beta = r_\beta e^{i\phi_\beta}$$
+
+    $|\alpha|^2 + |\beta|^2 = 1 \rightarrow$ 3차원(Bloch sphere의 표면) $\rightarrow$ 2차원
+
+2. $$(\phi, r_\alpha, r_\beta):$$
+3차원
+    $|\Psi\rangle = e^{i\gamma} |\Psi\rangle = e^{i\gamma} (\alpha|0\rangle + \beta|1\rangle)$
+
+    global phase $e^{i\gamma}$:측정 결과에 대한 확률에 영향 거의 X
+
+    $$\begin{aligned}
+    \therefore |\Psi\rangle &= r_\alpha e^{i\phi_\alpha} |0\rangle + r_\beta e^{i\phi_\beta} |1\rangle\\
+    &= \underbrace{e^{i\phi_\alpha}}_{\rightarrow 1} [r_\alpha |0\rangle + r_\beta e^{i(\phi_\alpha - \phi_\beta)} |1\rangle]\\
+    &\approx r_\alpha |0\rangle + r_\beta e^{i\phi} |1\rangle
+    \end{aligned}$$
+
+3. $(\theta, \phi):$ 2차원
+    $|\alpha|^2 + |\beta|^2 = 1$
+    $\Rightarrow z^2 + |x+iy|^2 = 1$
+    $\therefore x^2 + y^2 + z^2 = 1$
+    
+    Let 
+    $$r_\alpha = z \in \mathbb{R}, \quad x, y \in \mathbb{R},\quad r_\beta e^{i\phi} = x+iy\in\mathbb{C}$$
+    
+    $$|\Psi\rangle = r_\alpha |0\rangle + r_\beta e^{i\phi} |1\rangle = z |0\rangle + (x+iy) |1\rangle$$
+    
+    Then, 
+
+    $$\begin{cases} x = r \sin\theta \cos\phi \\ y = r \sin\theta \sin\phi \\ z = r \cos\theta \end{cases} \Rightarrow \text{ 3차원 }(r, \theta, \phi)$$
+    
+    If $r=1 \Rightarrow$ (Unit sphere, Normalization), 2차원 
+    $r = x^2 + y^2 + z^2 = 1$ 이므로
+    최종적으로 $(\theta, \phi)$로 나타낼 수 있음
+    
+    $$\begin{aligned}
+    \therefore |\Psi\rangle &= z|0\rangle + (x+iy)|1\rangle\\
+    &= \cos\theta |0\rangle + \sin\theta(\cos\phi + i\sin\phi)|1\rangle\\
+    &= \cos\theta |0\rangle + e^{i\phi} \sin\theta |1\rangle
+    \end{aligned}$$
+
+4. Bloch Sphere: 2차원 Half-angle (대칭점 고려)
+    $|\Psi\rangle = \cos\theta |0\rangle + e^{i\phi} \sin\theta |1\rangle$
+    
+    $$P(r, \theta, \phi) \xrightarrow{\text{opposite point}} P'(r, \pi-\theta, \phi)\xrightarrow{\text{opposite point}}-P(r, \pi-\theta, \phi+\pi)$$
+    
+    $$\begin{matrix}P \longleftrightarrow -P\\
+    |\Psi\rangle \longleftrightarrow -|\Psi\rangle \end{matrix}$$
+
+    ($-1 = e^{-i\pi}$은 global phase $\Rightarrow$ 측정결과에 영향 X)
+    
+    - Upper hemisphere와 Lower hemisphere 중 대칭점에 해당하는 Lower hemisphere 버림 (같은 측정 결과를 주므로)
+    
+    $$\begin{aligned}
+    |\Psi\rangle &= \cos\theta |0\rangle + e^{i\phi} \sin\theta |1\rangle \quad (0 \le \theta \le \pi/2, 0 \le \phi \le 2\pi)\\
+    &= \cos\frac{\theta}{2} |0\rangle + e^{i\phi} \sin\frac{\theta}{2} |1\rangle \quad (0 \le \theta \le \pi, 0 \le \phi \le 2\pi)
+    \end{aligned}$$
+    
+    - $|0\rangle$ (North pole, $z$축)
+    - $|1\rangle$ (South pole, $-z$축)
+    - $|+\rangle$ ($x$축)
+    - $|-\rangle$ ($-x$축)
+    - $|i\rangle$ ($y$축)
+    - $|o\rangle$ ($-y$축)
+    
+    - $|\Psi\rangle = |0\rangle \quad \text{if } \theta = 0$
+    - $|\Psi\rangle = |1\rangle \quad \text{if } \theta = \pi$
+    - $|\Psi\rangle = |+\rangle = \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = 0$
+    - $|\Psi\rangle = |-\rangle = \frac{1}{\sqrt{2}} (|0\rangle - |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \pi$
+    - $|\Psi\rangle = |i\rangle = \frac{1}{\sqrt{2}} (|0\rangle + i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{\pi}{2}$ (inner $y$축을 향하여)
+    - $|\Psi\rangle = |-i\rangle = \frac{1}{\sqrt{2}} (|0\rangle - i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{3}{2}\pi$ (outer $y$축의 반대로)
+
+Bloch Sphere의 성질
+1. orthogonality of opposite points: 반대 점은 수직 ($\frac{\theta}{2}$ 를 두 배로 늘려서)
+    $$\begin{aligned}
+    |\Psi_1\rangle &= \cos\frac{\theta}{2} |0\rangle + e^{i\phi} \sin\frac{\theta}{2} |1\rangle\\
+    \downarrow &\text{opposite point } (\theta \rightarrow \pi-\theta, \phi \rightarrow \phi+\pi)\\
+    |\Psi_2\rangle &= \cos\frac{\pi-\theta}{2} |0\rangle + e^{i(\phi+\pi)} \sin\frac{\pi-\theta}{2} |1\rangle
+    \end{aligned}$$
+    
+    $$\begin{aligned}
+    \langle\Psi_1|\Psi_2\rangle &= \cos\frac{\theta}{2} \cos\frac{\pi-\theta}{2} + \underbrace{e^{i\pi}}_{=-1} \sin\frac{\theta}{2} \sin\frac{\pi-\theta}{2}\\
+    &= \cos\frac{\theta}{2} \sin\frac{\theta}{2} - \sin\frac{\theta}{2} \cos\frac{\theta}{2} = 0
+    \end{aligned}$$
+2. Rotation with Pauli matrices $X, Y, Z$
+    (gate)
+    $$\begin{cases} X = \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} & \text{x축 기준 }\pi\text{ 회전} \\ Y = \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} & \text{y축 기준 }\pi\text{ 회전} \\ Z = \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} & \text{z축 기준 }\pi\text{ 회전} \end{cases}$$
+    
+    Unitary matrix
+    $$X^2 = Y^2 = Z^2 = I$$
+    
+    e.g. 
+    $$X|\Psi\rangle = X(\alpha|0\rangle + \beta|1\rangle) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} \alpha \\ \beta \end{pmatrix} = \begin{pmatrix} \beta \\ \alpha \end{pmatrix} \Rightarrow X|0\rangle = |1\rangle, \quad X|1\rangle = |0\rangle $$
