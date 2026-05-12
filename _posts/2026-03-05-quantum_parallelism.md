@@ -2237,13 +2237,13 @@ $$\langle\beta|X\alpha\rangle = (\beta^*)^T X \alpha = (X^* \beta)^* \alpha = \l
     &= \cos\frac{\theta}{2} |0\rangle + e^{i\phi} \sin\frac{\theta}{2} |1\rangle \quad (0 \le \theta \le \pi, 0 \le \phi \le 2\pi)
     \end{aligned}$$
 
-    <img src="{{ '/assets/img/post/quantum_parallelism/0511_1.png' | relative_url }}" style="max-width: 90%; height: auto; display: block; margin: 0 auto;" alt="image">
+    <img src="{{ '/assets/img/post/quantum_parallelism/0511_1.png' | relative_url }}" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" alt="image">
 
     
     - $$|0\rangle$$ 
-    (North pole, $z$축)
+    ($z$축)
     - $$|1\rangle$$ 
-    (South pole, $-z$축)
+    ($-z$축)
     - $$|+\rangle$$ 
     ($x$축)
     - $$|-\rangle$$ 
@@ -2254,13 +2254,17 @@ $$\langle\beta|X\alpha\rangle = (\beta^*)^T X \alpha = (X^* \beta)^* \alpha = \l
     ($-y$축)
     
     - $$|\Psi\rangle = |0\rangle \quad \text{if } \theta = 0$$
+    (North pole)
     - $$|\Psi\rangle = |1\rangle \quad \text{if } \theta = \pi$$
+    (South pole)
     - $$|\Psi\rangle = |+\rangle = \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = 0$$
+    ($|0\rangle + |1\rangle$)
     - $$|\Psi\rangle = |-\rangle = \frac{1}{\sqrt{2}} (|0\rangle - |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \pi$$
+    ($|0\rangle - |1\rangle$)
     - $$|\Psi\rangle = |i\rangle = \frac{1}{\sqrt{2}} (|0\rangle + i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{\pi}{2}$$ 
-    (inner $y$축을 향하여)
+    (inner: $y$축을 향하여)
     - $$|\Psi\rangle = |-i\rangle = \frac{1}{\sqrt{2}} (|0\rangle - i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{3}{2}\pi$$ 
-    (outer $y$축의 반대로)
+    (outer: $y$축의 반대로)
 
 Bloch Sphere의 성질
 1. orthogonality of opposite points: 반대 점은 수직 ($\frac{\theta}{2}$ 를 두 배로 늘려서)
