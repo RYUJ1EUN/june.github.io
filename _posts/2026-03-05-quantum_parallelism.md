@@ -2090,7 +2090,7 @@ $$|\Psi\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle, \quad \alpha_0, \alpha
     $$|\Psi\rangle = e^{i\phi} [c_0 |0\rangle + c_1 |1\rangle],$$ 
     
     - $$|c_0|^2, |c_1|^2$$
-    의 확률로 $|0\rangle$ 또는 $|1\rangle$이 됨
+    의 확률로 $\mid 0\rangle$ 또는 $\mid 1\rangle$이 됨
     - $e^{i\phi}$: global phase $\rightarrow$ 크기가 1이고 확률에 기여 X $\rightarrow$ 2 차원
 
 #### Qubit 
@@ -2258,9 +2258,9 @@ $$\langle\beta|X\alpha\rangle = (\beta^*)^T X \alpha = (X^* \beta)^* \alpha = \l
     - $$|\Psi\rangle = |1\rangle \quad \text{if } \theta = \pi$$
     (South pole)
     - $$|\Psi\rangle = |+\rangle = \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = 0$$
-    ($|0\rangle + |1\rangle$)
+    ($\mid 0\rangle + \mid 1\rangle$)
     - $$|\Psi\rangle = |-\rangle = \frac{1}{\sqrt{2}} (|0\rangle - |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \pi$$
-    ($|0\rangle - |1\rangle$)
+    ($\mid 0\rangle - \mid 1\rangle$)
     - $$|\Psi\rangle = |i\rangle = \frac{1}{\sqrt{2}} (|0\rangle + i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{\pi}{2}$$ 
     (inner: $y$축을 향하여)
     - $$|\Psi\rangle = |-i\rangle = \frac{1}{\sqrt{2}} (|0\rangle - i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{3}{2}\pi$$ 
