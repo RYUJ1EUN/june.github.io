@@ -2014,8 +2014,9 @@ $$\hat{Q} \Rightarrow \hat{Q} = \sum_n q_n |e_n\rangle\langle e_n|$$
 proof) 임의의 
 $$|\alpha\rangle = \sum \alpha_n |e_n\rangle$$ 
 에 대해
-1. $$\hat{Q}|\alpha\rangle = \hat{Q}(\sum \alpha_n |e_n\rangle) = \sum \alpha_n \hat{Q}|e_n\rangle = \sum \alpha_n q_n |e_n\rangle$$ ,
-2. $$(\sum_n q_n |e_n\rangle\langle e_n|)|\alpha\rangle = \sum_n q_n |e_n\rangle\langle e_n|\alpha\rangle = \sum_n \alpha_n q_n |e_n\rangle$$ .
+1. $$\hat{Q}|\alpha\rangle = \hat{Q}(\sum \alpha_n |e_n\rangle) = \sum \alpha_n \hat{Q}|e_n\rangle = \sum \alpha_n q_n |e_n\rangle,$$
+
+2. $$(\sum_n q_n |e_n\rangle\langle e_n|)|\alpha\rangle = \sum_n q_n |e_n\rangle\langle e_n|\alpha\rangle = \sum_n \alpha_n q_n |e_n\rangle$$
 
 $\therefore$ 1. = 2.
 
@@ -2060,7 +2061,7 @@ $$\begin{cases} |\Psi\rangle = a_1|\alpha_1\rangle + \dots + a_n|\alpha_n\rangle
 
 **내적** 
 
-$$|\alpha\rangle \cdot \langle\beta| = \langle\alpha|\beta\rangle \in \mathbb{C} \quad (\text{내적도 } \in H^*)$$
+$$|\alpha\rangle \langle\beta| = \langle\alpha|\beta\rangle \in \mathbb{C} \quad (\text{내적도 } \in H^*)$$
 
 **직교** 
 
@@ -2079,14 +2080,17 @@ $$|\Psi\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle, \quad \alpha_0, \alpha
 
     $$\begin{cases} \alpha_0 = x_0 + y_0 i \in \mathbb{C} \\ \alpha_1 = x_1 + y_1 i \in \mathbb{C}, \quad x_0, x_1, y_0, y_1 \in \mathbb{R} \end{cases}$$
 
-    - $|\Psi\rangle$를 표현하려면 4개의 차원 필요
-    - $|\alpha\_0|^2 + |\alpha\_1|^2 = 1$ 조건이 있으므로 3차원으로 표현 가능
+    - $$|\Psi\rangle$$
+    를 표현하려면 4개의 차원 필요
+    - $$|\alpha_0|^2 + |\alpha_1|^2 = 1$$ 
+    조건이 있으므로 3차원으로 표현 가능
 
 * 3 차원 (변수 3개로 표현 가능)
     
     $$|\Psi\rangle = e^{i\phi} [c_0 |0\rangle + c_1 |1\rangle],$$ 
     
-    - $|c\_0|^2, |c\_1|^2$의 확률로 $|0\rangle$ 또는 $|1\rangle$이 됨
+    - $$|c_0|^2, |c_1|^2$$
+    의 확률로 $|0\rangle$ 또는 $|1\rangle$이 됨
     - $e^{i\phi}$: global phase $\rightarrow$ 크기가 1이고 확률에 기여 X $\rightarrow$ 2 차원
 
 #### Qubit 
@@ -2096,8 +2100,8 @@ $$|\Psi\rangle = \alpha_0 |0\rangle + \alpha_1 |1\rangle, \quad |\alpha_0|^2 + |
 $$|\Psi_n\rangle = \alpha_{n0}|0_n\rangle + \alpha_{n1}|1_n\rangle$$
 라고 하면, $N = 2^n$에 대하여
 $$\begin{aligned}
-|\Psi\rangle = &|\Psi_1\rangle \dots |\Psi_n\rangle\\
-= &(\alpha_{10} \dots \alpha_{n0}) |0_1\rangle|0_2\rangle \dots |0_n\rangle + (\alpha_{11} \alpha_{20} \dots \alpha_{n0}) |1_1\rangle|0_2\rangle \dots |0_n\rangle \\
+|\Psi\rangle =\; &|\Psi_1\rangle \dots |\Psi_n\rangle\\
+=\; &(\alpha_{10} \dots \alpha_{n0}) |0_1\rangle|0_2\rangle \dots |0_n\rangle + (\alpha_{11} \alpha_{20} \dots \alpha_{n0}) |1_1\rangle|0_2\rangle \dots |0_n\rangle \\
 &+ \dots + (\alpha_{11} \dots \alpha_{(n-1)1} \alpha_{n0}) |1_1\rangle \dots |1_{n-1}\rangle|0_n\rangle + (\alpha_{11} \alpha_{21} \dots \alpha_{n1}) |1_1\rangle|1_2\rangle \dots |1_n\rangle
 \end{aligned}$$
 
@@ -2143,8 +2147,9 @@ $$\begin{pmatrix} X: \text{연산자} \\ |\alpha\rangle: \text{양자 상태} \e
     $$|\beta\rangle = X|\alpha\rangle = (x_{00}a_0 + x_{01}a_1)|0\rangle + (x_{10}a_0 + x_{11}a_1)|1\rangle$$
 
 2. $n$-qubit system
-$|\alpha\rangle = \begin{pmatrix} a_0 \\ \vdots \\ a_{2^n-1} \end{pmatrix}$
-$|\beta\rangle = [ \quad ]_{2^n \times 2^n} \begin{pmatrix} a_0 \\ \vdots \\ a_{2^n-1} \end{pmatrix} = X|\alpha\rangle$
+    $$|\alpha\rangle = \begin{pmatrix} a_0 \\ \vdots \\ a_{2^n-1} \end{pmatrix}$$
+
+    $$|\beta\rangle = [ \quad ]_{2^n \times 2^n} \begin{pmatrix} a_0 \\ \vdots \\ a_{2^n-1} \end{pmatrix} = X|\alpha\rangle$$
 
 **Dual conjugate $X^\dagger$**
 
@@ -2171,10 +2176,13 @@ $$\langle\beta|X\alpha\rangle = (\beta^*)^T X \alpha = (X^* \beta)^* \alpha = \l
 
 1. $$(r_\alpha, \phi_\alpha, r_\beta, \phi_\beta) \approx (x_\alpha, y_\alpha, x_\beta, y_\beta):$$
 4차원
+
     극좌표로 ($x+iy = re^{i\theta}$ 이므로)
+
     $$\alpha = r_\alpha e^{i\phi_\alpha}, \quad \beta = r_\beta e^{i\phi_\beta}$$
 
-    $|\alpha|^2 + |\beta|^2 = 1 \rightarrow$ 3차원(Bloch sphere의 표면) $\rightarrow$ 2차원
+    $|$\alpha|^2 + |\beta|^2 = 1 \rightarrow$$ 
+    3차원(Bloch sphere의 표면) $\rightarrow$ 2차원
 
 2. $$(\phi, r_\alpha, r_\beta):$$
 3차원
@@ -2228,20 +2236,31 @@ $$\langle\beta|X\alpha\rangle = (\beta^*)^T X \alpha = (X^* \beta)^* \alpha = \l
     |\Psi\rangle &= \cos\theta |0\rangle + e^{i\phi} \sin\theta |1\rangle \quad (0 \le \theta \le \pi/2, 0 \le \phi \le 2\pi)\\
     &= \cos\frac{\theta}{2} |0\rangle + e^{i\phi} \sin\frac{\theta}{2} |1\rangle \quad (0 \le \theta \le \pi, 0 \le \phi \le 2\pi)
     \end{aligned}$$
+
+    <img src="{{ '/assets/img/post/quantum_parallelism/0511_1.png' | relative_url }}" style="max-width: 90%; height: auto; display: block; margin: 0 auto;" alt="image">
+
     
-    - $|0\rangle$ (North pole, $z$축)
-    - $|1\rangle$ (South pole, $-z$축)
-    - $|+\rangle$ ($x$축)
-    - $|-\rangle$ ($-x$축)
-    - $|i\rangle$ ($y$축)
-    - $|o\rangle$ ($-y$축)
+    - $$|0\rangle$$ 
+    (North pole, $z$축)
+    - $$|1\rangle$$ 
+    (South pole, $-z$축)
+    - $$|+\rangle$$ 
+    ($x$축)
+    - $$|-\rangle$$ 
+    ($-x$축)
+    - $$|i\rangle$$ 
+    ($y$축)
+    - $$|o\rangle$$ 
+    ($-y$축)
     
-    - $|\Psi\rangle = |0\rangle \quad \text{if } \theta = 0$
-    - $|\Psi\rangle = |1\rangle \quad \text{if } \theta = \pi$
-    - $|\Psi\rangle = |+\rangle = \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = 0$
-    - $|\Psi\rangle = |-\rangle = \frac{1}{\sqrt{2}} (|0\rangle - |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \pi$
-    - $|\Psi\rangle = |i\rangle = \frac{1}{\sqrt{2}} (|0\rangle + i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{\pi}{2}$ (inner $y$축을 향하여)
-    - $|\Psi\rangle = |-i\rangle = \frac{1}{\sqrt{2}} (|0\rangle - i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{3}{2}\pi$ (outer $y$축의 반대로)
+    - $$|\Psi\rangle = |0\rangle \quad \text{if } \theta = 0$$
+    - $$|\Psi\rangle = |1\rangle \quad \text{if } \theta = \pi$$
+    - $$|\Psi\rangle = |+\rangle = \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = 0$$
+    - $$|\Psi\rangle = |-\rangle = \frac{1}{\sqrt{2}} (|0\rangle - |1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \pi$$
+    - $$|\Psi\rangle = |i\rangle = \frac{1}{\sqrt{2}} (|0\rangle + i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{\pi}{2}$$ 
+    (inner $y$축을 향하여)
+    - $$|\Psi\rangle = |-i\rangle = \frac{1}{\sqrt{2}} (|0\rangle - i|1\rangle) \quad \text{if } \theta = \frac{\pi}{2}, \phi = \frac{3}{2}\pi$$ 
+    (outer $y$축의 반대로)
 
 Bloch Sphere의 성질
 1. orthogonality of opposite points: 반대 점은 수직 ($\frac{\theta}{2}$ 를 두 배로 늘려서)
