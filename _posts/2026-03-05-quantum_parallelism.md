@@ -2292,15 +2292,18 @@ Bloch Sphere의 성질
 
 ### Qubit GATE
 
-$$|\psi\rangle = \cos \frac{\theta}{2} |0\rangle + e^{i\phi} \sin \frac{\theta}{2} |1\rangle$   $\begin{pmatrix} 0 \le \theta \le \pi \\ 0 \le \phi \le 2\pi \end{pmatrix}$$
+$$|\psi\rangle = \cos \frac{\theta}{2} |0\rangle + e^{i\phi} \sin \frac{\theta}{2} |1\rangle\qquad \begin{pmatrix} 0 \le \theta \le \pi \\ 0 \le \phi \le 2\pi \end{pmatrix}$$
 
 $$e^{i\phi} :$$ 
 $$|1\rangle$$
 에만 영향을 미침. global phase가 아님
 
-- $X = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ (x축 $\pi$회전)
-- $Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}$
-- $Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$
+- $$X = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$$ 
+(x축 $\pi$회전)
+- $$Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}$$
+(y축 $\pi$회전)
+- $$Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$$
+(z축 $\pi$회전)
 - $X^2 = Y^2 = Z^2 = I$ : unitary matrix
 
 **※ Operator (Matrix) Exponential**
@@ -2323,8 +2326,7 @@ e^{i\theta A} &= I + i\theta A - \frac{1}{2!}\theta^2 I - \frac{i}{3!}\theta^3 A
 #### Pauli-gate의 일반화
 
 $$\begin{aligned}
-R_X(\theta) &= e^{-i\frac{\theta}{2}X} = \cos\frac{\theta}{2} I - i\sin\frac{\theta}{2} X\\
-&= \begin{pmatrix} \cos\frac{\theta}{2} & 0 \\ 0 & \cos\frac{\theta}{2} \end{pmatrix} - i \begin{pmatrix} 0 & \sin\frac{\theta}{2} \\ \sin\frac{\theta}{2} & 0 \end{pmatrix} = \begin{pmatrix} \cos\frac{\theta}{2} & -i\sin\frac{\theta}{2} \\ -i\sin\frac{\theta}{2} & \cos\frac{\theta}{2} \end{pmatrix}\\
+R_X(\theta) &= e^{-i\frac{\theta}{2}X} = \cos\frac{\theta}{2} I - i\sin\frac{\theta}{2} X = \begin{pmatrix} \cos\frac{\theta}{2} & 0 \\ 0 & \cos\frac{\theta}{2} \end{pmatrix} - i \begin{pmatrix} 0 & \sin\frac{\theta}{2} \\ \sin\frac{\theta}{2} & 0 \end{pmatrix} = \begin{pmatrix} \cos\frac{\theta}{2} & -i\sin\frac{\theta}{2} \\ -i\sin\frac{\theta}{2} & \cos\frac{\theta}{2} \end{pmatrix}\\
 \therefore X &= -i R_X(\pi)
 \end{aligned}$$
 
@@ -2339,14 +2341,15 @@ $$\begin{aligned}
 H &= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}\quad (H^2 = I)\\
 H|0\rangle &= \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle) = |+\rangle\\
 H|1\rangle &= \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle) = |-\rangle\\
-H|+\rangle &= |0\rangle$$H|-\rangle = |1\rangle
+H|+\rangle &= |0\rangle\\
+H|-\rangle &= |1\rangle
 \end{aligned}$$
 
 
 #### CNOT (c-X) gate : 2-qubit gate
 
 Control qubit $a$ ───●─── $a$  
-Target qubit $b$ ─────⊕─── $y = a \oplus b$ (unitary gate가 되기 위해 역함수 존재)
+Target qubit $b$ ───⊕─── $y = a \oplus b$ (unitary gate가 되기 위해 역함수 존재)
 
 basis : 
 $$|00\rangle = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, |01\rangle = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix}, |10\rangle = \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix}, |11\rangle = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix}$$
@@ -2394,43 +2397,41 @@ $$f(0) = \begin{cases} 0 \rightarrow f(1) \begin{cases} 0 & \text{constant} \\ 1
 
 
 
-**NOTE**
-    **Phase kickback (위상 되차기)**
-
+* **NOTE: Phase kickback (위상 되차기)**
     첫번째 qubit의 state 정보가 출력에서 위상으로 나타나는 현상
-    
+
     **CNOT**
-    
+
     $a$ ───●─── $a$  
     $b$ ───⊕─── $a \oplus b$
-    
+
     $$\begin{aligned}
     CNOT : &|0\rangle|-\rangle \longmapsto |0\rangle|-\rangle\\
     $CNOT : &|1\rangle|-\rangle \longmapsto |1\rangle(-|-\rangle) = -|1\rangle|-\rangle
     \end{aligned}$$
-    
+
     $$|1\rangle \frac{|1\rangle-|0\rangle}{\sqrt{2}}
     \Rightarrow \frac{(|1\rangle \otimes |1\rangle) - (|1\rangle \otimes |0\rangle)}{\sqrt{2}}$$
-    
+
     $$\therefore CNOT : |x\rangle \frac{|0\rangle-|1\rangle}{\sqrt{2}} \longmapsto (-1)^x |x\rangle \frac{|0\rangle-|1\rangle}{\sqrt{2}}$$
-    
+
     $$\begin{aligned}
     |+\rangle|-\rangle \longmapsto &\frac{1}{\sqrt{2}} CNOT(|0\rangle|-\rangle) + \frac{1}{\sqrt{2}} CNOT(|1\rangle|-\rangle)\\
     &= \frac{1}{\sqrt{2}} (-1)^0 |0\rangle|-\rangle + \frac{1}{\sqrt{2}} (-1)^1 |1\rangle|-\rangle\\
     &= \frac{|0\rangle-|1\rangle}{\sqrt{2}} |-\rangle\\
     &= |-\rangle|-\rangle
     \end{aligned}$$
-    
+
     $$\begin{aligned}
     U_f : &|x\rangle|y\rangle \longmapsto |x\rangle|y \oplus f(x)\rangle\qquad\text{(linear)}\\
     U_f : &|x\rangle \frac{|0\rangle-|1\rangle}{\sqrt{2}} \longmapsto \frac{U_f(|x\rangle|0\rangle) - U_f(|x\rangle|1\rangle)}{\sqrt{2}} = \frac{|x\rangle|0 \oplus f(x)\rangle - |x\rangle|1 \oplus f(x)\rangle}{\sqrt{2}}= |x\rangle \frac{|0 \oplus f(x)\rangle - |1 \oplus f(x)\rangle}{\sqrt{2}}
     \end{aligned}$$
-    
+
     1. $f(x)=0$ 일 때, 
     $$|x\rangle \frac{|0\rangle - |1\rangle}{\sqrt{2}}$$
     2. $f(x)=1$ 일 때, 
     $$|x\rangle \frac{|1\rangle - |0\rangle}{\sqrt{2}} = -|x\rangle \frac{|0\rangle - |1\rangle}{\sqrt{2}}$$
-    
+
     $$\Rightarrow U_f : |x\rangle|-\rangle \longmapsto (-1)^{f(x)} |x\rangle \underbrace{\frac{|0\rangle - |1\rangle}{\sqrt{2}}}_{|-\rangle} :$$ 
     $f$가 "위상에만" 영향을 줌
 
@@ -2444,11 +2445,13 @@ $$unitary \ U U^* = I$$
 $$U_f : |x\rangle|y\rangle \longmapsto |x\rangle|y \oplus f(x)\rangle$$ 
 
 **Circuit Diagram**
-    |$\mid 0\rangle$ |───| [H] | ─── | ─── | ─── | [   ] | ── | [H] | ── | [M] (z성분으로 측정) |
-    |$\mid 0\rangle$ |───| [X] | ─── | [H] | ─── | [ $U_f$ ] | ── | $\mid y \oplus f(x)\rangle$ | ── | |
-    | | ($\mid \psi_1\rangle$) | | ($\mid \psi_2\rangle$) | | ($\mid \psi_3\rangle$) | | ($\mid \psi_4\rangle$) | | ($\mid \psi_5\rangle$)|
 
-    (현실에선 만들기 어려움, unitary $\implies$ quantum gate)
+|$\mid 0\rangle$ |───| [H] | ─── | ─── | ─── | [   ] | ── | [H] | ── | [M] (z성분으로 측정) |
+|$\mid 0\rangle$ |───| [X] | ─── | [H] | ─── | [ $U_f$ ] | ── | $\mid y \oplus f(x)\rangle$ | ── | |
+| | ($\mid \psi_1\rangle$) | | ($\mid \psi_2\rangle$) | | ($\mid \psi_3\rangle$) | | ($\mid \psi_4\rangle$) | | ($\mid \psi_5\rangle$)|
+
+(현실에선 만들기 어려움, unitary $\implies$ quantum gate)
+
 
 $$|X\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\qquad H = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}$$
 
@@ -2456,7 +2459,7 @@ $$|X\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\qquad H = \frac{1}{\
 $$\begin{aligned}
 |\psi_1\rangle &= |0\rangle|0\rangle\quad (= |00\rangle)\\
 |\psi_2\rangle &= |0\rangle|1\rangle\\
-|\psi_3\rangle &= |+\rangle|-\rangle = \frac{|0\rangle+|1\rangle}{\sqrt{2}} \frac{|0\rangle-|1\rangle}{\sqrt{2}}
+|\psi_3\rangle &= |+\rangle|-\rangle = \frac{|0\rangle+|1\rangle}{\sqrt{2}} \frac{|0\rangle-|1\rangle}{\sqrt{2}}\\
 |\psi_4\rangle &= U_f(|+\rangle|-\rangle) = \frac{1}{\sqrt{2}} U_f(|0\rangle|-\rangle) + \frac{1}{\sqrt{2}} U_f(|1\rangle|-\rangle)\\
 &= \frac{1}{\sqrt{2}} (-1)^{f(0)} |0\rangle|-\rangle + \frac{1}{\sqrt{2}} (-1)^{f(1)} |1\rangle|-\rangle\\
 &= \frac{(-1)^{f(0)}|0\rangle + (-1)^{f(1)}|1\rangle}{\sqrt{2}} |-\rangle\\
