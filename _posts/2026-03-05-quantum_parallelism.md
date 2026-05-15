@@ -2,7 +2,7 @@
 layout: post
 title: "Quantum Parallelism"
 date: 2026-03-05
-last_modified_at: 2026-05-11
+last_modified_at: 2026-05-14
 # description: ""
 tags: [QUANTUM]
 categories: [Study, Class]
@@ -2181,7 +2181,7 @@ $$\langle\beta|X\alpha\rangle = (\beta^*)^T X \alpha = (X^* \beta)^* \alpha = \l
 
     $$\alpha = r_\alpha e^{i\phi_\alpha}, \quad \beta = r_\beta e^{i\phi_\beta}$$
 
-    $|$\alpha|^2 + |\beta|^2 = 1 \rightarrow$$ 
+    $$|\alpha|^2 + |\beta|^2 = 1 \rightarrow$$ 
     3차원(Bloch sphere의 표면) $\rightarrow$ 2차원
 
 2. $$(\phi, r_\alpha, r_\beta):$$
@@ -2287,3 +2287,182 @@ Bloch Sphere의 성질
     
     e.g. 
     $$X|\Psi\rangle = X(\alpha|0\rangle + \beta|1\rangle) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} \alpha \\ \beta \end{pmatrix} = \begin{pmatrix} \beta \\ \alpha \end{pmatrix} \Rightarrow X|0\rangle = |1\rangle, \quad X|1\rangle = |0\rangle $$
+
+
+
+### Qubit GATE
+
+$$|\psi\rangle = \cos \frac{\theta}{2} |0\rangle + e^{i\phi} \sin \frac{\theta}{2} |1\rangle$   $\begin{pmatrix} 0 \le \theta \le \pi \\ 0 \le \phi \le 2\pi \end{pmatrix}$$
+
+$$e^{i\phi} :$$ 
+$$|1\rangle$$
+에만 영향을 미침. global phase가 아님
+
+- $X = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ (x축 $\pi$회전)
+- $Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}$
+- $Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$
+- $X^2 = Y^2 = Z^2 = I$ : unitary matrix
+
+**※ Operator (Matrix) Exponential**
+
+$$\begin{aligned}
+e^A &= I + A + \frac{1}{2!}A^2 + \dots\\
+e^{iA} &= I + (iA) + \frac{1}{2!}(iA)^2 + \dots\\
+&= I + iA - \frac{1}{2!}A^2 - \dots\\
+e^{i\theta A} &= I + i\theta A - \frac{1}{2!}(\theta A)^2 - \dots
+\end{aligned}$$
+
+If $A^2 = I$ then, 
+
+$$\begin{aligned}
+e^{i\theta A} &= I + i\theta A - \frac{1}{2!}\theta^2 I - \frac{i}{3!}\theta^3 A + \frac{1}{4!}\theta^4 I + \dots\\
+&= (1 - \frac{1}{2!}\theta^2 + \frac{1}{4!}\theta^4 - \dots) I + i(\theta - \frac{1}{3!}\theta^3 + \frac{1}{5!}\theta^5 - \dots) A\\
+&= \cos\theta I + i\sin\theta A
+\end{aligned}$$
+
+#### Pauli-gate의 일반화
+
+$$\begin{aligned}
+R_X(\theta) &= e^{-i\frac{\theta}{2}X} = \cos\frac{\theta}{2} I - i\sin\frac{\theta}{2} X\\
+&= \begin{pmatrix} \cos\frac{\theta}{2} & 0 \\ 0 & \cos\frac{\theta}{2} \end{pmatrix} - i \begin{pmatrix} 0 & \sin\frac{\theta}{2} \\ \sin\frac{\theta}{2} & 0 \end{pmatrix} = \begin{pmatrix} \cos\frac{\theta}{2} & -i\sin\frac{\theta}{2} \\ -i\sin\frac{\theta}{2} & \cos\frac{\theta}{2} \end{pmatrix}\\
+\therefore X &= -i R_X(\pi)
+\end{aligned}$$
+
+비슷하게 
+
+$$R_Y(\theta) := e^{-i\frac{\theta}{2}Y}$, $R_Z(\theta) := e^{-i\frac{\theta}{2}Z}$$
+
+
+#### Hadamard gate
+
+$$\begin{aligned}
+H &= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}\quad (H^2 = I)\\
+H|0\rangle &= \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle) = |+\rangle\\
+H|1\rangle &= \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle) = |-\rangle\\
+H|+\rangle &= |0\rangle$$H|-\rangle = |1\rangle
+\end{aligned}$$
+
+
+#### CNOT (c-X) gate : 2-qubit gate
+
+Control qubit $a$ ───●─── $a$  
+Target qubit $b$ ─────⊕─── $y = a \oplus b$ (unitary gate가 되기 위해 역함수 존재)
+
+basis : 
+$$|00\rangle = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, |01\rangle = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix}, |10\rangle = \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix}, |11\rangle = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix}$$
+
+$$\text{CNOT} = \left( \begin{array}{cc|cc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ \hline 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{array} \right)$$
+
+- 상단 (a=0): $I$
+- 하단 (a=1): $X$ gate
+
+#### c-U gate (universal)
+
+$a$ ───●─── $a$  
+$b$ ───[U]─── $y = \begin{cases} b, & a=0 \\ Ub, & a=1 \end{cases}$
+
+$$c-U = \left( \begin{array}{c|c} I & 0 \\ \hline 0 & U \end{array} \right)$$
+
+
+#### swap gate
+
+$a$ ─●─ $b$  
+$b$ ─●─ $a$ 
+
+$$SWAP = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$$
+
+1. $$|01\rangle \rightarrow |10\rangle$$
+2. $$|10\rangle \rightarrow |01\rangle$$
+
+
+#### Deutsch Algorithm (도이치)
+
+$f: \{0, 1\} \rightarrow \{0, 1\}$ 에 대하여 $f$가 balanced인지 constant인지 판정하는 알고리즘
+
+- $f$의 종류 4가지
+    |x | 0| 1 | |
+    |$f_1$ | 0 | 0 | constant |
+    |$f_2$ | 0 | 1 | balanced |
+    |$f_3$ | 1 | 0 | balanced |
+    |$f_4$ | 1 | 1 | constant |
+
+##### (고전)알고리즘: 2번의 시도가 필요
+
+$$f(0) = \begin{cases} 0 \rightarrow f(1) \begin{cases} 0 & \text{constant} \\ 1 & \text{balanced} \end{cases} \\ 1 \rightarrow f(1) \begin{cases} 0 & \text{balanced} \\ 1 & \text{constant} \end{cases} \end{cases}$$
+
+##### 양자 알고리즘: 1번의 시도가 필요
+
+
+
+**NOTE**
+    **Phase kickback (위상 되차기)**
+
+    첫번째 qubit의 state 정보가 출력에서 위상으로 나타나는 현상
+    
+    **CNOT**
+    
+    $a$ ───●─── $a$  
+    $b$ ───⊕─── $a \oplus b$
+    
+    $$\begin{aligned}
+    CNOT : &|0\rangle|-\rangle \longmapsto |0\rangle|-\rangle\\
+    $CNOT : &|1\rangle|-\rangle \longmapsto |1\rangle(-|-\rangle) = -|1\rangle|-\rangle
+    \end{aligned}$$
+    
+    $$|1\rangle \frac{|1\rangle-|0\rangle}{\sqrt{2}}
+    \Rightarrow \frac{(|1\rangle \otimes |1\rangle) - (|1\rangle \otimes |0\rangle)}{\sqrt{2}}$$
+    
+    $$\therefore CNOT : |x\rangle \frac{|0\rangle-|1\rangle}{\sqrt{2}} \longmapsto (-1)^x |x\rangle \frac{|0\rangle-|1\rangle}{\sqrt{2}}$$
+    
+    $$\begin{aligned}
+    |+\rangle|-\rangle \longmapsto &\frac{1}{\sqrt{2}} CNOT(|0\rangle|-\rangle) + \frac{1}{\sqrt{2}} CNOT(|1\rangle|-\rangle)\\
+    &= \frac{1}{\sqrt{2}} (-1)^0 |0\rangle|-\rangle + \frac{1}{\sqrt{2}} (-1)^1 |1\rangle|-\rangle\\
+    &= \frac{|0\rangle-|1\rangle}{\sqrt{2}} |-\rangle\\
+    &= |-\rangle|-\rangle
+    \end{aligned}$$
+    
+    $$\begin{aligned}
+    U_f : &|x\rangle|y\rangle \longmapsto |x\rangle|y \oplus f(x)\rangle\qquad\text{(linear)}\\
+    U_f : &|x\rangle \frac{|0\rangle-|1\rangle}{\sqrt{2}} \longmapsto \frac{U_f(|x\rangle|0\rangle) - U_f(|x\rangle|1\rangle)}{\sqrt{2}} = \frac{|x\rangle|0 \oplus f(x)\rangle - |x\rangle|1 \oplus f(x)\rangle}{\sqrt{2}}= |x\rangle \frac{|0 \oplus f(x)\rangle - |1 \oplus f(x)\rangle}{\sqrt{2}}
+    \end{aligned}$$
+    
+    1. $f(x)=0$ 일 때, 
+    $$|x\rangle \frac{|0\rangle - |1\rangle}{\sqrt{2}}$$
+    2. $f(x)=1$ 일 때, 
+    $$|x\rangle \frac{|1\rangle - |0\rangle}{\sqrt{2}} = -|x\rangle \frac{|0\rangle - |1\rangle}{\sqrt{2}}$$
+    
+    $$\Rightarrow U_f : |x\rangle|-\rangle \longmapsto (-1)^{f(x)} |x\rangle \underbrace{\frac{|0\rangle - |1\rangle}{\sqrt{2}}}_{|-\rangle} :$$ 
+    $f$가 "위상에만" 영향을 줌
+
+
+$f$에 대한 blackbox oracle이 주어졌을 때
+
+$$|\psi\rangle \rightarrow [ \text{oracle} ] \rightarrow |\psi'\rangle$$
+
+$$unitary \ U U^* = I$$
+
+$$U_f : |x\rangle|y\rangle \longmapsto |x\rangle|y \oplus f(x)\rangle$$ 
+
+**Circuit Diagram**
+    |$\mid 0\rangle$ |───| [H] | ─── | ─── | ─── | [   ] | ── | [H] | ── | [M] (z성분으로 측정) |
+    |$\mid 0\rangle$ |───| [X] | ─── | [H] | ─── | [ $U_f$ ] | ── | $\mid y \oplus f(x)\rangle$ | ── | |
+    | | ($\mid \psi_1\rangle$) | | ($\mid \psi_2\rangle$) | | ($\mid \psi_3\rangle$) | | ($\mid \psi_4\rangle$) | | ($\mid \psi_5\rangle$)|
+
+    (현실에선 만들기 어려움, unitary $\implies$ quantum gate)
+
+$$|X\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\qquad H = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}$$
+
+
+$$\begin{aligned}
+|\psi_1\rangle &= |0\rangle|0\rangle\quad (= |00\rangle)\\
+|\psi_2\rangle &= |0\rangle|1\rangle\\
+|\psi_3\rangle &= |+\rangle|-\rangle = \frac{|0\rangle+|1\rangle}{\sqrt{2}} \frac{|0\rangle-|1\rangle}{\sqrt{2}}
+|\psi_4\rangle &= U_f(|+\rangle|-\rangle) = \frac{1}{\sqrt{2}} U_f(|0\rangle|-\rangle) + \frac{1}{\sqrt{2}} U_f(|1\rangle|-\rangle)\\
+&= \frac{1}{\sqrt{2}} (-1)^{f(0)} |0\rangle|-\rangle + \frac{1}{\sqrt{2}} (-1)^{f(1)} |1\rangle|-\rangle\\
+&= \frac{(-1)^{f(0)}|0\rangle + (-1)^{f(1)}|1\rangle}{\sqrt{2}} |-\rangle\\
+&= \begin{cases} (-1)^{f(0)} |-\rangle|-\rangle, & \text{if } f: \text{balanced} \\ (-1)^{f(0)} |+\rangle|-\rangle, & \text{if } f: \text{constant} \end{cases}
+\end{aligned}$$
+
+- $x$가 무엇이었는지 확인이 필요. $\rightarrow$ [H]\
+
+$$|\psi_5\rangle = \begin{cases} \pm |1\rangle : & f: \text{balanced} \\ \pm |0\rangle : & f: \text{constant} \end{cases}$$
