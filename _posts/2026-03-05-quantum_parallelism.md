@@ -2348,8 +2348,10 @@ H|-\rangle &= |1\rangle
 
 #### CNOT (c-X) gate : 2-qubit gate
 
-Control qubit $a$ ───●─── $a$  
-Target qubit $b$ ───⊕─── $y = a \oplus b$ (unitary gate가 되기 위해 역함수 존재)
+<img src="{{ '/assets/img/post/quantum_parallelism/0514_1.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+
+- $a$ : Control qubit
+- $b$ : Target qubit (unitary gate가 되기 위해 역함수 존재)
 
 basis : 
 $$|00\rangle = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, |01\rangle = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix}, |10\rangle = \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix}, |11\rangle = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix}$$
@@ -2361,16 +2363,16 @@ $$\text{CNOT} = \left( \begin{array}{cc|cc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ \h
 
 #### c-U gate (universal)
 
-$a$ ───●─── $a$  
-$b$ ───[U]─── $y = \begin{cases} b, & a=0 \\ Ub, & a=1 \end{cases}$
+<img src="{{ '/assets/img/post/quantum_parallelism/0514_2.png' | relative_url }}" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" alt="image">
+
 
 $$c-U = \left( \begin{array}{c|c} I & 0 \\ \hline 0 & U \end{array} \right)$$
 
 
 #### swap gate
 
-$a$ ─●─ $b$  
-$b$ ─●─ $a$ 
+<img src="{{ '/assets/img/post/quantum_parallelism/0514_4.png' | relative_url }}" style="max-width: 70%; height: auto; display: block; margin: 0 auto;" alt="image">
+
 
 $$SWAP = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$$
 
@@ -2402,12 +2404,9 @@ $$f(0) = \begin{cases} 0 \rightarrow f(1) \begin{cases} 0 & \text{constant} \\ 1
 
     **CNOT**
 
-    $a$ ───●─── $a$  
-    $b$ ───⊕─── $a \oplus b$
-
     $$\begin{aligned}
     CNOT : &|0\rangle|-\rangle \longmapsto |0\rangle|-\rangle\\
-    $CNOT : &|1\rangle|-\rangle \longmapsto |1\rangle(-|-\rangle) = -|1\rangle|-\rangle
+    CNOT : &|1\rangle|-\rangle \longmapsto |1\rangle(-|-\rangle) = -|1\rangle|-\rangle
     \end{aligned}$$
 
     $$|1\rangle \frac{|1\rangle-|0\rangle}{\sqrt{2}}
@@ -2446,9 +2445,8 @@ $$U_f : |x\rangle|y\rangle \longmapsto |x\rangle|y \oplus f(x)\rangle$$
 
 **Circuit Diagram**
 
-|$\mid 0\rangle$ |───| [H] | ─── | ─── | ─── | [   ] | ── | [H] | ── | [M] (z성분으로 측정) |
-|$\mid 0\rangle$ |───| [X] | ─── | [H] | ─── | [ $U_f$ ] | ── | $\mid y \oplus f(x)\rangle$ | ── | |
-| | ($\mid \psi_1\rangle$) | | ($\mid \psi_2\rangle$) | | ($\mid \psi_3\rangle$) | | ($\mid \psi_4\rangle$) | | ($\mid \psi_5\rangle$)|
+<img src="{{ '/assets/img/post/quantum_parallelism/0514_3.png' | relative_url }}" style="max-width: 7%; height: auto; display: block; margin: 0 auto;" alt="image">
+
 
 (현실에선 만들기 어려움, unitary $\implies$ quantum gate)
 
