@@ -2348,7 +2348,7 @@ H|-\rangle &= |1\rangle
 
 #### CNOT (c-X) gate : 2-qubit gate
 
-<img src="{{ '/assets/img/post/quantum_parallelism/0514_1.png' | relative_url }}" style="max-width: 40%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/quantum_parallelism/0514_1.png' | relative_url }}" style="max-width: 35%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 - $a$ : Control qubit
 - $b$ : Target qubit (unitary gate가 되기 위해 역함수 존재)
@@ -2363,7 +2363,7 @@ $$\text{CNOT} = \left( \begin{array}{cc|cc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ \h
 
 #### c-U gate (universal)
 
-<img src="{{ '/assets/img/post/quantum_parallelism/0514_2.png' | relative_url }}" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" alt="image">
+<img src="{{ '/assets/img/post/quantum_parallelism/0514_2.png' | relative_url }}" style="max-width: 45%; height: auto; display: block; margin: 0 auto;" alt="image">
 
 
 $$c-U = \left( \begin{array}{c|c} I & 0 \\ \hline 0 & U \end{array} \right)$$
