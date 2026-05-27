@@ -2,11 +2,71 @@
 layout: post
 title: "PQC 동향 (~ '24.10)"
 date: 2025-09-18
-last_modified_at: 2026-03-27
-description: "Study note: AIS 31 (version 3.0)"
+last_modified_at: 2026-05-27
 tags: [Cryptography, PQC]
 categories: [Research]
 ---
+
+
+### 26.05.14 [Nine Candidates Advance to the Third Round of the Additional Digital Signatures for the PQC Standardization Process](https://csrc.nist.gov/News/2026/nist-advances-9-candidates-to-the-3rd-round-of-pqc)
+
+
+18개월간의 평가 기간을 거쳐 추가 PQC 디지털 서명 3라운드 후보 9종 선정
+
+| FAEST (Symmetric) | MQOM (MPC-in-the-Head) | SNOVA (Multivariate) |
+| HAWK (Lattice) | QR-UOV (Multivariate) | SQIsign (Isogeny) |
+| MAYO (Multivariate) | SDitH (MPC-in-the-Head) | UOV (Multivariate) |
+
+
+NIST IR 8610에 평가 기준과 선정 절차 설명
+[NIST IR 8610: Status Report on the Second Round of the Additional Digital Signature Schemes for the NIST Post-Quantum Cryptography Standardization Process](https://csrc.nist.gov/pubs/ir/8610/final)
+
+- 3라운드에서 각 후보는 스펙 및 구현물 업데이트를 제출할 예정임
+- 3라운드 평가 및 검토 단계는 약 2년 동안 진행될 것으로 예상
+
+- 2027년 늦봄에서 초여름 사이 제7회 NIST PQC 표준화 컨퍼런스 개최 예정
+
+
+<br>
+<br>
+---
+
+### 26.04.17 [Recommendation for Cryptographic Key Generation | NIST Releases Draft SP 800-133 Revision 3 for Comment](https://csrc.nist.gov/News/2026/recommendation-for-cryptographic-key-generation)
+
+‘암호 키 생성 권고안’의 개정 초안(IPD) SP 800-133r3 공개
+
+[NIST SP 800-133 Rev. 3 (Initial Public Draft): Recommendation for Cryptographic Key Generation](https://csrc.nist.gov/pubs/sp/800/133/r3/ipd)
+
+주요 개정사항
+- 비대칭 키 쌍 생성이 키 쌍 생성 과정에서 난수 도출 방법을 포함하도록 확장
+- SHAKE, DRBG의 제한적 사용을 허용하는 새로운 “seed 확장” 방법 포함
+- 대칭 키 생성을 위한 키 설정 옵션으로서 KEM, PQC 관련 내용 추가
+- SP 800-90C에 부합하도록 난수 생성에 관한 문구 수정
+
+의견 요청사항
+- HSM 설계 관련: 위 요구사항이 루트 시드/비밀값을 사용하는 일반적인 관행 및 기존 시스템과 어떻게 부합하는가?
+- PQC 구현 및 프로토콜: 이러한 요구사항이 키를 seed로 저장하는 방식 및 PQC 하이브리드 구현 수행과 어떻게 조화를 이루는가?
+
+
+<br>
+<br>
+---
+
+
+### 26.04.13 [NIST Releases Initial Public Draft (IPD) SP 800-230, Additional SLH-DSA Parameter Sets for Limited Signature Use Cases](https://csrc.nist.gov/News/2026/nist-releases-draft-sp-800-230)
+
+보안 수준 1, 3, 5에 대한 6개의 추가 매개변수 세트를 명시함으로써 FIPS 205의 기술적 확장 제시
+- 이러한 추가 세트는 소프트웨어, 펌웨어 및 디지털 인증서 서명과 같이 빠른 검증과 서명 크기 축소가 필요한 사용 사례에 특화되어 있음
+- 서명 키당 $2^{24}$개의 서명으로 엄격한 한도를 설정함으로써 달성되므로, 이 세트들은 범용으로 사용할 수 없음
+
+
+[NIST SP 800-230 (Initial Public Draft): Additional SLH-DSA Parameter Sets for Limited Signature Use Cases](https://csrc.nist.gov/pubs/sp/800/230/ipd)
+
+
+<br>
+<br>
+---
+
 
 ### 26.01.27 [BSI TR-02102 Cryptographic Mechanisms](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr02102/tr02102_node.html)
 
