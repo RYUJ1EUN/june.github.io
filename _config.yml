@@ -167,9 +167,9 @@ collections:
   #   defaults:
   #     layout: post
   #   output: true
-  # projects:
-  #   output: true
-  #   permalink: /exhibitions/:name
+  projects:
+    output: false
+    permalink: /exhibitions/:name
   # teachings:
   #   output: true
   til:
