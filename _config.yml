@@ -161,23 +161,23 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  books:
-    output: true
+  # books:
+  #   output: true
   # news:
   #   defaults:
   #     layout: post
   #   output: true
-  projects:
-    output: true
-    permalink: /exhibitions/:name
+  # projects:
+  #   output: true
+  #   permalink: /exhibitions/:name
   # teachings:
   #   output: true
   til:
     output: true
     permalink: /til/:name
-  interest:
-    output: true
-    permalink: /interest/:name
+  # interest:
+  #   output: true
+  #   permalink: /interest/:name
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
