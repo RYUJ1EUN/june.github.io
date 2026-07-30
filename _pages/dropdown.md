@@ -1,16 +1,16 @@
 ---
 layout: page
 title: SUB
-nav: true
+nav: false
 nav_order: 5
-dropdown: true
-children:
-  - title: Books
-    permalink: /books/
-  - title: divider
-  - title: Exhibitions
-    permalink: /exhibitions/
-  - title: divider
-  - title: Interest
-    permalink: /interest/
+dropdown: false
+# children:
+#   - title: Books
+#     permalink: /books/
+#   - title: divider
+#   - title: Exhibitions
+#     permalink: /exhibitions/
+#   - title: divider
+#   - title: Interest
+#     permalink: /interest/
 ---
