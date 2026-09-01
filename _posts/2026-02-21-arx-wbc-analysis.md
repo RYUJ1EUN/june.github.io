@@ -601,6 +601,8 @@ Speck의 마스터 키 길이는 $4n$이므로 4개 라운드의 라운드 키�
 
 
 
+#### ARX 라운드의 Black-box Decomposition
 
+##### 1. with Affine Encodings
 
-
+<iframe src="https://docs.google.com/viewer?url={{ '/assets/pdf/ARX_WBC_Decomp_Affine.pdf' | absolute_url }}&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>
