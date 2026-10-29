@@ -1,9 +1,9 @@
 cv:
   name: 류지은 (Jieun Ryu)
-  label: Ph.D. student in Cryptography
+  headline: Ph.D. student in Cryptography
   email: J.ryu.jieun@gmail.com
   location: Seoul, South Korea
-  image: ""
+  # image: ""
   # summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
 
   sections:
