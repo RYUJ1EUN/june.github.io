@@ -2,11 +2,33 @@
 layout: post
 title: "PQC 동향 (~ '24.10)"
 date: 2025-09-18
-last_modified_at: 2026-05-27
+last_modified_at: 2026-10-30
 tags: [Cryptography, PQC]
 categories: [Research]
 ---
 
+
+### 26.10.27 [Transition to Post-Quantum Cryptography Standards | NIST IR 8547](https://csrc.nist.gov/News/2026/transition-to-pqc-standards-nist-ir-8547)
+
+
+PQC 전환을 관리하고 안내하기 위한 보다 광범위한 전략으로써
+기술 보고서 발표 (241112 초안의 완성본)
+
+- 해당 보고서는 구체적인 방법을 명시하는 것이 아닌 방향성을 제시하고 구상을 설명함
+
+- 코드 서명, 사용자 및 시스템 인증, 네트워크 보안 프로토콜, 이메일 및 문서 서명 및 암호화에 대한 use case를 제공함
+- KEM과 서명에 대한 PQC-Classical Hybrid Protocol 구성 방향을 제시함
+- Classical 암호 알고리즘에 대한 보안 강도별 PQC 전환 요구 일정을 안내함
+
+
+
+**함께 볼 문서**
+
+[NIST Report Provides Guidelines for Transition to Post-Quantum Cryptography Standards](https://www.nist.gov/news-events/news/2026/10/nist-report-provides-guidelines-transition-post-quantum-cryptography)
+
+<br>
+<br>
+---
 
 ### 26.05.14 [Nine Candidates Advance to the Third Round of the Additional Digital Signatures for the PQC Standardization Process](https://csrc.nist.gov/News/2026/nist-advances-9-candidates-to-the-3rd-round-of-pqc)
 
