@@ -114,7 +114,7 @@ cv:
           - Yongjin Yeom
         publisher: Journal of Surveillance, Security and Safety
         releaseDate: 2024-12-31
-        url: https://doi.org/10.1109/ACCESS.2024.3349704
+        url: https://doi.org/10.20517/jsss.2024.16
         # summary: With the widespread use of connected surveillance systems using IP cameras, the security of video data has become a critical issue. In response to the potential compromise of sensitive information via covert channels, the United States and the United Kingdom warned against the use of suspicious cameras in critical infrastructure. To mitigate the security concerns, it is indispensable to investigate every component inside IP cameras using evaluation and validation programs such as Common Criteria and Cryptographic Module Validation Program. However, such compliance tests on implementation under test cannot suffice to prevent the products from malicious attacks using a Trojan-horse in a black-box component, particularly inserted in the image-sensing module or the random number generator (RNG).In this paper, we categorize potential vulnerabilities and argue that IP cameras should disclose the components of the modules to mitigate the threats of backdoor. Based on this, we provide a way to construct backdoor-free RNG. To remove the possibility of the backdoor inside the RNG, we extract randomness from optical black pixels of the image sensor and apply two entropy accumulation methods to guarantee the min-entropy of accumulated data under weak assumptions, which means the IP camera already has a hardware entropy source in itself without additional suspicious entropy source. In the experiment using an IP camera with a Cortex-A53 processor, we can harvest entropy at the rate of 7.3kbps. The operating speed of the RNG is sufficient to provide random bits without delay when a symmetric key is updated every minute.
       
       - title: '[Paper] IPCC7: Post-Quantum Encryption Scheme Based on a Perfect Dominating Set in 3-Regular Graph'
@@ -299,49 +299,49 @@ cv:
         # summary: 본 발명은 암호키를 보호하고 필요한 기능만을 제공하여 안전성을 강화하기 위해 화이트박스 암호화 기술에 확률론적 일방향성을 갖는 출력 인코딩을 추가한 블록암호 운영모드에 관한 것으로, 블록 암호의 출력을 인코딩 과정에 공개키만을 사용하기 때문에 대응되는 비밀키 없이는 복호화 기능을 수행할 수 없도록 할 수 있다. 이를 통해, 호환성을 고려하여 취약한 표준 암호화이트박스 기술로 불가피하게 암호화하는 경우에도 일방향성(즉, 암호화만 가능하고 복호화는 할 수 없음)을 유지할 수 있다.
 
     Projects:
-      - name: PQC FIDO + AI 에이전트 통합 인증 인프라 구축을 위한 보안 기술 개발 (`26-`29)
+      - name: PQC FIDO + AI 에이전트 통합 인증 인프라 구축을 위한 보안 기술 개발 ('26-'29)
         summary: 하드웨어 보안 모듈의 CMVP 인증을 위한 난수발생기 안전성 평가 지원
         # highlights:
         #   - PQC
         start_date: 2026-07-01
         # end_date: 
 
-      - name: 차량용 차세대 보안반도체 핵심IP 원천기술개발 (`26-`30)
+      - name: 차량용 차세대 보안반도체 핵심IP 원천기술개발 ('26-'30)
         summary: 차량용 암호 모듈에 포함된 난수발생기에 대한 확률론적 모델 도출 및 CC 평가 지원
         # highlights:
         #   - PQC
         start_date: 2026-07-01
         # end_date: 
 
-      - name: AI엣지 노드 보호를 위한 양자내성암호 기반 실시간 파일시스템 암호화 및 자율 소거 기술 개발 (`26-`27)
+      - name: AI엣지 노드 보호를 위한 양자내성암호 기반 실시간 파일시스템 암호화 및 자율 소거 기술 개발 ('26-'27)
         summary: 저사양 엣지 노드 환경에 양자내성암호 적용을 위한 GPU 외부 가속기 활용 방법 연구
         # highlights:
         #   - PQC
         start_date: 2026-07-01
         end_date: 2027-06-30
 
-      - name: 국가·공공 암호기술 가이드라인 개발체계 추진방안연구 (`26)
+      - name: 국가·공공 암호기술 가이드라인 개발체계 추진방안연구 ('26)
         summary: 암호 기술 가이드라인 개발 체계 구체화 및 현장 적용을 위한 자문 위원회 개최 등 운영 기법 연구
         # highlights:
         #   - PQC
         start_date: 2026-04-01
         end_date: 2026-10-31
 
-      - name: 위성용 OTAR(Over The Air Rekeying) 기술 연구 (`26)
+      - name: 위성용 OTAR(Over The Air Rekeying) 기술 연구 ('26)
         summary: 위성 시스템의 무선 키 관리 표준 분석 및 모델 구상
         # highlights:
         #   - PQC
         start_date: 2026-04-01
         end_date: 2026-10-31
 
-      - name: 양자내성암호Kyber를 이용한 스마트카드 인증 기술개발 (`25-`26)
+      - name: 양자내성암호Kyber를 이용한 스마트카드 인증 기술개발 ('25-'26)
         summary: 저사양 단말 환경에 PQC 인증 기술을 적용 위한 외부가속기 활용 모델 개발 및 구현
         # highlights:
         #   - PQC
         start_date: 2025-09-01
         end_date: 2026-08-31
       
-      - name: 암호기술 가이드라인 개발 체계 구성 및 방안 연구 (`25)
+      - name: 암호기술 가이드라인 개발 체계 구성 및 방안 연구 ('25)
         summary: 암호 기술에 관한 가이드라인 개발 동향 조사 및 국내 현황을 반영한 절차, 방법론, 체계 구성 방안 연구
         # highlights:
         #   - Policy
@@ -349,7 +349,7 @@ cv:
         start_date: 2025-05-01
         end_date: 2025-11-30
       
-      - name: 글로벌 보안시스템 관련 국제 표준 및 주요국 제도 연구 (`25)
+      - name: 글로벌 보안시스템 관련 국제 표준 및 주요국 제도 연구 ('25)
         summary: 주요국의 보안시스템 수출입 정책 및 국제 표준 동향 조사 및 국내 현황 분석
         # highlights:
         #   - Policy
@@ -357,14 +357,14 @@ cv:
         start_date: 2025-04-01
         end_date: 2025-10-31
       
-      - name: 일대다(1:N) 구조의 양자암호통신 시스템 구축 (`24-`25)
+      - name: 일대다(1:N) 구조의 양자암호통신 시스템 구축 ('24-'25)
         summary: QKD 기반의 일대다(1:N) 구조의 양자암호통신 시스템 구축을 위한 후처리 기술 개발
         # highlights:
         #   - QKD post-processing
         start_date: 2024-09-01
         end_date: 2025-08-31
       
-      - name: 양자내성암호 구현 기술 개발 (`24)
+      - name: 양자내성암호 구현 기술 개발 ('24)
         summary: PQC 이론 분석 자료화 및 표준 알고리즘 3종 구현물의 기존 암호 모듈 통합 (기업 과제)
         # highlights:
         #   - PQC
@@ -372,7 +372,7 @@ cv:
         start_date: 2024-04-16
         end_date: 2024-12-15
       
-      - name: 양자내성암호 전환 및 확산방안 연구 (`24)
+      - name: 양자내성암호 전환 및 확산방안 연구 ('24)
         summary: 미국 NCCoE의 PQC 전환 프로젝트 현황 분석을 기반으로 국내 양자내성암호의 전환을 위한 절차 및 방법 연구
         # highlights:
         #   - PQC
@@ -380,14 +380,14 @@ cv:
         start_date: 2024-04-01
         end_date: 2024-10-31
       
-      - name: 화이트박스 암호 설계/구현 기술 공동연구 (`24)
+      - name: 화이트박스 암호 설계/구현 기술 공동연구 ('24)
         summary: 음함수 기반 화이트박스 전자서명 구현 기술 개발 (기업 과제)
         # highlights:
         #   - WBC
         start_date: 2024-03-01
         end_date: 2024-12-31
       
-      - name: KpqC 알고리즘 적용 및 확산 방안 연구 (`23)
+      - name: KpqC 알고리즘 적용 및 확산 방안 연구 ('23)
         summary: NIST 및 주요국의 PQC 표준화와 전환 정책 시행 현황 분석에 기반한 국내 KpqC 알고리즘의 저변 확대 기반 조성 연구
         # highlights:
         #   - PQC
@@ -395,21 +395,21 @@ cv:
         start_date: 2023-05-01
         end_date: 2023-11-30
       
-      - name: 화이트박스 암호 설계/분석 기술 공동연구 (`23-`24)
+      - name: 화이트박스 암호 설계/분석 기술 공동연구 ('23-'24)
         summary: 음함수 기반 화이트박스 블록암호 구현 기술 분석 및 개발 (기업 과제)
         # highlights:
         #   - WBC
         start_date: 2023-03-01
         end_date: 2024-02-28
       
-      - name: 양자기술 기반 보안문제 차단 IP카메라 개발 (`22-`26)
+      - name: 양자기술 기반 보안문제 차단 IP카메라 개발 ('22-'26)
         summary: IP카메라 내 은닉채널 존재 가능성을 원천 차단한 이미지센서 기반 QRNG 활용 암호 체계 구축
         # highlights:
         #   - RNG
         start_date: 2022-07-01
         end_date: 2026-01-31
       
-      - name: 양자내성암호 활용을 위한 전환 정책 및 절차에 관한 연구 (`22)
+      - name: 양자내성암호 활용을 위한 전환 정책 및 절차에 관한 연구 ('22)
         summary: 암호전환정책 분석 및 하이브리드 방식 적용 방안 분석을 통한 신규 암호 알고리즘 산업계 지원 방향 연구
         # highlights:
         #   - PQC
@@ -417,7 +417,7 @@ cv:
         start_date: 2022-04-01
         end_date: 2022-10-31
       
-      - name: 국가·공공 정보시스템 안전성 및 활용성 제고를 위한 차세대 암호체계 개발 (`22-`24)
+      - name: 국가·공공 정보시스템 안전성 및 활용성 제고를 위한 차세대 암호체계 개발 ('22-'24)
         summary: 국가ㆍ공공 정보시스템 고도화를 위한 암호 알고리즘, 암호모듈 개발 및 차세대 암호 인증 기술 개발 연구
         # highlights:
         #   - QKD
@@ -425,7 +425,7 @@ cv:
         start_date: 2022-03-01
         end_date: 2024-12-31
       
-      - name: 양자컴퓨팅 환경에 대비한 분산자원 플랫폼 관리용 암호 기술 연구 (`21-`24)
+      - name: 양자컴퓨팅 환경에 대비한 분산자원 플랫폼 관리용 암호 기술 연구 ('21-'24)
         summary: BEMS 등의 분산자원 플랫폼 관리를 위한 QKD-PQC 기반 보안 인프라 개발 연구
         # highlights:
         #   - PQC
@@ -474,7 +474,7 @@ cv:
         end_date: 2023-10-20
         # location: Class
         
-      - name: '[Conference] FIPS `n` CHIPS 2026 (Online)'
+      - name: '[Conference] FIPS ''n'' CHIPS 2026 (Online)'
         start_date: 2026-10-27
         end_date: 2026-10-27
       - name: '[Conference] MILCOM 2026'
@@ -500,7 +500,7 @@ cv:
         end_date: 2023-05-20
         # location: Conference
 
-      - name: '[Rab] 난수성분석및안전성평가연구실'
+      - name: '[Lab] 난수성분석및안전성평가연구실'
         start_date: 2022-03
         url: https://randanalysis.kookmin.ac.kr/
         summary: "랩장(23.11-)"
